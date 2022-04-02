@@ -328,6 +328,7 @@ AddEventHandler("lvc_SetAirManuState_c", function(sender, newstate)
 	end
 end)
 
+-- EXPERIMENTAL FEATURE, NOT IN USE AT THE MOMENT
 --[[RegisterKeyMapping('toggleemergencylights', 'Toggle Emergency Lights', 'keyboard', 'J')
 RegisterCommand('toggleemergencylights', function()
     local playerped = GetPlayerPed(-1)
