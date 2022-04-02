@@ -10,4 +10,4 @@ https://github.com/fk-1997/Server-Sided-Sounds-and-Sirens
 
 https://forum.cfx.re/t/release-luxart-vehicle-control/17304?page=14
 
-https://www.lcpdfr.com/downloads/gta5mods/audio/8038-federal-signal-smart-siren-ss2000sm-rumbler-tones-now-available/ (only for a little while while i find something better)
+https://www.lcpdfr.com/downloads/gta4mods/audio/3088-federal-signal-smartsiren-2000/?tab=comments#comment-20756 (only for a little while while i find something better)
