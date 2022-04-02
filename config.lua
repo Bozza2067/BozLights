@@ -1,5 +1,5 @@
 MuteHornToneSwitcher = true
-UsingVanillaSiren = false
+UsingVanillaSiren = true
 
 -- Vehicles with no third tone: Useful for california-compliant sirens that only have Wail and Yelp.
 ModelsWithNoTertiaryTone = 
@@ -9,7 +9,7 @@ ModelsWithNoTertiaryTone =
 -- Vehicles with a 4th tone activated by a seperate button. Usually a Hi-Lo.
 ModelsWithQuarternaryTone = 
 {
-    --"POLICE",
+    "POLICE",
 }
 
 

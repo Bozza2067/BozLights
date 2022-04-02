@@ -265,6 +265,14 @@ function SetLxSirenStateForVeh(veh, newstate)
 					PlaySoundFromEntity(snd_lxsiren[veh], "vehicles_horns_police_warning_rnd_euro", veh, 0, 0, 0)
 				end
 				TogMuteDfltSrnForVeh(veh, true)
+			
+			elseif newstate == 5 then
+				snd_lxsiren[veh] = GetSoundId()
+				if UseSS2000(veh) then
+					--PlaySoundFromEntity(snd_lxsiren[veh], "oiss_ssa_vehaud_etc_frank", veh, "oiss_ssa_vehaud_etc_soundset", 0, 0)
+					PlaySoundFromEntity(snd_lxsiren[veh], "sirens_euro_high", veh, 0, 0, 0)
+				end
+				TogMuteDfltSrnForVeh(veh, true)
 				
 			else
 				TogMuteDfltSrnForVeh(veh, true)
@@ -445,6 +453,7 @@ RequestScriptAudioBank("dlc_serversideaudio\\oiss_ssa_vehaud_etc3", false)
 RequestScriptAudioBank("dlc_serversideaudio\\oiss_ssa_vehaud_etc4", false)
 RequestScriptAudioBank("dlc_serversideaudio\\oiss_ssa_vehaud_etc5", false)
 RequestScriptAudioBank("dlc_serversideaudio\\oiss_ssa_vehaud_etc6", false)
+local fstate = 0
 
 ---------------------------------------------------------------------
 Citizen.CreateThread(function()
@@ -515,7 +524,7 @@ Citizen.CreateThread(function()
 						SetVehRadioStation(veh, "OFF")
 						SetVehicleRadioEnabled(veh, false)
 						
-						if state_lxsiren[veh] ~= 1 and state_lxsiren[veh] ~= 2 and state_lxsiren[veh] ~= 3 and state_lxsiren[veh] ~= 4 then
+						if state_lxsiren[veh] ~= 1 and state_lxsiren[veh] ~= 2 and state_lxsiren[veh] ~= 3 and state_lxsiren[veh] ~= 4 and state_lxsiren[veh] ~= 5 then
 							state_lxsiren[veh] = 0
 						end
 						if state_pwrcall[veh] ~= true then
@@ -524,7 +533,7 @@ Citizen.CreateThread(function()
 						if state_airmanu[veh] ~= 1 and state_airmanu[veh] ~= 2 and state_airmanu[veh] ~= 3 then
 							state_airmanu[veh] = 0
 						end
-						ShowInfo("vanilla " .. tostring(UsingVanillaSiren) .. " switchmute " .. tostring(MuteHornToneSwitcher) .. "    lxsiren " .. tostring(state_lxsiren[veh]) .. " airmanu " .. tostring(state_airmanu[veh] .. " pwrcall " .. tostring(state_pwrcall[veh]) .. "    timer " .. count_bcast_timer))
+						ShowInfo(fstate .. "vanilla " .. tostring(UsingVanillaSiren) .. " switchmute " .. tostring(MuteHornToneSwitcher) .. "    lxsiren " .. tostring(state_lxsiren[veh]) .. " airmanu " .. tostring(state_airmanu[veh] .. " pwrcall " .. tostring(state_pwrcall[veh]) .. "    timer " .. count_bcast_timer))
 						
 						if UseFiretruckSiren(veh) and state_lxsiren[veh] == 1 then
 							TogMuteDfltSrnForVeh(veh, false)
@@ -590,24 +599,46 @@ Citizen.CreateThread(function()
 								
 							end
 							
+							local cstate = state_lxsiren[veh]
+							local nstate = 1
 							-- BROWSE LX SRN TONES
 							if state_lxsiren[veh] > 0 then
 								if IsDisabledControlJustReleased(0, 80) then
 									if IsVehicleSirenOn(veh) then
-										local cstate = state_lxsiren[veh]
-										local nstate = 1
 										PlaySoundFrontend(-1, "NAV_LEFT_RIGHT", "HUD_FRONTEND_DEFAULT_SOUNDSET", 1) -- on
 										if cstate == 1 then
-											nstate = 2
+											if UseSS2000(veh) and count_bcast_timer < 16 then
+												nstate = 5
+												fstate = 2
+												count_bcast_timer = delay_bcast_timer
+											else
+												nstate = 2
+											end
 										elseif not HasNoTertiaryTone(veh) and cstate == 2 then
-											nstate = 3
-										else	
-											nstate = 1
+											if UseSS2000(veh) and count_bcast_timer < 16 then
+												nstate = 5
+												fstate = 3
+												count_bcast_timer = delay_bcast_timer
+											else
+												nstate = 3
+											end
+										else
+											if UseSS2000(veh) and count_bcast_timer < 16 then
+												nstate = 5
+												fstate = 1
+												count_bcast_timer = delay_bcast_timer
+											else
+												nstate = 1
+											end
 										end
 										SetLxSirenStateForVeh(veh, nstate)
 										count_bcast_timer = delay_bcast_timer
 									end
 								end
+							end
+
+							if count_bcast_timer == 16 then
+								nstate = fstate
 							end
 
 							-- 	TOG QUARTERNARY TONE
