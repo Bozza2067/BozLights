@@ -58,7 +58,7 @@ function ShowDebug(text)
 end
 
 ---------------------------------------------------------------------
-function useFiretruckSiren(veh)
+function UseFiretruckSiren(veh)
 	local model = GetEntityModel(veh)
 	for i = 1, #ModelsWithFireSrn, 1 do
 		if model == GetHashKey(ModelsWithFireSrn[i]) then
@@ -69,7 +69,7 @@ function useFiretruckSiren(veh)
 end
 
 ---------------------------------------------------------------------
-function usePowercallAuxSrn(veh)
+function UsePowercallAuxSrn(veh)
 	local model = GetEntityModel(veh)
 	for i = 1, #ModelsWithPcall, 1 do
 		if model == GetHashKey(ModelsWithPcall[i]) then
@@ -163,7 +163,7 @@ function SetLxSirenStateForVeh(veh, newstate)
 			end
 						
 			if newstate == 1 then
-				if useFiretruckSiren(veh) then
+				if UseFiretruckSiren(veh) then
 					TogMuteDfltSrnForVeh(veh, false)
 				else
 					snd_lxsiren[veh] = GetSoundId()	
@@ -178,7 +178,7 @@ function SetLxSirenStateForVeh(veh, newstate)
 			
 			elseif newstate == 3 then
 				snd_lxsiren[veh] = GetSoundId()
-				if useFiretruckSiren(veh) then
+				if UseFiretruckSiren(veh) then
 					PlaySoundFromEntity(snd_lxsiren[veh], "VEHICLES_HORNS_AMBULANCE_WARNING", veh, 0, 0, 0)
 				else
 					PlaySoundFromEntity(snd_lxsiren[veh], "VEHICLES_HORNS_POLICE_WARNING", veh, 0, 0, 0)
@@ -201,7 +201,7 @@ function TogPowercallStateForVeh(veh, toggle)
 		if toggle == true then
 			if snd_pwrcall[veh] == nil then
 				snd_pwrcall[veh] = GetSoundId()
-				if usePowercallAuxSrn(veh) then
+				if UsePowercallAuxSrn(veh) then
 					PlaySoundFromEntity(snd_pwrcall[veh], "VEHICLES_HORNS_AMBULANCE_WARNING", veh, 0, 0, 0)
 				else
 					PlaySoundFromEntity(snd_pwrcall[veh], "VEHICLES_HORNS_SIREN_1", veh, 0, 0, 0)
@@ -231,7 +231,7 @@ function SetAirManuStateForVeh(veh, newstate)
 						
 			if newstate == 1 then
 				snd_airmanu[veh] = GetSoundId()
-				if useFiretruckSiren(veh) then
+				if UseFiretruckSiren(veh) then
 					PlaySoundFromEntity(snd_airmanu[veh], "VEHICLES_HORNS_FIRETRUCK_WARNING", veh, 0, 0, 0)
 				else
 					PlaySoundFromEntity(snd_airmanu[veh], "SIRENS_AIRHORN", veh, 0, 0, 0)
@@ -328,7 +328,20 @@ AddEventHandler("lvc_SetAirManuState_c", function(sender, newstate)
 	end
 end)
 
-
+--[[RegisterKeyMapping('toggleemergencylights', 'Toggle Emergency Lights', 'keyboard', 'J')
+RegisterCommand('toggleemergencylights', function()
+    local playerped = GetPlayerPed(-1)
+    local veh = GetVehiclePedIsUsing(playerped)
+    if IsPedInAnyVehicle(playerped, false) and GetPedInVehicleSeat(veh, -1) == playerped and GetVehicleClass(veh) == 18 and not IsPauseMenuActive() then
+        if IsVehicleSirenOn(veh) then
+            PlaySoundFrontend(-1, "NAV_UP_DOWN", "HUD_FRONTEND_DEFAULT_SOUNDSET", 1)
+            SetVehicleSiren(veh, false)
+        else
+            PlaySoundFrontend(-1, "NAV_LEFT_RIGHT", "HUD_FRONTEND_DEFAULT_SOUNDSET", 1)
+            SetVehicleSiren(veh, true)
+        end
+    end	
+end)]]
 
 ---------------------------------------------------------------------
 Citizen.CreateThread(function()
@@ -402,7 +415,7 @@ Citizen.CreateThread(function()
 							state_airmanu[veh] = 0
 						end
 						
-						if useFiretruckSiren(veh) and state_lxsiren[veh] == 1 then
+						if UseFiretruckSiren(veh) and state_lxsiren[veh] == 1 then
 							TogMuteDfltSrnForVeh(veh, false)
 							dsrn_mute = false
 						else
@@ -516,7 +529,7 @@ Citizen.CreateThread(function()
 							hmanu_state_new = 3
 						end
 						if hmanu_state_new == 1 then
-							if not useFiretruckSiren(veh) then
+							if not UseFiretruckSiren(veh) then
 								if state_lxsiren[veh] > 0 and actv_lxsrnmute_temp == false then
 									srntone_temp = state_lxsiren[veh]
 									SetLxSirenStateForVeh(veh, 0)
@@ -524,7 +537,7 @@ Citizen.CreateThread(function()
 								end
 							end
 						else
-							if not useFiretruckSiren(veh) then
+							if not UseFiretruckSiren(veh) then
 								if actv_lxsrnmute_temp == true then
 									SetLxSirenStateForVeh(veh, srntone_temp)
 									actv_lxsrnmute_temp = false
