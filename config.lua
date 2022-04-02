@@ -1,15 +1,18 @@
 MuteHornToneSwitcher = true
 UsingVanillaSiren = false
 
--- Vehicles with no third tone: Useful for california-compliant sirens.
-ModelsWithNoTertiary = 
+-- Vehicles with no third tone: Useful for california-compliant sirens that only have Wail and Yelp.
+ModelsWithNoTertiaryTone = 
 {
-    "POLICE",
+    --"POLICE",
 }
+-- Vehicles with a 4th tone activated by a seperate button. Usually a Hi-Lo.
 ModelsWithQuarternaryTone = 
 {
-    "POLICE",
+    --"POLICE",
 }
+
+
 
 ModelsWithSS2000 =
 {
@@ -19,6 +22,8 @@ ModelsWithSSP3000 =
 {
 	
 }
+
+
 
 -- Base Variable arrays
 ModelsWithFireSrn =

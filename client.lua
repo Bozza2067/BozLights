@@ -49,6 +49,9 @@ local snd_pwrcall = {}
 local snd_airmanu = {}
 
 
+local pstate = 1
+
+
 
 
 -- DEBUGGING ----------------------------------------------------------------
@@ -99,10 +102,20 @@ function UsePowercallAuxSrn(veh)
 	return false
 end
 
-function HasNoTertiary(veh)
+function HasNoTertiaryTone(veh)
 	local model = GetEntityModel(veh)
-	for i = 1, #ModelsWithNoTertiary, 1 do
-		if model == GetHashKey(ModelsWithNoTertiary[i]) then
+	for i = 1, #ModelsWithNoTertiaryTone, 1 do
+		if model == GetHashKey(ModelsWithNoTertiaryTone[i]) then
+			return true
+		end
+	end
+	return false
+end
+
+function HasQuarternaryTone(veh)
+	local model = GetEntityModel(veh)
+	for i = 1, #ModelsWithQuarternaryTone, 1 do
+		if model == GetHashKey(ModelsWithQuarternaryTone[i]) then
 			return true
 		end
 	end
@@ -241,6 +254,15 @@ function SetLxSirenStateForVeh(veh, newstate)
 					PlaySoundFromEntity(snd_lxsiren[veh], "oiss_ssa_vehaud_etc_charles", veh, "oiss_ssa_vehaud_etc_soundset", 0, 0)
 				else
 					PlaySoundFromEntity(snd_lxsiren[veh], "VEHICLES_HORNS_POLICE_WARNING", veh, 0, 0, 0)
+				end
+				TogMuteDfltSrnForVeh(veh, true)
+			
+			elseif newstate == 4 then
+				snd_lxsiren[veh] = GetSoundId()
+				if UseSS2000(veh) then
+					PlaySoundFromEntity(snd_lxsiren[veh], "oiss_ssa_vehaud_etc_edward", veh, "oiss_ssa_vehaud_etc_soundset", 0, 0)
+				else
+					PlaySoundFromEntity(snd_lxsiren[veh], "vehicles_horns_police_warning_rnd_euro", veh, 0, 0, 0)
 				end
 				TogMuteDfltSrnForVeh(veh, true)
 				
@@ -493,7 +515,7 @@ Citizen.CreateThread(function()
 						SetVehRadioStation(veh, "OFF")
 						SetVehicleRadioEnabled(veh, false)
 						
-						if state_lxsiren[veh] ~= 1 and state_lxsiren[veh] ~= 2 and state_lxsiren[veh] ~= 3 then
+						if state_lxsiren[veh] ~= 1 and state_lxsiren[veh] ~= 2 and state_lxsiren[veh] ~= 3 and state_lxsiren[veh] ~= 4 then
 							state_lxsiren[veh] = 0
 						end
 						if state_pwrcall[veh] ~= true then
@@ -527,7 +549,7 @@ Citizen.CreateThread(function()
 						if not IsPauseMenuActive() then
 						
 							-- TOG DFLT SRN LIGHTS
-							if IsDisabledControlJustReleased(0, 85) or IsDisabledControlJustReleased(0, 246) then
+							if IsDisabledControlJustReleased(0, 85) then
 								if IsVehicleSirenOn(veh) then
 									PlaySoundFrontend(-1, "NAV_UP_DOWN", "HUD_FRONTEND_DEFAULT_SOUNDSET", 1)
 									SetVehicleSiren(veh, false)
@@ -538,7 +560,7 @@ Citizen.CreateThread(function()
 								end		
 							
 							-- TOG LX SIREN
-							elseif IsDisabledControlJustReleased(0, 19) or IsDisabledControlJustReleased(0, 82) then
+							elseif IsDisabledControlJustReleased(0, 19) then
 								local cstate = state_lxsiren[veh]
 								if cstate == 0 then
 									if IsVehicleSirenOn(veh) then
@@ -552,8 +574,8 @@ Citizen.CreateThread(function()
 									count_bcast_timer = delay_bcast_timer
 								end
 								
-							-- POWERCALL
-							elseif IsDisabledControlJustReleased(0, 172) then
+							-- TOG AUXILIARY TONE
+							elseif IsDisabledControlJustReleased(0, 82) then
 								if state_pwrcall[veh] == true then
 									PlaySoundFrontend(-1, "NAV_UP_DOWN", "HUD_FRONTEND_DEFAULT_SOUNDSET", 1)
 									TogPowercallStateForVeh(veh, false)
@@ -570,14 +592,14 @@ Citizen.CreateThread(function()
 							
 							-- BROWSE LX SRN TONES
 							if state_lxsiren[veh] > 0 then
-								if IsDisabledControlJustReleased(0, 80) or IsDisabledControlJustReleased(0, 81) then
+								if IsDisabledControlJustReleased(0, 80) then
 									if IsVehicleSirenOn(veh) then
 										local cstate = state_lxsiren[veh]
 										local nstate = 1
 										PlaySoundFrontend(-1, "NAV_LEFT_RIGHT", "HUD_FRONTEND_DEFAULT_SOUNDSET", 1) -- on
 										if cstate == 1 then
 											nstate = 2
-										elseif not HasNoTertiary(veh) and cstate == 2 then
+										elseif not HasNoTertiaryTone(veh) and cstate == 2 then
 											nstate = 3
 										else	
 											nstate = 1
@@ -585,6 +607,29 @@ Citizen.CreateThread(function()
 										SetLxSirenStateForVeh(veh, nstate)
 										count_bcast_timer = delay_bcast_timer
 									end
+								end
+							end
+
+							-- 	TOG QUARTERNARY TONE
+							if (IsDisabledControlJustReleased(0, 81) and IsUsingKeyboard(true)) or (IsDisabledControlJustReleased(0, 172) and IsUsingKeyboard(false)) then
+								if IsVehicleSirenOn(veh) and HasQuarternaryTone(veh) then
+									local cstate = state_lxsiren[veh]
+									local nstate = 4
+									PlaySoundFrontend(-1, "Beep_Red", "DLC_HEIST_HACKING_SNAKE_SOUNDS", 1)
+									if cstate == 1 then
+										pstate = cstate
+										nstate = 4
+									elseif cstate == 2 then	
+										pstate = cstate
+										nstate = 4
+									elseif cstate == 3 then	
+										pstate = cstate
+										nstate = 4
+									elseif cstate == 4 then	
+										nstate = pstate
+									end
+									SetLxSirenStateForVeh(veh, nstate)
+									count_bcast_timer = delay_bcast_timer
 								end
 							end
 										
