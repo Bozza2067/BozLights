@@ -99,10 +99,10 @@ function UsePowercallAuxSrn(veh)
 	return false
 end
 
-function HasNoPriority(veh)
+function HasNoTertiary(veh)
 	local model = GetEntityModel(veh)
-	for i = 1, #ModelsWithNoPriority, 1 do
-		if model == GetHashKey(ModelsWithNoPriority[i]) then
+	for i = 1, #ModelsWithNoTertiary, 1 do
+		if model == GetHashKey(ModelsWithNoTertiary[i]) then
 			return true
 		end
 	end
@@ -577,7 +577,7 @@ Citizen.CreateThread(function()
 										PlaySoundFrontend(-1, "NAV_LEFT_RIGHT", "HUD_FRONTEND_DEFAULT_SOUNDSET", 1) -- on
 										if cstate == 1 then
 											nstate = 2
-										elseif not HasNoPriority(veh) and cstate == 2 then
+										elseif not HasNoTertiary(veh) and cstate == 2 then
 											nstate = 3
 										else	
 											nstate = 1
