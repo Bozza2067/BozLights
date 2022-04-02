@@ -8,3 +8,15 @@ version '6.0.0'
 client_script 'client.lua'
 client_script 'config.lua'
 server_script 'server.lua'
+
+files {
+	-- Weeby Siren Fixes
+	"data/simplesound_test_sounds.dat54.rel",
+	"data/wsound_game.dat151.rel",
+	"data/wsound_sounds.dat54.rel",
+}
+
+-- Weeby Siren Fixes
+data_file 'AUDIO_GAMEDATA' 'data/wsound_game.dat'
+data_file "AUDIO_SOUNDDATA" "data/simplesound_test_sounds.dat"
+data_file "AUDIO_SOUNDDATA" "data/wsound_sounds.dat"
