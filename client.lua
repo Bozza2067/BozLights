@@ -48,20 +48,6 @@ local snd_lxsiren = {}
 local snd_pwrcall = {}
 local snd_airmanu = {}
 
--- these models will use their real wail siren, as determined by their assigned audio hash in vehicles.meta
-local eModelsWithFireSrn =
-{
-	"FIRETRUK",
-}
-
--- models listed below will use AMBULANCE_WARNING as auxiliary siren
--- unlisted models will instead use the default wail as the auxiliary siren
-local eModelsWithPcall =
-{	
-	"AMBULANCE",
-	"FIRETRUK",
-	"LGUARD",
-}
 
 
 ---------------------------------------------------------------------
@@ -74,8 +60,8 @@ end
 ---------------------------------------------------------------------
 function useFiretruckSiren(veh)
 	local model = GetEntityModel(veh)
-	for i = 1, #eModelsWithFireSrn, 1 do
-		if model == GetHashKey(eModelsWithFireSrn[i]) then
+	for i = 1, #ModelsWithFireSrn, 1 do
+		if model == GetHashKey(ModelsWithFireSrn[i]) then
 			return true
 		end
 	end
@@ -85,8 +71,8 @@ end
 ---------------------------------------------------------------------
 function usePowercallAuxSrn(veh)
 	local model = GetEntityModel(veh)
-	for i = 1, #eModelsWithPcall, 1 do
-		if model == GetHashKey(eModelsWithPcall[i]) then
+	for i = 1, #ModelsWithPcall, 1 do
+		if model == GetHashKey(ModelsWithPcall[i]) then
 			return true
 		end
 	end
