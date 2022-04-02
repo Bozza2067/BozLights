@@ -11,23 +11,26 @@ server_script 'server.lua'
 
 files {
 	-- Weeby Siren Fixes
-	"audio/simplesound_test_sounds.dat54.rel",
-	"audio/wsound_game.dat151.rel",
-	"audio/wsound_sounds.dat54.rel",
+	"data/simplesound_test_sounds.dat54.rel",
+	"data/wsound_game.dat151.rel",
+	"data/wsound_sounds.dat54.rel",
 
-	"audio/serversideaudio_sounds.dat54.rel",
-	"audio/sfx/dlc_serversideaudio/rpch_ssa_vehaud_pack1.awc",
-	"audio/sfx/dlc_serversideaudio/rpch_ssa_vehaud_pack2.awc",
-	"audio/sfx/dlc_serversideaudio/rpch_ssa_vehaud_pack3.awc",
-	"audio/sfx/dlc_serversideaudio/rpch_ssa_vehaud_pack4.awc",
-	"audio/sfx/dlc_serversideaudio/rpch_ssa_vehaud_pack5.awc",
-	"audio/sfx/dlc_serversideaudio/rpch_ssa_vehaud_pack6.awc",
+	-- Addon Sounds
+	"dlc_serversideaudio/oiss_ssa_vehaud_etc.awc",
+	"dlc_serversideaudio/oiss_ssa_vehaud_etc2.awc",
+	"dlc_serversideaudio/oiss_ssa_vehaud_etc3.awc",
+	"dlc_serversideaudio/oiss_ssa_vehaud_etc4.awc",
+	"dlc_serversideaudio/oiss_ssa_vehaud_etc5.awc",
+	"dlc_serversideaudio/oiss_ssa_vehaud_etc6.awc",
+	"data/serversideaudio_sounds.dat54.nametable",
+	"data/serversideaudio_sounds.dat54.rel"
 }
 
 -- Weeby Siren Fixes
-data_file 'AUDIO_GAMEDATA' 'audio/wsound_game.dat'
-data_file "AUDIO_SOUNDDATA" "audio/simplesound_test_sounds.dat"
-data_file "AUDIO_SOUNDDATA" "audio/wsound_sounds.dat"
+data_file 'AUDIO_GAMEDATA' 'data/wsound_game.dat'
+data_file "AUDIO_SOUNDDATA" "data/simplesound_test_sounds.dat"
+data_file "AUDIO_SOUNDDATA" "data/wsound_sounds.dat"
 
-data_file "AUDIO_WAVEPACK" "audio/sfx/dlc_serversideaudio"
-data_file "AUDIO_SOUNDDATA" "audio/serversideaudio_sounds.dat54.rel"
+-- Addon Sounds
+data_file "AUDIO_WAVEPACK" "dlc_serversideaudio"
+data_file "AUDIO_SOUNDDATA" "data/serversideaudio_sounds.dat"

@@ -21,7 +21,7 @@ CONTROLS
 ]]
 
 local count_bcast_timer = 0
-local delay_bcast_timer = 200
+local delay_bcast_timer = 1000
 
 local count_sndclean_timer = 0
 local delay_sndclean_timer = 400
@@ -50,12 +50,33 @@ local snd_airmanu = {}
 
 
 
----------------------------------------------------------------------
+
+-- DEBUGGING ----------------------------------------------------------------
 function ShowDebug(text)
 	SetNotificationTextEntry("STRING")
 	AddTextComponentString(text)
 	DrawNotification(false, false)
 end
+
+function ShowInfo(text)
+	SetTextComponentFormat("STRING")
+	AddTextComponentString(text)
+	DisplayHelpTextFromStringLabel(0, 0, 0, -1)
+end
+
+Citizen.CreateThread(function()
+	while true do
+		Citizen.Wait(0)
+	end
+end)
+
+RegisterCommand('togglevanillasirens', function()
+	if not UsingVanillaSiren then
+		UsingVanillaSiren = true
+	else
+		UsingVanillaSiren = false
+	end
+end)
 
 ---------------------------------------------------------------------
 function UseFiretruckSiren(veh)
@@ -68,7 +89,6 @@ function UseFiretruckSiren(veh)
 	return false
 end
 
----------------------------------------------------------------------
 function UsePowercallAuxSrn(veh)
 	local model = GetEntityModel(veh)
 	for i = 1, #ModelsWithPcall, 1 do
@@ -79,6 +99,35 @@ function UsePowercallAuxSrn(veh)
 	return false
 end
 
+function HasNoPriority(veh)
+	local model = GetEntityModel(veh)
+	for i = 1, #ModelsWithNoPriority, 1 do
+		if model == GetHashKey(ModelsWithNoPriority[i]) then
+			return true
+		end
+	end
+	return false
+end
+
+function UseSS2000(veh)
+	local model = GetEntityModel(veh)
+	for i = 1, #ModelsWithSS2000, 1 do
+		if model == GetHashKey(ModelsWithSS2000[i]) then
+			return true
+		end
+	end
+	return false
+end
+
+function UseSSP3000(veh)
+	local model = GetEntityModel(veh)
+	for i = 1, #ModelsWithSSP3000, 1 do
+		if model == GetHashKey(ModelsWithSSP3000[i]) then
+			return true
+		end
+	end
+	return false
+end
 ---------------------------------------------------------------------
 function CleanupSounds()
 	if count_sndclean_timer > delay_sndclean_timer then
@@ -163,23 +212,33 @@ function SetLxSirenStateForVeh(veh, newstate)
 			end
 						
 			if newstate == 1 then
+				snd_lxsiren[veh] = GetSoundId()	
 				if UseFiretruckSiren(veh) then
-					TogMuteDfltSrnForVeh(veh, false)
+					PlaySoundFromEntity(snd_lxsiren[veh], "collision_i8o7bp", veh, 0, 0, 0)
+				elseif UseSS2000(veh) then
+					PlaySoundFromEntity(snd_lxsiren[veh], "oiss_ssa_vehaud_etc_adam", veh, "oiss_ssa_vehaud_etc_soundset", 0, 0)
 				else
-					snd_lxsiren[veh] = GetSoundId()	
 					PlaySoundFromEntity(snd_lxsiren[veh], "VEHICLES_HORNS_SIREN_1", veh, 0, 0, 0)
-					TogMuteDfltSrnForVeh(veh, true)
 				end
+				TogMuteDfltSrnForVeh(veh, true)
 				
 			elseif newstate == 2 then
-				snd_lxsiren[veh] = GetSoundId()
-				PlaySoundFromEntity(snd_lxsiren[veh], "VEHICLES_HORNS_SIREN_2", veh, 0, 0, 0)
+				snd_lxsiren[veh] = GetSoundId()	
+				if UseFiretruckSiren(veh) then
+					PlaySoundFromEntity(snd_lxsiren[veh], "collision_q3nurz", veh, 0, 0, 0)
+				elseif UseSS2000(veh) then
+					PlaySoundFromEntity(snd_lxsiren[veh], "oiss_ssa_vehaud_etc_boy", veh, "oiss_ssa_vehaud_etc_soundset", 0, 0)
+				else
+					PlaySoundFromEntity(snd_lxsiren[veh], "VEHICLES_HORNS_SIREN_2", veh, 0, 0, 0)
+				end
 				TogMuteDfltSrnForVeh(veh, true)
 			
 			elseif newstate == 3 then
 				snd_lxsiren[veh] = GetSoundId()
 				if UseFiretruckSiren(veh) then
 					PlaySoundFromEntity(snd_lxsiren[veh], "VEHICLES_HORNS_AMBULANCE_WARNING", veh, 0, 0, 0)
+				elseif UseSS2000(veh) then
+					PlaySoundFromEntity(snd_lxsiren[veh], "oiss_ssa_vehaud_etc_charles", veh, "oiss_ssa_vehaud_etc_soundset", 0, 0)
 				else
 					PlaySoundFromEntity(snd_lxsiren[veh], "VEHICLES_HORNS_POLICE_WARNING", veh, 0, 0, 0)
 				end
@@ -201,8 +260,8 @@ function TogPowercallStateForVeh(veh, toggle)
 		if toggle == true then
 			if snd_pwrcall[veh] == nil then
 				snd_pwrcall[veh] = GetSoundId()
-				if UsePowercallAuxSrn(veh) then
-					PlaySoundFromEntity(snd_pwrcall[veh], "VEHICLES_HORNS_AMBULANCE_WARNING", veh, 0, 0, 0)
+				if UseSS2000(veh) then
+					PlaySoundFromEntity(snd_pwrcall[veh], "oiss_ssa_vehaud_etc_adam", veh, "oiss_ssa_vehaud_etc_soundset", 0, 0)
 				else
 					PlaySoundFromEntity(snd_pwrcall[veh], "VEHICLES_HORNS_SIREN_1", veh, 0, 0, 0)
 				end
@@ -233,17 +292,31 @@ function SetAirManuStateForVeh(veh, newstate)
 				snd_airmanu[veh] = GetSoundId()
 				if UseFiretruckSiren(veh) then
 					PlaySoundFromEntity(snd_airmanu[veh], "VEHICLES_HORNS_FIRETRUCK_WARNING", veh, 0, 0, 0)
+				elseif UseSS2000(veh) then
+					PlaySoundFromEntity(snd_airmanu[veh], "oiss_ssa_vehaud_etc_david", veh, "oiss_ssa_vehaud_etc_soundset", 0, 0)
 				else
 					PlaySoundFromEntity(snd_airmanu[veh], "SIRENS_AIRHORN", veh, 0, 0, 0)
 				end
 				
 			elseif newstate == 2 then
 				snd_airmanu[veh] = GetSoundId()
-				PlaySoundFromEntity(snd_airmanu[veh], "VEHICLES_HORNS_SIREN_1", veh, 0, 0, 0)
+				if UseFiretruckSiren(veh) then
+					PlaySoundFromEntity(snd_airmanu[veh], "collision_i8o7bp", veh, 0, 0, 0)
+				elseif UseSS2000(veh) then
+					PlaySoundFromEntity(snd_airmanu[veh], "oiss_ssa_vehaud_etc_adam", veh, "oiss_ssa_vehaud_etc_soundset", 0, 0)
+				else
+					PlaySoundFromEntity(snd_airmanu[veh], "VEHICLES_HORNS_SIREN_1", veh, 0, 0, 0)
+				end
 			
 			elseif newstate == 3 then
 				snd_airmanu[veh] = GetSoundId()
-				PlaySoundFromEntity(snd_airmanu[veh], "VEHICLES_HORNS_SIREN_2", veh, 0, 0, 0)
+				if UseFiretruckSiren(veh) then
+					PlaySoundFromEntity(snd_airmanu[veh], "collision_q3nurz", veh, 0, 0, 0)
+				elseif UseSS2000(veh) then
+					PlaySoundFromEntity(snd_airmanu[veh], "oiss_ssa_vehaud_etc_boy", veh, "oiss_ssa_vehaud_etc_soundset", 0, 0)
+				else
+					PlaySoundFromEntity(snd_airmanu[veh], "VEHICLES_HORNS_SIREN_2", veh, 0, 0, 0)
+				end
 				
 			end				
 				
@@ -344,11 +417,25 @@ RegisterCommand('toggleemergencylights', function()
     end	
 end)]]
 
+RequestScriptAudioBank("dlc_serversideaudio\\oiss_ssa_vehaud_etc", false)
+RequestScriptAudioBank("dlc_serversideaudio\\oiss_ssa_vehaud_etc2", false)
+RequestScriptAudioBank("dlc_serversideaudio\\oiss_ssa_vehaud_etc3", false)
+RequestScriptAudioBank("dlc_serversideaudio\\oiss_ssa_vehaud_etc4", false)
+RequestScriptAudioBank("dlc_serversideaudio\\oiss_ssa_vehaud_etc5", false)
+RequestScriptAudioBank("dlc_serversideaudio\\oiss_ssa_vehaud_etc6", false)
+
 ---------------------------------------------------------------------
 Citizen.CreateThread(function()
 	while true do
 			
 			CleanupSounds()
+
+			RequestScriptAudioBank("dlc_serversideaudio\\oiss_ssa_vehaud_etc", false)
+			RequestScriptAudioBank("dlc_serversideaudio\\oiss_ssa_vehaud_etc2", false)
+			RequestScriptAudioBank("dlc_serversideaudio\\oiss_ssa_vehaud_etc3", false)
+			RequestScriptAudioBank("dlc_serversideaudio\\oiss_ssa_vehaud_etc4", false)
+			RequestScriptAudioBank("dlc_serversideaudio\\oiss_ssa_vehaud_etc5", false)
+			RequestScriptAudioBank("dlc_serversideaudio\\oiss_ssa_vehaud_etc6", false)
 			
 			----- IS IN VEHICLE -----
 			local playerped = GetPlayerPed(-1)		
@@ -415,6 +502,7 @@ Citizen.CreateThread(function()
 						if state_airmanu[veh] ~= 1 and state_airmanu[veh] ~= 2 and state_airmanu[veh] ~= 3 then
 							state_airmanu[veh] = 0
 						end
+						ShowInfo("vanilla " .. tostring(UsingVanillaSiren) .. " switchmute " .. tostring(MuteHornToneSwitcher) .. "    lxsiren " .. tostring(state_lxsiren[veh]) .. " airmanu " .. tostring(state_airmanu[veh] .. " pwrcall " .. tostring(state_pwrcall[veh]) .. "    timer " .. count_bcast_timer))
 						
 						if UseFiretruckSiren(veh) and state_lxsiren[veh] == 1 then
 							TogMuteDfltSrnForVeh(veh, false)
@@ -489,7 +577,7 @@ Citizen.CreateThread(function()
 										PlaySoundFrontend(-1, "NAV_LEFT_RIGHT", "HUD_FRONTEND_DEFAULT_SOUNDSET", 1) -- on
 										if cstate == 1 then
 											nstate = 2
-										elseif cstate == 2 then
+										elseif not HasNoPriority(veh) and cstate == 2 then
 											nstate = 3
 										else	
 											nstate = 1
