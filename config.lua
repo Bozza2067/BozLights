@@ -1,5 +1,5 @@
 MuteHornToneSwitcher = true
-UsingVanillaSiren = true
+UsingVanillaSiren = false
 
 -- Vehicles with no third tone: Useful for california-compliant sirens that only have Wail and Yelp.
 ModelsWithNoTertiaryTone = 

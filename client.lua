@@ -607,7 +607,7 @@ Citizen.CreateThread(function()
 									if IsVehicleSirenOn(veh) then
 										PlaySoundFrontend(-1, "NAV_LEFT_RIGHT", "HUD_FRONTEND_DEFAULT_SOUNDSET", 1) -- on
 										if cstate == 1 then
-											if UseSS2000(veh) and count_bcast_timer < 16 then
+											if UseSS2000(veh) and count_bcast_timer < 32 then
 												nstate = 5
 												fstate = 2
 												count_bcast_timer = delay_bcast_timer
@@ -615,7 +615,7 @@ Citizen.CreateThread(function()
 												nstate = 2
 											end
 										elseif not HasNoTertiaryTone(veh) and cstate == 2 then
-											if UseSS2000(veh) and count_bcast_timer < 16 then
+											if UseSS2000(veh) and count_bcast_timer < 32 then
 												nstate = 5
 												fstate = 3
 												count_bcast_timer = delay_bcast_timer
@@ -623,7 +623,7 @@ Citizen.CreateThread(function()
 												nstate = 3
 											end
 										else
-											if UseSS2000(veh) and count_bcast_timer < 16 then
+											if UseSS2000(veh) and count_bcast_timer < 32 then
 												nstate = 5
 												fstate = 1
 												count_bcast_timer = delay_bcast_timer
@@ -637,7 +637,7 @@ Citizen.CreateThread(function()
 								end
 							end
 
-							if count_bcast_timer == 16 then
+							if count_bcast_timer == 32 then
 								nstate = fstate
 							end
 
