@@ -277,8 +277,8 @@ function SetLxSirenStateForVeh(veh, newstate)
 			elseif newstate == 5 then
 				snd_lxsiren[veh] = GetSoundId()
 				if UseSS2000(veh) then
-					PlaySoundFromEntity(snd_lxsiren[veh], "oiss_ssa_vehaud_etc_frank", veh, "oiss_ssa_vehaud_etc_soundset", 0, 0)
-					--PlaySoundFromEntity(snd_lxsiren[veh], "sirens_euro_high", veh, 0, 0, 0)
+					--PlaySoundFromEntity(snd_lxsiren[veh], "oiss_ssa_vehaud_etc_frank", veh, "oiss_ssa_vehaud_etc_soundset", 0, 0)
+					PlaySoundFromEntity(snd_lxsiren[veh], "sirens_euro_high", veh, 0, 0, 0)
 				end
 				TogMuteDfltSrnForVeh(veh, true)
 				
