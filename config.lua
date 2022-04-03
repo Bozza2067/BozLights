@@ -4,12 +4,17 @@ UsingVanillaSiren = false
 -- Vehicles with no third tone: Useful for california-compliant sirens that only have Wail and Yelp.
 ModelsWithNoTertiaryTone = 
 {
-    --"POLICE",
+    "POLICE",
+    "POLICE2",
+    "POLICE4",
+    "SHERIFF",
+    "SHERIFF2",
 }
 -- Vehicles with a 4th tone activated by a seperate button. Usually a Hi-Lo.
 ModelsWithQuarternaryTone = 
 {
-    "POLICE",
+    "SHERIFF",
+    "SHERIFF2",
 }
 
 
@@ -17,10 +22,15 @@ ModelsWithQuarternaryTone =
 ModelsWithSS2000 =
 {
     "POLICE",
+    "POLICE2",
+    "POLICE4",
+    "SHERIFF",
+    "SHERIFF2",
 }
+
 ModelsWithSSP3000 =
 {
-	
+	"POLICE3",
 }
 
 
@@ -29,11 +39,4 @@ ModelsWithSSP3000 =
 ModelsWithFireSrn =
 {
 	"FIRETRUK",
-}
-
-ModelsWithPcall =
-{	
-	"AMBULANCE",
-	"FIRETRUK",
-	"LGUARD",
 }

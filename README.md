@@ -10,4 +10,8 @@ https://github.com/fk-1997/Server-Sided-Sounds-and-Sirens
 
 https://forum.cfx.re/t/release-luxart-vehicle-control/17304?page=14
 
-https://www.lcpdfr.com/downloads/gta4mods/audio/3088-federal-signal-smartsiren-2000/?tab=comments#comment-20756 (only for a little while while i find something better)
+
+
+https://www.lcpdfr.com/downloads/gta5mods/audio/36017-ultimate-federal-signal-smart-siren-signalmaster-ss2000sm-pack/
+
+https://www.lcpdfr.com/downloads/gta5mods/audio/34308-ultimate-federal-signal-smart-siren-platinum-ssp3000-series-a-pack/
