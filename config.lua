@@ -22,6 +22,14 @@ ModelsWithAuxiliaryTone =
 {
 	
 }
+-- Vehicles that use the horn to change tones. Disabled electronic horn. Horn behavior: Regular car horn when lights off, manual tone when lights on, change tone when sirens on.
+ModelsWithHornSwitch = 
+{
+    "POLICE",
+    "POLICE2",
+    "POLICE3",
+    "POLICE4",
+}
 
 
 

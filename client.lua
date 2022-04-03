@@ -122,6 +122,16 @@ function HasAuxiliaryTone(veh)
 	return false
 end
 
+function HasHornSwitch(veh)
+	local model = GetEntityModel(veh)
+	for i = 1, #ModelsWithHornSwitch, 1 do
+		if model == GetHashKey(ModelsWithHornSwitch[i]) then
+			return true
+		end
+	end
+	return false
+end
+
 function UseSS2000(veh)
 	local model = GetEntityModel(veh)
 	for i = 1, #ModelsWithSS2000, 1 do
@@ -330,12 +340,22 @@ function SetAirManuStateForVeh(veh, newstate)
 						
 			if newstate == 1 then
 				snd_airmanu[veh] = GetSoundId()
-				if UseFiretruckSiren(veh) then
+				if HasHornSwitch(veh) and not IsVehicleSirenOn(veh) then
+						PlaySoundFromEntity(snd_airmanu[veh], "stretch_multi_horn", veh, 0, 0, 0)
+				elseif UseFiretruckSiren(veh) then
 					PlaySoundFromEntity(snd_airmanu[veh], "VEHICLES_HORNS_FIRETRUCK_WARNING", veh, 0, 0, 0)
 				elseif UseSS2000(veh) then
+					if HasHornSwitch(veh) then
+						PlaySoundFromEntity(snd_airmanu[veh], "oiss_ssa_vehaud_etc_george", veh, "oiss_ssa_vehaud_etc_soundset", 0, 0)
+					else
 					PlaySoundFromEntity(snd_airmanu[veh], "oiss_ssa_vehaud_etc_david", veh, "oiss_ssa_vehaud_etc_soundset", 0, 0)
+					end
 				elseif UseSSP3000(veh) then
+					if HasHornSwitch(veh) then
+						PlaySoundFromEntity(snd_airmanu[veh], "oiss_ssa_vehaud_etc_mary", veh, "oiss_ssa_vehaud_etc_soundset", 0, 0)
+					else
 					PlaySoundFromEntity(snd_airmanu[veh], "oiss_ssa_vehaud_etc_king", veh, "oiss_ssa_vehaud_etc_soundset", 0, 0)
+					end
 				else
 					PlaySoundFromEntity(snd_airmanu[veh], "SIRENS_AIRHORN", veh, 0, 0, 0)
 				end
@@ -691,12 +711,55 @@ Citizen.CreateThread(function()
 								actv_manu = false
 							end
 							
+							local br
+
 							-- HORN
-							if IsDisabledControlPressed(0, 86) then
+							if IsDisabledControlPressed(0, 86) and (not HasHornSwitch(veh) or (HasHornSwitch(veh) and state_lxsiren[veh] == 0))  then
+								--[[if HasHornSwitch(veh) and state_lxsiren[veh] == 0 then
+									local timer = GetGameTimer()
+									while true do
+										Citizen.Wait(0)
+										if (GetGameTimer() - timer >= 101) then
+											actv_horn = true
+											break
+										end
+									end
+								else]]
 								actv_horn = true
+								--end
 							else
 								actv_horn = false
 							end
+
+							-- HORNSWITCH
+							--[[if IsDisabledControlJustReleased(0,86) and HasHornSwitch(veh) and IsVehicleSirenOn(veh) then
+								local pressedAgain = false
+								local timer = GetGameTimer()
+								while true do
+									Citizen.Wait(0)
+									if (IsDisabledControlJustPressed(0, 86)) then
+										pressedAgain = true
+										break
+									end
+									if (GetGameTimer() - timer >= 100) then
+										break
+									end
+								end
+								if (pressedAgain) then
+									local cstate = state_lxsiren[veh]
+									if cstate == 0 then
+										if IsVehicleSirenOn(veh) then
+											PlaySoundFrontend(-1, "NAV_LEFT_RIGHT", "HUD_FRONTEND_DEFAULT_SOUNDSET", 1) -- on
+											SetLxSirenStateForVeh(veh, 1)
+											count_bcast_timer = delay_bcast_timer
+										end
+									else
+										PlaySoundFrontend(-1, "NAV_UP_DOWN", "HUD_FRONTEND_DEFAULT_SOUNDSET", 1) -- off
+										SetLxSirenStateForVeh(veh, 0)
+										count_bcast_timer = delay_bcast_timer
+									end
+								end
+							end]]
 						
 						end
 						
