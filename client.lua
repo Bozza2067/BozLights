@@ -50,6 +50,8 @@ local snd_airmanu = {}
 
 
 local pstate = 1
+local fstate = 0
+local SS2000Timer = GetGameTimer()
 
 
 
@@ -489,7 +491,6 @@ RequestScriptAudioBank("dlc_serversideaudio\\oiss_ssa_vehaud_etc3", false)
 RequestScriptAudioBank("dlc_serversideaudio\\oiss_ssa_vehaud_etc4", false)
 RequestScriptAudioBank("dlc_serversideaudio\\oiss_ssa_vehaud_etc5", false)
 RequestScriptAudioBank("dlc_serversideaudio\\oiss_ssa_vehaud_etc6", false)
-local fstate = 0
 
 ---------------------------------------------------------------------
 Citizen.CreateThread(function()
@@ -503,6 +504,7 @@ Citizen.CreateThread(function()
 			RequestScriptAudioBank("dlc_serversideaudio\\oiss_ssa_vehaud_etc4", false)
 			RequestScriptAudioBank("dlc_serversideaudio\\oiss_ssa_vehaud_etc5", false)
 			RequestScriptAudioBank("dlc_serversideaudio\\oiss_ssa_vehaud_etc6", false)
+
 			
 			----- IS IN VEHICLE -----
 			local playerped = GetPlayerPed(-1)		
@@ -643,28 +645,31 @@ Citizen.CreateThread(function()
 									if IsVehicleSirenOn(veh) then
 										PlaySoundFrontend(-1, "NAV_LEFT_RIGHT", "HUD_FRONTEND_DEFAULT_SOUNDSET", 1) -- on
 										if cstate == 1 then
-											if UseSS2000(veh) and count_bcast_timer < 32 then
+											if UseSS2000(veh) and count_bcast_timer < 32 and state_lxsiren[veh] ~= 5 then
 												nstate = 5
 												fstate = 2
 												count_bcast_timer = delay_bcast_timer
 											else
 												nstate = 2
+												fstate = 2
 											end
 										elseif not HasNoTertiaryTone(veh) and cstate == 2 then
-											if UseSS2000(veh) and count_bcast_timer < 32 then
+											if UseSS2000(veh) and count_bcast_timer < 32 and state_lxsiren[veh] ~= 5 then
 												nstate = 5
 												fstate = 3
 												count_bcast_timer = delay_bcast_timer
 											else
 												nstate = 3
+												fstate = 3
 											end
 										else
-											if UseSS2000(veh) and count_bcast_timer < 32 then
+											if UseSS2000(veh) and count_bcast_timer < 32 and state_lxsiren[veh] ~= 5 then
 												nstate = 5
 												fstate = 1
 												count_bcast_timer = delay_bcast_timer
 											else
 												nstate = 1
+												fstate = 1
 											end
 										end
 										SetLxSirenStateForVeh(veh, nstate)
@@ -673,7 +678,7 @@ Citizen.CreateThread(function()
 								end
 							end
 
-							if count_bcast_timer == 32 then
+							if cstate == 5 and count_bcast_timer >= 32 then
 								nstate = fstate
 							end
 
