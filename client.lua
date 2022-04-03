@@ -112,6 +112,16 @@ function HasQuarternaryTone(veh)
 	return false
 end
 
+function HasAuxiliaryTone(veh)
+	local model = GetEntityModel(veh)
+	for i = 1, #ModelsWithAuxiliaryTone, 1 do
+		if model == GetHashKey(ModelsWithAuxiliaryTone[i]) then
+			return true
+		end
+	end
+	return false
+end
+
 function UseSS2000(veh)
 	local model = GetEntityModel(veh)
 	for i = 1, #ModelsWithSS2000, 1 do
@@ -590,7 +600,7 @@ Citizen.CreateThread(function()
 								end
 								
 							-- TOG AUXILIARY TONE
-							elseif IsDisabledControlJustReleased(0, 82) then
+							elseif IsDisabledControlJustReleased(0, 82) and HasAuxiliaryTone(veh) then
 								if state_pwrcall[veh] == true then
 									PlaySoundFrontend(-1, "NAV_UP_DOWN", "HUD_FRONTEND_DEFAULT_SOUNDSET", 1)
 									TogPowercallStateForVeh(veh, false)

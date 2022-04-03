@@ -16,6 +16,11 @@ ModelsWithQuarternaryTone =
     "SHERIFF",
     "SHERIFF2",
 }
+-- Vehicles with dual sirens
+ModelsWithAuxiliaryTone = 
+{
+	
+}
 
 
 
