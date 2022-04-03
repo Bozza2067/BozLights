@@ -6,6 +6,7 @@ ModelsWithNoTertiaryTone =
 {
     "POLICE",
     "POLICE2",
+    "POLICE3",
     "POLICE4",
     "SHERIFF",
     "SHERIFF2",
