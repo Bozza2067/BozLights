@@ -6,16 +6,13 @@ ModelsWithNoTertiaryTone =
 {
     "POLICE",
     "POLICE2",
-    "POLICE3",
     "POLICE4",
     "SHERIFF",
-    "SHERIFF2",
 }
 -- Vehicles with a 4th tone activated by a seperate button. Usually a Hi-Lo.
 ModelsWithQuarternaryTone = 
 {
-    "SHERIFF",
-    "SHERIFF2",
+	"POLICE3",
 }
 -- Vehicles with dual sirens
 ModelsWithAuxiliaryTone = 
@@ -27,7 +24,6 @@ ModelsWithHornSwitch =
 {
     "POLICE",
     "POLICE2",
-    "POLICE3",
     "POLICE4",
 }
 
