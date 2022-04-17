@@ -182,6 +182,16 @@ function UseSSP3000(veh)
 	end
 	return false
 end
+
+function HasNoEquipment(veh)
+	local model = GetEntityModel(veh)
+	for i = 1, #EmergencyModelsWithNoEquipment, 1 do
+		if model == GetHashKey(EmergencyModelsWithNoEquipment[i]) then
+			return true
+		end
+	end
+	return false
+end
 ---------------------------------------------------------------------
 function CleanupSounds()
 	if count_sndclean_timer > delay_sndclean_timer then
@@ -604,7 +614,7 @@ Citizen.CreateThread(function()
 					
 					
 					--- IS EMERG VEHICLE ---
-					if GetVehicleClass(veh) == 18 then
+					if GetVehicleClass(veh) == 18 and not HasNoEquipment(veh) then
 						
 						local actv_manu = false
 						local actv_horn = false

@@ -82,6 +82,10 @@ ModelsWithSSP3000 =
     " bcsonalamo",
 }
 
+EmergencyModelsWithNoEquipment =
+{
+    "glpdalamo2",
+}
 
 
 -- Base Variable arrays
