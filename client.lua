@@ -516,13 +516,6 @@ RegisterCommand('toggleemergencylights', function()
     end	
 end)]]
 
-RequestScriptAudioBank("dlc_serversideaudio\\oiss_ssa_vehaud_etc", false)
-RequestScriptAudioBank("dlc_serversideaudio\\oiss_ssa_vehaud_etc2", false)
-RequestScriptAudioBank("dlc_serversideaudio\\oiss_ssa_vehaud_etc3", false)
-RequestScriptAudioBank("dlc_serversideaudio\\oiss_ssa_vehaud_etc4", false)
-RequestScriptAudioBank("dlc_serversideaudio\\oiss_ssa_vehaud_etc5", false)
-RequestScriptAudioBank("dlc_serversideaudio\\oiss_ssa_vehaud_etc6", false)
-
 ---------------------------------------------------------------------
 Citizen.CreateThread(function()
 	while true do
@@ -530,11 +523,6 @@ Citizen.CreateThread(function()
 			CleanupSounds()
 
 			RequestScriptAudioBank("dlc_serversideaudio\\oiss_ssa_vehaud_etc", false)
-			RequestScriptAudioBank("dlc_serversideaudio\\oiss_ssa_vehaud_etc2", false)
-			RequestScriptAudioBank("dlc_serversideaudio\\oiss_ssa_vehaud_etc3", false)
-			RequestScriptAudioBank("dlc_serversideaudio\\oiss_ssa_vehaud_etc4", false)
-			RequestScriptAudioBank("dlc_serversideaudio\\oiss_ssa_vehaud_etc5", false)
-			RequestScriptAudioBank("dlc_serversideaudio\\oiss_ssa_vehaud_etc6", false)
 
 			
 			----- IS IN VEHICLE -----
@@ -689,7 +677,7 @@ Citizen.CreateThread(function()
 							end
 
 							-- 	TOG QUARTERNARY TONE
-							if (IsDisabledControlJustReleased(0, 81) and IsUsingKeyboard(true)) or (IsDisabledControlJustReleased(0, 172) and IsUsingKeyboard(false)) then
+							if IsDisabledControlJustReleased(0, 81) then
 								if IsVehicleSirenOn(veh) and HasQuarternaryTone(veh) then
 									local cstate = state_lxsiren[veh]
 									local nstate = 4
