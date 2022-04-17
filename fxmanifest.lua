@@ -16,8 +16,8 @@ files {
 	--"data/wsound_sounds.dat54.rel",
 
 	-- Addon Sounds
-	--"dlc_serversideaudio/oiss_ssa_vehaud_etc.awc",
-	--"data/serversideaudio_sounds.dat54.rel"
+	"audio/sfx/dlc_policingmpaudio/policingmp_sirens1.awc",
+	"audio/data/policingmpaudio_sounds.dat54.rel"
 }
 
 -- Weeby Siren Fixes
@@ -26,5 +26,5 @@ files {
 --data_file "AUDIO_SOUNDDATA" "data/wsound_sounds.dat"
 
 -- Addon Sounds
---data_file "AUDIO_WAVEPACK" "dlc_serversideaudio"
---data_file "AUDIO_SOUNDDATA" "data/serversideaudio_sounds.dat"
+data_file "AUDIO_WAVEPACK" "audio/sfx/policingmp_sirens1"
+data_file "AUDIO_SOUNDDATA" "audio/data/policingmpaudio_sounds.dat"

@@ -257,7 +257,9 @@ function SetLxSirenStateForVeh(veh, newstate)
 						
 			if newstate == 1 then
 				snd_lxsiren[veh] = GetSoundId()	
-				if UseFiretruckSiren(veh) then
+				if UseCHPSiren(veh) then
+					PlaySoundFromEntity(snd_lxsiren[veh], "siren_chp_wail", veh, "policingmp_sounds_sirens1_soundset", 0, 0)
+				elseif UseFiretruckSiren(veh) then
 					PlaySoundFromEntity(snd_lxsiren[veh], "collision_i8o7bp", veh, 0, 0, 0)
 				elseif UsePA500(veh) then
 					PlaySoundFromEntity(snd_lxsiren[veh], "resident_vehicles_siren_wail_02", veh, 0, 0, 0)
@@ -272,7 +274,9 @@ function SetLxSirenStateForVeh(veh, newstate)
 				
 			elseif newstate == 2 then
 				snd_lxsiren[veh] = GetSoundId()	
-				if UseFiretruckSiren(veh) then
+				if UseCHPSiren(veh) then
+					PlaySoundFromEntity(snd_lxsiren[veh], "siren_chp_yelp", veh, "policingmp_sounds_sirens1_soundset", 0, 0)
+				elseif UseFiretruckSiren(veh) then
 					PlaySoundFromEntity(snd_lxsiren[veh], "collision_q3nurz", veh, 0, 0, 0)
 				elseif UsePA500(veh) then
 					PlaySoundFromEntity(snd_lxsiren[veh], "resident_vehicles_siren_quick_02", veh, 0, 0, 0)
@@ -300,7 +304,9 @@ function SetLxSirenStateForVeh(veh, newstate)
 			
 			elseif newstate == 4 then
 				snd_lxsiren[veh] = GetSoundId()
-				if UseSS2000(veh) then
+				if UseCHPSiren(veh) then
+					PlaySoundFromEntity(snd_lxsiren[veh], "siren_chp_evac", veh, "policingmp_sounds_sirens1_soundset", 0, 0)
+				elseif UseSS2000(veh) then
 					PlaySoundFromEntity(snd_lxsiren[veh], "oiss_ssa_vehaud_etc_edward", veh, "oiss_ssa_vehaud_etc_soundset", 0, 0)
 				elseif UseSSP3000(veh) then
 					PlaySoundFromEntity(snd_lxsiren[veh], "oiss_ssa_vehaud_etc_lincoln", veh, "oiss_ssa_vehaud_etc_soundset", 0, 0)
@@ -516,13 +522,15 @@ RegisterCommand('toggleemergencylights', function()
     end	
 end)]]
 
+RequestScriptAudioBank("DLC_POLICINGMPAUDIO\\POLICINGMP_SIRENS1", false)
+
 ---------------------------------------------------------------------
 Citizen.CreateThread(function()
 	while true do
 			
 			CleanupSounds()
 
-			--RequestScriptAudioBank("dlc_serversideaudio\\oiss_ssa_vehaud_etc", false)
+			RequestScriptAudioBank("DLC_POLICINGMPAUDIO\\POLICINGMP_SIRENS1", false)
 
 			
 			----- IS IN VEHICLE -----
