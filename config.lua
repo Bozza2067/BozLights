@@ -5,7 +5,14 @@ UsingVanillaSiren = false
 ModelsWithNoTertiaryTone = 
 {
     "bcsonalamo",
-
+    "glpdalamo",
+    "glpdalamo2",
+    "glpdbison",
+    "glpdbisonum",
+    "glpdgresley",
+    "glpdgresleyum",
+    "glpdscout",
+    "glpdstanier",
     "sahp",
     "sahp1a",
     "sahp1b",
@@ -68,18 +75,23 @@ ModelsWithPA500 =
 
 ModelsWithZ3 = 
 {
-    "fbi",
-    "fbi2",
+    "glpdalamo",
+    "glpdalamo2",
+    "glpdbison",
+    "glpdbisonum",
+    "glpdgresley",
+    "glpdgresleyum",
+    "glpdscout",
 }
 
 ModelsWithSS2000 =
 {
-    "police",
+    --"glpdstanier",
 }
 
 ModelsWithSSP3000 =
 {
-    " bcsonalamo",
+    --"bcsonalamo",
 }
 
 EmergencyModelsWithNoEquipment =
