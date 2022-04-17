@@ -621,10 +621,6 @@ Citizen.CreateThread(function()
 					
 						----- CONTROLS -----
 						if not IsPauseMenuActive() then
-
-							if IsDisabledControlJustReleased(0, 86) then
-								print("retard")
-							end
 						
 							-- TOG DFLT SRN LIGHTS
 							if IsDisabledControlJustReleased(0, 85) then
