@@ -66,6 +66,12 @@ ModelsWithPA500 =
     "sahp2b",
 }
 
+ModelsWithZ3 = 
+{
+    "fbi",
+    "fbi2",
+}
+
 ModelsWithSS2000 =
 {
     "police",
