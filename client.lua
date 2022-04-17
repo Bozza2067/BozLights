@@ -522,7 +522,7 @@ Citizen.CreateThread(function()
 			
 			CleanupSounds()
 
-			RequestScriptAudioBank("dlc_serversideaudio\\oiss_ssa_vehaud_etc", false)
+			--RequestScriptAudioBank("dlc_serversideaudio\\oiss_ssa_vehaud_etc", false)
 
 			
 			----- IS IN VEHICLE -----
