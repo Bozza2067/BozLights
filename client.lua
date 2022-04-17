@@ -275,7 +275,7 @@ function SetLxSirenStateForVeh(veh, newstate)
 			elseif newstate == 2 then
 				snd_lxsiren[veh] = GetSoundId()	
 				if UseCHPSiren(veh) then
-					PlaySoundFromEntity(snd_lxsiren[veh], "siren_chp_yelp", veh, "policingmp_sounds_sirens1_soundset", 0, 0)
+					PlaySoundFromEntity(snd_lxsiren[veh], "siren_chp_yelp", veh, 0, 0, 0)
 				elseif UseFiretruckSiren(veh) then
 					PlaySoundFromEntity(snd_lxsiren[veh], "collision_q3nurz", veh, 0, 0, 0)
 				elseif UsePA500(veh) then
@@ -621,6 +621,10 @@ Citizen.CreateThread(function()
 					
 						----- CONTROLS -----
 						if not IsPauseMenuActive() then
+
+							if IsDisabledControlJustReleased(0, 86) then
+								print("retard")
+							end
 						
 							-- TOG DFLT SRN LIGHTS
 							if IsDisabledControlJustReleased(0, 85) then
@@ -647,6 +651,30 @@ Citizen.CreateThread(function()
 									SetLxSirenStateForVeh(veh, 0)
 									count_bcast_timer = delay_bcast_timer
 								end
+							
+							-- TOG LX SIREN (HORN)
+							elseif IsDisabledControlJustReleased(0,86) and HasHornSwitch(veh) then
+								local timer = GetGameTimer()
+								while true do
+									if IsControlJustPressed(0, 86) then
+										local cstate = state_lxsiren[veh]
+										if cstate == 0 then
+											if IsVehicleSirenOn(veh) then
+												PlaySoundFrontend(-1, "Beep_Red", "DLC_HEIST_HACKING_SNAKE_SOUNDS", 1)
+												SetLxSirenStateForVeh(veh, 1)
+												count_bcast_timer = delay_bcast_timer
+											end
+										else
+											PlaySoundFrontend(-1, "Beep_Red", "DLC_HEIST_HACKING_SNAKE_SOUNDS", 1)
+											SetLxSirenStateForVeh(veh, 0)
+											count_bcast_timer = delay_bcast_timer
+										end
+									end
+									if (GetGameTimer() - timer >= 100) then
+										break
+									end
+									Citizen.Wait(0)
+								end
 								
 							-- TOG AUXILIARY TONE
 							elseif IsDisabledControlJustReleased(0, 82) and HasAuxiliaryTone(veh) then
@@ -666,7 +694,7 @@ Citizen.CreateThread(function()
 							
 							-- BROWSE LX SRN TONES
 							if state_lxsiren[veh] > 0 then
-								if IsDisabledControlJustReleased(0, 80) then
+								if IsDisabledControlJustReleased(0, 80) or (IsDisabledControlJustPressed(0, 86) and HasHornSwitch(veh)) then
 									local cstate = state_lxsiren[veh]
 									local nstate = 1
 									if IsVehicleSirenOn(veh) then
@@ -689,7 +717,7 @@ Citizen.CreateThread(function()
 								if IsVehicleSirenOn(veh) and HasQuarternaryTone(veh) then
 									local cstate = state_lxsiren[veh]
 									local nstate = 4
-									PlaySoundFrontend(-1, "Beep_Red", "DLC_HEIST_HACKING_SNAKE_SOUNDS", 1)
+									PlaySoundFrontend(-1, "NAV_LEFT_RIGHT", "HUD_FRONTEND_DEFAULT_SOUNDSET", 1) -- on
 									if cstate == 1 then
 										pstate = cstate
 										nstate = 4
@@ -717,60 +745,19 @@ Citizen.CreateThread(function()
 							else
 								actv_manu = false
 							end
-							
-							local br
 
-							-- HORN
+							-- HORN SIREN TOGGLL
 							if IsDisabledControlPressed(0, 86) and (not HasHornSwitch(veh) or (HasHornSwitch(veh) and state_lxsiren[veh] == 0))  then
-								--[[if HasHornSwitch(veh) and state_lxsiren[veh] == 0 then
+								if HasHornSwitch(veh) and IsVehicleSirenOn(veh) and state_lxsiren[veh] >~ 0 then
 									local timer = GetGameTimer()
-									while true do
-										Citizen.Wait(0)
-										if (GetGameTimer() - timer >= 101) then
-											actv_horn = true
-											break
-										end
+									if (GetGameTimer() - timer > 100) then
+										actv_horn = true
 									end
-								else]]
+								else
 								actv_horn = true
-								--end
-							elseif IsDisabledControlPressed(0, 86) and HasHornSwitch(veh) and state_lxsiren[veh] ~= 0 then
-								if timer2 > 100 then
-									actv_horn = false
-								
 								end
 							else
 								actv_horn = false
-							end
-
-							-- HORNSWITCH
-							if IsDisabledControlJustReleased(0,86) and HasHornSwitch(veh) and IsVehicleSirenOn(veh) then
-								local pressedAgain = false
-								local timer = GetGameTimer()
-								while true do
-									Citizen.Wait(0)
-									if (IsDisabledControlJustPressed(0, 86)) then
-										pressedAgain = true
-										break
-									end
-									if (GetGameTimer() - timer >= 100) then
-										break
-									end
-								end
-								if (pressedAgain) then
-									local cstate = state_lxsiren[veh]
-									if cstate == 0 then
-										if IsVehicleSirenOn(veh) then
-											PlaySoundFrontend(-1, "NAV_LEFT_RIGHT", "HUD_FRONTEND_DEFAULT_SOUNDSET", 1) -- on
-											SetLxSirenStateForVeh(veh, 1)
-											count_bcast_timer = delay_bcast_timer
-										end
-									else
-										PlaySoundFrontend(-1, "NAV_UP_DOWN", "HUD_FRONTEND_DEFAULT_SOUNDSET", 1) -- off
-										SetLxSirenStateForVeh(veh, 0)
-										count_bcast_timer = delay_bcast_timer
-									end
-								end
 							end
 						
 						end
