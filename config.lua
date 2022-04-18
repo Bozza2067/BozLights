@@ -91,7 +91,7 @@ ModelsWithSS2000 =
 
 ModelsWithSSP3000 =
 {
-    --"bcsonalamo",
+    "bcsonalamo",
 }
 
 EmergencyModelsWithNoEquipment =
