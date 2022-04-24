@@ -98,6 +98,8 @@ ModelsWithMastercomB =
     "sadcrrumpo",
     "sadcrstanier",
     "sadcrstank9",
+
+    "sheriff2",
 }
 
 ModelsWithPA500 = -- Vanilla FIB Siren
@@ -111,11 +113,17 @@ ModelsWithSS2000 =
 {
     "centurionlspd",
     "glpdstanier",
+
+    "police",
+    "police2",
+    "police4",
+    "sheriff",
 }
 
 ModelsWithSSP3000 =
 {
     "bcsonalamo",
+
     "police3",
 }
 
@@ -129,4 +137,7 @@ ModelsWithZ3 =
     "sadcrnscout",
     "sadcrtorrence",
     "sadcrtorrslick",
+
+    "fbi",
+    "fbi2",
 }
