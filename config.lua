@@ -26,6 +26,12 @@ ModelsWithNoTertiaryTone =
     "sahp2",
     "sahp2a",
     "sahp2b",
+    "sadcrnscout",
+    "sadcrrumpo",
+    "sadcrstanier",
+    "sadcrstank9",
+    "sadcrtorrence",
+    "sadcrtorrslick",
 }
 
 -- Vehicles with a 4th tone activated by a seperate button. Usually a Hi-Lo.
@@ -91,7 +97,7 @@ ModelsWithMastercomB =
     "glpdalamo",
     "sadcrrumpo",
     "sadcrstanier",
-    "sadcrstanierk9",
+    "sadcrstank9",
 }
 
 ModelsWithPA500 = -- Vanilla FIB Siren
