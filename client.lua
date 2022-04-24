@@ -286,7 +286,7 @@ function SetLxSirenStateForVeh(veh, newstate)
 				elseif UsePA500(veh) then
 					PlaySoundFromEntity(snd_lxsiren[veh], "resident_vehicles_siren_wail_02", veh, 0, 0, 0)
 				elseif UseSS2000(veh) then
-					PlaySoundFromEntity(snd_lxsiren[veh], "oiss_ssa_vehaud_etc_adam", veh, "oiss_ssa_vehaud_etc_soundset", 0, 0)
+					PlaySoundFromEntity(snd_lxsiren[veh], "siren_ss2000_wail", veh, "policingmp_sounds_sirens2_soundset", 0, 0)
 				elseif UseSSP3000(veh) then
 					PlaySoundFromEntity(snd_lxsiren[veh], "siren_ssp3000_wail", veh, "policingmp_sounds_sirens1_soundset", 0, 0)
 				else
@@ -305,7 +305,7 @@ function SetLxSirenStateForVeh(veh, newstate)
 				elseif UsePA500(veh) then
 					PlaySoundFromEntity(snd_lxsiren[veh], "resident_vehicles_siren_quick_02", veh, 0, 0, 0)
 				elseif UseSS2000(veh) then
-					PlaySoundFromEntity(snd_lxsiren[veh], "oiss_ssa_vehaud_etc_boy", veh, "oiss_ssa_vehaud_etc_soundset", 0, 0)
+					PlaySoundFromEntity(snd_lxsiren[veh], "siren_ss2000_yelp", veh, "policingmp_sounds_sirens2_soundset", 0, 0)
 				elseif UseSSP3000(veh) then
 					PlaySoundFromEntity(snd_lxsiren[veh], "siren_ssp3000_yelp", veh, "policingmp_sounds_sirens1_soundset", 0, 0)
 				else
@@ -320,7 +320,7 @@ function SetLxSirenStateForVeh(veh, newstate)
 				elseif UseZ3Siren(veh) then
 					PlaySoundFromEntity(snd_lxsiren[veh], "siren_z3_hyperyelp", veh, "policingmp_sounds_sirens1_soundset", 0, 0)
 				elseif UseSS2000(veh) then
-					PlaySoundFromEntity(snd_lxsiren[veh], "oiss_ssa_vehaud_etc_charles", veh, "oiss_ssa_vehaud_etc_soundset", 0, 0)
+					PlaySoundFromEntity(snd_lxsiren[veh], "siren_ss2000_priority", veh, "policingmp_sounds_sirens2_soundset", 0, 0)
 				elseif UseSSP3000(veh) then
 					PlaySoundFromEntity(snd_lxsiren[veh], "siren_ssp3000_priority", veh, "policingmp_sounds_sirens1_soundset", 0, 0)
 				else
@@ -335,7 +335,7 @@ function SetLxSirenStateForVeh(veh, newstate)
 				elseif UseZ3Siren(veh) then
 					PlaySoundFromEntity(snd_lxsiren[veh], "siren_z3_lowfrequency", veh, "policingmp_sounds_sirens1_soundset", 0, 0)
 				elseif UseSS2000(veh) then
-					PlaySoundFromEntity(snd_lxsiren[veh], "oiss_ssa_vehaud_etc_edward", veh, "oiss_ssa_vehaud_etc_soundset", 0, 0)
+					PlaySoundFromEntity(snd_lxsiren[veh], "siren_ss2000_hilo", veh, "policingmp_sounds_sirens2_soundset", 0, 0)
 				elseif UseSSP3000(veh) then
 					PlaySoundFromEntity(snd_lxsiren[veh], "siren_ssp3000_hilo", veh, "policingmp_sounds_sirens1_soundset", 0, 0)
 				else
@@ -374,7 +374,7 @@ function TogPowercallStateForVeh(veh, toggle)
 				elseif UsePA500(veh) then
 					PlaySoundFromEntity(snd_pwrcall[veh], "resident_vehicles_siren_wail_02", veh, 0, 0, 0)
 				elseif UseSS2000(veh) then
-					PlaySoundFromEntity(snd_pwrcall[veh], "oiss_ssa_vehaud_etc_adam", veh, "oiss_ssa_vehaud_etc_soundset", 0, 0)
+					PlaySoundFromEntity(snd_pwrcall[veh], "siren_ss2000_wail", veh, "policingmp_sounds_sirens2_soundset", 0, 0)
 				elseif UseSSP3000(veh) then
 					PlaySoundFromEntity(snd_pwrcall[veh], "siren_ssp3000_wail", veh, "policingmp_sounds_sirens1_soundset", 0, 0)
 				else
@@ -417,9 +417,9 @@ function SetAirManuStateForVeh(veh, newstate)
 					PlaySoundFromEntity(snd_airmanu[veh], "stretch_multi_horn", veh, 0, 0, 0)
 				elseif UseSS2000(veh) then
 					if HasHornSwitch(veh) then
-						PlaySoundFromEntity(snd_airmanu[veh], "oiss_ssa_vehaud_etc_george", veh, "oiss_ssa_vehaud_etc_soundset", 0, 0)
+						PlaySoundFromEntity(snd_airmanu[veh], "siren_ss2000_manual", veh, "policingmp_sounds_sirens2_soundset", 0, 0)
 					else
-					PlaySoundFromEntity(snd_airmanu[veh], "oiss_ssa_vehaud_etc_david", veh, "oiss_ssa_vehaud_etc_soundset", 0, 0)
+						PlaySoundFromEntity(snd_airmanu[veh], "siren_ss2000_horn", veh, "policingmp_sounds_sirens2_soundset", 0, 0)
 					end
 				elseif UseSSP3000(veh) then
 					if HasHornSwitch(veh) then
@@ -442,7 +442,7 @@ function SetAirManuStateForVeh(veh, newstate)
 				elseif UsePA500(veh) then
 					PlaySoundFromEntity(snd_airmanu[veh], "resident_vehicles_siren_wail_02", veh, 0, 0, 0)
 				elseif UseSS2000(veh) then
-					PlaySoundFromEntity(snd_airmanu[veh], "oiss_ssa_vehaud_etc_george", veh, "oiss_ssa_vehaud_etc_soundset", 0, 0)
+					PlaySoundFromEntity(snd_airmanu[veh], "siren_ss2000_manual", veh, "policingmp_sounds_sirens2_soundset", 0, 0)
 				elseif UseSSP3000(veh) then
 					PlaySoundFromEntity(snd_airmanu[veh], "siren_ssp3000_manual", veh, "policingmp_sounds_sirens1_soundset", 0, 0)
 				else
@@ -460,7 +460,7 @@ function SetAirManuStateForVeh(veh, newstate)
 				elseif UsePA500(veh) then
 					PlaySoundFromEntity(snd_airmanu[veh], "resident_vehicles_siren_quick_02", veh, 0, 0, 0)
 				elseif UseSS2000(veh) then
-					PlaySoundFromEntity(snd_airmanu[veh], "oiss_ssa_vehaud_etc_boy", veh, "oiss_ssa_vehaud_etc_soundset", 0, 0)
+					PlaySoundFromEntity(snd_airmanu[veh], "siren_ss2000_yelp", veh, "policingmp_sounds_sirens2_soundset", 0, 0)
 				elseif UseSSP3000(veh) then
 					PlaySoundFromEntity(snd_airmanu[veh], "siren_ssp3000_yelp", veh, "policingmp_sounds_sirens1_soundset", 0, 0)
 				else
@@ -567,6 +567,7 @@ RegisterCommand('toggleemergencylights', function()
 end)]]
 
 RequestScriptAudioBank("DLC_POLICINGMPAUDIO\\POLICINGMP_SIRENS1", false)
+RequestScriptAudioBank("DLC_POLICINGMPAUDIO\\POLICINGMP_SIRENS2", false)
 
 ---------------------------------------------------------------------
 Citizen.CreateThread(function()
@@ -575,6 +576,7 @@ Citizen.CreateThread(function()
 			CleanupSounds()
 
 			RequestScriptAudioBank("DLC_POLICINGMPAUDIO\\POLICINGMP_SIRENS1", false)
+			RequestScriptAudioBank("DLC_POLICINGMPAUDIO\\POLICINGMP_SIRENS2", false)
 
 			
 			----- IS IN VEHICLE -----

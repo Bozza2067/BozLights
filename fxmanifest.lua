@@ -2,7 +2,7 @@ fx_version 'cerulean'
 game 'gta5'
 
 description 'BozLights (boz_vehcontrol)'
-author 'Boz, ZaygTheRard Lt. Caine'
+author 'Boz, actuallyTOXIC, Lt. Caine, bakerxgooty, crazytaxi1000, Charleszinkey'
 version '6.0.0'
 
 client_script 'client.lua'
@@ -17,6 +17,7 @@ files {
 
 	-- Addon Sounds
 	"audio/sfx/dlc_policingmpaudio/policingmp_sirens1.awc",
+	"audio/sfx/dlc_policingmpaudio/policingmp_sirens2.awc",
 	"audio/data/policingmpaudio_sounds.dat54.rel"
 }
 
