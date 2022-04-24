@@ -1050,7 +1050,7 @@
        <Volume value="65436" />
        <Category>vehicles_sirens</Category>
       </Header>
-      <ChildSound>siren_ss2000_mastercom_b_s</ChildSound>
+      <ChildSound>siren_mastercom_b_yelp_s</ChildSound>
       <InnerAngle value="20" />
       <OuterAngle value="65" />
       <RearAttenuation value="-3" />
