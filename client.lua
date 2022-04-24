@@ -644,8 +644,10 @@ Citizen.CreateThread(function()
 						if state_airmanu[veh] ~= 1 and state_airmanu[veh] ~= 2 and state_airmanu[veh] ~= 3 then
 							state_airmanu[veh] = 0
 						end
-						ShowInfo(fstate .. "vanilla " .. tostring(UsingVanillaSiren) .. " switchmute " .. tostring(MuteHornToneSwitcher) .. "    lxsiren " .. tostring(state_lxsiren[veh]) .. " airmanu " .. tostring(state_airmanu[veh] .. " pwrcall " .. tostring(state_pwrcall[veh]) .. "    timer " .. count_bcast_timer))
-						
+						if ShowDebugInfo == true then
+							ShowInfo(fstate .. "vanilla " .. tostring(UsingVanillaSiren) .. " switchmute " .. tostring(MuteHornToneSwitcher) .. "    lxsiren " .. tostring(state_lxsiren[veh]) .. " airmanu " .. tostring(state_airmanu[veh] .. " pwrcall " .. tostring(state_pwrcall[veh]) .. "    timer " .. count_bcast_timer))
+						end
+
 						if UseFiretruckSiren(veh) and state_lxsiren[veh] == 1 then
 							TogMuteDfltSrnForVeh(veh, false)
 							dsrn_mute = false
