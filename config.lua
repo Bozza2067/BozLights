@@ -6,6 +6,7 @@ ShowDebugInfo = false
 ModelsWithNoTertiaryTone = 
 {
     "bcsonalamo",
+    "centurionlspd",
     "glpdalamo",
     "glpdalamo2",
     "glpdbison",
@@ -13,7 +14,7 @@ ModelsWithNoTertiaryTone =
     "glpdgresley",
     "glpdgresleyum",
     "glpdscout",
-    --"glpdstanier",
+    "glpdstanier",
     "sahp",
     "sahp1a",
     "sahp1b",
@@ -80,6 +81,19 @@ ModelsWithWhelenCHPSiren =
     "sahp2a",
 }
 
+ModelsWithFireSrn = -- vanilla fire truck siren
+{
+	"FIRETRUK",
+}
+
+ModelsWithMastercomB = 
+{
+    "glpdalamo",
+    "sadcrrumpo",
+    "sadcrstanier",
+    "sadcrstanierk9",
+}
+
 ModelsWithPA500 = -- Vanilla FIB Siren
 {
     "sahp1b3",
@@ -87,30 +101,26 @@ ModelsWithPA500 = -- Vanilla FIB Siren
     "sahp2b",
 }
 
-ModelsWithZ3 = 
-{
-    "glpdalamo",
-    "glpdalamo2",
-    "glpdbison",
-    "glpdbisonum",
-    "glpdgresley",
-    "glpdgresleyum",
-    "glpdscout",
-}
-
 ModelsWithSS2000 =
 {
+    "centurionlspd",
     "glpdstanier",
 }
 
 ModelsWithSSP3000 =
 {
     "bcsonalamo",
-
     "police3",
 }
 
-ModelsWithFireSrn = -- vanilla fire truck siren
+ModelsWithZ3 = 
 {
-	"FIRETRUK",
+    "glpdbison",
+    "glpdbisonum",
+    "glpdgresley",
+    "glpdgresleyum",
+    "glpdscout",
+    "sadcrnscout",
+    "sadcrtorrence",
+    "sadcrtorrslick",
 }
