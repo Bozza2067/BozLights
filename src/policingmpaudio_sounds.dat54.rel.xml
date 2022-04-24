@@ -98,7 +98,7 @@
      </Item>
      <Item>
       <ScriptName>siren_ss2000_priority</ScriptName>
-      <ChildSound>siren_ssp3000_priority_d</ChildSound>
+      <ChildSound>siren_ss2000_priority_d</ChildSound>
      </Item>
      <Item>
       <ScriptName>siren_ss2000_wail</ScriptName>
@@ -107,6 +107,22 @@
      <Item>
       <ScriptName>siren_ss2000_yelp</ScriptName>
       <ChildSound>siren_ss2000_yelp_d</ChildSound>
+     </Item>
+     <Item>
+      <ScriptName>siren_mastercom_b_horn</ScriptName>
+      <ChildSound>siren_mastercom_b_horn_d</ChildSound>
+     </Item>
+     <Item>
+      <ScriptName>siren_mastercom_b_priority</ScriptName>
+      <ChildSound>siren_mastercom_b_priority_d</ChildSound>
+     </Item>
+     <Item>
+      <ScriptName>siren_mastercom_b_wail</ScriptName>
+      <ChildSound>siren_mastercom_b_wail_d</ChildSound>
+     </Item>
+     <Item>
+      <ScriptName>siren_mastercom_b_yelp</ScriptName>
+      <ChildSound>siren_mastercom_b_yelp_d</ChildSound>
      </Item>
     </Items>
    </Item>
@@ -922,5 +938,124 @@
      <YawAngle value="90" />
      <PitchAngle value="0" />
     </Item>
+
+
+    
+    <Item type="SimpleSound">
+      <Name>siren_mastercom_b_horn_s</Name>
+      <Header>
+       <Flags value="0x0820E010" />
+       <Pitch value="0" />
+       <ReleaseTime value="50" />
+       <DopplerFactor value="0" />
+       <Category>vehicles_sirens</Category>
+       <VolumeCurveScale value="300" />
+       <Unk22 value="50" />
+      </Header>
+      <ContainerName>dlc_policingmpaudio/policingmp_sirens2</ContainerName>
+      <FileName>siren_mastercom_b_horn</FileName>
+      <WaveSlotNum value="0" />
+     </Item>
+     <Item type="DirectionalSound">
+      <Name>siren_mastercom_b_horn_d</Name>
+      <Header>
+       <Flags value="0x00008004" />
+       <Volume value="65436" />
+       <Category>vehicles_sirens</Category>
+      </Header>
+      <ChildSound>siren_mastercom_b_horn_s</ChildSound>
+      <InnerAngle value="20" />
+      <OuterAngle value="65" />
+      <RearAttenuation value="-3" />
+      <YawAngle value="90" />
+      <PitchAngle value="0" />
+     </Item>
+     <Item type="SimpleSound">
+      <Name>siren_mastercom_b_priority_s</Name>
+      <Header>
+       <Flags value="0x0820E010" />
+       <Pitch value="0" />
+       <ReleaseTime value="50" />
+       <DopplerFactor value="0" />
+       <Category>vehicles_sirens</Category>
+       <VolumeCurveScale value="300" />
+       <Unk22 value="50" />
+      </Header>
+      <ContainerName>dlc_policingmpaudio/policingmp_sirens2</ContainerName>
+      <FileName>siren_mastercom_b_priority</FileName>
+      <WaveSlotNum value="0" />
+     </Item>
+     <Item type="DirectionalSound">
+      <Name>siren_mastercom_b_priority_d</Name>
+      <Header>
+       <Flags value="0x00008004" />
+       <Volume value="65436" />
+       <Category>vehicles_sirens</Category>
+      </Header>
+      <ChildSound>siren_mastercom_b_priority_s</ChildSound>
+      <InnerAngle value="20" />
+      <OuterAngle value="65" />
+      <RearAttenuation value="-3" />
+      <YawAngle value="90" />
+      <PitchAngle value="0" />
+     </Item>
+     <Item type="SimpleSound">
+      <Name>siren_mastercom_b_wail_s</Name>
+      <Header>
+       <Flags value="0x0820E010" />
+       <Pitch value="0" />
+       <ReleaseTime value="50" />
+       <DopplerFactor value="0" />
+       <Category>vehicles_sirens</Category>
+       <VolumeCurveScale value="300" />
+       <Unk22 value="50" />
+      </Header>
+      <ContainerName>dlc_policingmpaudio/policingmp_sirens2</ContainerName>
+      <FileName>siren_mastercom_b_wail</FileName>
+      <WaveSlotNum value="0" />
+     </Item>
+     <Item type="DirectionalSound">
+      <Name>siren_mastercom_b_wail_d</Name>
+      <Header>
+       <Flags value="0x00008004" />
+       <Volume value="65436" />
+       <Category>vehicles_sirens</Category>
+      </Header>
+      <ChildSound>siren_mastercom_b_wail_s</ChildSound>
+      <InnerAngle value="20" />
+      <OuterAngle value="65" />
+      <RearAttenuation value="-3" />
+      <YawAngle value="90" />
+      <PitchAngle value="0" />
+     </Item>
+     <Item type="SimpleSound">
+      <Name>siren_mastercom_b_yelp_s</Name>
+      <Header>
+       <Flags value="0x0820E010" />
+       <Pitch value="0" />
+       <ReleaseTime value="50" />
+       <DopplerFactor value="0" />
+       <Category>vehicles_sirens</Category>
+       <VolumeCurveScale value="300" />
+       <Unk22 value="50" />
+      </Header>
+      <ContainerName>dlc_policingmpaudio/policingmp_sirens2</ContainerName>
+      <FileName>siren_mastercom_b_yelp</FileName>
+      <WaveSlotNum value="0" />
+     </Item>
+     <Item type="DirectionalSound">
+      <Name>siren_mastercom_b_yelp_d</Name>
+      <Header>
+       <Flags value="0x00008004" />
+       <Volume value="65436" />
+       <Category>vehicles_sirens</Category>
+      </Header>
+      <ChildSound>siren_ss2000_mastercom_b_s</ChildSound>
+      <InnerAngle value="20" />
+      <OuterAngle value="65" />
+      <RearAttenuation value="-3" />
+      <YawAngle value="90" />
+      <PitchAngle value="0" />
+     </Item>
   </Items>
 </Dat54>
