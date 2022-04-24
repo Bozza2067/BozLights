@@ -79,7 +79,7 @@ ModelsWithWhelenCHPSiren =
     "sahp2a",
 }
 
-ModelsWithPA500 =
+ModelsWithPA500 = -- Vanilla FIB Siren
 {
     "sahp1b3",
     "sahp1c",
