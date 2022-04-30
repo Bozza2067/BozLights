@@ -425,7 +425,7 @@ function SetLxSirenStateForVeh(veh, newstate)
 				elseif UseCHPSiren(veh) then
 					PlaySoundFromEntity(snd_lxsiren[veh], "siren_chp_evac", veh, "policingmp_sounds_sirens1_soundset", 0, 0)
 				elseif UseZ3Siren(veh) then
-					PlaySoundFromEntity(snd_lxsiren[veh], "siren_z3_lowfrequency", veh, "policingmp_sounds_sirens1_soundset", 0, 0)
+					PlaySoundFromEntity(snd_lxsiren[veh], "siren_z3_lowfreq", veh, "policingmp_sounds_sirens1_soundset", 0, 0)
 				elseif UseSS2000(veh) then
 					PlaySoundFromEntity(snd_lxsiren[veh], "siren_ss2000_hilo", veh, "policingmp_sounds_sirens2_soundset", 0, 0)
 				elseif UseAstroSpectra(veh) then
