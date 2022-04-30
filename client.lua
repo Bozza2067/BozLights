@@ -202,6 +202,16 @@ function UseMastercomB(veh)
 	end
 	return false
 end
+
+function UseAstroSpectra(veh)
+	local model = GetEntityModel(veh)
+	for i = 1, #ModelsWithAstroSpectra, 1 do
+		if model == GetHashKey(ModelsWithAstroSpectra[i]) then
+			return true
+		end
+	end
+	return false
+end
 ---------------------------------------------------------------------
 function CleanupSounds()
 	if count_sndclean_timer > delay_sndclean_timer then
@@ -297,6 +307,12 @@ function SetLxSirenStateForVeh(veh, newstate)
 					PlaySoundFromEntity(snd_lxsiren[veh], "resident_vehicles_siren_wail_02", veh, 0, 0, 0)
 				elseif UseSS2000(veh) then
 					PlaySoundFromEntity(snd_lxsiren[veh], "siren_ss2000_wail", veh, "policingmp_sounds_sirens2_soundset", 0, 0)
+				elseif UseAstroSpectra(veh) then
+					if UseLAFDSpectraWail(veh) then
+						PlaySoundFromEntity(snd_lxsiren[veh], "siren_spectra_wail2", veh, "policingmp_sounds_sirens2_soundset", 0, 0)
+					else
+						PlaySoundFromEntity(snd_lxsiren[veh], "siren_spectra_wail", veh, "policingmp_sounds_sirens2_soundset", 0, 0)
+					end
 				elseif UseMastercomB(veh) then
 					PlaySoundFromEntity(snd_lxsiren[veh], "siren_mastercom_b_wail", veh, "policingmp_sounds_sirens2_soundset", 0, 0)
 				elseif UseSSP3000(veh) then
@@ -318,6 +334,8 @@ function SetLxSirenStateForVeh(veh, newstate)
 					PlaySoundFromEntity(snd_lxsiren[veh], "resident_vehicles_siren_quick_02", veh, 0, 0, 0)
 				elseif UseSS2000(veh) then
 					PlaySoundFromEntity(snd_lxsiren[veh], "siren_ss2000_yelp", veh, "policingmp_sounds_sirens2_soundset", 0, 0)
+				elseif UseAstroSpectra(veh) then
+					PlaySoundFromEntity(snd_lxsiren[veh], "siren_spectra_yelp", veh, "policingmp_sounds_sirens2_soundset", 0, 0)
 				elseif UseMastercomB(veh) then
 					PlaySoundFromEntity(snd_lxsiren[veh], "siren_mastercom_b_yelp", veh, "policingmp_sounds_sirens2_soundset", 0, 0)
 				elseif UseSSP3000(veh) then
@@ -352,6 +370,8 @@ function SetLxSirenStateForVeh(veh, newstate)
 					PlaySoundFromEntity(snd_lxsiren[veh], "siren_z3_lowfrequency", veh, "policingmp_sounds_sirens1_soundset", 0, 0)
 				elseif UseSS2000(veh) then
 					PlaySoundFromEntity(snd_lxsiren[veh], "siren_ss2000_hilo", veh, "policingmp_sounds_sirens2_soundset", 0, 0)
+				elseif UseAstroSpectra(veh) then
+					PlaySoundFromEntity(snd_lxsiren[veh], "siren_spectra_hilo", veh, "policingmp_sounds_sirens2_soundset", 0, 0)
 				elseif UseSSP3000(veh) then
 					PlaySoundFromEntity(snd_lxsiren[veh], "siren_ssp3000_hilo", veh, "policingmp_sounds_sirens1_soundset", 0, 0)
 				else
@@ -391,6 +411,12 @@ function TogPowercallStateForVeh(veh, toggle)
 					PlaySoundFromEntity(snd_pwrcall[veh], "resident_vehicles_siren_wail_02", veh, 0, 0, 0)
 				elseif UseSS2000(veh) then
 					PlaySoundFromEntity(snd_pwrcall[veh], "siren_ss2000_wail", veh, "policingmp_sounds_sirens2_soundset", 0, 0)
+				elseif UseAstroSpectra(veh) then
+					if UseLAFDSpectraWail(veh) then
+						PlaySoundFromEntity(snd_pwrcall[veh], "siren_spectra_wail2", veh, "policingmp_sounds_sirens2_soundset", 0, 0)
+					else
+						PlaySoundFromEntity(snd_pwrcall[veh], "siren_spectra_wail", veh, "policingmp_sounds_sirens2_soundset", 0, 0)
+					end
 				elseif UseMastercomB(veh) then
 					PlaySoundFromEntity(snd_pwrcall[veh], "siren_mastercom_b_wail", veh, "policingmp_sounds_sirens2_soundset", 0, 0)
 				elseif UseSSP3000(veh) then
@@ -423,7 +449,7 @@ function SetAirManuStateForVeh(veh, newstate)
 						
 			if newstate == 1 then
 				snd_airmanu[veh] = GetSoundId()
-				if HasHornSwitch(veh) and not IsVehicleSirenOn(veh) then
+				elseif HasHornSwitch(veh) and not IsVehicleSirenOn(veh) then
 						PlaySoundFromEntity(snd_airmanu[veh], "stretch_multi_horn", veh, 0, 0, 0)
 				elseif UseCHPSiren(veh) then
 					PlaySoundFromEntity(snd_airmanu[veh], "siren_chp_horn", veh, "policingmp_sounds_sirens1_soundset", 0, 0)
@@ -441,6 +467,8 @@ function SetAirManuStateForVeh(veh, newstate)
 					else
 						PlaySoundFromEntity(snd_airmanu[veh], "siren_ss2000_horn", veh, "policingmp_sounds_sirens2_soundset", 0, 0)
 					end
+				elseif UseAstroSpectra(veh) then
+					PlaySoundFromEntity(snd_airmanu[veh], "siren_spectra_horn", veh, "policingmp_sounds_sirens2_soundset", 0, 0)
 				elseif UseSSP3000(veh) then
 					if HasHornSwitch(veh) then
 						PlaySoundFromEntity(snd_airmanu[veh], "siren_ssp3000_manual", veh, "policingmp_sounds_sirens1_soundset", 0, 0)
@@ -465,6 +493,8 @@ function SetAirManuStateForVeh(veh, newstate)
 					PlaySoundFromEntity(snd_airmanu[veh], "siren_mastercom_b_wail", veh, "policingmp_sounds_sirens2_soundset", 0, 0)
 				elseif UseSS2000(veh) then
 					PlaySoundFromEntity(snd_airmanu[veh], "siren_ss2000_manual", veh, "policingmp_sounds_sirens2_soundset", 0, 0)
+				elseif UseAstroSpectra(veh) then
+					PlaySoundFromEntity(snd_airmanu[veh], "siren_spectra_manual", veh, "policingmp_sounds_sirens2_soundset", 0, 0)
 				elseif UseSSP3000(veh) then
 					PlaySoundFromEntity(snd_airmanu[veh], "siren_ssp3000_manual", veh, "policingmp_sounds_sirens1_soundset", 0, 0)
 				else

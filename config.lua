@@ -92,6 +92,11 @@ ModelsWithFireSrn = -- vanilla fire truck siren
 	"FIRETRUK",
 }
 
+ModelsWithAstroSpectra = 
+{
+    "LSFDGRANGER",
+}
+
 ModelsWithMastercomB = 
 {
     "glpdalamo",
