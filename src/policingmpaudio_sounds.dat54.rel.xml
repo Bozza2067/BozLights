@@ -144,6 +144,10 @@
      <ScriptName>siren_mastercom_b_wail</ScriptName>
      <ChildSound>siren_mastercom_b_wail_d</ChildSound>
     </Item>
+    <Item>
+     <ScriptName>siren_lasd_horn</ScriptName>
+     <ChildSound>siren_lasd_horn_d</ChildSound>
+    </Item>
    </Items>
   </Item>
   <Item type="SimpleSound">
@@ -1097,6 +1101,35 @@
     <Category>vehicles_sirens</Category>
    </Header>
    <ChildSound>siren_spectra_horn_s</ChildSound>
+   <InnerAngle value="20" />
+   <OuterAngle value="65" />
+   <RearAttenuation value="-3" />
+   <YawAngle value="90" />
+   <PitchAngle value="0" />
+  </Item>
+  <Item type="SimpleSound">
+   <Name>siren_lasd_horn_s</Name>
+   <Header>
+    <Flags value="0x0820E010" />
+    <Pitch value="0" />
+    <ReleaseTime value="50" />
+    <DopplerFactor value="0" />
+    <Category>vehicles_sirens</Category>
+    <VolumeCurveScale value="300" />
+    <Unk22 value="50" />
+   </Header>
+   <ContainerName>dlc_policingmpaudio/policingmp_sirens2</ContainerName>
+   <FileName>siren_lasd_horn</FileName>
+   <WaveSlotNum value="0" />
+  </Item>
+  <Item type="DirectionalSound">
+   <Name>siren_lasd_horn_d</Name>
+   <Header>
+    <Flags value="0x00008004" />
+    <Volume value="65436" />
+    <Category>vehicles_sirens</Category>
+   </Header>
+   <ChildSound>siren_lasd_horn_s</ChildSound>
    <InnerAngle value="20" />
    <OuterAngle value="65" />
    <RearAttenuation value="-3" />

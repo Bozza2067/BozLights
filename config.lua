@@ -131,6 +131,11 @@ ModelsWithSS2000 =
     "sheriff",
 }
 
+ModelsWithLASDHorn = 
+{
+    "sheriff",
+}
+
 ModelsWithSSP3000 =
 {
     "bcsonalamo",
