@@ -2,6 +2,10 @@ MuteHornToneSwitcher = true
 UsingVanillaSiren = false -- UNUSED AS OF RIGHT NOW
 ShowDebugInfo = false
 
+------------------------------------
+-- VEHICLES WITH SPECIAL FEATURES --
+------------------------------------
+
 -- Vehicles with no third tone: Useful for california-compliant sirens that only have Wail and Yelp.
 ModelsWithNoTertiaryTone = 
 {
@@ -39,6 +43,8 @@ ModelsWithNoTertiaryTone =
 -- Vehicles with a 4th tone activated by a seperate button. Usually a Hi-Lo.
 ModelsWithQuarternaryTone = 
 {
+    "bcfdbat",
+
     "bcsonalamo",
     "bcsospeedo",
 
@@ -55,7 +61,7 @@ ModelsWithQuarternaryTone =
 -- Vehicles with dual sirens
 ModelsWithAuxiliaryTone = 
 {
-	
+	"rhpdscout",
 }
 
 -- Vehicles that use the horn to change tones. Disabled electronic horn. Horn behavior: Regular car horn when lights off, manual tone when lights on, change tone when sirens on.
@@ -66,15 +72,15 @@ ModelsWithHornSwitch =
     "sahp2b",
 }
 
--- By default, vehicles in the emergency class will have light/siren control features. Put vehicles in this array that you don't want to be affected.
+-- By default, vehicles in the emergency class will have light/siren control features. Emergency-classed vehicles in this list will not have those features.
 EmergencyModelsWithNoEquipment =
 {
     "glpdalamo2",
 }
 
----------------------------------------
--- VEHICLES WITH ALTERNATE SIRENS
----------------------------------------
+------------------------------------
+-- VEHICLES WITH ALTERNATE SIRENS --
+------------------------------------
 
 ModelsWithWhelenCHPSiren =
 {
@@ -93,17 +99,7 @@ ModelsWithFireSrn = -- vanilla fire truck siren
 	"FIRETRUK",
 }
 
-ModelsWithFireHorn = 
-{
-    "FIRETRUK",
-}
-
 ModelsWithAstroSpectra = 
-{
-    "LSFDGRANGER",
-}
-
-ModelsWithLAFDSpectraWail = 
 {
     "LSFDGRANGER",
 }
@@ -136,9 +132,9 @@ ModelsWithSS2000 =
     "sheriff",
 }
 
-ModelsWithLASDHorn = 
+ModelsWithCencomSapphire = 
 {
-    "sheriff",
+    "BCFDBAT",
 }
 
 ModelsWithSSP3000 =
@@ -162,4 +158,28 @@ ModelsWithZ3 =
 
     "fbi",
     "fbi2",
+}
+
+-----------------------------------
+-- VEHICLES WITH ALTERNATE TONES --
+------------------------------------
+
+ModelsWithLAFDSpectraWail = -- LAFD Wail Tone in LXSRN 1 (Wail). Will only work with vehicles that are also in ModelsWithAstroSpectra list.
+{
+    "LSFDGRANGER",
+}
+
+ModelsWithLASDHorn = -- Classic Whelen Horn
+{
+    "sheriff",
+}
+
+ModelsWithFireHorn = -- Uses vanilla fire truck horn, does not interrupt main siren
+{
+    "FIRETRUK",
+}
+
+ModelsWithCencomCarbideUltra = -- Ultra Hi-Lo tone from Whelen Cencom Carbide in LXSRN 4 (Quarternary/Hilo)
+{
+    "bcfdbat",
 }

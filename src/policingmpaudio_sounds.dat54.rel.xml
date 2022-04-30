@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORT THIS FILE AS XML TO CODEWALKER RPF EXPLORER TO GENERATE A NEW REL FILE-->
 <Dat54>
  <Version value="7126027" />
  <ContainerPaths>
@@ -148,6 +149,26 @@
      <ScriptName>siren_lasd_horn</ScriptName>
      <ChildSound>siren_lasd_horn_d</ChildSound>
     </Item>
+    <Item>
+        <ScriptName>siren_sapphire_horn</ScriptName>
+        <ChildSound>siren_sapphire_horn_d</ChildSound>
+       </Item>
+       <Item>
+        <ScriptName>siren_sapphire_wail</ScriptName>
+        <ChildSound>siren_sapphire_wail_d</ChildSound>
+       </Item>
+       <Item>
+        <ScriptName>siren_sapphire_yelp</ScriptName>
+        <ChildSound>siren_sapphire_yelp_d</ChildSound>
+       </Item>
+       <Item>
+        <ScriptName>siren_sapphire_priority</ScriptName>
+        <ChildSound>siren_sapphire_priority_d</ChildSound>
+       </Item>
+       <Item>
+        <ScriptName>siren_carbide_ultra</ScriptName>
+        <ChildSound>siren_carbide_ultra_d</ChildSound>
+       </Item>
    </Items>
   </Item>
   <Item type="SimpleSound">
@@ -1246,6 +1267,151 @@
     <Category>vehicles_sirens</Category>
    </Header>
    <ChildSound>siren_spectra_yelp_s</ChildSound>
+   <InnerAngle value="20" />
+   <OuterAngle value="65" />
+   <RearAttenuation value="-3" />
+   <YawAngle value="90" />
+   <PitchAngle value="0" />
+  </Item>
+  <Item type="SimpleSound">
+   <Name>siren_sapphire_horn_s</Name>
+   <Header>
+    <Flags value="0x0820E010" />
+    <Pitch value="0" />
+    <ReleaseTime value="50" />
+    <DopplerFactor value="0" />
+    <Category>vehicles_sirens</Category>
+    <VolumeCurveScale value="300" />
+    <Unk22 value="50" />
+   </Header>
+   <ContainerName>dlc_policingmpaudio/policingmp_sirens2</ContainerName>
+   <FileName>siren_sapphire_horn</FileName>
+   <WaveSlotNum value="0" />
+  </Item>
+  <Item type="DirectionalSound">
+   <Name>siren_sapphire_horn_d</Name>
+   <Header>
+    <Flags value="0x00008004" />
+    <Volume value="65436" />
+    <Category>vehicles_sirens</Category>
+   </Header>
+   <ChildSound>siren_sapphire_horn_s</ChildSound>
+   <InnerAngle value="20" />
+   <OuterAngle value="65" />
+   <RearAttenuation value="-3" />
+   <YawAngle value="90" />
+   <PitchAngle value="0" />
+  </Item>
+  <Item type="SimpleSound">
+   <Name>siren_carbide_ultra_s</Name>
+   <Header>
+    <Flags value="0x0820E010" />
+    <Pitch value="0" />
+    <ReleaseTime value="50" />
+    <DopplerFactor value="0" />
+    <Category>vehicles_sirens</Category>
+    <VolumeCurveScale value="300" />
+    <Unk22 value="50" />
+   </Header>
+   <ContainerName>dlc_policingmpaudio/policingmp_sirens2</ContainerName>
+   <FileName>siren_carbide_ultra</FileName>
+   <WaveSlotNum value="0" />
+  </Item>
+  <Item type="DirectionalSound">
+   <Name>siren_carbide_ultra_d</Name>
+   <Header>
+    <Flags value="0x00008004" />
+    <Volume value="65436" />
+    <Category>vehicles_sirens</Category>
+   </Header>
+   <ChildSound>siren_carbide_ultra_s</ChildSound>
+   <InnerAngle value="20" />
+   <OuterAngle value="65" />
+   <RearAttenuation value="-3" />
+   <YawAngle value="90" />
+   <PitchAngle value="0" />
+  </Item>
+  <Item type="SimpleSound">
+   <Name>siren_sapphire_priority_s</Name>
+   <Header>
+    <Flags value="0x0820E010" />
+    <Pitch value="0" />
+    <ReleaseTime value="50" />
+    <DopplerFactor value="0" />
+    <Category>vehicles_sirens</Category>
+    <VolumeCurveScale value="300" />
+    <Unk22 value="50" />
+   </Header>
+   <ContainerName>dlc_policingmpaudio/policingmp_sirens2</ContainerName>
+   <FileName>siren_sapphire_priority</FileName>
+   <WaveSlotNum value="0" />
+  </Item>
+  <Item type="DirectionalSound">
+   <Name>siren_sapphire_priority_d</Name>
+   <Header>
+    <Flags value="0x00008004" />
+    <Volume value="65436" />
+    <Category>vehicles_sirens</Category>
+   </Header>
+   <ChildSound>siren_sapphire_priority_s</ChildSound>
+   <InnerAngle value="20" />
+   <OuterAngle value="65" />
+   <RearAttenuation value="-3" />
+   <YawAngle value="90" />
+   <PitchAngle value="0" />
+  </Item>
+  <Item type="SimpleSound">
+   <Name>siren_sapphire_wail_s</Name>
+   <Header>
+    <Flags value="0x0820E010" />
+    <Pitch value="0" />
+    <ReleaseTime value="50" />
+    <DopplerFactor value="0" />
+    <Category>vehicles_sirens</Category>
+    <VolumeCurveScale value="300" />
+    <Unk22 value="50" />
+   </Header>
+   <ContainerName>dlc_policingmpaudio/policingmp_sirens2</ContainerName>
+   <FileName>siren_sapphire_wail</FileName>
+   <WaveSlotNum value="0" />
+  </Item>
+  <Item type="DirectionalSound">
+   <Name>siren_sapphire_wail_d</Name>
+   <Header>
+    <Flags value="0x00008004" />
+    <Volume value="65436" />
+    <Category>vehicles_sirens</Category>
+   </Header>
+   <ChildSound>siren_sapphire_wail_s</ChildSound>
+   <InnerAngle value="20" />
+   <OuterAngle value="65" />
+   <RearAttenuation value="-3" />
+   <YawAngle value="90" />
+   <PitchAngle value="0" />
+  </Item>
+  <Item type="SimpleSound">
+   <Name>siren_sapphire_yelp_s</Name>
+   <Header>
+    <Flags value="0x0820E010" />
+    <Pitch value="0" />
+    <ReleaseTime value="50" />
+    <DopplerFactor value="0" />
+    <Category>vehicles_sirens</Category>
+    <VolumeCurveScale value="300" />
+    <Unk22 value="50" />
+   </Header>
+   <ContainerName>dlc_policingmpaudio/policingmp_sirens2</ContainerName>
+   <FileName>siren_sapphire_yelp</FileName>
+   <WaveSlotNum value="0" />
+  </Item>
+  <Item type="DirectionalSound">
+   <Name>siren_sapphire_yelp_d</Name>
+   <Header>
+    <Flags value="0x00008004" />
+    <Volume value="65436" />
+    <Category>vehicles_sirens</Category>
+   </Header>
+   <ChildSound>siren_sapphire_yelp_s</ChildSound>
    <InnerAngle value="20" />
    <OuterAngle value="65" />
    <RearAttenuation value="-3" />
