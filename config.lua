@@ -10,9 +10,12 @@ ShowDebugInfo = false
 ModelsWithNoTertiaryTone = 
 {
     "bcfdbat",
+
     "bcsonalamo",
     "bcsospeedo",
+
     "centurionlspd",
+
     "glpdalamo",
     "glpdalamo2",
     "glpdbison",
@@ -21,7 +24,17 @@ ModelsWithNoTertiaryTone =
     "glpdgresleyum",
     "glpdscout",
     "glpdstanier",
+
     "LSFDGRANGER",
+
+    "rhpdfug",
+    "rhpdfugumk",
+    "rhpdscout",
+    "rhpdscoutk9",
+    "rhpdscoutslick",
+    "rhpdscoutumk",
+    "rhpdstanier",
+
     "sahp",
     "sahp1a",
     "sahp1b",
@@ -33,6 +46,7 @@ ModelsWithNoTertiaryTone =
     "sahp2",
     "sahp2a",
     "sahp2b",
+
     "sadcrnscout",
     "sadcrrumpo",
     "sadcrstanier",
@@ -49,6 +63,8 @@ ModelsWithQuarternaryTone =
     "bcsonalamo",
     "bcsospeedo",
 
+    "rhpdfug",
+
     "sahp",
     "sahp1a",
     "sahp1b",
@@ -62,7 +78,12 @@ ModelsWithQuarternaryTone =
 -- Vehicles with dual sirens
 ModelsWithAuxiliaryTone = 
 {
-	"rhpdscout",
+    "rhpdfug",
+    "rhpdfugumk",
+    "rhpdscout",
+    "rhpdscoutk9",
+    "rhpdscoutslick",
+    "rhpdstanier",
 }
 
 -- Vehicles that use the horn to change tones. Disabled electronic horn. Horn behavior: Regular car horn when lights off, manual tone when lights on, change tone when sirens on.
@@ -108,11 +129,12 @@ ModelsWithAstroSpectra =
 ModelsWithMastercomB = 
 {
     "glpdalamo",
+
+    "rhpdstanier",
+
     "sadcrrumpo",
     "sadcrstanier",
     "sadcrstank9",
-
-    "sheriff2",
 }
 
 ModelsWithPA500 = -- Vanilla FIB Siren
@@ -126,24 +148,19 @@ ModelsWithSS2000 =
 {
     "centurionlspd",
     "glpdstanier",
-
-    "police",
-    "police2",
-    "police4",
-    "sheriff",
 }
 
 ModelsWithCencomSapphire = 
 {
     "BCFDBAT",
+
+    "rhpdscoutumk",
 }
 
 ModelsWithSSP3000 =
 {
     "bcsonalamo",
     "bcsospeedo",
-
-    "police3",
 }
 
 ModelsWithZ3 = 
@@ -153,12 +170,16 @@ ModelsWithZ3 =
     "glpdgresley",
     "glpdgresleyum",
     "glpdscout",
+
+    "rhpdfug",
+    "rhpdfugumk",
+    "rhpdscout",
+    "rhpdscoutk9",
+    "rhpdscoutslick",
+
     "sadcrnscout",
     "sadcrtorrence",
     "sadcrtorrslick",
-
-    "fbi",
-    "fbi2",
 }
 
 -----------------------------------
@@ -172,7 +193,7 @@ ModelsWithLAFDSpectraWail = -- LAFD Wail Tone in LXSRN 1 (Wail). Will only work 
 
 ModelsWithLASDHorn = -- Classic Whelen Horn
 {
-    "sheriff",
+    "glpdstanier",
 }
 
 ModelsWithFireHorn = -- Uses vanilla fire truck horn, does not interrupt main siren
