@@ -92,6 +92,15 @@ function UseFiretruckSiren(veh)
 	end
 	return false
 end
+function UseFiretruckHorn(veh)
+	local model = GetEntityModel(veh)
+	for i = 1, #ModelsWithFireHorn, 1 do
+		if model == GetHashKey(ModelsWithFireHorn[i]) then
+			return true
+		end
+	end
+	return false
+end
 
 function HasNoTertiaryTone(veh)
 	local model = GetEntityModel(veh)
@@ -477,8 +486,8 @@ function SetAirManuStateForVeh(veh, newstate)
 					PlaySoundFromEntity(snd_airmanu[veh], "siren_chp_horn", veh, "policingmp_sounds_sirens1_soundset", 0, 0)
 				elseif UseZ3Siren(veh) then
 					PlaySoundFromEntity(snd_airmanu[veh], "siren_z3_horn", veh, "policingmp_sounds_sirens1_soundset", 0, 0)
-				elseif UseFiretruckSiren(veh) then
-					PlaySoundFromEntity(snd_airmanu[veh], "VEHICLES_HORNS_FIRETRUCK_WARNING", veh, 0, 0, 0)
+				elseif UseFiretruckSiren(veh) or UseFiretruckHorn(veh) then
+					PlaySoundFromEntity(snd_airmanu[veh], "fire_horn", veh, 0, 0, 0)
 				elseif UsePA500(veh) then
 					PlaySoundFromEntity(snd_airmanu[veh], "stretch_multi_horn", veh, 0, 0, 0)
 				elseif UseMastercomB(veh) then
@@ -724,13 +733,8 @@ Citizen.CreateThread(function()
 							ShowInfo(fstate .. "vanilla " .. tostring(UsingVanillaSiren) .. " switchmute " .. tostring(MuteHornToneSwitcher) .. "    lxsiren " .. tostring(state_lxsiren[veh]) .. " airmanu " .. tostring(state_airmanu[veh] .. " pwrcall " .. tostring(state_pwrcall[veh]) .. "    timer " .. count_bcast_timer))
 						end
 
-						if UseFiretruckSiren(veh) and state_lxsiren[veh] == 1 then
-							TogMuteDfltSrnForVeh(veh, false)
-							dsrn_mute = false
-						else
-							TogMuteDfltSrnForVeh(veh, true)
-							dsrn_mute = true
-						end
+						TogMuteDfltSrnForVeh(veh, true)
+						dsrn_mute = true
 						
 						if not IsVehicleSirenOn(veh) and state_lxsiren[veh] > 0 then
 							PlaySoundFrontend(-1, "NAV_UP_DOWN", "HUD_FRONTEND_DEFAULT_SOUNDSET", 1)
@@ -892,7 +896,7 @@ Citizen.CreateThread(function()
 							hmanu_state_new = 3
 						end
 						if hmanu_state_new == 1 then
-							if not UseFiretruckSiren(veh) then
+							if not UseFiretruckSiren(veh) or UseFiretruckHorn(veh) then
 								if state_lxsiren[veh] > 0 and actv_lxsrnmute_temp == false then
 									srntone_temp = state_lxsiren[veh]
 									SetLxSirenStateForVeh(veh, 0)
@@ -900,7 +904,7 @@ Citizen.CreateThread(function()
 								end
 							end
 						else
-							if not UseFiretruckSiren(veh) then
+							if not UseFiretruckSiren(veh) or UseFiretruckHorn(veh) then
 								if actv_lxsrnmute_temp == true then
 									SetLxSirenStateForVeh(veh, srntone_temp)
 									actv_lxsrnmute_temp = false

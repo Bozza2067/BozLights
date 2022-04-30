@@ -93,6 +93,11 @@ ModelsWithFireSrn = -- vanilla fire truck siren
 	"FIRETRUK",
 }
 
+ModelsWithFireHorn = 
+{
+    "FIRETRUK",
+}
+
 ModelsWithAstroSpectra = 
 {
     "LSFDGRANGER",
