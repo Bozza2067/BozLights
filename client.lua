@@ -212,6 +212,16 @@ function UseAstroSpectra(veh)
 	end
 	return false
 end
+
+function UseLAFDSpectraWail(veh)
+	local model = GetEntityModel(veh)
+	for i = 1, #ModelsWithLAFDSpectraWail, 1 do
+		if model == GetHashKey(ModelsWithLAFDSpectraWail[i]) then
+			return true
+		end
+	end
+	return false
+end
 ---------------------------------------------------------------------
 function CleanupSounds()
 	if count_sndclean_timer > delay_sndclean_timer then
@@ -449,7 +459,7 @@ function SetAirManuStateForVeh(veh, newstate)
 						
 			if newstate == 1 then
 				snd_airmanu[veh] = GetSoundId()
-				elseif HasHornSwitch(veh) and not IsVehicleSirenOn(veh) then
+				if HasHornSwitch(veh) and not IsVehicleSirenOn(veh) then
 						PlaySoundFromEntity(snd_airmanu[veh], "stretch_multi_horn", veh, 0, 0, 0)
 				elseif UseCHPSiren(veh) then
 					PlaySoundFromEntity(snd_airmanu[veh], "siren_chp_horn", veh, "policingmp_sounds_sirens1_soundset", 0, 0)

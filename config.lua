@@ -16,6 +16,7 @@ ModelsWithNoTertiaryTone =
     "glpdgresleyum",
     "glpdscout",
     "glpdstanier",
+    "LSFDGRANGER",
     "sahp",
     "sahp1a",
     "sahp1b",
@@ -93,6 +94,11 @@ ModelsWithFireSrn = -- vanilla fire truck siren
 }
 
 ModelsWithAstroSpectra = 
+{
+    "LSFDGRANGER",
+}
+
+ModelsWithLAFDSpectraWail = 
 {
     "LSFDGRANGER",
 }
