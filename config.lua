@@ -6,6 +6,7 @@ ShowDebugInfo = false
 ModelsWithNoTertiaryTone = 
 {
     "bcsonalamo",
+    "bcsospeedo",
     "centurionlspd",
     "glpdalamo",
     "glpdalamo2",
@@ -38,6 +39,7 @@ ModelsWithNoTertiaryTone =
 ModelsWithQuarternaryTone = 
 {
     "bcsonalamo",
+    "bcsospeedo",
 
     "sahp",
     "sahp1a",
@@ -57,9 +59,7 @@ ModelsWithAuxiliaryTone =
 
 -- Vehicles that use the horn to change tones. Disabled electronic horn. Horn behavior: Regular car horn when lights off, manual tone when lights on, change tone when sirens on.
 ModelsWithHornSwitch = 
-{
-    "bcsonalamo",
-    
+{   
     "sahp1b3",
     "sahp1c",
     "sahp2b",
@@ -123,6 +123,7 @@ ModelsWithSS2000 =
 ModelsWithSSP3000 =
 {
     "bcsonalamo",
+    "bcsospeedo",
 
     "police3",
 }
