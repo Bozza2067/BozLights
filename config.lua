@@ -9,6 +9,7 @@ ShowDebugInfo = false
 -- Vehicles with no third tone: Useful for california-compliant sirens that only have Wail and Yelp.
 ModelsWithNoTertiaryTone = 
 {
+    "bcfdbat",
     "bcsonalamo",
     "bcsospeedo",
     "centurionlspd",
