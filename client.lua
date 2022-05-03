@@ -932,7 +932,7 @@ Citizen.CreateThread(function()
 							hmanu_state_new = 3
 						end
 						if hmanu_state_new == 1 then
-							if not UseFiretruckSiren(veh) or UseFiretruckHorn(veh) then
+							if not UseFiretruckSiren(veh) and not UseFiretruckHorn(veh) then
 								if state_lxsiren[veh] > 0 and actv_lxsrnmute_temp == false then
 									srntone_temp = state_lxsiren[veh]
 									SetLxSirenStateForVeh(veh, 0)
@@ -940,7 +940,7 @@ Citizen.CreateThread(function()
 								end
 							end
 						else
-							if not UseFiretruckSiren(veh) or UseFiretruckHorn(veh) then
+							if not UseFiretruckSiren(veh) and not UseFiretruckHorn(veh) then
 								if actv_lxsrnmute_temp == true then
 									SetLxSirenStateForVeh(veh, srntone_temp)
 									actv_lxsrnmute_temp = false
