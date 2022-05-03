@@ -26,10 +26,6 @@ ModelsWithNoTertiaryTone =
     "glpdstanier",
 
     "LSFDGRANGER",
-    
-    "lsiaops1",
-    "lsiaops2",
-    "lsiaops3",
 
     "rhpdfug",
     "rhpdfugumk",
@@ -163,9 +159,6 @@ ModelsWithCencomSapphire =
 
 ModelsWithSSP3000 =
 {
-    "lsiaops1",
-    "lsiaops2",
-
     "bcsonalamo",
     "bcsospeedo",
 }
