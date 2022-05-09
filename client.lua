@@ -959,8 +959,6 @@ Citizen.CreateThread(function()
 										PlaySoundFrontend(-1, "NAV_LEFT_RIGHT", "HUD_FRONTEND_DEFAULT_SOUNDSET", 1) -- on
 										if cstate == 1 then
 											nstate = 2
-										elseif not HasNoTertiaryTone(veh) and cstate == 2 then
-											nstate = 3
 										else
 											nstate = 1
 										end
