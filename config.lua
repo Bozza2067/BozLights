@@ -9,7 +9,9 @@ ShowDebugInfo = false
 -- This section will let you define vehicles that don't conform to that default.
 
 NonEmergencyModelsWithEquipment = 
-
+    "lsiaops1",
+    "lsiaops2",
+    "lsiaops3",
 }
 
 EmergencyModelsWithNoEquipment =
@@ -177,6 +179,8 @@ ModelsWithSSP3000 =
 {
     "bcsonalamo",
     "bcsospeedo",
+    "lsiaops1",
+    "lsiaops2",
 }
 
 ModelsWithZ3 = 
