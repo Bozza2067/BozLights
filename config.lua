@@ -2,6 +2,21 @@ MuteHornToneSwitcher = true
 UsingVanillaSiren = false -- UNUSED AS OF RIGHT NOW
 ShowDebugInfo = false
 
+----------------------
+-- ENABLED VEHICLES --
+----------------------
+-- By default, vehicles in the emergency class will have light/siren control features. 
+-- This section will let you define vehicles that don't conform to that default.
+
+NonEmergencyModelsWithEquipment = 
+
+}
+
+EmergencyModelsWithNoEquipment =
+{
+    "glpdalamo2",
+}
+
 ------------------------------------
 -- VEHICLES WITH SPECIAL FEATURES --
 ------------------------------------
@@ -73,6 +88,7 @@ ModelsWithQuarternaryTone =
     "sahp1e",
     "sahp2",
     "sahp2a",
+    "fbi"
 }
 
 -- Vehicles with dual sirens
@@ -94,11 +110,6 @@ ModelsWithHornSwitch =
     "sahp2b",
 }
 
--- By default, vehicles in the emergency class will have light/siren control features. Emergency-classed vehicles in this list will not have those features.
-EmergencyModelsWithNoEquipment =
-{
-    "glpdalamo2",
-}
 
 ------------------------------------
 -- VEHICLES WITH ALTERNATE SIRENS --

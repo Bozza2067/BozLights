@@ -211,6 +211,15 @@ function HasNoEquipment(veh)
 	end
 	return false
 end
+function HasEquipment(veh)
+	local model = GetEntityModel(veh)
+	for i = 1, #NonEmergencyModelsWithEquipment, 1 do
+		if model == GetHashKey(NonEmergencyModelsWithEquipment[i]) then
+			return true
+		end
+	end
+	return false
+end
 
 function UseMastercomB(veh)
 	local model = GetEntityModel(veh)
@@ -763,7 +772,7 @@ Citizen.CreateThread(function()
 					
 					
 					--- IS EMERG VEHICLE ---
-					if GetVehicleClass(veh) == 18 and not HasNoEquipment(veh) then
+					if (GetVehicleClass(veh) == 18 and not HasNoEquipment(veh)) or HasEquipment(veh) then
 						
 						local actv_manu = false
 						local actv_horn = false
