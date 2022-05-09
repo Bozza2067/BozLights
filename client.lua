@@ -935,20 +935,22 @@ Citizen.CreateThread(function()
 								end
 								
 							-- TOG AUXILIARY TONE
-							elseif IsDisabledControlJustReleased(0, 82) then
-								if state_pwrcall[veh] == true then
-									PlaySoundFrontend(-1, "NAV_UP_DOWN", "HUD_FRONTEND_DEFAULT_SOUNDSET", 1)
-									TogPowercallStateForVeh(veh, false)
-									count_bcast_timer = delay_bcast_timer
-								else
-									if IsVehicleSirenOn(veh) then
-										PlaySoundFrontend(-1, "NAV_LEFT_RIGHT", "HUD_FRONTEND_DEFAULT_SOUNDSET", 1)
-										TogPowercallStateForVeh(veh, true)
+							elseif IsDisabledControlJustReleased(0, 165) then
+								if HasAuxiliaryTone(veh) then
+									if state_pwrcall[veh] == true then
+										PlaySoundFrontend(-1, "NAV_UP_DOWN", "HUD_FRONTEND_DEFAULT_SOUNDSET", 1)
+										TogPowercallStateForVeh(veh, false)
 										count_bcast_timer = delay_bcast_timer
+									else
+										if IsVehicleSirenOn(veh) then
+											PlaySoundFrontend(-1, "NAV_LEFT_RIGHT", "HUD_FRONTEND_DEFAULT_SOUNDSET", 1)
+											TogPowercallStateForVeh(veh, true)
+											count_bcast_timer = delay_bcast_timer
+										end
 									end
+								else
+									ShowInfo("This vehicle is not equipped with an auxiliary siren.")
 								end
-								
-							end
 							
 							-- BROWSE LX SRN TONES
 							if state_lxsiren[veh] > 0 then
