@@ -951,6 +951,7 @@ Citizen.CreateThread(function()
 								else
 									ShowInfo("This vehicle is not equipped with an auxiliary siren.")
 								end
+							end
 							
 							-- BROWSE LX SRN TONES
 							if state_lxsiren[veh] > 0 then
