@@ -137,6 +137,11 @@ ModelsWithMastercomB =
     "sadcrstank9",
 }
 
+ModelsWithNergy400 = 
+{
+    "fbi"
+}
+
 ModelsWithPA500 = -- Vanilla FIB Siren
 {
     "sahp1b3",

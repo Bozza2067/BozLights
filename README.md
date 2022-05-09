@@ -14,3 +14,5 @@ https://www.lcpdfr.com/downloads/gta5mods/audio/34308-ultimate-federal-signal-sm
 https://www.lcpdfr.com/downloads/gta5mods/audio/24119-code-3-z3-siren-fivem-ready-studio-recorded/
 
 https://www.lcpdfr.com/downloads/gta5mods/audio/21926-charleszinkeys-realistic-chp-siren-els/
+
+https://www.lcpdfr.com/downloads/gta5mods/audio/17748-soundoff-nergy-400-electronic-siren
