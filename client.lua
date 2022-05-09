@@ -204,8 +204,8 @@ end
 
 function HasNoEquipment(veh)
 	local model = GetEntityModel(veh)
-	for i = 1, #EmergencyModelsWithNoEquipment, 1 do
-		if model == GetHashKey(EmergencyModelsWithNoEquipment[i]) then
+	for i = 1, #NonEmergencyModelsWithEquipment, 1 do
+		if model == GetHashKey(NonEmergencyModelsWithEquipment[i]) then
 			return true
 		end
 	end
@@ -213,8 +213,8 @@ function HasNoEquipment(veh)
 end
 function HasEquipment(veh)
 	local model = GetEntityModel(veh)
-	for i = 1, #NonEmergencyModelsWithEquipment, 1 do
-		if model == GetHashKey(NonEmergencyModelsWithEquipment[i]) then
+	for i = 1, #EmergencyModelsWithNoEquipment, 1 do
+		if model == GetHashKey(EmergencyModelsWithNoEquipment[i]) then
 			return true
 		end
 	end
