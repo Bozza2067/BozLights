@@ -204,17 +204,18 @@ end
 
 function HasNoEquipment(veh)
 	local model = GetEntityModel(veh)
-	for i = 1, #NonEmergencyModelsWithEquipment, 1 do
-		if model == GetHashKey(NonEmergencyModelsWithEquipment[i]) then
+	for i = 1, #ModelsWithNoEquipment, 1 do
+		if model == GetHashKey(ModelsWithNoEquipment[i]) then
 			return true
 		end
 	end
 	return false
 end
+
 function HasEquipment(veh)
 	local model = GetEntityModel(veh)
-	for i = 1, #EmergencyModelsWithNoEquipment, 1 do
-		if model == GetHashKey(EmergencyModelsWithNoEquipment[i]) then
+	for i = 1, #ModelsWithEquipment, 1 do
+		if model == GetHashKey(ModelsWithEquipment[i]) then
 			return true
 		end
 	end
@@ -772,7 +773,7 @@ Citizen.CreateThread(function()
 					
 					
 					--- IS EMERG VEHICLE ---
-					if (GetVehicleClass(veh) == 18 and not HasNoEquipment(veh)) or HasEquipment(veh) then
+					if GetVehicleClass(veh) == 18 and not HasNoEquipment(veh) or HasEquipment(veh) then
 						
 						local actv_manu = false
 						local actv_horn = false

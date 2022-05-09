@@ -8,15 +8,16 @@ ShowDebugInfo = false
 -- By default, vehicles in the emergency class will have light/siren control features. 
 -- This section will let you define vehicles that don't conform to that default.
 
-NonEmergencyModelsWithEquipment = 
+ModelsWithEquipment = 
+{
     "lsiaops1",
     "lsiaops2",
     "lsiaops3",
 }
 
-EmergencyModelsWithNoEquipment =
+ModelsWithNoEquipment =
 {
-    "glpdalamo2",
+    "glpdalamo2"
 }
 
 ------------------------------------
@@ -70,6 +71,9 @@ ModelsWithNoTertiaryTone =
     "sadcrstank9",
     "sadcrtorrence",
     "sadcrtorrslick",
+    
+    "lsiaops1",
+    "lsiaops2",
 }
 
 -- Vehicles with a 4th tone activated by a seperate button. Usually a Hi-Lo.
