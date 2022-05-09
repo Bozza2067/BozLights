@@ -827,7 +827,7 @@ Citizen.CreateThread(function()
 						end
 					
 						----- CONTROLS -----
-						if not IsPauseMenuActive() then
+						if not IsPauseMenuActive() and UpdateOnscreenKeyboard() ~= 0 then
 						
 							-- TOG DFLT SRN LIGHTS
 							if IsDisabledControlJustReleased(0, 85) then
@@ -952,7 +952,7 @@ Citizen.CreateThread(function()
 									ShowInfo("This vehicle is not equipped with an auxiliary siren.")
 								end
 							end
-							
+
 							-- BROWSE LX SRN TONES
 							if state_lxsiren[veh] > 0 then
 								if IsDisabledControlJustReleased(0, 80) or (IsDisabledControlJustPressed(0, 86) and HasHornSwitch(veh)) then
@@ -1034,7 +1034,7 @@ Citizen.CreateThread(function()
 					if GetVehicleClass(veh) ~= 14 and GetVehicleClass(veh) ~= 15 and GetVehicleClass(veh) ~= 16 and GetVehicleClass(veh) ~= 21 then
 					
 						----- CONTROLS -----
-						if not IsPauseMenuActive() then
+						if not IsPauseMenuActive() and UpdateOnscreenKeyboard() ~= 0 then
 						
 							-- IND L
 							if IsDisabledControlJustReleased(0, 84) then -- INPUT_VEH_PREV_RADIO_TRACK
