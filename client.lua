@@ -869,30 +869,38 @@ Citizen.CreateThread(function()
 									count_bcast_timer = delay_bcast_timer
 								end
 							elseif IsDisabledControlJustReleased(0, 160) then
-								local cstate = state_lxsiren[veh]
-								if cstate ~= 3 then
-									if IsVehicleSirenOn(veh) then
-										PlaySoundFrontend(-1, "NAV_LEFT_RIGHT", "HUD_FRONTEND_DEFAULT_SOUNDSET", 1) -- on
-										SetLxSirenStateForVeh(veh, 3)
+								if not HasNoTertiaryTone(veh) then
+									local cstate = state_lxsiren[veh]
+									if cstate ~= 3 then
+										if IsVehicleSirenOn(veh) then
+											PlaySoundFrontend(-1, "NAV_LEFT_RIGHT", "HUD_FRONTEND_DEFAULT_SOUNDSET", 1) -- on
+											SetLxSirenStateForVeh(veh, 3)
+											count_bcast_timer = delay_bcast_timer
+										end
+									else
+										PlaySoundFrontend(-1, "NAV_UP_DOWN", "HUD_FRONTEND_DEFAULT_SOUNDSET", 1) -- off
+										SetLxSirenStateForVeh(veh, 0)
 										count_bcast_timer = delay_bcast_timer
 									end
 								else
-									PlaySoundFrontend(-1, "NAV_UP_DOWN", "HUD_FRONTEND_DEFAULT_SOUNDSET", 1) -- off
-									SetLxSirenStateForVeh(veh, 0)
-									count_bcast_timer = delay_bcast_timer
+									ShowInfo("This vehicle is not equipped with a tertiary siren tone.")
 								end
 							elseif IsDisabledControlJustReleased(0, 164) then
-								local cstate = state_lxsiren[veh]
-								if cstate ~= 4 then
-									if IsVehicleSirenOn(veh) then
-										PlaySoundFrontend(-1, "NAV_LEFT_RIGHT", "HUD_FRONTEND_DEFAULT_SOUNDSET", 1) -- on
-										SetLxSirenStateForVeh(veh, 4)
+								if HasQuarternaryTone(veh) then
+									local cstate = state_lxsiren[veh]
+									if cstate ~= 4 then
+										if IsVehicleSirenOn(veh) then
+											PlaySoundFrontend(-1, "NAV_LEFT_RIGHT", "HUD_FRONTEND_DEFAULT_SOUNDSET", 1) -- on
+											SetLxSirenStateForVeh(veh, 4)
+											count_bcast_timer = delay_bcast_timer
+										end
+									else
+										PlaySoundFrontend(-1, "NAV_UP_DOWN", "HUD_FRONTEND_DEFAULT_SOUNDSET", 1) -- off
+										SetLxSirenStateForVeh(veh, 0)
 										count_bcast_timer = delay_bcast_timer
 									end
 								else
-									PlaySoundFrontend(-1, "NAV_UP_DOWN", "HUD_FRONTEND_DEFAULT_SOUNDSET", 1) -- off
-									SetLxSirenStateForVeh(veh, 0)
-									count_bcast_timer = delay_bcast_timer
+									ShowInfo("This vehicle is not equipped with a quarternary siren tone.")
 								end
 
 							-- TOG LX SIREN
