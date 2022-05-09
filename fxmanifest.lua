@@ -18,6 +18,7 @@ files {
 	-- Addon Sounds
 	"audio/sfx/dlc_policingmpaudio/policingmp_sirens1.awc",
 	"audio/sfx/dlc_policingmpaudio/policingmp_sirens2.awc",
+	"audio/sfx/dlc_policingmpaudio/policingmp_sirens3.awc",
 	"audio/data/policingmpaudio_sounds.dat54.rel"
 }
 

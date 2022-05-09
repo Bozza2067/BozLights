@@ -13,6 +13,7 @@ ModelsWithEquipment =
     "lsiaops1",
     "lsiaops2",
     "lsiaops3",
+    "riot3",
 }
 
 ModelsWithNoEquipment =
@@ -177,6 +178,12 @@ ModelsWithCencomSapphire =
     "BCFDBAT",
 
     "rhpdscoutumk",
+}
+
+ModelsWith295HFS = {
+    "centurionfib",
+    "centurionlssd",
+    "riot3",
 }
 
 ModelsWithSSP3000 =
