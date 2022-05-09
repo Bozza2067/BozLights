@@ -788,6 +788,13 @@ Citizen.CreateThread(function()
 						DisableControlAction(0, 19, true) -- INPUT_CHARACTER_WHEEL 
 						DisableControlAction(0, 85, true) -- INPUT_VEH_RADIO_WHEEL 
 						DisableControlAction(0, 80, true) -- INPUT_VEH_CIN_CAM 
+
+						DisableControlAction(0, 157, true) -- INPUT_SELECT_WEAPON_UNARMED (1)
+						DisableControlAction(0, 158, true) -- INPUT_SELECT_WEAPON_MELEE (2)
+						DisableControlAction(0, 160, true) -- INPUT_SELECT_WEAPON_SHOTGUN (3)
+						DisableControlAction(0, 164, true) -- INPUT_SELECT_WEAPON_HEAVY (4) ()
+						DisableControlAction(0, 165, true) -- INPUT_SELECT_WEAPON_SPECIAL (5) (Auxiliary)
+
 					
 						SetVehRadioStation(veh, "OFF")
 						SetVehicleRadioEnabled(veh, false)
@@ -833,6 +840,61 @@ Citizen.CreateThread(function()
 									count_bcast_timer = delay_bcast_timer
 								end		
 							
+							-- TOG BOZ SIREN (NEW)
+
+							elseif IsDisabledControlJustReleased(0, 157) then
+								local cstate = state_lxsiren[veh]
+								if cstate ~= 1 then
+									if IsVehicleSirenOn(veh) then
+										PlaySoundFrontend(-1, "NAV_LEFT_RIGHT", "HUD_FRONTEND_DEFAULT_SOUNDSET", 1) -- on
+										SetLxSirenStateForVeh(veh, 1)
+										count_bcast_timer = delay_bcast_timer
+									end
+								else
+									PlaySoundFrontend(-1, "NAV_UP_DOWN", "HUD_FRONTEND_DEFAULT_SOUNDSET", 1) -- off
+									SetLxSirenStateForVeh(veh, 0)
+									count_bcast_timer = delay_bcast_timer
+								end
+							elseif IsDisabledControlJustReleased(0, 158) then
+								local cstate = state_lxsiren[veh]
+								if cstate ~= 2 then
+									if IsVehicleSirenOn(veh) then
+										PlaySoundFrontend(-1, "NAV_LEFT_RIGHT", "HUD_FRONTEND_DEFAULT_SOUNDSET", 1) -- on
+										SetLxSirenStateForVeh(veh, 2)
+										count_bcast_timer = delay_bcast_timer
+									end
+								else
+									PlaySoundFrontend(-1, "NAV_UP_DOWN", "HUD_FRONTEND_DEFAULT_SOUNDSET", 1) -- off
+									SetLxSirenStateForVeh(veh, 0)
+									count_bcast_timer = delay_bcast_timer
+								end
+							elseif IsDisabledControlJustReleased(0, 160) then
+								local cstate = state_lxsiren[veh]
+								if cstate ~= 3 then
+									if IsVehicleSirenOn(veh) then
+										PlaySoundFrontend(-1, "NAV_LEFT_RIGHT", "HUD_FRONTEND_DEFAULT_SOUNDSET", 1) -- on
+										SetLxSirenStateForVeh(veh, 3)
+										count_bcast_timer = delay_bcast_timer
+									end
+								else
+									PlaySoundFrontend(-1, "NAV_UP_DOWN", "HUD_FRONTEND_DEFAULT_SOUNDSET", 1) -- off
+									SetLxSirenStateForVeh(veh, 0)
+									count_bcast_timer = delay_bcast_timer
+								end
+							elseif IsDisabledControlJustReleased(0, 164) then
+								local cstate = state_lxsiren[veh]
+								if cstate ~= 4 then
+									if IsVehicleSirenOn(veh) then
+										PlaySoundFrontend(-1, "NAV_LEFT_RIGHT", "HUD_FRONTEND_DEFAULT_SOUNDSET", 1) -- on
+										SetLxSirenStateForVeh(veh, 4)
+										count_bcast_timer = delay_bcast_timer
+									end
+								else
+									PlaySoundFrontend(-1, "NAV_UP_DOWN", "HUD_FRONTEND_DEFAULT_SOUNDSET", 1) -- off
+									SetLxSirenStateForVeh(veh, 0)
+									count_bcast_timer = delay_bcast_timer
+								end
+
 							-- TOG LX SIREN
 							elseif IsDisabledControlJustReleased(0, 19) then
 								local cstate = state_lxsiren[veh]
@@ -873,7 +935,7 @@ Citizen.CreateThread(function()
 								end
 								
 							-- TOG AUXILIARY TONE
-							elseif IsDisabledControlJustReleased(0, 82) and HasAuxiliaryTone(veh) then
+							elseif IsDisabledControlJustReleased(0, 82) then
 								if state_pwrcall[veh] == true then
 									PlaySoundFrontend(-1, "NAV_UP_DOWN", "HUD_FRONTEND_DEFAULT_SOUNDSET", 1)
 									TogPowercallStateForVeh(veh, false)
