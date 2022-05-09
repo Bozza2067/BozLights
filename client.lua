@@ -969,29 +969,6 @@ Citizen.CreateThread(function()
 									end
 								end
 							end
-
-							-- 	TOG QUARTERNARY TONE
-							if IsDisabledControlJustReleased(0, 81) then
-								if IsVehicleSirenOn(veh) and HasQuarternaryTone(veh) then
-									local cstate = state_lxsiren[veh]
-									local nstate = 4
-									PlaySoundFrontend(-1, "NAV_LEFT_RIGHT", "HUD_FRONTEND_DEFAULT_SOUNDSET", 1) -- on
-									if cstate == 1 then
-										pstate = cstate
-										nstate = 4
-									elseif cstate == 2 then	
-										pstate = cstate
-										nstate = 4
-									elseif cstate == 3 then	
-										pstate = cstate
-										nstate = 4
-									elseif cstate == 4 then	
-										nstate = pstate
-									end
-									SetLxSirenStateForVeh(veh, nstate)
-									count_bcast_timer = delay_bcast_timer
-								end
-							end
 										
 							-- MANU
 							if state_lxsiren[veh] < 1 then
