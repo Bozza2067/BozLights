@@ -95,7 +95,9 @@ ModelsWithQuarternaryTone =
     "sahp1e",
     "sahp2",
     "sahp2a",
-    "fbi"
+
+    "fbi",
+    "police3",
 }
 
 -- Vehicles with dual sirens
@@ -115,6 +117,11 @@ ModelsWithHornSwitch =
     "sahp1b3",
     "sahp1c",
     "sahp2b",
+}
+
+ModelsWithRumbler =
+{
+    "police3",
 }
 
 
@@ -192,6 +199,8 @@ ModelsWithSSP3000 =
     "bcsospeedo",
     "lsiaops1",
     "lsiaops2",
+    
+    "police3",
 }
 
 ModelsWithZ3 = 
