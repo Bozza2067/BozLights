@@ -1,6 +1,6 @@
 MuteHornToneSwitcher = true
 UsingVanillaSiren = false -- UNUSED AS OF RIGHT NOW
-ShowDebugInfo = false
+ShowDebugInfo = true
 
 ----------------------
 -- ENABLED VEHICLES --
@@ -98,6 +98,7 @@ ModelsWithQuarternaryTone =
 
     "fbi",
     "police3",
+    "police",
 }
 
 -- Vehicles with dual sirens
@@ -178,6 +179,7 @@ ModelsWithSS2000 =
 {
     "centurionlspd",
     "glpdstanier",
+    "police",
 }
 
 ModelsWithCencomSapphire = 
