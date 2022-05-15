@@ -122,7 +122,10 @@ ModelsWithHornSwitch =
 
 ModelsWithRumbler =
 {
+    "lsiaops1",
+    "lsiaops2",
     "police3",
+    "police",
 }
 
 

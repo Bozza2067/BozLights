@@ -53,6 +53,7 @@ local pstate = 1
 local fstate = 0
 
 local rumblerState = 0
+local SecondManualBrowserToneOption = 0
 
 
 
@@ -497,24 +498,32 @@ function SetLxSirenStateForVeh(veh, newstate)
 				snd_lxsiren[veh] = GetSoundId()
 				if UseSSP3000(veh) then
 					PlaySoundFromEntity(snd_lxsiren[veh], "siren_ssp3000_wail_r", veh, "policingmp_sounds_sirens3_soundset", 0, 0)
+				elseif UseSS2000(veh) then
+					PlaySoundFromEntity(snd_lxsiren[veh], "siren_ss2000_wail_r", veh, "policingmp_sounds_sirens3_soundset", 0, 0)
 				end
 			
 			elseif newstate == 6 then
 				snd_lxsiren[veh] = GetSoundId()
 				if UseSSP3000(veh) then
 					PlaySoundFromEntity(snd_lxsiren[veh], "siren_ssp3000_yelp_r", veh, "policingmp_sounds_sirens3_soundset", 0, 0)
+				elseif UseSS2000(veh) then
+					PlaySoundFromEntity(snd_lxsiren[veh], "siren_ss2000_yelp_r", veh, "policingmp_sounds_sirens3_soundset", 0, 0)
 				end
 			
 			elseif newstate == 7 then
 				snd_lxsiren[veh] = GetSoundId()
 				if UseSSP3000(veh) then
 					PlaySoundFromEntity(snd_lxsiren[veh], "siren_ssp3000_priority_r", veh, "policingmp_sounds_sirens3_soundset", 0, 0)
+				elseif UseSS2000(veh) then
+					PlaySoundFromEntity(snd_lxsiren[veh], "siren_ss2000_priority_r", veh, "policingmp_sounds_sirens3_soundset", 0, 0)
 				end
 			
 			elseif newstate == 8 then
 				snd_lxsiren[veh] = GetSoundId()
 				if UseSSP3000(veh) then
 					PlaySoundFromEntity(snd_lxsiren[veh], "siren_ssp3000_hilo_r", veh, "policingmp_sounds_sirens3_soundset", 0, 0)
+				elseif UseSS2000(veh) then
+					PlaySoundFromEntity(snd_lxsiren[veh], "siren_ss2000_hilo_r", veh, "policingmp_sounds_sirens3_soundset", 0, 0)
 				end
 
 				TogMuteDfltSrnForVeh(veh, true)
@@ -659,12 +668,16 @@ function SetAirManuStateForVeh(veh, newstate)
 				snd_airmanu[veh] = GetSoundId()
 				if UseSSP3000(veh) then
 					PlaySoundFromEntity(snd_airmanu[veh], "siren_ssp3000_horn_r", veh, "policingmp_sounds_sirens3_soundset", 0, 0)
+				elseif UseSS2000(veh) then
+					PlaySoundFromEntity(snd_airmanu[veh], "siren_ss2000_horn_r", veh, "policingmp_sounds_sirens3_soundset", 0, 0)
 				end
 
 			elseif newstate == 4 then
 				snd_airmanu[veh] = GetSoundId()
 				if UseSSP3000(veh) then
 					PlaySoundFromEntity(snd_airmanu[veh], "siren_ssp3000_manual_r", veh, "policingmp_sounds_sirens3_soundset", 0, 0)
+				elseif UseSS2000(veh) then
+					PlaySoundFromEntity(snd_airmanu[veh], "siren_ss2000_wail_r", veh, "policingmp_sounds_sirens3_soundset", 0, 0)
 				end
 				
 			end				
@@ -855,7 +868,7 @@ Citizen.CreateThread(function()
 							state_airmanu[veh] = 0
 						end
 						if ShowDebugInfo == true then
-							ShowInfo(fstate .. "vanilla " .. tostring(UsingVanillaSiren) .. " switchmute " .. tostring(MuteHornToneSwitcher) .. "    lxsiren " .. tostring(state_lxsiren[veh]) .. " airmanu " .. tostring(state_airmanu[veh] .. " pwrcall " .. tostring(state_pwrcall[veh]) .. "    timer " .. count_bcast_timer))
+							ShowInfo(tostring(state_lxsiren[veh]) .. tostring(state_airmanu[veh]) .. tostring(state_pwrcall[veh]))
 						end
 
 						TogMuteDfltSrnForVeh(veh, true)
