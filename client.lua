@@ -77,6 +77,7 @@ Citizen.CreateThread(function()
 	end
 end)
 
+
 RegisterCommand('togglevanillasirens', function()
 	if not UsingVanillaSiren then
 		UsingVanillaSiren = true
@@ -84,6 +85,42 @@ RegisterCommand('togglevanillasirens', function()
 		UsingVanillaSiren = false
 	end
 end)
+
+RegisterKeyMapping('riser', 'Toggle Bomb Bay Doors', 'keyboard', '')
+RegisterCommand('riser', function()
+	local ped = GetPlayerPed(-1)
+	local veh = GetVehiclePedIsIn(ped, false)
+	if useRiser(veh) then
+		if not AreBombBayDoorsOpen(veh) then
+			OpenBombBayDoors(veh)
+		else
+			CloseBombBayDoors(veh)
+		end
+	else
+		ShowInfo("This vehicle is not equipped with this function.")
+	end
+end)
+
+-- EXPERIMENTAL FEATURE, NOT IN USE AT THE MOMENT
+--[[RegisterKeyMapping('toggleemergencylights', 'Toggle Emergency Lights', 'keyboard', 'J')
+RegisterCommand('toggleemergencylights', function()
+    local playerped = GetPlayerPed(-1)
+    local veh = GetVehiclePedIsUsing(playerped)
+    if IsPedInAnyVehicle(playerped, false) and GetPedInVehicleSeat(veh, -1) == playerped and GetVehicleClass(veh) == 18 and not IsPauseMenuActive() then
+        if IsVehicleSirenOn(veh) then
+            PlaySoundFrontend(-1, "NAV_UP_DOWN", "HUD_FRONTEND_DEFAULT_SOUNDSET", 1)
+            SetVehicleSiren(veh, false)
+        else
+            PlaySoundFrontend(-1, "NAV_LEFT_RIGHT", "HUD_FRONTEND_DEFAULT_SOUNDSET", 1)
+            SetVehicleSiren(veh, true)
+        end
+    end	
+end)]]
+
+
+RequestScriptAudioBank("DLC_POLICINGMPAUDIO\\POLICINGMP_SIRENS1", false)
+RequestScriptAudioBank("DLC_POLICINGMPAUDIO\\POLICINGMP_SIRENS2", false)
+RequestScriptAudioBank("DLC_POLICINGMPAUDIO\\POLICINGMP_SIRENS3", false)
 
 ---------------------------------------------------------------------
 function UseFiretruckSiren(veh)
@@ -299,6 +336,16 @@ function UseCarbideUltra(veh)
 	local model = GetEntityModel(veh)
 	for i = 1, #ModelsWithCencomCarbideUltra, 1 do
 		if model == GetHashKey(ModelsWithCencomCarbideUltra[i]) then
+			return true
+		end
+	end
+	return false
+end
+
+function useRiser(veh)
+	local model = GetEntityModel(veh)
+	for i = 1, #ModelsWithRiser, 1 do
+		if model == GetHashKey(ModelsWithRiser[i]) then
 			return true
 		end
 	end
@@ -763,26 +810,6 @@ AddEventHandler("lvc_SetAirManuState_c", function(sender, newstate)
 	end
 end)
 
--- EXPERIMENTAL FEATURE, NOT IN USE AT THE MOMENT
---[[RegisterKeyMapping('toggleemergencylights', 'Toggle Emergency Lights', 'keyboard', 'J')
-RegisterCommand('toggleemergencylights', function()
-    local playerped = GetPlayerPed(-1)
-    local veh = GetVehiclePedIsUsing(playerped)
-    if IsPedInAnyVehicle(playerped, false) and GetPedInVehicleSeat(veh, -1) == playerped and GetVehicleClass(veh) == 18 and not IsPauseMenuActive() then
-        if IsVehicleSirenOn(veh) then
-            PlaySoundFrontend(-1, "NAV_UP_DOWN", "HUD_FRONTEND_DEFAULT_SOUNDSET", 1)
-            SetVehicleSiren(veh, false)
-        else
-            PlaySoundFrontend(-1, "NAV_LEFT_RIGHT", "HUD_FRONTEND_DEFAULT_SOUNDSET", 1)
-            SetVehicleSiren(veh, true)
-        end
-    end	
-end)]]
-
-RequestScriptAudioBank("DLC_POLICINGMPAUDIO\\POLICINGMP_SIRENS1", false)
-RequestScriptAudioBank("DLC_POLICINGMPAUDIO\\POLICINGMP_SIRENS2", false)
-RequestScriptAudioBank("DLC_POLICINGMPAUDIO\\POLICINGMP_SIRENS3", false)
-
 ---------------------------------------------------------------------
 Citizen.CreateThread(function()
 	while true do
@@ -804,11 +831,14 @@ Citizen.CreateThread(function()
 				
 					DisableControlAction(0, 84, true) -- INPUT_VEH_PREV_RADIO_TRACK  
 					DisableControlAction(0, 83, true) -- INPUT_VEH_NEXT_RADIO_TRACK 
+
+					-- Get speed in mph
+					local speed = GetEntitySpeed(veh) * 2.236936
 					
 					if state_indic[veh] ~= ind_state_o and state_indic[veh] ~= ind_state_l and state_indic[veh] ~= ind_state_r and state_indic[veh] ~= ind_state_h then
 						state_indic[veh] = ind_state_o
 					end
-					
+
 					-- INDIC AUTO CONTROL
 					if actv_ind_timer == true then	
 						if state_indic[veh] == ind_state_l or state_indic[veh] == ind_state_r then
@@ -828,7 +858,13 @@ Citizen.CreateThread(function()
 							end
 						end
 					end
-					
+
+					-- close highriser if above 30mph
+					if useRiser(veh) then
+						if speed >= 30 and AreBombBayDoorsOpen(veh) then
+							CloseBombBayDoors(veh)
+						end
+					end
 					
 					--- IS EMERG VEHICLE ---
 					if GetVehicleClass(veh) == 18 and not HasNoEquipment(veh) or HasEquipment(veh) then
@@ -985,6 +1021,7 @@ Citizen.CreateThread(function()
 							elseif IsDisabledControlJustPressed(0, 159) then
 								local cstate = state_lxsiren[veh]
 								if HasRumbler(veh) then
+									PlaySoundFrontend(-1, "Beep_Red", "DLC_HEIST_HACKING_SNAKE_SOUNDS", 1)
 									if rumblerState == 0 then
 										rumblerState = 1
 										if cstate ~= 0 then
@@ -994,7 +1031,9 @@ Citizen.CreateThread(function()
 										rumblerState = 0
 										SetLxSirenStateForVeh(veh, cstate - 4)
 									end
-								end	
+								else
+									ShowInfo("This vehicle is not equipped with a low frequency siren.")
+								end
 
 							-- TOG LX SIREN
 							elseif IsDisabledControlJustPressed(0, 19) then

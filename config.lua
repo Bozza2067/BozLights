@@ -1,6 +1,6 @@
 MuteHornToneSwitcher = true
 UsingVanillaSiren = false -- UNUSED AS OF RIGHT NOW
-ShowDebugInfo = true
+ShowDebugInfo = false
 
 ----------------------
 -- ENABLED VEHICLES --
@@ -80,13 +80,11 @@ ModelsWithNoTertiaryTone =
 -- Vehicles with a 4th tone activated by a seperate button. Usually a Hi-Lo.
 ModelsWithQuarternaryTone = 
 {
+    -- PolicingMP
     "bcfdbat",
-
     "bcsonalamo",
     "bcsospeedo",
-
     "rhpdfug",
-
     "sahp",
     "sahp1a",
     "sahp1b",
@@ -96,6 +94,15 @@ ModelsWithQuarternaryTone =
     "sahp2",
     "sahp2a",
 
+    -- New Wave RP
+	"LCPD2E",
+	"LCPD2F",
+	"LCPD3B",
+	"LCPD4B",
+	"LCPD6A",
+	"LCPDT6A",
+
+    -- Vanilla
     "fbi",
     "police3",
     "police",
@@ -122,12 +129,30 @@ ModelsWithHornSwitch =
 
 ModelsWithRumbler =
 {
+    -- PolicingMP
     "lsiaops1",
     "lsiaops2",
+
+    -- New Wave RP
+	"LCPD2E",
+	"LCPD2F",
+	"LCPD3B",
+	"LCPD4B",
+	"LCPD6A",
+	"LCPDT6A",
+
+    -- Vanilla
     "police3",
     "police",
 }
 
+-- Vehicles that have moving parts assigned to bomb bay doors (e.g. highrisers)
+ModelsWithRiser =
+{
+    -- New Wave RP
+	"FDLCLADDER",
+	"LCPD4B",
+}
 
 ------------------------------------
 -- VEHICLES WITH ALTERNATE SIRENS --
@@ -147,6 +172,14 @@ ModelsWithWhelenCHPSiren =
 
 ModelsWithFireSrn = -- vanilla fire truck siren
 {
+    -- New Wave RP
+	"FDLCHAZMAT",
+	"FDLCHEAVY",
+	"FDLCLADDER",
+	"FDLCRESCUE",
+	"FDLCTRUCK",
+
+    -- Vanilla
 	"FIRETRUK",
 }
 
@@ -180,15 +213,21 @@ ModelsWithPA500 = -- Vanilla FIB Siren
 
 ModelsWithSS2000 =
 {
+    -- PolicingMP
     "centurionlspd",
     "glpdstanier",
+    
+    -- New Wave RP
+	"LCPD2F",
+	"LCPD4B",
+    
+    -- Vanilla
     "police",
 }
 
 ModelsWithCencomSapphire = 
 {
     "BCFDBAT",
-
     "rhpdscoutumk",
 }
 
@@ -200,11 +239,19 @@ ModelsWith295HFS = {
 
 ModelsWithSSP3000 =
 {
+    -- PolicingMP
     "bcsonalamo",
     "bcsospeedo",
     "lsiaops1",
     "lsiaops2",
+
+    -- New Wave RP
+	"LCPD2E",
+	"LCPD3B",
+	"LCPD6A",
+	"LCPDT6A",
     
+    -- Vanilla
     "police3",
 }
 
