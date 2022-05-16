@@ -85,6 +85,7 @@ ModelsWithQuarternaryTone =
     "bcsonalamo",
     "bcsospeedo",
     "rhpdfug",
+    "rhpdSCOUTSLICK",
     "sahp",
     "sahp1a",
     "sahp1b",
