@@ -35,6 +35,10 @@ ModelsWithNoTertiaryTone =
 
     "centurionlspd",
 
+    "cfpdscout",
+    "cfpdtorrence",
+    "cfpdalamo",
+
     "glpdalamo",
     "glpdalamo2",
     "glpdbison",
@@ -84,6 +88,9 @@ ModelsWithQuarternaryTone =
     "bcfdbat",
     "bcsonalamo",
     "bcsospeedo",
+    "cfpdscout",
+    "cfpdtorrence",
+    "cfpdalamo",
     "rhpdfug",
     "rhpdSCOUTSLICK",
     "sahp",
@@ -112,6 +119,9 @@ ModelsWithQuarternaryTone =
 -- Vehicles with dual sirens
 ModelsWithAuxiliaryTone = 
 {
+    "cfpdscout",
+    "cfpdtorrence",
+    "cfpdalamo",
     "rhpdfug",
     "rhpdfugumk",
     "rhpdscout",
@@ -228,7 +238,9 @@ ModelsWithSS2000 =
 
 ModelsWithCencomSapphire = 
 {
-    "BCFDBAT",
+    "bcfdbat",
+    "glpdbisonum",
+    "glpdgresleyum",
     "rhpdscoutumk",
 }
 
@@ -258,10 +270,12 @@ ModelsWithSSP3000 =
 
 ModelsWithZ3 = 
 {
+    "cfpdscout",
+    "cfpdtorrence",
+    "cfpdalamo",
+
     "glpdbison",
-    "glpdbisonum",
     "glpdgresley",
-    "glpdgresleyum",
     "glpdscout",
 
     "rhpdfug",
