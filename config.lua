@@ -39,6 +39,18 @@ ModelsWithNoTertiaryTone =
     "cfpdtorrence",
     "cfpdalamo",
 
+    "dppd",
+    "dppdk9",
+    "dppdsgt",
+    "dppdunmk",
+    "dppdcara",
+    "dppdcara2",
+    "dppdcaraspare",
+    "dppdscout",
+    "dppdscoutk9",
+    "dppdscoutsgt",
+    "dppdscoutunmk",
+
     "glpdalamo",
     "glpdalamo2",
     "glpdbison",
@@ -122,6 +134,17 @@ ModelsWithAuxiliaryTone =
     "cfpdscout",
     "cfpdtorrence",
     "cfpdalamo",
+    "dppd",
+    "dppdk9",
+    "dppdsgt",
+    "dppdunmk",
+    "dppdcara",
+    "dppdcara2",
+    "dppdcaraspare",
+    "dppdscout",
+    "dppdscoutk9",
+    "dppdscoutsgt",
+    "dppdscoutunmk",
     "rhpdfug",
     "rhpdfugumk",
     "rhpdscout",
@@ -255,6 +278,13 @@ ModelsWithSSP3000 =
     -- PolicingMP
     "bcsonalamo",
     "bcsospeedo",
+    "dppdcara",
+    "dppdcara2",
+    "dppdcaraspare",
+    "dppdscout",
+    "dppdscoutk9",
+    "dppdscoutsgt",
+    "dppdscoutunmk",
     "lsiaops1",
     "lsiaops2",
 
@@ -266,6 +296,14 @@ ModelsWithSSP3000 =
     
     -- Vanilla
     "police3",
+}
+
+ModelsWithTouchmaster = 
+{
+    "dppd",
+    "dppdk9",
+    "dppdsgt",
+    "dppdunmk",
 }
 
 ModelsWithZ3 = 

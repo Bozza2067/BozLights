@@ -342,6 +342,16 @@ function UseCarbideUltra(veh)
 	return false
 end
 
+function UseTouchmaster(veh)
+	local model = GetEntityModel(veh)
+	for i = 1, #ModelsWithTouchmaster, 1 do
+		if model == GetHashKey(ModelsWithTouchmaster[i]) then
+			return true
+		end
+	end
+	return false
+end
+
 function useRiser(veh)
 	local model = GetEntityModel(veh)
 	for i = 1, #ModelsWithRiser, 1 do
@@ -452,6 +462,8 @@ function SetLxSirenStateForVeh(veh, newstate)
 					PlaySoundFromEntity(snd_lxsiren[veh], "siren_ss2000_wail", veh, "policingmp_sounds_sirens2_soundset", 0, 0)
 				elseif UseSapphire(veh) then
 					PlaySoundFromEntity(snd_lxsiren[veh], "siren_sapphire_wail", veh, "policingmp_sounds_sirens2_soundset", 0, 0)
+				elseif UseTouchmaster(veh) then
+					PlaySoundFromEntity(snd_lxsiren[veh], "siren_touchmaster_wail", veh, "policingmp_sounds_sirens3_soundset", 0, 0)
 				elseif UseAstroSpectra(veh) then
 					if UseLAFDSpectraWail(veh) then
 						PlaySoundFromEntity(snd_lxsiren[veh], "siren_spectra_wail2", veh, "policingmp_sounds_sirens2_soundset", 0, 0)
@@ -485,6 +497,8 @@ function SetLxSirenStateForVeh(veh, newstate)
 					PlaySoundFromEntity(snd_lxsiren[veh], "siren_ss2000_yelp", veh, "policingmp_sounds_sirens2_soundset", 0, 0)
 				elseif UseSapphire(veh) then
 					PlaySoundFromEntity(snd_lxsiren[veh], "siren_sapphire_yelp", veh, "policingmp_sounds_sirens2_soundset", 0, 0)
+				elseif UseTouchmaster(veh) then
+					PlaySoundFromEntity(snd_lxsiren[veh], "siren_touchmaster_yelp", veh, "policingmp_sounds_sirens3_soundset", 0, 0)
 				elseif UseAstroSpectra(veh) then
 					PlaySoundFromEntity(snd_lxsiren[veh], "siren_spectra_yelp", veh, "policingmp_sounds_sirens2_soundset", 0, 0)
 				elseif UseMastercomB(veh) then
@@ -508,6 +522,8 @@ function SetLxSirenStateForVeh(veh, newstate)
 					PlaySoundFromEntity(snd_lxsiren[veh], "siren_nergy_yelp_reverse", veh, "policingmp_sounds_sirens2_soundset", 0, 0)
 				elseif UseSS2000(veh) then
 					PlaySoundFromEntity(snd_lxsiren[veh], "siren_ss2000_priority", veh, "policingmp_sounds_sirens2_soundset", 0, 0)
+				elseif UseTouchmaster(veh) then
+					PlaySoundFromEntity(snd_lxsiren[veh], "siren_touchmaster_priority", veh, "policingmp_sounds_sirens3_soundset", 0, 0)
 				elseif UseSapphire(veh) then
 					PlaySoundFromEntity(snd_lxsiren[veh], "siren_sapphire_priority", veh, "policingmp_sounds_sirens2_soundset", 0, 0)
 				elseif UseMastercomB(veh) then
@@ -532,6 +548,8 @@ function SetLxSirenStateForVeh(veh, newstate)
 					PlaySoundFromEntity(snd_lxsiren[veh], "siren_nergy_hilo", veh, "policingmp_sounds_sirens2_soundset", 0, 0)
 				elseif UseSS2000(veh) then
 					PlaySoundFromEntity(snd_lxsiren[veh], "siren_ss2000_hilo", veh, "policingmp_sounds_sirens2_soundset", 0, 0)
+				elseif UseTouchmaster(veh) then
+					PlaySoundFromEntity(snd_lxsiren[veh], "siren_touchmaster_ultra", veh, "policingmp_sounds_sirens3_soundset", 0, 0)
 				elseif UseAstroSpectra(veh) then
 					PlaySoundFromEntity(snd_lxsiren[veh], "siren_spectra_hilo", veh, "policingmp_sounds_sirens2_soundset", 0, 0)
 				elseif UseSSP3000(veh) then
@@ -572,6 +590,12 @@ function SetLxSirenStateForVeh(veh, newstate)
 				elseif UseSS2000(veh) then
 					PlaySoundFromEntity(snd_lxsiren[veh], "siren_ss2000_hilo_r", veh, "policingmp_sounds_sirens3_soundset", 0, 0)
 				end
+			
+			elseif newstate == 9 then
+				snd_lxsiren[veh] = GetSoundId()
+				if UseTouchmaster(veh) then
+					PlaySoundFromEntity(snd_lxsiren[veh], "siren_touchmaster_wail2", veh, "policingmp_sounds_sirens3_soundset", 0, 0)
+				end
 
 				TogMuteDfltSrnForVeh(veh, true)
 				
@@ -603,6 +627,8 @@ function TogPowercallStateForVeh(veh, toggle)
 					PlaySoundFromEntity(snd_pwrcall[veh], "resident_vehicles_siren_wail_02", veh, 0, 0, 0)
 				elseif UseSS2000(veh) then
 					PlaySoundFromEntity(snd_pwrcall[veh], "siren_ss2000_wail", veh, "policingmp_sounds_sirens2_soundset", 0, 0)
+				elseif UseTouchmaster(veh) then
+					PlaySoundFromEntity(snd_pwrcall[veh], "siren_touchmaster_wail", veh, "policingmp_sounds_sirens3_soundset", 0, 0)
 				elseif UseSapphire(veh) then
 					PlaySoundFromEntity(snd_pwrcall[veh], "siren_sapphire_wail", veh, "policingmp_sounds_sirens2_soundset", 0, 0)
 				elseif UseAstroSpectra(veh) then
@@ -655,6 +681,8 @@ function SetAirManuStateForVeh(veh, newstate)
 					PlaySoundFromEntity(snd_airmanu[veh], "siren_z3_horn", veh, "policingmp_sounds_sirens1_soundset", 0, 0)
 				elseif Use295HFS(veh) then
 					PlaySoundFromEntity(snd_airmanu[veh], "siren_295hfs_horn", veh, "policingmp_sounds_sirens3_soundset", 0, 0)
+				elseif UseTouchmaster(veh) then
+					PlaySoundFromEntity(snd_airmanu[veh], "siren_touchmaster_horn", veh, "policingmp_sounds_sirens3_soundset", 0, 0)
 				elseif UseNERGY(veh) then
 					PlaySoundFromEntity(snd_airmanu[veh], "siren_nergy_horn", veh, "policingmp_sounds_sirens2_soundset", 0, 0)
 				elseif UseFiretruckSiren(veh) or UseFiretruckHorn(veh) then
@@ -697,6 +725,8 @@ function SetAirManuStateForVeh(veh, newstate)
 					PlaySoundFromEntity(snd_airmanu[veh], "siren_nergy_wail", veh, "policingmp_sounds_sirens2_soundset", 0, 0)
 				elseif Use295HFS(veh) then
 					PlaySoundFromEntity(snd_airmanu[veh], "siren_295hfs_wail", veh, "policingmp_sounds_sirens3_soundset", 0, 0)
+				elseif UseTouchmaster(veh) then
+					PlaySoundFromEntity(snd_airmanu[veh], "siren_touchmaster_manual", veh, "policingmp_sounds_sirens3_soundset", 0, 0)
 				elseif UseMastercomB(veh) then
 					PlaySoundFromEntity(snd_airmanu[veh], "siren_mastercom_b_wail", veh, "policingmp_sounds_sirens2_soundset", 0, 0)
 				elseif UseSS2000(veh) then
@@ -894,7 +924,7 @@ Citizen.CreateThread(function()
 						SetVehRadioStation(veh, "OFF")
 						SetVehicleRadioEnabled(veh, false)
 						
-						if state_lxsiren[veh] ~= 1 and state_lxsiren[veh] ~= 2 and state_lxsiren[veh] ~= 3 and state_lxsiren[veh] ~= 4 and state_lxsiren[veh] ~= 5 and state_lxsiren[veh] ~= 6 and state_lxsiren[veh] ~= 7 and state_lxsiren[veh] ~= 8 then
+						if state_lxsiren[veh] ~= 1 and state_lxsiren[veh] ~= 2 and state_lxsiren[veh] ~= 3 and state_lxsiren[veh] ~= 4 and state_lxsiren[veh] ~= 5 and state_lxsiren[veh] ~= 6 and state_lxsiren[veh] ~= 7 and state_lxsiren[veh] ~= 8 and state_lxsiren[veh] ~= 9 then
 							state_lxsiren[veh] = 0
 						end
 						if state_pwrcall[veh] ~= true then
@@ -943,7 +973,13 @@ Citizen.CreateThread(function()
 
 							elseif IsDisabledControlJustPressed(0, 157) then
 								local cstate = state_lxsiren[veh]
-								if cstate ~= 1 and cstate ~= 5 then
+								if cstate == 2 and UseTouchmaster(veh) then
+									if IsVehicleSirenOn(veh) then
+										PlaySoundFrontend(-1, "Beep_Red", "DLC_HEIST_HACKING_SNAKE_SOUNDS", 1)
+										SetLxSirenStateForVeh(veh, 9)
+										count_bcast_timer = delay_bcast_timer
+									end
+								elseif cstate ~= 1 and cstate ~= 5 and cstate ~= 9 then
 									if IsVehicleSirenOn(veh) then
 										PlaySoundFrontend(-1, "Beep_Red", "DLC_HEIST_HACKING_SNAKE_SOUNDS", 1)
 										if rumblerState == 1 then
@@ -1104,7 +1140,7 @@ Citizen.CreateThread(function()
 									local nstate = 1
 									if IsVehicleSirenOn(veh) then
 										--PlaySoundFrontend(-1, "Beep_Red", "DLC_HEIST_HACKING_SNAKE_SOUNDS", 1)
-										if cstate == 1 or cstate == 5 then
+										if cstate == 1 or cstate == 5 or cstate == 9 then
 											if rumblerState == 1 then
 												nstate = 6
 											else
@@ -1113,6 +1149,8 @@ Citizen.CreateThread(function()
 										else
 											if rumblerState == 1 then
 												nstate = 5
+											elseif UseTouchmaster(veh) then
+												nstate = 9
 											else
 												nstate = 1
 											end
@@ -1178,7 +1216,11 @@ Citizen.CreateThread(function()
 						if hmanu_state_new == 1 or hmanu_state_new == 3 then
 							if not UseFiretruckSiren(veh) and not UseFiretruckHorn(veh) then
 								if state_lxsiren[veh] > 0 and actv_lxsrnmute_temp == false then
-									srntone_temp = state_lxsiren[veh]
+									if state_lxsiren[veh] == 9 then
+										srntone_temp = 1
+									else
+										srntone_temp = state_lxsiren[veh]
+									end
 									SetLxSirenStateForVeh(veh, 0)
 									actv_lxsrnmute_temp = true
 								end
