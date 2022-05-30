@@ -50,6 +50,7 @@ ModelsWithNoTertiaryTone =
     "dppdscoutk9",
     "dppdscoutsgt",
     "dppdscoutunmk",
+    "dppdscoutvol",
 
     "glpdalamo",
     "glpdalamo2",
@@ -285,6 +286,7 @@ ModelsWithSSP3000 =
     "dppdscoutk9",
     "dppdscoutsgt",
     "dppdscoutunmk",
+    "dppdscoutvol",
     "lsiaops1",
     "lsiaops2",
 
