@@ -239,6 +239,12 @@ ModelsWithNergy400 =
     "fbi"
 }
 
+ModelsWithOmega90 = 
+{
+    "amb_rox_sheriff2",
+    "amb_rox_swat",
+}
+
 ModelsWithPA500 = -- Vanilla FIB Siren
 {
     "sahp1b3",
