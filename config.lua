@@ -243,6 +243,7 @@ ModelsWithOmega90 =
 {
     "amb_rox_sheriff2",
     "amb_rox_swat",
+    "police",
 }
 
 ModelsWithPA500 = -- Vanilla FIB Siren
@@ -263,7 +264,8 @@ ModelsWithSS2000 =
 	"LCPD4B",
     
     -- Vanilla
-    "police",
+    "police2",
+    "police4",
 }
 
 ModelsWithCencomSapphire = 
