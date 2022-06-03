@@ -614,7 +614,7 @@ function SetLxSirenStateForVeh(veh, newstate)
 				if UseTouchmaster(veh) then
 					PlaySoundFromEntity(snd_lxsiren[veh], "siren_touchmaster_wail2", veh, "policingmp_sounds_sirens3_soundset", 0, 0)
 				elseif UseOmega90(veh) then
-					PlaySoundFromEntity(snd_airmanu[veh], "siren_omega_wail2", veh, "policingmp_sounds_sirens4_soundset", 0, 0)end
+					PlaySoundFromEntity(snd_airmanu[veh], "siren_omega_wail2", veh, "policingmp_sounds_sirens4_soundset", 0, 0)
 				end
 				TogMuteDfltSrnForVeh(veh, true)
 				
@@ -874,6 +874,7 @@ Citizen.CreateThread(function()
 			RequestScriptAudioBank("DLC_POLICINGMPAUDIO\\POLICINGMP_SIRENS1", false)
 			RequestScriptAudioBank("DLC_POLICINGMPAUDIO\\POLICINGMP_SIRENS2", false)
 			RequestScriptAudioBank("DLC_POLICINGMPAUDIO\\POLICINGMP_SIRENS3", false)
+			RequestScriptAudioBank("DLC_POLICINGMPAUDIO\\POLICINGMP_SIRENS4", false)
 
 			
 			----- IS IN VEHICLE -----

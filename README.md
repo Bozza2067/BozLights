@@ -17,3 +17,4 @@ Have a look if you want, contributions welcome!
 - https://www.lcpdfr.com/downloads/gta5mods/audio/22875-whelen-cencom-sapphire-fivem-ready-studio-recorded/
 - https://www.lcpdfr.com/downloads/gta5mods/audio/11625-iv-touchmaster-delta/
 - https://www.lcpdfr.com/downloads/gta5mods/audio/26135-touchmaster-delta-siren-fivem-ready-studio-recorded/
+- https://www.lcpdfr.com/downloads/gta5mods/audio/25042-omega-90-federal-signal-siren-fivem-ready-studio-recorded/
