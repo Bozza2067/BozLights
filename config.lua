@@ -114,6 +114,8 @@ ModelsWithQuarternaryTone =
     "sahp1e",
     "sahp2",
     "sahp2a",
+    "amb_rox_sheriff2",
+    "amb_rox_swat",
 
     -- New Wave RP
 	"LCPD2E",
@@ -165,8 +167,17 @@ ModelsWithHornSwitch =
 ModelsWithRumbler =
 {
     -- PolicingMP
+    "dppdcara",
+    "dppdcara2",
+    "dppdcaraspare",
+    "dppdscout",
+    "dppdscoutk9",
+    "dppdscoutsgt",
+    "dppdscoutunmk",
     "lsiaops1",
     "lsiaops2",
+    "amb_rox_sheriff2",
+    "amb_rox_swat",
 
     -- New Wave RP
 	"LCPD2E",
@@ -192,6 +203,17 @@ ModelsWithRiser =
 ------------------------------------
 -- VEHICLES WITH ALTERNATE SIRENS --
 ------------------------------------
+
+ModelsWithBMWIntegratedSiren =
+{
+    "polthrust",
+}
+
+ModelsWith80K = 
+{
+    "policeold1",
+    "policeold2",
+}
 
 ModelsWithWhelenCHPSiren =
 {

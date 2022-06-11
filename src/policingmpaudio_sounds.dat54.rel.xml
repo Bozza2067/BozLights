@@ -331,6 +331,42 @@
 					<ScriptName>siren_omega_yelp</ScriptName>
 					<ChildSound>siren_omega_yelp_d</ChildSound>
 				</Item>
+				<Item>
+					<ScriptName>siren_80k_wail</ScriptName>
+					<ChildSound>siren_80k_wail_d</ChildSound>
+				</Item>
+				<Item>
+					<ScriptName>siren_80k_wail2</ScriptName>
+					<ChildSound>siren_80k_wail2_d</ChildSound>
+				</Item>
+				<Item>
+					<ScriptName>siren_80k_yelp</ScriptName>
+					<ChildSound>siren_80k_yelp_d</ChildSound>
+				</Item>
+				<Item>
+					<ScriptName>siren_80k_horn</ScriptName>
+					<ChildSound>siren_80k_horn_d</ChildSound>
+				</Item>
+				<Item>
+					<ScriptName>siren_80k_hilofast</ScriptName>
+					<ChildSound>siren_80k_hilofast_d</ChildSound>
+				</Item>
+				<Item>
+					<ScriptName>siren_80k_hilo</ScriptName>
+					<ChildSound>siren_80k_hilo_d</ChildSound>
+				</Item>
+				<Item>
+					<ScriptName>siren_3955_wail</ScriptName>
+					<ChildSound>siren_3955_wail_d</ChildSound>
+				</Item>
+				<Item>
+					<ScriptName>siren_3955_yelp</ScriptName>
+					<ChildSound>siren_3955_yelp_d</ChildSound>
+				</Item>
+				<Item>
+					<ScriptName>siren_3955_horn</ScriptName>
+					<ChildSound>siren_3955_horn_d</ChildSound>
+				</Item>
 			</Items>
 		</Item>
 		<Item type="SimpleSound">
@@ -1551,7 +1587,6 @@
 			<YawAngle value="90" />
 			<PitchAngle value="0" />
 		</Item>
-
 		<Item type="SimpleSound">
 			<Name>siren_295hfs_horn_s</Name>
 			<Header>
@@ -2445,6 +2480,267 @@
 				<Category>vehicles_sirens</Category>
 			</Header>
 			<ChildSound>siren_omega_wail2_s</ChildSound>
+			<InnerAngle value="20" />
+			<OuterAngle value="65" />
+			<RearAttenuation value="-3" />
+			<YawAngle value="90" />
+			<PitchAngle value="0" />
+		</Item>
+		<Item type="SimpleSound">
+			<Name>siren_80k_wail_s</Name>
+			<Header>
+				<Flags value="0x0820E010" />
+				<Pitch value="0" />
+				<ReleaseTime value="50" />
+				<DopplerFactor value="0" />
+				<Category>vehicles_sirens</Category>
+				<VolumeCurveScale value="300" />
+				<Unk22 value="50" />
+			</Header>
+			<ContainerName>dlc_policingmpaudio/policingmp_sirens4</ContainerName>
+			<FileName>siren_80k_wail</FileName>
+			<WaveSlotNum value="0" />
+		</Item>
+		<Item type="DirectionalSound">
+			<Name>siren_80k_wail_d</Name>
+			<Header>
+				<Flags value="0x00008004" />
+				<Volume value="65436" />
+				<Category>vehicles_sirens</Category>
+			</Header>
+			<ChildSound>siren_80k_wail_s</ChildSound>
+			<InnerAngle value="20" />
+			<OuterAngle value="65" />
+			<RearAttenuation value="-3" />
+			<YawAngle value="90" />
+			<PitchAngle value="0" />
+		</Item>
+		<Item type="SimpleSound">
+			<Name>siren_80k_wail2_s</Name>
+			<Header>
+				<Flags value="0x0820E010" />
+				<Pitch value="0" />
+				<ReleaseTime value="50" />
+				<DopplerFactor value="0" />
+				<Category>vehicles_sirens</Category>
+				<VolumeCurveScale value="300" />
+				<Unk22 value="50" />
+			</Header>
+			<ContainerName>dlc_policingmpaudio/policingmp_sirens4</ContainerName>
+			<FileName>siren_80k_wail2</FileName>
+			<WaveSlotNum value="0" />
+		</Item>
+		<Item type="DirectionalSound">
+			<Name>siren_80k_wail2_d</Name>
+			<Header>
+				<Flags value="0x00008004" />
+				<Volume value="65436" />
+				<Category>vehicles_sirens</Category>
+			</Header>
+			<ChildSound>siren_80k_wail2_s</ChildSound>
+			<InnerAngle value="20" />
+			<OuterAngle value="65" />
+			<RearAttenuation value="-3" />
+			<YawAngle value="90" />
+			<PitchAngle value="0" />
+		</Item>
+		<Item type="SimpleSound">
+			<Name>siren_80k_yelp_s</Name>
+			<Header>
+				<Flags value="0x0820E010" />
+				<Pitch value="0" />
+				<ReleaseTime value="50" />
+				<DopplerFactor value="0" />
+				<Category>vehicles_sirens</Category>
+				<VolumeCurveScale value="300" />
+				<Unk22 value="50" />
+			</Header>
+			<ContainerName>dlc_policingmpaudio/policingmp_sirens4</ContainerName>
+			<FileName>siren_80k_yelp</FileName>
+			<WaveSlotNum value="0" />
+		</Item>
+		<Item type="DirectionalSound">
+			<Name>siren_80k_yelp_d</Name>
+			<Header>
+				<Flags value="0x00008004" />
+				<Volume value="65436" />
+				<Category>vehicles_sirens</Category>
+			</Header>
+			<ChildSound>siren_80k_yelp_s</ChildSound>
+			<InnerAngle value="20" />
+			<OuterAngle value="65" />
+			<RearAttenuation value="-3" />
+			<YawAngle value="90" />
+			<PitchAngle value="0" />
+		</Item>
+		<Item type="SimpleSound">
+			<Name>siren_80k_hilofast_s</Name>
+			<Header>
+				<Flags value="0x0820E010" />
+				<Pitch value="0" />
+				<ReleaseTime value="50" />
+				<DopplerFactor value="0" />
+				<Category>vehicles_sirens</Category>
+				<VolumeCurveScale value="300" />
+				<Unk22 value="50" />
+			</Header>
+			<ContainerName>dlc_policingmpaudio/policingmp_sirens4</ContainerName>
+			<FileName>siren_80k_hilofast</FileName>
+			<WaveSlotNum value="0" />
+		</Item>
+		<Item type="DirectionalSound">
+			<Name>siren_80k_hilofast_d</Name>
+			<Header>
+				<Flags value="0x00008004" />
+				<Volume value="65436" />
+				<Category>vehicles_sirens</Category>
+			</Header>
+			<ChildSound>siren_80k_hilofast_s</ChildSound>
+			<InnerAngle value="20" />
+			<OuterAngle value="65" />
+			<RearAttenuation value="-3" />
+			<YawAngle value="90" />
+			<PitchAngle value="0" />
+		</Item>
+		<Item type="SimpleSound">
+			<Name>siren_80k_hilo_s</Name>
+			<Header>
+				<Flags value="0x0820E010" />
+				<Pitch value="0" />
+				<ReleaseTime value="50" />
+				<DopplerFactor value="0" />
+				<Category>vehicles_sirens</Category>
+				<VolumeCurveScale value="300" />
+				<Unk22 value="50" />
+			</Header>
+			<ContainerName>dlc_policingmpaudio/policingmp_sirens4</ContainerName>
+			<FileName>siren_80k_hilo</FileName>
+			<WaveSlotNum value="0" />
+		</Item>
+		<Item type="DirectionalSound">
+			<Name>siren_80k_hilo_d</Name>
+			<Header>
+				<Flags value="0x00008004" />
+				<Volume value="65436" />
+				<Category>vehicles_sirens</Category>
+			</Header>
+			<ChildSound>siren_80k_hilo_s</ChildSound>
+			<InnerAngle value="20" />
+			<OuterAngle value="65" />
+			<RearAttenuation value="-3" />
+			<YawAngle value="90" />
+			<PitchAngle value="0" />
+		</Item>
+		<Item type="SimpleSound">
+			<Name>siren_80k_horn_s</Name>
+			<Header>
+				<Flags value="0x0820E010" />
+				<Pitch value="0" />
+				<ReleaseTime value="50" />
+				<DopplerFactor value="0" />
+				<Category>vehicles_sirens</Category>
+				<VolumeCurveScale value="300" />
+				<Unk22 value="50" />
+			</Header>
+			<ContainerName>dlc_policingmpaudio/policingmp_sirens4</ContainerName>
+			<FileName>siren_80k_horn</FileName>
+			<WaveSlotNum value="0" />
+		</Item>
+		<Item type="DirectionalSound">
+			<Name>siren_80k_horn_d</Name>
+			<Header>
+				<Flags value="0x00008004" />
+				<Volume value="65436" />
+				<Category>vehicles_sirens</Category>
+			</Header>
+			<ChildSound>siren_80k_horn_s</ChildSound>
+			<InnerAngle value="20" />
+			<OuterAngle value="65" />
+			<RearAttenuation value="-3" />
+			<YawAngle value="90" />
+			<PitchAngle value="0" />
+		</Item>
+		<Item type="SimpleSound">
+			<Name>siren_3955_wail_s</Name>
+			<Header>
+				<Flags value="0x0820E010" />
+				<Pitch value="0" />
+				<ReleaseTime value="50" />
+				<DopplerFactor value="0" />
+				<Category>vehicles_sirens</Category>
+				<VolumeCurveScale value="300" />
+				<Unk22 value="50" />
+			</Header>
+			<ContainerName>dlc_policingmpaudio/policingmp_sirens4</ContainerName>
+			<FileName>siren_3955_wail</FileName>
+			<WaveSlotNum value="0" />
+		</Item>
+		<Item type="DirectionalSound">
+			<Name>siren_3955_wail_d</Name>
+			<Header>
+				<Flags value="0x00008004" />
+				<Volume value="65436" />
+				<Category>vehicles_sirens</Category>
+			</Header>
+			<ChildSound>siren_3955_wail_s</ChildSound>
+			<InnerAngle value="20" />
+			<OuterAngle value="65" />
+			<RearAttenuation value="-3" />
+			<YawAngle value="90" />
+			<PitchAngle value="0" />
+		</Item>
+		<Item type="SimpleSound">
+			<Name>siren_3955_yelp_s</Name>
+			<Header>
+				<Flags value="0x0820E010" />
+				<Pitch value="0" />
+				<ReleaseTime value="50" />
+				<DopplerFactor value="0" />
+				<Category>vehicles_sirens</Category>
+				<VolumeCurveScale value="300" />
+				<Unk22 value="50" />
+			</Header>
+			<ContainerName>dlc_policingmpaudio/policingmp_sirens4</ContainerName>
+			<FileName>siren_3955_yelp</FileName>
+			<WaveSlotNum value="0" />
+		</Item>
+		<Item type="DirectionalSound">
+			<Name>siren_3955_yelp_d</Name>
+			<Header>
+				<Flags value="0x00008004" />
+				<Volume value="65436" />
+				<Category>vehicles_sirens</Category>
+			</Header>
+			<ChildSound>siren_3955_yelp_s</ChildSound>
+			<InnerAngle value="20" />
+			<OuterAngle value="65" />
+			<RearAttenuation value="-3" />
+			<YawAngle value="90" />
+			<PitchAngle value="0" />
+		</Item>
+		<Item type="SimpleSound">
+			<Name>siren_3955_horn_s</Name>
+			<Header>
+				<Flags value="0x0820E010" />
+				<Pitch value="0" />
+				<ReleaseTime value="50" />
+				<DopplerFactor value="0" />
+				<Category>vehicles_sirens</Category>
+				<VolumeCurveScale value="300" />
+				<Unk22 value="50" />
+			</Header>
+			<ContainerName>dlc_policingmpaudio/policingmp_sirens4</ContainerName>
+			<FileName>siren_3955_horn</FileName>
+			<WaveSlotNum value="0" />
+		</Item>
+		<Item type="DirectionalSound">
+			<Name>siren_3955_horn_d</Name>
+			<Header>
+				<Flags value="0x00008004" />
+				<Volume value="65436" />
+				<Category>vehicles_sirens</Category>
+			</Header>
+			<ChildSound>siren_3955_horn_s</ChildSound>
 			<InnerAngle value="20" />
 			<OuterAngle value="65" />
 			<RearAttenuation value="-3" />
