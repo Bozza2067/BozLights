@@ -92,6 +92,9 @@ ModelsWithNoTertiaryTone =
     
     "lsiaops1",
     "lsiaops2",
+    
+    "amb_rox_sheriff2",
+    "amb_rox_swat",
 }
 
 -- Vehicles with a 4th tone activated by a seperate button. Usually a Hi-Lo.
@@ -114,8 +117,6 @@ ModelsWithQuarternaryTone =
     "sahp1e",
     "sahp2",
     "sahp2a",
-    "amb_rox_sheriff2",
-    "amb_rox_swat",
 
     -- New Wave RP
 	"LCPD2E",
@@ -176,8 +177,6 @@ ModelsWithRumbler =
     "dppdscoutunmk",
     "lsiaops1",
     "lsiaops2",
-    "amb_rox_sheriff2",
-    "amb_rox_swat",
 
     -- New Wave RP
 	"LCPD2E",
@@ -263,8 +262,6 @@ ModelsWithNergy400 =
 
 ModelsWithOmega90 = 
 {
-    "amb_rox_sheriff2",
-    "amb_rox_swat",
     "police",
 }
 
@@ -302,6 +299,8 @@ ModelsWith295HFS = {
     "centurionfib",
     "centurionlssd",
     "riot3",
+    "amb_rox_sheriff2",
+    "amb_rox_swat",
 }
 
 ModelsWithSSP3000 =
