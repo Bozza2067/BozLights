@@ -97,7 +97,7 @@ RegisterCommand('riser', function()
 			CloseBombBayDoors(veh)
 		end
 	else
-		ShowInfo("This vehicle is not equipped with this function.")
+		PlaySoundFrontend(-1, "Highlight_Error", "DLC_HEIST_PLANNING_BOARD_SOUNDS", 1)
 	end
 end)
 
@@ -1114,7 +1114,7 @@ Citizen.CreateThread(function()
 										count_bcast_timer = delay_bcast_timer
 									end
 								else
-									ShowInfo("This vehicle is not equipped with a tertiary siren tone.")
+									PlaySoundFrontend(-1, "Highlight_Error", "DLC_HEIST_PLANNING_BOARD_SOUNDS", 1)
 								end
 							elseif IsDisabledControlJustPressed(0, 164) then
 								if HasQuarternaryTone(veh) then
@@ -1135,7 +1135,7 @@ Citizen.CreateThread(function()
 										count_bcast_timer = delay_bcast_timer
 									end
 								else
-									ShowInfo("This vehicle is not equipped with a quarternary siren tone.")
+									PlaySoundFrontend(-1, "Highlight_Error", "DLC_HEIST_PLANNING_BOARD_SOUNDS", 1)
 								end
 								
 							elseif IsDisabledControlJustPressed(0, 159) then
@@ -1152,7 +1152,7 @@ Citizen.CreateThread(function()
 										SetLxSirenStateForVeh(veh, cstate - 4)
 									end
 								else
-									ShowInfo("This vehicle is not equipped with a low frequency siren.")
+									PlaySoundFrontend(-1, "Highlight_Error", "DLC_HEIST_PLANNING_BOARD_SOUNDS", 1)
 								end
 
 							-- TOG LX SIREN
@@ -1213,7 +1213,7 @@ Citizen.CreateThread(function()
 										end
 									end
 								else
-									ShowInfo("This vehicle is not equipped with an auxiliary siren.")
+									PlaySoundFrontend(-1, "Highlight_Error", "DLC_HEIST_PLANNING_BOARD_SOUNDS", 1)
 								end
 							end
 
