@@ -35,9 +35,13 @@ ModelsWithNoTertiaryTone =
 
     "centurionlspd",
 
+    "cfpdalamo2",
+    "cfpdalamok9",
     "cfpdscout",
+    "cfpdscout2",
+    "cfpdstanier",
     "cfpdtorrence",
-    "cfpdalamo",
+    "cfpdtorrenceum",
 
     "dppd",
     "dppdk9",
@@ -279,6 +283,8 @@ ModelsWithSS2000 =
 {
     -- PolicingMP
     "centurionlspd",
+    "cfpdstanier",
+    "cfpdalamok9",
     "glpdstanier",
     
     -- New Wave RP
@@ -293,6 +299,7 @@ ModelsWithSS2000 =
 ModelsWithCencomSapphire = 
 {
     "bcfdbat",
+    "cfpdtorrenceum",
     "glpdbisonum",
     "glpdgresleyum",
     "mrcacara",
@@ -343,9 +350,10 @@ ModelsWithTouchmaster =
 
 ModelsWithZ3 = 
 {
+    "cfpdalamo2",
     "cfpdscout",
+    "cfpdscout2",
     "cfpdtorrence",
-    "cfpdalamo",
 
     "glpdbison",
     "glpdgresley",
