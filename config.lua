@@ -63,6 +63,9 @@ ModelsWithNoTertiaryTone =
 
     "LSFDGRANGER",
 
+    "mrcaalamo",
+    "mrcacara",
+
     "rhpdfug",
     "rhpdfugumk",
     "rhpdscout",
@@ -292,6 +295,7 @@ ModelsWithCencomSapphire =
     "bcfdbat",
     "glpdbisonum",
     "glpdgresleyum",
+    "mrcacara",
     "rhpdscoutumk",
 }
 
@@ -346,6 +350,8 @@ ModelsWithZ3 =
     "glpdbison",
     "glpdgresley",
     "glpdscout",
+
+    "mrcaalamo",
 
     "rhpdfug",
     "rhpdfugumk",
