@@ -1,6 +1,7 @@
 MuteHornToneSwitcher = true
 UsingVanillaSiren = false -- UNUSED AS OF RIGHT NOW
 ShowDebugInfo = false
+TertiaryToneByDefault = true -- UNUSED AS OF RIGHT NOW
 
 ----------------------
 -- ENABLED VEHICLES --
@@ -69,6 +70,10 @@ ModelsWithNoTertiaryTone =
 
     "mrcaalamo",
     "mrcacara",
+    
+    "ranchopdalamo",
+    "ranchopdscout",
+    "ranchopdscoutk9",
 
     "rhpdfug",
     "rhpdfugumk",
@@ -111,9 +116,13 @@ ModelsWithQuarternaryTone =
     "bcfdbat",
     "bcsonalamo",
     "bcsospeedo",
+    "cfpdalamo2",
     "cfpdscout",
+    "cfpdscout2",
     "cfpdtorrence",
-    "cfpdalamo",
+    "ranchopdalamo",
+    "ranchopdscout",
+    "ranchopdscoutk9",
     "rhpdfug",
     "rhpdSCOUTSLICK",
     "sahp",
@@ -137,14 +146,17 @@ ModelsWithQuarternaryTone =
     "fbi",
     "police3",
     "police",
+    "policeold1",
+    "policeold2",
 }
 
 -- Vehicles with dual sirens
 ModelsWithAuxiliaryTone = 
 {
+    "cfpdalamo2",
     "cfpdscout",
+    "cfpdscout2",
     "cfpdtorrence",
-    "cfpdalamo",
     "dppd",
     "dppdk9",
     "dppdsgt",
@@ -156,6 +168,9 @@ ModelsWithAuxiliaryTone =
     "dppdscoutk9",
     "dppdscoutsgt",
     "dppdscoutunmk",
+    "ranchopdalamo",
+    "ranchopdscout",
+    "ranchopdscoutk9",
     "rhpdfug",
     "rhpdfugumk",
     "rhpdscout",
@@ -360,6 +375,10 @@ ModelsWithZ3 =
     "glpdscout",
 
     "mrcaalamo",
+    
+    "ranchopdalamo",
+    "ranchopdscout",
+    "ranchopdscoutk9",
 
     "rhpdfug",
     "rhpdfugumk",
