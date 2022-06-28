@@ -165,9 +165,6 @@ ModelsWithAuxiliaryTone =
     "dppdk9",
     "dppdsgt",
     "dppdunmk",
-    "dppdcara",
-    "dppdcara2",
-    "dppdcaraspare",
     "dppdscout",
     "dppdscoutk9",
     "dppdscoutsgt",
@@ -194,9 +191,6 @@ ModelsWithHornSwitch =
 ModelsWithRumbler =
 {
     -- PolicingMP
-    "dppdcara",
-    "dppdcara2",
-    "dppdcaraspare",
     "dppdscout",
     "dppdscoutk9",
     "dppdscoutsgt",
