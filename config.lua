@@ -140,6 +140,10 @@ ModelsWithQuarternaryTone =
 	"LCPD3B",
 	"LCPD4B",
 	"LCPD6A",
+    "lcpd6aadl",
+    "lcpd6aaqn",
+    "lcpd6abahn",
+    "lcpd6abkd",
 	"LCPDT6A",
 
     -- Vanilla
@@ -206,6 +210,10 @@ ModelsWithRumbler =
 	"LCPD3B",
 	"LCPD4B",
 	"LCPD6A",
+    "lcpd6aadl",
+    "lcpd6aaqn",
+    "lcpd6abahn",
+    "lcpd6abkd",
 	"LCPDT6A",
 
     -- Vanilla
@@ -349,6 +357,10 @@ ModelsWithSSP3000 =
 	"LCPD2E",
 	"LCPD3B",
 	"LCPD6A",
+    "lcpd6aadl",
+    "lcpd6aaqn",
+    "lcpd6abahn",
+    "lcpd6abkd",
 	"LCPDT6A",
     
     -- Vanilla
