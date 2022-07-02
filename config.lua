@@ -29,13 +29,13 @@ ModelsWithNoEquipment =
 -- Vehicles with no third tone: Useful for california-compliant sirens that only have Wail and Yelp.
 ModelsWithNoTertiaryTone = 
 {
+    "adspscout",
+    "amb_rox_sheriff2",
+    "amb_rox_swat",
     "bcfdbat",
-
     "bcsonalamo",
     "bcsospeedo",
-
     "centurionlspd",
-
     "cfpdalamo2",
     "cfpdalamok9",
     "cfpdscout",
@@ -43,7 +43,6 @@ ModelsWithNoTertiaryTone =
     "cfpdstanier",
     "cfpdtorrence",
     "cfpdtorrenceum",
-
     "dppd",
     "dppdk9",
     "dppdsgt",
@@ -56,7 +55,6 @@ ModelsWithNoTertiaryTone =
     "dppdscoutsgt",
     "dppdscoutunmk",
     "dppdscoutvol",
-
     "glpdalamo",
     "glpdalamo2",
     "glpdbison",
@@ -65,16 +63,14 @@ ModelsWithNoTertiaryTone =
     "glpdgresleyum",
     "glpdscout",
     "glpdstanier",
-
     "LSFDGRANGER",
-
+    "lsiaops1",
+    "lsiaops2",
     "mrcaalamo",
     "mrcacara",
-    
     "ranchopdalamo",
     "ranchopdscout",
     "ranchopdscoutk9",
-
     "rhpdfug",
     "rhpdfugumk",
     "rhpdscout",
@@ -82,7 +78,6 @@ ModelsWithNoTertiaryTone =
     "rhpdscoutslick",
     "rhpdscoutumk",
     "rhpdstanier",
-
     "sahp",
     "sahp1a",
     "sahp1b",
@@ -94,25 +89,18 @@ ModelsWithNoTertiaryTone =
     "sahp2",
     "sahp2a",
     "sahp2b",
-
     "sadcrnscout",
     "sadcrrumpo",
     "sadcrstanier",
     "sadcrstank9",
     "sadcrtorrence",
     "sadcrtorrslick",
-    
-    "lsiaops1",
-    "lsiaops2",
-    
-    "amb_rox_sheriff2",
-    "amb_rox_swat",
 }
 
 -- Vehicles with a 4th tone activated by a seperate button. Usually a Hi-Lo.
 ModelsWithQuarternaryTone = 
 {
-    -- PolicingMP
+    "adspscout",
     "bcfdbat",
     "bcsonalamo",
     "bcsospeedo",
@@ -120,6 +108,16 @@ ModelsWithQuarternaryTone =
     "cfpdscout",
     "cfpdscout2",
     "cfpdtorrence",
+	"LCPD2E",
+	"LCPD2F",
+	"LCPD3B",
+	"LCPD4B",
+	"LCPD6A",
+    "lcpd6aadl",
+    "lcpd6aaqn",
+    "lcpd6abahn",
+    "lcpd6abkd",
+	"LCPDT6A",
     "ranchopdalamo",
     "ranchopdscout",
     "ranchopdscoutk9",
@@ -133,18 +131,6 @@ ModelsWithQuarternaryTone =
     "sahp1e",
     "sahp2",
     "sahp2a",
-
-    -- New Wave RP
-	"LCPD2E",
-	"LCPD2F",
-	"LCPD3B",
-	"LCPD4B",
-	"LCPD6A",
-    "lcpd6aadl",
-    "lcpd6aaqn",
-    "lcpd6abahn",
-    "lcpd6abkd",
-	"LCPDT6A",
 
     -- Vanilla
     "fbi",
@@ -197,8 +183,6 @@ ModelsWithRumbler =
     "dppdscoutunmk",
     "lsiaops1",
     "lsiaops2",
-
-    -- New Wave RP
 	"LCPD2E",
 	"LCPD2F",
 	"LCPD3B",
@@ -218,7 +202,6 @@ ModelsWithRumbler =
 -- Vehicles that have moving parts assigned to bomb bay doors (e.g. highrisers)
 ModelsWithRiser =
 {
-    -- New Wave RP
 	"FDLCLADDER",
 	"LCPD4B",
 }
@@ -252,7 +235,6 @@ ModelsWithWhelenCHPSiren =
 
 ModelsWithFireSrn = -- vanilla fire truck siren
 {
-    -- New Wave RP
 	"FDLCHAZMAT",
 	"FDLCHEAVY",
 	"FDLCLADDER",
@@ -265,15 +247,14 @@ ModelsWithFireSrn = -- vanilla fire truck siren
 
 ModelsWithAstroSpectra = 
 {
+    "adspscout",
     "LSFDGRANGER",
 }
 
 ModelsWithMastercomB = 
 {
     "glpdalamo",
-
     "rhpdstanier",
-
     "sadcrrumpo",
     "sadcrstanier",
     "sadcrstank9",
@@ -298,13 +279,10 @@ ModelsWithPA500 = -- Vanilla FIB Siren
 
 ModelsWithSS2000 =
 {
-    -- PolicingMP
     "centurionlspd",
     "cfpdstanier",
     "cfpdalamok9",
     "glpdstanier",
-    
-    -- New Wave RP
 	"LCPD2F",
 	"LCPD4B",
     
@@ -333,7 +311,6 @@ ModelsWith295HFS = {
 
 ModelsWithSSP3000 =
 {
-    -- PolicingMP
     "bcsonalamo",
     "bcsospeedo",
     "dppdcara",
@@ -344,10 +321,6 @@ ModelsWithSSP3000 =
     "dppdscoutsgt",
     "dppdscoutunmk",
     "dppdscoutvol",
-    "lsiaops1",
-    "lsiaops2",
-
-    -- New Wave RP
 	"LCPD2E",
 	"LCPD3B",
 	"LCPD6A",
@@ -356,6 +329,8 @@ ModelsWithSSP3000 =
     "lcpd6abahn",
     "lcpd6abkd",
 	"LCPDT6A",
+    "lsiaops1",
+    "lsiaops2",
     
     -- Vanilla
     "police3",
@@ -375,23 +350,18 @@ ModelsWithZ3 =
     "cfpdscout",
     "cfpdscout2",
     "cfpdtorrence",
-
     "glpdbison",
     "glpdgresley",
     "glpdscout",
-
     "mrcaalamo",
-    
     "ranchopdalamo",
     "ranchopdscout",
     "ranchopdscoutk9",
-
     "rhpdfug",
     "rhpdfugumk",
     "rhpdscout",
     "rhpdscoutk9",
     "rhpdscoutslick",
-
     "sadcrnscout",
     "sadcrtorrence",
     "sadcrtorrslick",
