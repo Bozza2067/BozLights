@@ -273,8 +273,8 @@ ModelsWithNergy400 =
 
 ModelsWithOmega90 = 
 {
-    "police",
     "lsiaops3",
+    "police",
 }
 
 ModelsWithPA500 = -- Vanilla FIB Siren
