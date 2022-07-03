@@ -1057,10 +1057,15 @@ Citizen.CreateThread(function()
 
 							elseif IsDisabledControlJustPressed(0, 157) then
 								local cstate = state_lxsiren[veh]
-								if cstate == 2 and UseTouchmaster(veh) or UseOmega90(veh) or Use80K(veh) and cstate == 2 then
+								if cstate == 2 and UseTouchmaster(veh) or UseOmega90(veh) and cstate == 2 or Use80K(veh) and cstate == 2 then
+									local sirenoption = math.random(0,1)
 									if IsVehicleSirenOn(veh) then
 										PlaySoundFrontend(-1, "Beep_Red", "DLC_HEIST_HACKING_SNAKE_SOUNDS", 1)
-										SetLxSirenStateForVeh(veh, 9)
+										if sirenoption == 1 then
+											SetLxSirenStateForVeh(veh, 9)
+										else 
+											SetLxSirenStateForVeh(veh, 1)
+										end
 										count_bcast_timer = delay_bcast_timer
 									end
 								elseif cstate ~= 1 and cstate ~= 5 and cstate ~= 9 then
@@ -1231,9 +1236,10 @@ Citizen.CreateThread(function()
 												nstate = 2
 											end
 										else
+											local sirenoption = math.random(0,1)
 											if rumblerState == 1 then
 												nstate = 5
-											elseif UseTouchmaster(veh) or UseOmega90(veh) or Use80K(veh) then
+											elseif (UseTouchmaster(veh) or UseOmega90(veh) or Use80K(veh)) and sirenoption == 1 then
 												nstate = 9
 											else
 												nstate = 1
