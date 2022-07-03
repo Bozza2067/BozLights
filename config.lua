@@ -15,6 +15,12 @@ ModelsWithEquipment =
     "lsiaops2",
     "lsiaops3",
     "riot3",
+    "sadcrnscout",
+    "sadcrrumpo",
+    "sadcrstanier",
+    "sadcrstank9",
+    "sadcrtorrence",
+    "sadcrtorrslick",
 }
 
 ModelsWithNoEquipment =
@@ -268,6 +274,7 @@ ModelsWithNergy400 =
 ModelsWithOmega90 = 
 {
     "police",
+    "lsiaops3",
 }
 
 ModelsWithPA500 = -- Vanilla FIB Siren
