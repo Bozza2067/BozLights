@@ -74,6 +74,10 @@ ModelsWithNoTertiaryTone =
     "lsiaops2",
     "mrcaalamo",
     "mrcacara",
+    "parkprem",
+    "polprem",
+    "polpremumk",
+    "polpremslick",
     "ranchopdalamo",
     "ranchopdscout",
     "ranchopdscoutk9",
@@ -178,6 +182,8 @@ ModelsWithHornSwitch =
     "sahp1b3",
     "sahp1c",
     "sahp2b",
+    "sahpprem",
+    "sahppremslick",
 }
 
 ModelsWithRumbler =
@@ -225,6 +231,12 @@ ModelsWith80K =
 {
     "policeold1",
     "policeold2",
+    "polprem",
+    "polpremumk",
+    "polpremslick",
+    "sherprem",
+    "parkprem",
+    "sherprem2",
 }
 
 ModelsWithWhelenCHPSiren =
@@ -282,6 +294,8 @@ ModelsWithPA500 = -- Vanilla FIB Siren
     "sahp1b3",
     "sahp1c",
     "sahp2b",
+    "sahpprem",
+    "sahppremslick",
 }
 
 ModelsWithSS2000 =
