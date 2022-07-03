@@ -1385,7 +1385,7 @@ Citizen.CreateThread(function()
 						if count_bcast_timer > delay_bcast_timer then
 							count_bcast_timer = 0
 							--- IS EMERG VEHICLE ---
-							if GetVehicleClass(veh) == 18 then
+							if GetVehicleClass(veh) == 18 or HasEquipment(veh) then
 								TriggerServerEvent("lvc_TogDfltSrnMuted_s", dsrn_mute)
 								TriggerServerEvent("lvc_SetLxSirenState_s", state_lxsiren[veh])
 								TriggerServerEvent("lvc_TogPwrcallState_s", state_pwrcall[veh])
