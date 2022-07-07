@@ -132,6 +132,7 @@ ModelsWithQuarternaryTone =
     "cfpdscout",
     "cfpdscout2",
     "cfpdtorrence",
+	"crimetaxi",
 	"LCPD2E",
 	"LCPD2F",
 	"LCPD3B",
@@ -201,7 +202,7 @@ ModelsWithHornSwitch =
 
 ModelsWithRumbler =
 {
-    -- PolicingMP
+	"crimetaxi",
     "dppdscout",
     "dppdscoutk9",
     "dppdscoutsgt",
@@ -315,6 +316,7 @@ ModelsWithSS2000 =
     "cfpdstanier",
     "cfpdalamok9",
     "glpdstanier",
+	"crimetaxi",
 	"LCPD2F",
 	"LCPD4B",
     "lifeguard",
