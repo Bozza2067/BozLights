@@ -6,11 +6,10 @@ TertiaryToneByDefault = true -- UNUSED AS OF RIGHT NOW
 ----------------------
 -- ENABLED VEHICLES --
 ----------------------
--- By default, vehicles in the emergency class will have light/siren control features. 
--- This section will let you define vehicles that don't conform to that default.
 
-ModelsWithEquipment = 
-{
+-- By default, only vehicles in the emergency class will have light/siren control features. Here you can adjust that on a per-car basis.
+-- Non-emergency models with lights/sirens controls.
+ModelsWithEquipment = {
     "lsiaops1",
     "lsiaops2",
     "lsiaops3",
@@ -23,8 +22,7 @@ ModelsWithEquipment =
     "sadcrtorrslick",
 }
 
-ModelsWithNoEquipment =
-{
+ModelsWithNoEquipment = { -- Non-emergency models without lights/sirens controls
     "glpdalamo2",
     "pbus",
 }
@@ -34,8 +32,7 @@ ModelsWithNoEquipment =
 ------------------------------------
 
 -- Vehicles with no third tone: Useful for california-compliant sirens that only have Wail and Yelp.
-ModelsWithNoTertiaryTone = 
-{
+ModelsWithNoTertiaryTone = {
     "adspscout",
     "amb_rox_sheriff2",
     "amb_rox_swat",
@@ -122,8 +119,7 @@ ModelsWithNoTertiaryTone =
 }
 
 -- Vehicles with a 4th tone activated by a seperate button. Usually a Hi-Lo.
-ModelsWithQuarternaryTone = 
-{
+ModelsWithQuarternaryTone = {
     "adspscout",
     "bcfdbat",
     "bcsonalamo",
@@ -159,8 +155,7 @@ ModelsWithQuarternaryTone =
 }
 
 -- Vehicles with dual sirens
-ModelsWithAuxiliaryTone = 
-{
+ModelsWithAuxiliaryTone = {
     "cfpdalamo2",
     "cfpdscout",
     "cfpdscout2",
@@ -185,8 +180,7 @@ ModelsWithAuxiliaryTone =
 }
 
 -- Vehicles that use the horn to change tones. Disabled electronic horn. Horn behavior: Regular car horn when lights off, manual tone when lights on, change tone when sirens on.
-ModelsWithHornSwitch = 
-{   
+ModelsWithHornSwitch = {
     "police",
     "police2",
     "police3",
@@ -200,8 +194,7 @@ ModelsWithHornSwitch =
     "sahppremslick",
 }
 
-ModelsWithRumbler =
-{
+ModelsWithRumbler = {
 	"crimetaxi",
     "dppdscout",
     "dppdscoutk9",
@@ -222,8 +215,7 @@ ModelsWithRumbler =
 }
 
 -- Vehicles that have moving parts assigned to bomb bay doors (e.g. highrisers)
-ModelsWithRiser =
-{
+ModelsWithRiser = {
 	"FDLCLADDER",
 	"LCPD4B",
 }
@@ -232,13 +224,11 @@ ModelsWithRiser =
 -- VEHICLES WITH ALTERNATE SIRENS --
 ------------------------------------
 
-ModelsWithBMWIntegratedSiren =
-{
+ModelsWithBMWIntegratedSiren = {
     "polthrust",
 }
 
-ModelsWith80K = 
-{
+ModelsWith80K = {
     "policeold1",
     "policeold2",
     "polprem",
@@ -249,8 +239,7 @@ ModelsWith80K =
     "sherprem2",
 }
 
-ModelsWithWhelenCHPSiren =
-{
+ModelsWithWhelenCHPSiren ={
     "sahp",
     "sahp1a",
     "sahp1b",
@@ -261,8 +250,7 @@ ModelsWithWhelenCHPSiren =
     "sahp2a",
 }
 
-ModelsWithFireSrn = -- vanilla fire truck siren
-{
+ModelsWithFireSrn = { -- vanilla fire truck siren
 	"FDLCHAZMAT",
 	"FDLCHEAVY",
 	"FDLCLADDER",
@@ -270,16 +258,14 @@ ModelsWithFireSrn = -- vanilla fire truck siren
 	"FDLCTRUCK",
 }
 
-ModelsWithAstroSpectra = 
-{
+ModelsWithAstroSpectra = {
     "adspscout",
     "ambulance",
     "firetruk",
     "LSFDGRANGER",
 }
 
-ModelsWithMastercomB = 
-{
+ModelsWithMastercomB = {
     "glpdalamo",
     "rhpdstanier",
     "sadcrrumpo",
@@ -287,22 +273,19 @@ ModelsWithMastercomB =
     "sadcrstank9",
 }
 
-ModelsWithNergy400 = 
-{
+ModelsWithNergy400 = {
     "fbi",
     "fbi2",
 }
 
-ModelsWithOmega90 = 
-{
+ModelsWithOmega90 = {
     "lsiaops3",
     "policeb",
     "policet",
     "riot",
 }
 
-ModelsWithPA500 = -- Vanilla FIB Siren
-{
+ModelsWithPA500 = { -- Vanilla FIB Siren
     "sahp1b3",
     "sahp1c",
     "sahp2b",
@@ -310,8 +293,7 @@ ModelsWithPA500 = -- Vanilla FIB Siren
     "sahppremslick",
 }
 
-ModelsWithSS2000 =
-{
+ModelsWithSS2000 = {
     "centurionlspd",
     "cfpdstanier",
     "cfpdalamok9",
@@ -327,8 +309,7 @@ ModelsWithSS2000 =
     "sheriff2",
 }
 
-ModelsWithCencomSapphire = 
-{
+ModelsWithCencomSapphire = {
     "bcfdbat",
     "cfpdtorrenceum",
     "glpdbisonum",
@@ -346,8 +327,7 @@ ModelsWith295HFS = {
     "riot3",
 }
 
-ModelsWithSSP3000 =
-{
+ModelsWithSSP3000 = {
     "bcsonalamo",
     "bcsospeedo",
     "dppdcara",
@@ -371,8 +351,7 @@ ModelsWithSSP3000 =
     "police3",
 }
 
-ModelsWithTouchmaster = 
-{
+ModelsWithTouchmaster = {
     "dppd",
     "dppdk9",
     "dppdsgt",
@@ -380,8 +359,7 @@ ModelsWithTouchmaster =
     "pranger",
 }
 
-ModelsWithZ3 = 
-{
+ModelsWithZ3 = {
     "cfpdalamo2",
     "cfpdscout",
     "cfpdscout2",
@@ -407,27 +385,23 @@ ModelsWithZ3 =
 -- VEHICLES WITH ALTERNATE TONES --
 ------------------------------------
 
-ModelsWithLAFDSpectraWail = -- LAFD Wail Tone in LXSRN 1 (Wail). Will only work with vehicles that are also in ModelsWithAstroSpectra list.
-{
+ModelsWithLAFDSpectraWail = { -- LAFD Wail Tone in LXSRN 1 (Wail). Will only work with vehicles that are also in ModelsWithAstroSpectra list.
     "ambulance",
     "firetruk",
     "LSFDGRANGER",
 }
 
-ModelsWithLASDHorn = -- Classic Whelen Horn
-{
+ModelsWithLASDHorn = { -- Classic Whelen Horn
     "glpdstanier",
     "sheriff",
     "sheriff2",
 }
 
-ModelsWithFireHorn = -- Uses vanilla fire truck horn, does not interrupt main siren
-{
+ModelsWithFireHorn = { -- Uses vanilla fire truck horn, does not interrupt main siren
     "ambulance",
     "firetruk",
 }
 
-ModelsWithCencomCarbideUltra = -- Ultra Hi-Lo tone from Whelen Cencom Carbide in LXSRN 4 (Quarternary/Hilo)
-{
+ModelsWithCencomCarbideUltra = { -- Ultra Hi-Lo tone from Whelen Cencom Carbide in LXSRN 4 (Quarternary/Hilo)
     "bcfdbat",
 }
