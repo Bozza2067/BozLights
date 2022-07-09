@@ -1,5 +1,5 @@
 MuteHornToneSwitcher = true
-UsingVanillaSiren = false -- UNUSED AS OF RIGHT NOW
+UsingVanillaSiren = false
 ShowDebugInfo = false
 TertiaryToneByDefault = true -- UNUSED AS OF RIGHT NOW
 
@@ -285,7 +285,7 @@ ModelsWithOmega90 = {
     "riot",
 }
 
-ModelsWithPA500 = { -- Vanilla FIB Siren
+ModelsWithFIBSiren = { -- Vanilla FIB Siren
     "sahp1b3",
     "sahp1c",
     "sahp2b",
@@ -379,6 +379,10 @@ ModelsWithZ3 = {
     "sadcrnscout",
     "sadcrtorrence",
     "sadcrtorrslick",
+}
+
+ModelsWithSAP500 = {
+    "castellajp",
 }
 
 -----------------------------------
