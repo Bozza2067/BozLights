@@ -69,6 +69,7 @@ ModelsWithNoTertiaryTone = {
     "glpdgresleyum",
     "glpdscout",
     "glpdstanier",
+    "gtfminivan",
     "lifeguard",
     "LSFDGRANGER",
     "lsiaops1",
@@ -181,6 +182,7 @@ ModelsWithAuxiliaryTone = {
 
 -- Vehicles that use the horn to change tones. Disabled electronic horn. Horn behavior: Regular car horn when lights off, manual tone when lights on, change tone when sirens on.
 ModelsWithHornSwitch = {
+    "gtfminivan",
     "police",
     "police2",
     "police3",
@@ -298,6 +300,7 @@ ModelsWithSS2000 = {
     "cfpdstanier",
     "cfpdalamok9",
     "glpdstanier",
+    "gtfminivan",
 	"crimetaxi",
 	"LCPD2F",
 	"LCPD4B",
