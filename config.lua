@@ -78,14 +78,20 @@ ModelsWithNoTertiaryTone = {
     "mrcacara",
     "parkprem",
     "police",
+    "policeslick",
     "police2",
     "police3",
+    "pscout",
+    "pscoutnew",
+    "poleveron",
+    "polspeedo",
+    "polsadlerk9",
     "police4",
+    "police42old",
+    "gtfminivan",
+    "centurionlspd",
+    "polthrust",
     "policeb",
-    "policet",
-    "polprem",
-    "polpremumk",
-    "polpremslick",
     "pranger",
     "ranchopdalamo",
     "ranchopdscout",
@@ -182,11 +188,23 @@ ModelsWithAuxiliaryTone = {
 
 -- Vehicles that use the horn to change tones. Disabled electronic horn. Horn behavior: Regular car horn when lights off, manual tone when lights on, change tone when sirens on.
 ModelsWithHornSwitch = {
-    "gtfminivan",
     "police",
+    "policeold",
+    "policeslick",
     "police2",
     "police3",
+    "pscout",
+    "pscoutnew",
+    "poleveron",
+    "polalamoold",
+    "polspeedo",
+    "polsadlerk9",
     "police4",
+    "police42old",
+    "gtfminivan",
+    "centurionlspd",
+    "polriot",
+    "polthrust",
     "policeb",
     "policet",
     "sahp1b3",
@@ -214,6 +232,8 @@ ModelsWithRumbler = {
     "lcpd6abahn",
     "lcpd6abkd",
 	"LCPDT6A",
+    "police2",
+    "police4",
 }
 
 -- Vehicles that have moving parts assigned to bomb bay doors (e.g. highrisers)
@@ -233,12 +253,6 @@ ModelsWithBMWIntegratedSiren = {
 ModelsWith80K = {
     "policeold1",
     "policeold2",
-    "polprem",
-    "polpremumk",
-    "polpremslick",
-    "sherprem",
-    "parkprem",
-    "sherprem2",
 }
 
 ModelsWithWhelenCHPSiren ={
@@ -282,7 +296,10 @@ ModelsWithNergy400 = {
 
 ModelsWithOmega90 = {
     "lsiaops3",
-    "policeb",
+    "policeold",
+    "polalamoold",
+    "polriot",
+    "lspdb",
     "policet",
     "riot",
 }
@@ -300,14 +317,18 @@ ModelsWithSS2000 = {
     "cfpdstanier",
     "cfpdalamok9",
     "glpdstanier",
-    "gtfminivan",
 	"crimetaxi",
 	"LCPD2F",
 	"LCPD4B",
     "lifeguard",
     "police",
+    "policeslick",
     "police2",
+    "polspeedo",
+    "polsadlerk9",
     "police4",
+    "gtfminivan",
+    "centurionlspd",
     "sheriff",
     "sheriff2",
 }
@@ -352,6 +373,9 @@ ModelsWithSSP3000 = {
     "lsiaops1",
     "lsiaops2",
     "police3",
+    "pscout",
+    "pscoutnew",
+    "poleveron",
 }
 
 ModelsWithTouchmaster = {
@@ -360,6 +384,7 @@ ModelsWithTouchmaster = {
     "dppdsgt",
     "dppdunmk",
     "pranger",
+    "police42old",
 }
 
 ModelsWithZ3 = {
