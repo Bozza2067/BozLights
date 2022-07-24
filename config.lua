@@ -253,6 +253,7 @@ ModelsWithBMWIntegratedSiren = {
 ModelsWith80K = {
     "policeold1",
     "policeold2",
+    "police42old",
 }
 
 ModelsWithWhelenCHPSiren ={
@@ -384,7 +385,6 @@ ModelsWithTouchmaster = {
     "dppdsgt",
     "dppdunmk",
     "pranger",
-    "police42old",
 }
 
 ModelsWithZ3 = {
