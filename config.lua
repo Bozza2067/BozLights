@@ -204,7 +204,6 @@ ModelsWithHornSwitch = {
     "gtfminivan",
     "centurionlspd",
     "polriot",
-    "polthrust",
     "policeb",
     "policet",
     "sahp1b3",
