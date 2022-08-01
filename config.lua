@@ -123,6 +123,17 @@ ModelsWithNoTertiaryTone = {
     "sadcrtorrslick",
     "sheriff",
     "sheriff2",
+    "sheriffalamo",
+    "sheriffcq4",
+    "sherifffug",
+    "sheriffinsurgent",
+    "sheriffoss",
+    "sheriffroamer",
+    "sheriffrumpo",
+    "sheriffscout",
+    "sheriffscoutnew",
+    "sheriffstalker",
+    "sheriffthrust",
 }
 
 -- Vehicles with a 4th tone activated by a seperate button. Usually a Hi-Lo.
@@ -159,6 +170,7 @@ ModelsWithQuarternaryTone = {
     "sahp1e",
     "sahp2",
     "sahp2a",
+    "sheriffscoutnew",
 }
 
 -- Vehicles with dual sirens
@@ -247,12 +259,14 @@ ModelsWithRiser = {
 
 ModelsWithBMWIntegratedSiren = {
     "polthrust",
+    "sheriffthrust",
 }
 
 ModelsWith80K = {
     "policeold1",
     "policeold2",
     "police42old",
+    "sheriffoss",
 }
 
 ModelsWithWhelenCHPSiren ={
@@ -331,6 +345,11 @@ ModelsWithSS2000 = {
     "centurionlspd",
     "sheriff",
     "sheriff2",
+    "sheriffalamo",
+    "sheriffcq4",
+    "sherifffug",
+    "sheriffroamer",
+    "sheriffscout",
 }
 
 ModelsWithCencomSapphire = {
@@ -376,6 +395,10 @@ ModelsWithSSP3000 = {
     "pscout",
     "pscoutnew",
     "poleveron",
+    "sheriffinsurgent",
+    "sheriffrumpo",
+    "sheriffscoutnew",
+    "sheriffstalker",
 }
 
 ModelsWithTouchmaster = {
@@ -426,6 +449,11 @@ ModelsWithLASDHorn = { -- Classic Whelen Horn
     "glpdstanier",
     "sheriff",
     "sheriff2",
+    "sheriffalamo",
+    "sheriffcq4",
+    "sherifffug",
+    "sheriffroamer",
+    "sheriffscout",
 }
 
 ModelsWithFireHorn = { -- Uses vanilla fire truck horn, does not interrupt main siren
