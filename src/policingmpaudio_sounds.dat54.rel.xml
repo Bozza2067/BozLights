@@ -377,25 +377,29 @@
 			</Header>
 			<Items>
 				<Item>
-					<ScriptName>siren_sap500_horn</ScriptName>
-					<ChildSound>siren_sap500_horn_d</ChildSound>
+					<ScriptName>police_warning_r</ScriptName>
+					<ChildSound>police_warning_r_d</ChildSound>
 				</Item>
 				<Item>
-					<ScriptName>siren_sap500_wail_4s</ScriptName>
-					<ChildSound>siren_sap500_wail_4s_d</ChildSound>
+					<ScriptName>siren_pa20a_wail_r</ScriptName>
+					<ChildSound>siren_pa20a_wail_r_d</ChildSound>
 				</Item>
 				<Item>
-					<ScriptName>siren_sap500_wail_8s</ScriptName>
-					<ChildSound>siren_sap500_wail_8s_d</ChildSound>
+					<ScriptName>siren_2_r</ScriptName>
+					<ChildSound>siren_2_r_d</ChildSound>
 				</Item>
 				<Item>
-					<ScriptName>siren_sap500_yelp</ScriptName>
-					<ChildSound>siren_sap500_yelp_d</ChildSound>
+					<ScriptName>siren_police_manual</ScriptName>
+					<ChildSound>siren_police_manual_d</ChildSound>
+				</Item>
+				<Item>
+					<ScriptName>siren_lms_wail2</ScriptName>
+					<ChildSound>siren_lms_wail2_d</ChildSound>
 				</Item>
 			</Items>
 		</Item>
 		<Item type="SimpleSound">
-			<Name>siren_sap500_wail_8s_s</Name>
+			<Name>siren_lms_wail2_s</Name>
 			<Header>
 				<Flags value="0x0820E010" />
 				<Pitch value="0" />
@@ -406,17 +410,17 @@
 				<Unk22 value="50" />
 			</Header>
 			<ContainerName>dlc_policingmpaudio/policingmp_sirens5</ContainerName>
-			<FileName>siren_sap500_wail_8s</FileName>
+			<FileName>siren_lms_wail2</FileName>
 			<WaveSlotNum value="0" />
 		</Item>
 		<Item type="DirectionalSound">
-			<Name>siren_sap500_wail_8s_d</Name>
+			<Name>siren_lms_wail2_d</Name>
 			<Header>
 				<Flags value="0x00008004" />
 				<Volume value="65436" />
 				<Category>vehicles_sirens</Category>
 			</Header>
-			<ChildSound>siren_sap500_wail_8s_s</ChildSound>
+			<ChildSound>siren_lms_wail2_s</ChildSound>
 			<InnerAngle value="20" />
 			<OuterAngle value="65" />
 			<RearAttenuation value="-3" />
@@ -424,7 +428,7 @@
 			<PitchAngle value="0" />
 		</Item>
 		<Item type="SimpleSound">
-			<Name>siren_sap500_wail_4s_s</Name>
+			<Name>siren_police_manual_s</Name>
 			<Header>
 				<Flags value="0x0820E010" />
 				<Pitch value="0" />
@@ -435,17 +439,17 @@
 				<Unk22 value="50" />
 			</Header>
 			<ContainerName>dlc_policingmpaudio/policingmp_sirens5</ContainerName>
-			<FileName>siren_sap500_wail_4s</FileName>
+			<FileName>siren_police_manual</FileName>
 			<WaveSlotNum value="0" />
 		</Item>
 		<Item type="DirectionalSound">
-			<Name>siren_sap500_wail_4s_d</Name>
+			<Name>siren_police_manual_d</Name>
 			<Header>
 				<Flags value="0x00008004" />
 				<Volume value="65436" />
 				<Category>vehicles_sirens</Category>
 			</Header>
-			<ChildSound>siren_sap500_wail_4s_s</ChildSound>
+			<ChildSound>siren_police_manual_s</ChildSound>
 			<InnerAngle value="20" />
 			<OuterAngle value="65" />
 			<RearAttenuation value="-3" />
@@ -453,7 +457,7 @@
 			<PitchAngle value="0" />
 		</Item>
 		<Item type="SimpleSound">
-			<Name>siren_sap500_yelp_s</Name>
+			<Name>siren_2_r_s</Name>
 			<Header>
 				<Flags value="0x0820E010" />
 				<Pitch value="0" />
@@ -464,17 +468,17 @@
 				<Unk22 value="50" />
 			</Header>
 			<ContainerName>dlc_policingmpaudio/policingmp_sirens5</ContainerName>
-			<FileName>siren_sap500_yelp</FileName>
+			<FileName>siren_2_r</FileName>
 			<WaveSlotNum value="0" />
 		</Item>
 		<Item type="DirectionalSound">
-			<Name>siren_sap500_yelp_d</Name>
+			<Name>siren_2_r_d</Name>
 			<Header>
 				<Flags value="0x00008004" />
 				<Volume value="65436" />
 				<Category>vehicles_sirens</Category>
 			</Header>
-			<ChildSound>siren_sap500_yelp_s</ChildSound>
+			<ChildSound>siren_2_r_s</ChildSound>
 			<InnerAngle value="20" />
 			<OuterAngle value="65" />
 			<RearAttenuation value="-3" />
@@ -482,7 +486,7 @@
 			<PitchAngle value="0" />
 		</Item>
 		<Item type="SimpleSound">
-			<Name>siren_sap500_horn_s</Name>
+			<Name>siren_pa20a_wail_r_s</Name>
 			<Header>
 				<Flags value="0x0820E010" />
 				<Pitch value="0" />
@@ -493,17 +497,75 @@
 				<Unk22 value="50" />
 			</Header>
 			<ContainerName>dlc_policingmpaudio/policingmp_sirens5</ContainerName>
-			<FileName>siren_sap500_horn</FileName>
+			<FileName>siren_pa20a_wail_r</FileName>
 			<WaveSlotNum value="0" />
 		</Item>
 		<Item type="DirectionalSound">
-			<Name>siren_sap500_horn_d</Name>
+			<Name>siren_pa20a_wail_r_d</Name>
 			<Header>
 				<Flags value="0x00008004" />
 				<Volume value="65436" />
 				<Category>vehicles_sirens</Category>
 			</Header>
-			<ChildSound>siren_sap500_horn_s</ChildSound>
+			<ChildSound>siren_pa20a_wail_r_s</ChildSound>
+			<InnerAngle value="20" />
+			<OuterAngle value="65" />
+			<RearAttenuation value="-3" />
+			<YawAngle value="90" />
+			<PitchAngle value="0" />
+		</Item>
+		<Item type="SimpleSound">
+			<Name>police_warning_r_s</Name>
+			<Header>
+				<Flags value="0x0820E010" />
+				<Pitch value="0" />
+				<ReleaseTime value="50" />
+				<DopplerFactor value="0" />
+				<Category>vehicles_sirens</Category>
+				<VolumeCurveScale value="300" />
+				<Unk22 value="50" />
+			</Header>
+			<ContainerName>dlc_policingmpaudio/policingmp_sirens5</ContainerName>
+			<FileName>police_warning_r</FileName>
+			<WaveSlotNum value="0" />
+		</Item>
+		<Item type="DirectionalSound">
+			<Name>police_warning_r_d</Name>
+			<Header>
+				<Flags value="0x00008004" />
+				<Volume value="65436" />
+				<Category>vehicles_sirens</Category>
+			</Header>
+			<ChildSound>police_warning_r_s</ChildSound>
+			<InnerAngle value="20" />
+			<OuterAngle value="65" />
+			<RearAttenuation value="-3" />
+			<YawAngle value="90" />
+			<PitchAngle value="0" />
+		</Item>
+		<Item type="SimpleSound">
+			<Name>police_warning_r_s</Name>
+			<Header>
+				<Flags value="0x0820E010" />
+				<Pitch value="0" />
+				<ReleaseTime value="50" />
+				<DopplerFactor value="0" />
+				<Category>vehicles_sirens</Category>
+				<VolumeCurveScale value="300" />
+				<Unk22 value="50" />
+			</Header>
+			<ContainerName>dlc_policingmpaudio/policingmp_sirens5</ContainerName>
+			<FileName>police_warning_r</FileName>
+			<WaveSlotNum value="0" />
+		</Item>
+		<Item type="DirectionalSound">
+			<Name>police_warning_r_d</Name>
+			<Header>
+				<Flags value="0x00008004" />
+				<Volume value="65436" />
+				<Category>vehicles_sirens</Category>
+			</Header>
+			<ChildSound>police_warning_r_s</ChildSound>
 			<InnerAngle value="20" />
 			<OuterAngle value="65" />
 			<RearAttenuation value="-3" />

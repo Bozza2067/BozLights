@@ -25,6 +25,8 @@ ModelsWithEquipment = {
 ModelsWithNoEquipment = { -- Non-emergency models without lights/sirens controls
     "glpdalamo2",
     "pbus",
+    "sheriffretro",
+    "sheriffretro2",
 }
 
 ------------------------------------
@@ -88,14 +90,15 @@ ModelsWithNoTertiaryTone = {
     "polsadlerk9",
     "police4",
     "police42old",
+    "polprem",
+    "polpremslick",
+    "polpremumk",
     "gtfminivan",
     "centurionlspd",
     "polthrust",
     "policeb",
+    "parkprem",
     "pranger",
-    "ranchopdalamo",
-    "ranchopdscout",
-    "ranchopdscoutk9",
     "riot",
     "rhpdfug",
     "rhpdfugumk",
@@ -126,7 +129,6 @@ ModelsWithNoTertiaryTone = {
     "sheriffalamo",
     "sheriffcq4",
     "sherifffug",
-    "sheriffinsurgent",
     "sheriffoss",
     "sheriffroamer",
     "sheriffrumpo",
@@ -134,6 +136,20 @@ ModelsWithNoTertiaryTone = {
     "sheriffscoutnew",
     "sheriffstalker",
     "sheriffthrust",
+    "sherprem",
+    "sherprem2",
+    "sheriffold2",
+    "sheriffold3",
+    "sheriffriataold",
+    "sheriffslick",
+    "sheriffcont",
+    "sheriffintc",
+    "sheriffscoutold",
+    "sheriffoffroad",
+    "sheriffghost",
+    "sheriffheavy",
+    "sheriffshark",
+    "sheriffboat",
 }
 
 -- Vehicles with a 4th tone activated by a seperate button. Usually a Hi-Lo.
@@ -157,9 +173,7 @@ ModelsWithQuarternaryTone = {
     "lcpd6abahn",
     "lcpd6abkd",
 	"LCPDT6A",
-    "ranchopdalamo",
-    "ranchopdscout",
-    "ranchopdscoutk9",
+    "parkprem",
     "rhpdfug",
     "rhpdSCOUTSLICK",
     "sahp",
@@ -171,6 +185,7 @@ ModelsWithQuarternaryTone = {
     "sahp2",
     "sahp2a",
     "sheriffscoutnew",
+    "sherprem2",
 }
 
 -- Vehicles with dual sirens
@@ -187,15 +202,16 @@ ModelsWithAuxiliaryTone = {
     "dppdscoutk9",
     "dppdscoutsgt",
     "dppdscoutunmk",
-    "ranchopdalamo",
-    "ranchopdscout",
-    "ranchopdscoutk9",
+    "police42old",
     "rhpdfug",
     "rhpdfugumk",
     "rhpdscout",
     "rhpdscoutk9",
     "rhpdscoutslick",
     "rhpdstanier",
+    "sheriffscout2",
+    "sheriffslick",
+    "sheriffoss",
 }
 
 -- Vehicles that use the horn to change tones. Disabled electronic horn. Horn behavior: Regular car horn when lights off, manual tone when lights on, change tone when sirens on.
@@ -245,6 +261,7 @@ ModelsWithRumbler = {
 	"LCPDT6A",
     "police2",
     "police4",
+    "sheriffscout2",
 }
 
 -- Vehicles that have moving parts assigned to bomb bay doors (e.g. highrisers)
@@ -260,13 +277,21 @@ ModelsWithRiser = {
 ModelsWithBMWIntegratedSiren = {
     "polthrust",
     "sheriffthrust",
+    "sheriffshark",
+    "sheriffboat",
 }
 
 ModelsWith80K = {
     "policeold1",
     "policeold2",
-    "police42old",
-    "sheriffoss",
+    "polprem",
+    "polpremslick",
+    "polpremumk",
+    "parkprem",
+    "sherprem2",
+    "sheriffold2",
+    "sheriffold3",
+    "sheriffriataold",
 }
 
 ModelsWithWhelenCHPSiren ={
@@ -316,6 +341,12 @@ ModelsWithOmega90 = {
     "lspdb",
     "policet",
     "riot",
+    "sherprem",
+    "sheriffalamoold",
+    "sheriffsar",
+    "sheriffvanold",
+    "sheriffmoon",
+    "sherifftrike",
 }
 
 ModelsWithFIBSiren = { -- Vanilla FIB Siren
@@ -330,26 +361,10 @@ ModelsWithSS2000 = {
     "centurionlspd",
     "cfpdstanier",
     "cfpdalamok9",
-    "glpdstanier",
-	"crimetaxi",
+    "crimetaxi",
 	"LCPD2F",
 	"LCPD4B",
     "lifeguard",
-    "police",
-    "policeslick",
-    "police2",
-    "polspeedo",
-    "polsadlerk9",
-    "police4",
-    "gtfminivan",
-    "centurionlspd",
-    "sheriff",
-    "sheriff2",
-    "sheriffalamo",
-    "sheriffcq4",
-    "sherifffug",
-    "sheriffroamer",
-    "sheriffscout",
 }
 
 ModelsWithCencomSapphire = {
@@ -366,6 +381,7 @@ ModelsWith295HFS = {
     "amb_rox_swat",
     "centurionfib",
     "centurionlssd",
+    "sheriffinsurgent",
     "riot2",
     "riot3",
 }
@@ -396,9 +412,10 @@ ModelsWithSSP3000 = {
     "pscoutnew",
     "poleveron",
     "sheriffinsurgent",
-    "sheriffrumpo",
     "sheriffscoutnew",
     "sheriffstalker",
+    "sheriffghost",
+    "sheriffscout2",
 }
 
 ModelsWithTouchmaster = {
@@ -418,9 +435,6 @@ ModelsWithZ3 = {
     "glpdgresley",
     "glpdscout",
     "mrcaalamo",
-    "ranchopdalamo",
-    "ranchopdscout",
-    "ranchopdscoutk9",
     "rhpdfug",
     "rhpdfugumk",
     "rhpdscout",
@@ -431,8 +445,32 @@ ModelsWithZ3 = {
     "sadcrtorrslick",
 }
 
-ModelsWithSAP500 = {
-    "castellajp",
+ModelsWithSmartSystemLMS = { -- LASD/LAPD Siren
+    "glpdstanier",
+    "police",
+    "policeslick",
+    "police2",
+    "polspeedo",
+    "polsadlerk9",
+    "police4",
+    "police42old",
+    "gtfminivan",
+    "centurionlspd",
+    "sheriff",
+    "sheriff2",
+    "sheriffalamo",
+    "sheriffcq4",
+    "sherifffug",
+    "sheriffroamer",
+    "sheriffrumpo",
+    "sheriffscout",
+    "sheriffcont",
+    "sheriffintc",
+    "sheriffscoutold",
+    "sheriffoffroad",
+    "sheriffenduro",
+    "sheriffslick",
+    "sheriffoss",
 }
 
 -----------------------------------
@@ -443,17 +481,6 @@ ModelsWithLAFDSpectraWail = { -- LAFD Wail Tone in LXSRN 1 (Wail). Will only wor
     "ambulance",
     "firetruk",
     "LSFDGRANGER",
-}
-
-ModelsWithLASDHorn = { -- Classic Whelen Horn
-    "glpdstanier",
-    "sheriff",
-    "sheriff2",
-    "sheriffalamo",
-    "sheriffcq4",
-    "sherifffug",
-    "sheriffroamer",
-    "sheriffscout",
 }
 
 ModelsWithFireHorn = { -- Uses vanilla fire truck horn, does not interrupt main siren
