@@ -266,6 +266,8 @@ ModelsWithRumbler = {
     "police2",
     "police4",
     "sheriffscout2",
+    "sheriffcoqm3",
+    "sheriffcoqmumk",
 }
 
 -- Vehicles that have moving parts assigned to bomb bay doors (e.g. highrisers)
