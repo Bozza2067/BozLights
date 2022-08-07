@@ -473,6 +473,10 @@ ModelsWithSmartSystemLMS = { -- LASD/LAPD Siren
     "sheriffoss",
 }
 
+ModelsWith650RemoteSiren = {
+    "sheriffheavy",
+}
+
 -----------------------------------
 -- VEHICLES WITH ALTERNATE TONES --
 ------------------------------------
