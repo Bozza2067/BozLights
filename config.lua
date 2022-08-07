@@ -150,6 +150,8 @@ ModelsWithNoTertiaryTone = {
     "sheriffheavy",
     "sheriffshark",
     "sheriffboat",
+    "sheriffcoqm3",
+    "sheriffcoqmumk",
 }
 
 -- Vehicles with a 4th tone activated by a seperate button. Usually a Hi-Lo.
@@ -239,6 +241,8 @@ ModelsWithHornSwitch = {
     "sahp2b",
     "sahpprem",
     "sahppremslick",
+    "sheriffcoqm3",
+    "sheriffcoqmumk",
 }
 
 ModelsWithRumbler = {
@@ -416,6 +420,8 @@ ModelsWithSSP3000 = {
     "sheriffstalker",
     "sheriffghost",
     "sheriffscout2",
+    "sheriffcoqm3",
+    "sheriffcoqmumk",
 }
 
 ModelsWithTouchmaster = {
