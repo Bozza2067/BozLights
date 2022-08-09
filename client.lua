@@ -1170,12 +1170,24 @@ Citizen.CreateThread(function()
 									local cstate = state_lxsiren[veh]
 									if cstate ~= 3 and cstate ~= 7 then
 										if IsVehicleSirenOn(veh) then
+
 											PlaySoundFrontend(-1, "Beep_Red", "DLC_HEIST_HACKING_SNAKE_SOUNDS", 1)
+
+											if UseSS2000(veh) or UseSSLMS(veh) then
+												if rumblerState == 1 then
+													SetLxSirenStateForVeh(veh, 8)
+												else
+													SetLxSirenStateForVeh(veh, 4)
+												end
+												Citizen.Wait(100)
+											end
+
 											if rumblerState == 1 then
 												SetLxSirenStateForVeh(veh, 7)
 											else
 												SetLxSirenStateForVeh(veh, 3)
 											end
+											
 											count_bcast_timer = delay_bcast_timer
 										end
 									else
