@@ -152,6 +152,11 @@ ModelsWithNoTertiaryTone = {
     "sheriffboat",
     "sheriffcoqm3",
     "sheriffcoqmumk",
+    "lssherbufac",
+    "police2a",
+    "police2c",
+    "police2gs",
+    "policebufac",
 }
 
 -- Vehicles with a 4th tone activated by a seperate button. Usually a Hi-Lo.
@@ -165,6 +170,7 @@ ModelsWithQuarternaryTone = {
     "cfpdscout2",
     "cfpdtorrence",
 	"crimetaxi",
+    "lcpdh1b",
 	"LCPD2E",
 	"LCPD2F",
 	"LCPD3B",
@@ -243,6 +249,9 @@ ModelsWithHornSwitch = {
     "sahppremslick",
     "sheriffcoqm3",
     "sheriffcoqmumk",
+    "police2c",
+    "police2gs",
+    "policebufac",
 }
 
 ModelsWithRumbler = {
@@ -253,6 +262,7 @@ ModelsWithRumbler = {
     "dppdscoutunmk",
     "lsiaops1",
     "lsiaops2",
+    "lcpdh1b",
 	"LCPD2E",
 	"LCPD2F",
 	"LCPD3B",
@@ -268,6 +278,7 @@ ModelsWithRumbler = {
     "sheriffscout2",
     "sheriffcoqm3",
     "sheriffcoqmumk",
+    "police2a",
 }
 
 -- Vehicles that have moving parts assigned to bomb bay doors (e.g. highrisers)
@@ -403,6 +414,7 @@ ModelsWithSSP3000 = {
     "dppdscoutsgt",
     "dppdscoutunmk",
     "dppdscoutvol",
+    "lcpdh1b",
 	"LCPD2E",
 	"LCPD3B",
 	"LCPD6A",
@@ -479,6 +491,11 @@ ModelsWithSmartSystemLMS = { -- LASD/LAPD Siren
     "sheriffenduro",
     "sheriffslick",
     "sheriffoss",
+    "lssherbufac",
+    "police2a",
+    "police2c",
+    "police2gs",
+    "policebufac",
 }
 
 ModelsWith650RemoteSiren = {
