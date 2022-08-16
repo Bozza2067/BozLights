@@ -250,7 +250,6 @@ ModelsWithHornSwitch = {
     "sheriffcoqm3",
     "sheriffcoqmumk",
     "police2c",
-    "police2gs",
     "policebufac",
 }
 
@@ -309,6 +308,7 @@ ModelsWith80K = {
     "sheriffold2",
     "sheriffold3",
     "sheriffriataold",
+    "police2gs",
 }
 
 ModelsWithWhelenCHPSiren ={
@@ -494,7 +494,6 @@ ModelsWithSmartSystemLMS = { -- LASD/LAPD Siren
     "lssherbufac",
     "police2a",
     "police2c",
-    "police2gs",
     "policebufac",
 }
 
