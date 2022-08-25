@@ -1044,6 +1044,7 @@ Citizen.CreateThread(function()
 							CloseBombBayDoors(veh)
 						end
 					end
+
 					
 					--- IS EMERG VEHICLE ---
 					if GetVehicleClass(veh) == 18 and not HasNoEquipment(veh) or HasEquipment(veh) then
@@ -1106,9 +1107,13 @@ Citizen.CreateThread(function()
 					
 						----- CONTROLS -----
 						if not IsPauseMenuActive() and UpdateOnscreenKeyboard() ~= 0 then
-						
-							-- TOG DFLT SRN LIGHTS
-							if IsDisabledControlJustReleased(0, 85) then
+							if GetVehicleBodyHealth(veh) < 975 then
+								SetLxSirenStateForVeh(veh, 0)
+								SetVehicleSiren(veh, false)
+								count_bcast_timer = delay_bcast_timer
+								ShowInfo("Your emergency equipment has been damaged and no longer functions.")
+
+							elseif IsDisabledControlJustReleased(0, 85) then
 								if IsVehicleSirenOn(veh) then
 									PlaySoundFrontend(-1, "NAV_UP_DOWN", "HUD_FRONTEND_DEFAULT_SOUNDSET", 1)
 									SetVehicleSiren(veh, false)
