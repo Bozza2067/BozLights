@@ -157,6 +157,12 @@ ModelsWithNoTertiaryTone = {
     "police2c",
     "police2gs",
     "policebufac",
+    "lsppalamo",
+    "lsppscout",
+    "lsppscoutk9",
+    "lsppscoutum",
+    "lsppstanier",
+    "lsppstanier2",
 }
 
 -- Vehicles with a 4th tone activated by a seperate button. Usually a Hi-Lo.
@@ -343,6 +349,10 @@ ModelsWithMastercomB = {
     "sadcrrumpo",
     "sadcrstanier",
     "sadcrstank9",
+    "lsppalamo",
+    "lsppscout",
+    "lsppscoutk9",
+    "lsppstanier",
 }
 
 ModelsWithNergy400 = {
@@ -463,6 +473,7 @@ ModelsWithZ3 = {
     "sadcrnscout",
     "sadcrtorrence",
     "sadcrtorrslick",
+    "lsppscoutum",
 }
 
 ModelsWithSmartSystemLMS = { -- LASD/LAPD Siren
@@ -495,6 +506,7 @@ ModelsWithSmartSystemLMS = { -- LASD/LAPD Siren
     "police2a",
     "police2c",
     "policebufac",
+    "lsppstanier2",
 }
 
 ModelsWith650RemoteSiren = {
