@@ -400,6 +400,16 @@ function useRiser(veh)
 	end
 	return false
 end
+
+function UseZ3SirenLowFreq(veh)
+	local model = GetEntityModel(veh)
+	for i = 1, #ModelsWithZ3LowFreqInsteadofHiLo, 1 do
+		if model == GetHashKey(ModelsWithZ3LowFreqInsteadofHiLo[i]) then
+			return true
+		end
+	end
+	return false
+end
 ---------------------------------------------------------------------
 function CleanupSounds()
 	if count_sndclean_timer > delay_sndclean_timer then
@@ -616,7 +626,11 @@ function SetLxSirenStateForVeh(veh, newstate)
 				elseif UseCHPSiren(veh) then
 					PlaySoundFromEntity(snd_lxsiren[veh], "siren_chp_evac", veh, "policingmp_sounds_sirens1_soundset", 0, 0)
 				elseif UseZ3Siren(veh) then
-					PlaySoundFromEntity(snd_lxsiren[veh], "siren_z3_lowfreq", veh, "policingmp_sounds_sirens1_soundset", 0, 0)
+					if UseZ3SirenLowFreq(veh) then
+						PlaySoundFromEntity(snd_lxsiren[veh], "siren_z3_lowfreq", veh, "policingmp_sounds_sirens1_soundset", 0, 0)
+					else
+						PlaySoundFromEntity(snd_lxsiren[veh], "siren_z3_hilo", veh, "policingmp_sounds_sirens1_soundset", 0, 0)
+					end
 				elseif UseNERGY(veh) then
 					PlaySoundFromEntity(snd_lxsiren[veh], "siren_nergy_hilo", veh, "policingmp_sounds_sirens2_soundset", 0, 0)
 				elseif UseSS2000(veh) or UseSSLMS(veh) then

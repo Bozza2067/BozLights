@@ -41,6 +41,10 @@
 					<ChildSound>siren_z3_horn_d</ChildSound>
 				</Item>
 				<Item>
+					<ScriptName>siren_z3_hilo</ScriptName>
+					<ChildSound>siren_z3_hilo_d</ChildSound>
+				</Item>
+				<Item>
 					<ScriptName>siren_chp_evac</ScriptName>
 					<ChildSound>siren_chp_evac_d</ChildSound>
 				</Item>
@@ -971,6 +975,35 @@
 				<Category>vehicles_sirens</Category>
 			</Header>
 			<ChildSound>siren_z3_horn_s</ChildSound>
+			<InnerAngle value="20" />
+			<OuterAngle value="65" />
+			<RearAttenuation value="-3" />
+			<YawAngle value="90" />
+			<PitchAngle value="0" />
+		</Item>
+		<Item type="SimpleSound">
+			<Name>siren_z3_hilo_s</Name>
+			<Header>
+				<Flags value="0x0820E010" />
+				<Pitch value="0" />
+				<ReleaseTime value="50" />
+				<DopplerFactor value="0" />
+				<Category>vehicles_sirens</Category>
+				<VolumeCurveScale value="300" />
+				<Unk22 value="50" />
+			</Header>
+			<ContainerName>dlc_policingmpaudio/policingmp_sirens1</ContainerName>
+			<FileName>siren_z3_hilo</FileName>
+			<WaveSlotNum value="0" />
+		</Item>
+		<Item type="DirectionalSound">
+			<Name>siren_z3_hilo_d</Name>
+			<Header>
+				<Flags value="0x00008004" />
+				<Volume value="65436" />
+				<Category>vehicles_sirens</Category>
+			</Header>
+			<ChildSound>siren_z3_hilo_s</ChildSound>
 			<InnerAngle value="20" />
 			<OuterAngle value="65" />
 			<RearAttenuation value="-3" />

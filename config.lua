@@ -200,6 +200,7 @@ ModelsWithQuarternaryTone = {
     "sahp2a",
     "sheriffscoutnew",
     "sherprem2",
+    "mrcaalamo",
 }
 
 -- Vehicles with dual sirens
@@ -465,11 +466,11 @@ ModelsWithZ3 = {
     "glpdgresley",
     "glpdscout",
     "mrcaalamo",
-    "rhpdfug",
     "rhpdfugumk",
+    "rhpdfug",
+    "rhpdscoutslick",
     "rhpdscout",
     "rhpdscoutk9",
-    "rhpdscoutslick",
     "sadcrnscout",
     "sadcrtorrence",
     "sadcrtorrslick",
@@ -521,6 +522,15 @@ ModelsWithLAFDSpectraWail = { -- LAFD Wail Tone in LXSRN 1 (Wail). Will only wor
     "ambulance",
     "firetruk",
     "LSFDGRANGER",
+}
+
+ModelsWithLASDSirenStuff = {
+
+}
+
+ModelsWithZ3LowFreqInsteadofHiLo = { -- Requires Z3 Siren
+    "rhpdfug",
+    "rhpdscoutslick",
 }
 
 ModelsWithFireHorn = { -- Uses vanilla fire truck horn, does not interrupt main siren
