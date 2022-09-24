@@ -38,6 +38,7 @@ local state_indic = {}
 local state_lxsiren = {}
 local state_pwrcall = {}
 local state_airmanu = {}
+local state_ltsg = {} -- bozlights
 
 local ind_state_o = 0
 local ind_state_l = 1
@@ -54,6 +55,11 @@ local fstate = 0
 
 local rumblerState = 0
 local SecondManualBrowserToneOption = 0
+							
+-- BOZLIGHTS START
+local lstate = state_ltsg[veh]
+local lstate = 0
+-- BOZLIGHTS END
 
 
 
@@ -122,6 +128,59 @@ RegisterCommand('toggleemergencylights', function()
 end)]]
 
 ---------------------------------------------------------------------
+
+-- BOZLIGHTS START
+function useBozLights(veh)
+	local model = GetEntityModel(veh)
+	for i = 1, #ModelsWithBozLights, 1 do
+		if model == GetHashKey(ModelsWithBozLights[i]) then
+			return true
+		end
+	end
+	return false
+end
+
+function useBozLightsLegacy(veh)
+	local model = GetEntityModel(veh)
+	for i = 1, #ModelsWithBozLightsLegacy, 1 do
+		if model == GetHashKey(ModelsWithBozLightsLegacy[i]) then
+			return true
+		end
+	end
+	return false
+end
+
+function useBLCTkdn(veh)
+	local model = GetEntityModel(veh)
+	for i = 1, #eModelsWithBLCTkdn, 1 do
+		if model == GetHashKey(eModelsWithBLCTkdn[i]) then
+			return true
+		end
+	end
+	return false
+end
+
+function useAlleyLights(veh)
+	local model = GetEntityModel(veh)
+	for i = 1, #eModelsWithAlleyLights, 1 do
+		if model == GetHashKey(eModelsWithAlleyLights[i]) then
+			return true
+		end
+	end
+	return false
+end
+
+function useMiniSiren(veh)
+	local model = GetEntityModel(veh)
+	for i = 1, #eModelsWithMiniSrn, 1 do
+		if model == GetHashKey(eModelsWithMiniSrn[i]) then
+			return true
+		end
+	end
+	return false
+end
+-- BOZLIGHTS END
+
 function UseFiretruckSiren(veh)
 	local model = GetEntityModel(veh)
 	for i = 1, #ModelsWithFireSrn, 1 do
@@ -797,8 +856,8 @@ function TogPowercallStateForVeh(veh, toggle)
 					PlaySoundFromEntity(snd_pwrcall[veh], "siren_timberwolf", veh, "policingmp_sounds_sirens5_soundset", 0, 0)
 				elseif UseEQ2Dual(veh) or UseEQ2(veh) then
 					PlaySoundFromEntity(snd_pwrcall[veh], "siren_eq2_wail", veh, "policingmp_sounds_sirens4_soundset", 0, 0)
-				elseif UseQ2Dual(veh) then
-					PlaySoundFromEntity(snd_pwrcall[veh], "siren_q2", veh, "policingmp_sounds_sirens5_soundset", 0, 0)
+				--elseif UseQ2Dual(veh) then
+				--	PlaySoundFromEntity(snd_pwrcall[veh], "siren_q2", veh, "policingmp_sounds_sirens5_soundset", 0, 0)
 				elseif UseFiretruckSiren(veh) then
 					PlaySoundFromEntity(snd_pwrcall[veh], "collision_i8o7bp", veh, 0, 0, 0)
 				elseif UseFIBSiren(veh) then
@@ -956,9 +1015,9 @@ function SetAirManuStateForVeh(veh, newstate)
 					PlaySoundFromEntity(snd_airmanu[veh], "siren_sapphire_wail", veh, "policingmp_sounds_sirens2_soundset", 0, 0)
 				elseif UseAstroSpectra(veh) then
 					if UseLAFDSpectraWail(veh) then
-						PlaySoundFromEntity(snd_lxsiren[veh], "siren_spectra_wail2", veh, "policingmp_sounds_sirens2_soundset", 0, 0)
+						PlaySoundFromEntity(snd_airmanu[veh], "siren_spectra_wail2", veh, "policingmp_sounds_sirens2_soundset", 0, 0)
 					else
-						PlaySoundFromEntity(snd_lxsiren[veh], "siren_spectra_wail", veh, "policingmp_sounds_sirens2_soundset", 0, 0)
+						PlaySoundFromEntity(snd_airmanu[veh], "siren_spectra_wail", veh, "policingmp_sounds_sirens2_soundset", 0, 0)
 					end
 				elseif UseSSP3000(veh) then
 					PlaySoundFromEntity(snd_airmanu[veh], "siren_ssp3000_manual", veh, "policingmp_sounds_sirens1_soundset", 0, 0)
@@ -1169,6 +1228,13 @@ Citizen.CreateThread(function()
 						if state_airmanu[veh] ~= 1 and state_airmanu[veh] ~= 2 and state_airmanu[veh] ~= 3 and state_airmanu[veh] ~= 4 then
 							state_airmanu[veh] = 0
 						end
+
+						-- BOZLIGHTS START
+						if state_ltsg[veh] ~= 1 and state_ltsg[veh] ~= 2 and state_ltsg[veh] ~= 3 then
+							state_ltsg[veh] = 0
+						end
+						-- BOZLIGHTS END
+
 						if ShowDebugInfo == true then
 							ShowInfo(tostring(state_lxsiren[veh]) .. tostring(state_airmanu[veh]) .. tostring(state_pwrcall[veh]))
 						end
@@ -1191,6 +1257,52 @@ Citizen.CreateThread(function()
 							count_bcast_timer = delay_bcast_timer
 						end
 
+						-- BOZLIGHTS START
+						if useBozLightsLegacy(veh) or useBozLights(veh) then
+							if lstate == 1 then
+								SetVehicleAutoRepairDisabled(veh, true)
+								SetVehicleExtra(veh, 1, true)
+								SetVehicleExtra(veh, 2, false)
+								SetVehicleExtra(veh, 3, true)
+								SetVehicleExtra(veh, 4, true)
+								if useBozLights(veh) then
+									SetVehicleExtra(veh, 5, true)
+									SetVehicleExtra(veh, 6, true)
+								end
+							elseif lstate == 2 then
+								SetVehicleAutoRepairDisabled(veh, true)
+								SetVehicleExtra(veh, 1, false)
+								SetVehicleExtra(veh, 2, false)
+								SetVehicleExtra(veh, 3, true)
+								SetVehicleExtra(veh, 4, true)
+								if useBozLights(veh) then
+									SetVehicleExtra(veh, 5, true)
+									SetVehicleExtra(veh, 6, true)
+								end
+							elseif lstate == 3 then
+								SetVehicleAutoRepairDisabled(veh, true)
+								SetVehicleExtra(veh, 1, false)
+								SetVehicleExtra(veh, 2, true)
+								SetVehicleExtra(veh, 3, false)
+								SetVehicleExtra(veh, 4, false)
+								if useBozLights(veh) then
+									SetVehicleExtra(veh, 5, false)
+									SetVehicleExtra(veh, 6, false)
+								end
+							elseif lstate == 0 then
+								SetVehicleAutoRepairDisabled(veh, true)
+								SetVehicleExtra(veh, 1, true)
+								SetVehicleExtra(veh, 2, true)
+								SetVehicleExtra(veh, 3, true)
+								SetVehicleExtra(veh, 4, true)
+								if useBozLights(veh) then
+									SetVehicleExtra(veh, 5, true)
+									SetVehicleExtra(veh, 6, true)
+								end
+							end
+						end
+						-- BOZLIGHTS END
+
 						if not HasRumbler(veh) then
 							rumblerState = 0
 						end
@@ -1203,7 +1315,38 @@ Citizen.CreateThread(function()
 								count_bcast_timer = delay_bcast_timer
 								ShowInfo("Your emergency equipment has been damaged and no longer functions.")
 
+							-- BOZLIGHTS START
 							elseif IsDisabledControlJustReleased(0, 85) then
+								--BOZLIGHTS START
+								if useBozLights(veh) or useBozLightsLegacy(veh) then
+									if lstate == 3 then
+										PlaySoundFrontend(-1, "NAV_UP_DOWN", "HUD_FRONTEND_DEFAULT_SOUNDSET", 1)
+										SetVehicleSiren(veh, false)
+										lstate = 0
+									elseif lstate ~= 3 then
+										PlaySoundFrontend(-1, "NAV_LEFT_RIGHT", "HUD_FRONTEND_DEFAULT_SOUNDSET", 1)
+										SetVehicleSiren(veh, true)
+										if useMiniSiren(veh) and lstate == 0 then
+											lstate = 2
+										else 
+											lstate = lstate + 1
+										end
+										count_bcast_timer = delay_bcast_timer
+									end
+								else
+								-- BOZLIGHTS END
+									if IsVehicleSirenOn(veh) then
+										PlaySoundFrontend(-1, "NAV_UP_DOWN", "HUD_FRONTEND_DEFAULT_SOUNDSET", 1)
+										SetVehicleSiren(veh, false)
+									else
+										PlaySoundFrontend(-1, "NAV_LEFT_RIGHT", "HUD_FRONTEND_DEFAULT_SOUNDSET", 1)
+										SetVehicleSiren(veh, true)
+										count_bcast_timer = delay_bcast_timer
+									end
+								end		-- BOZLIGHTS
+							-- BOZLIGHTS END
+
+							--[[elseif IsDisabledControlJustReleased(0, 85) then
 								if IsVehicleSirenOn(veh) then
 									PlaySoundFrontend(-1, "NAV_UP_DOWN", "HUD_FRONTEND_DEFAULT_SOUNDSET", 1)
 									SetVehicleSiren(veh, false)
@@ -1211,7 +1354,7 @@ Citizen.CreateThread(function()
 									PlaySoundFrontend(-1, "NAV_LEFT_RIGHT", "HUD_FRONTEND_DEFAULT_SOUNDSET", 1)
 									SetVehicleSiren(veh, true)
 									count_bcast_timer = delay_bcast_timer
-								end		
+								end		]]
 							
 							-- TOG BOZ SIREN (NEW)
 
@@ -1336,7 +1479,8 @@ Citizen.CreateThread(function()
 							elseif IsDisabledControlJustPressed(0, 19) then
 								local cstate = state_lxsiren[veh]
 								if cstate == 0 then
-									if IsVehicleSirenOn(veh) then
+									if not useBozLights(veh) and IsVehicleSirenOn(veh) or useBozLights(veh) and lstate == 3 or not useBozLightsLegacy(veh) and IsVehicleSirenOn(veh) or useBozLightsLegacy(veh) and lstate == 3 then -- bozlights
+									--if IsVehicleSirenOn(veh) then
 										PlaySoundFrontend(-1, "Beep_Red", "DLC_HEIST_HACKING_SNAKE_SOUNDS", 1)
 										if rumblerState == 1 then
 											SetLxSirenStateForVeh(veh, 5)
@@ -1358,7 +1502,8 @@ Citizen.CreateThread(function()
 									if IsControlJustPressed(0, 86) then
 										local cstate = state_lxsiren[veh]
 										if cstate == 0 then
-											if IsVehicleSirenOn(veh) then
+											if not useBozLights(veh) and IsVehicleSirenOn(veh) or useBozLights(veh) and lstate == 3 or not useBozLightsLegacy(veh) and IsVehicleSirenOn(veh) or useBozLightsLegacy(veh) and lstate == 3  then -- bozlights
+											--if IsVehicleSirenOn(veh) then
 												PlaySoundFrontend(-1, "Beep_Red", "DLC_HEIST_HACKING_SNAKE_SOUNDS", 1)
 												SetLxSirenStateForVeh(veh, 1)
 												count_bcast_timer = delay_bcast_timer
@@ -1377,6 +1522,7 @@ Citizen.CreateThread(function()
 								
 							-- TOG AUXILIARY TONE
 							elseif IsDisabledControlJustPressed(0, 165) then
+								--if HasAuxiliaryTone(veh) then -- bozlights
 								if HasAuxiliaryTone(veh) then
 									if state_pwrcall[veh] == true then
 										PlaySoundFrontend(-1, "Beep_Red", "DLC_HEIST_HACKING_SNAKE_SOUNDS", 1)
@@ -1421,6 +1567,36 @@ Citizen.CreateThread(function()
 										count_bcast_timer = delay_bcast_timer
 									end
 								end
+
+								-- BOZLIGHTS START
+								-- TAKEDOWN SHUTOFF AT HBEAMS
+								if useBLCTkdn(veh) then
+									if lstate == 3 then
+										_,lightson,highbeams = GetVehicleLightsState(veh)
+										local tkdnlights = IsVehicleExtraTurnedOn(veh, 4)
+										if highbeams == 1 then
+											SetVehicleAutoRepairDisabled(veh, true)
+											SetVehicleExtra(veh, 4, tkdnlights)
+										end
+									elseif lstate == 2 then
+										_,lightson,highbeams = GetVehicleLightsState(veh)
+										local sbrnlights = IsVehicleExtraTurnedOn(veh, 1)
+										if highbeams == 1 then
+											SetVehicleAutoRepairDisabled(veh, true)
+											--SetVehicleExtra(veh, 1, sbrnlights)
+										end
+									elseif lstate == 3 then
+										_,lightson,highbeams = GetVehicleLightsState(veh)
+										local sbrnlights = IsVehicleExtraTurnedOn(veh, 1)
+										local tkdnlights = IsVehicleExtraTurnedOn(veh, 4)
+										if highbeams == 1 then
+											SetVehicleAutoRepairDisabled(veh, true)
+											--SetVehicleExtra(veh, 1, sbrnlights)
+											SetVehicleExtra(veh, 4, tkdnlights)
+										end
+									end
+								end
+								-- BOZLIGHTS END
 							end
 
 							if IsDisabledControlJustPressed(0, 80) or (IsDisabledControlJustPressed(0, 86) and (not HasHornSwitch(veh) or HasHornSwitch(veh) and state_lxsiren[veh] ~= 0)) then
