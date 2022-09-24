@@ -1,6 +1,8 @@
 MuteHornToneSwitcher = true
 UsingVanillaSiren = false
 ShowDebugInfo = false
+DisableEquipmentWhenDamaged = true
+DamageThreshold = 975
 TertiaryToneByDefault = true -- UNUSED AS OF RIGHT NOW
 
 ----------------------
@@ -20,6 +22,8 @@ ModelsWithEquipment = {
     "sadcrstank9",
     "sadcrtorrence",
     "sadcrtorrslick",
+    "lsiasectorrence",
+    "lsiasecspeedo",
 }
 
 ModelsWithNoEquipment = { -- Non-emergency models without lights/sirens controls
@@ -163,6 +167,32 @@ ModelsWithNoTertiaryTone = {
     "lsppscoutum",
     "lsppstanier",
     "lsppstanier2",
+    "lsiascoutII",
+    "lsiastanierk9",
+    "lsiastanier",
+    "lsiastanierumk",
+    "lsiafug",
+    "lsiasectorrence",
+    "lsiasecspeedo",
+    "mcsoalamo",
+    "mcsoalamo2",
+    "mcsoalamo3",
+    "mcsocara",
+    "mcsocara2",
+    "mcsocara3",
+    "mcsocenturion",
+    "mcsooutlaw",
+    "mcsoscout",
+    "mcsoscout2",
+    "mcsoscout3",
+    "mcsoscout4",
+    "mcsostalker",
+    "mcsostanier",
+    "mcsostanier2",
+    "mcsotorr",
+    "mcsotorr2",
+    "mcsoyosemite",
+    "mcfdtruck",
 }
 
 -- Vehicles with a 4th tone activated by a seperate button. Usually a Hi-Lo.
@@ -258,6 +288,12 @@ ModelsWithHornSwitch = {
     "sheriffcoqmumk",
     "police2c",
     "policebufac",
+    "mcsoalamo",
+    "mcsoalamo3",
+    "mcsocara2",
+    "mcsocara3",
+    "mcsoscout",
+    "mcsoscout4",
 }
 
 ModelsWithRumbler = {
@@ -393,6 +429,7 @@ ModelsWithSS2000 = {
 	"LCPD2F",
 	"LCPD4B",
     "lifeguard",
+    "mcsooutlaw",
 }
 
 ModelsWithCencomSapphire = {
@@ -402,6 +439,7 @@ ModelsWithCencomSapphire = {
     "glpdgresleyum",
     "mrcacara",
     "rhpdscoutumk",
+    "mcfdfiretruk2",
 }
 
 ModelsWith295HFS = {
@@ -412,6 +450,7 @@ ModelsWith295HFS = {
     "sheriffinsurgent",
     "riot2",
     "riot3",
+    "mcsocenturion",
 }
 
 ModelsWithSSP3000 = {
@@ -447,6 +486,16 @@ ModelsWithSSP3000 = {
     "sheriffscout2",
     "sheriffcoqm3",
     "sheriffcoqmumk",
+    "lsiascoutII",
+    "lsiafug",
+    "lsiasectorrence",
+    "lsiasecspeedo",
+    "mcsoalamo",
+    "mcsoalamo3",
+    "mcsocara2",
+    "mcsocara3",
+    "mcsoscout",
+    "mcsoscout4",
 }
 
 ModelsWithTouchmaster = {
@@ -455,6 +504,16 @@ ModelsWithTouchmaster = {
     "dppdsgt",
     "dppdunmk",
     "pranger",
+    "mcsoalamo2",
+    "mcsocara",
+    "mcsoscout2",
+    "mcsoscout3",
+    "mcsostalker",
+    "mcsostanier",
+    "mcsostanier2",
+    "mcsotorr",
+    "mcsotorr2",
+    "mcsoyosemite",
 }
 
 ModelsWithZ3 = {
@@ -508,6 +567,9 @@ ModelsWithSmartSystemLMS = { -- LASD/LAPD Siren
     "police2c",
     "policebufac",
     "lsppstanier2",
+    "lsiastanierk9",
+    "lsiastanier",
+    "lsiastanierumk",
 }
 
 ModelsWith650RemoteSiren = {
@@ -524,8 +586,22 @@ ModelsWithLAFDSpectraWail = { -- LAFD Wail Tone in LXSRN 1 (Wail). Will only wor
     "LSFDGRANGER",
 }
 
-ModelsWithLASDSirenStuff = {
+ModelsWithTimberwolfDualSiren = {
 
+}
+
+ModelsWithEQ2DualSiren = {
+
+}
+
+ModelsWithQ2DualSiren = { -- THIS DOESNT WORK!!!!
+
+}
+
+BCSOFugitiveModels = {
+    "bcsofugitive",
+    "fibpalamo",
+    "fibpalamok9",
 }
 
 ModelsWithZ3LowFreqInsteadofHiLo = { -- Requires Z3 Siren
