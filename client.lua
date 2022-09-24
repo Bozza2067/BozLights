@@ -240,6 +240,15 @@ function UseCHPSiren(veh)
 	end
 	return false
 end
+function UseCHPMotorSiren(veh)
+	local model = GetEntityModel(veh)
+	for i = 1, #ModelsWithWhelenCHPMotorSiren, 1 do
+		if model == GetHashKey(ModelsWithWhelenCHPMotorSiren[i]) then
+			return true
+		end
+	end
+	return false
+end
 
 function UseSS2000(veh)
 	local model = GetEntityModel(veh)
@@ -548,6 +557,8 @@ function SetLxSirenStateForVeh(veh, newstate)
 					PlaySoundFromEntity(snd_lxsiren[veh], "VEHICLES_HORNS_SIREN_1", veh, 0, 0, 0)
 				elseif UseCHPSiren(veh) then
 					PlaySoundFromEntity(snd_lxsiren[veh], "siren_chp_wail", veh, "policingmp_sounds_sirens1_soundset", 0, 0)
+				elseif UseCHPMotorSiren(veh) then
+					PlaySoundFromEntity(snd_lxsiren[veh], "siren_chp2_wail", veh, "policingmp_sounds_sirens5_soundset", 0, 0)
 				elseif Use295HFS(veh) then
 					PlaySoundFromEntity(snd_lxsiren[veh], "siren_295hfs_wail", veh, "policingmp_sounds_sirens3_soundset", 0, 0)
 				elseif UseZ3Siren(veh) then
@@ -593,6 +604,8 @@ function SetLxSirenStateForVeh(veh, newstate)
 					PlaySoundFromEntity(snd_lxsiren[veh], "VEHICLES_HORNS_SIREN_2", veh, 0, 0, 0)
 				elseif UseCHPSiren(veh) then
 					PlaySoundFromEntity(snd_lxsiren[veh], "siren_chp_yelp", veh, "policingmp_sounds_sirens1_soundset", 0, 0)
+				elseif UseCHPMotorSiren(veh) then
+					PlaySoundFromEntity(snd_lxsiren[veh], "siren_chp2_yelp", veh, "policingmp_sounds_sirens5_soundset", 0, 0)
 				elseif Use295HFS(veh) then
 					PlaySoundFromEntity(snd_lxsiren[veh], "siren_295hfs_yelp", veh, "policingmp_sounds_sirens3_soundset", 0, 0)
 				elseif UseZ3Siren(veh) then
@@ -664,7 +677,7 @@ function SetLxSirenStateForVeh(veh, newstate)
 				elseif UsingVanillaSiren then
 					PlaySoundFromEntity(snd_lxsiren[veh], "vehicles_horns_police_warning_rnd_euro", veh, 0, 0, 0)
 
-				elseif UseCHPSiren(veh) then
+				elseif UseCHPSiren(veh) or UseCHPMotorSiren(veh) then
 					PlaySoundFromEntity(snd_lxsiren[veh], "siren_chp_evac", veh, "policingmp_sounds_sirens1_soundset", 0, 0)
 				elseif UseZ3Siren(veh) then
 					if UseZ3SirenLowFreq(veh) then
@@ -784,6 +797,8 @@ function TogPowercallStateForVeh(veh, toggle)
 					PlaySoundFromEntity(snd_pwrcall[veh], "VEHICLES_HORNS_SIREN_1", veh, 0, 0, 0)
 				elseif UseCHPSiren(veh) then
 					PlaySoundFromEntity(snd_pwrcall[veh], "siren_chp_wail", veh, "policingmp_sounds_sirens1_soundset", 0, 0)
+				elseif UseCHPMotorSiren(veh) then
+					PlaySoundFromEntity(snd_pwrcall[veh], "siren_chp2_wail", veh, "policingmp_sounds_sirens5_soundset", 0, 0)
 				elseif UseZ3Siren(veh) then
 					PlaySoundFromEntity(snd_pwrcall[veh], "siren_z3_wail", veh, "policingmp_sounds_sirens1_soundset", 0, 0)
 				elseif Use295HFS(veh) then
@@ -854,7 +869,7 @@ function SetAirManuStateForVeh(veh, newstate)
 						
 				elseif UseSSLMS(veh) then
 					PlaySoundFromEntity(snd_airmanu[veh], "siren_lasd_horn", veh, "policingmp_sounds_sirens2_soundset", 0, 0)
-				elseif UseCHPSiren(veh) then
+				elseif UseCHPSiren(veh) or UseCHPMotorSiren(veh) then
 					PlaySoundFromEntity(snd_airmanu[veh], "siren_chp_horn", veh, "policingmp_sounds_sirens1_soundset", 0, 0)
 				elseif UseZ3Siren(veh) then
 					PlaySoundFromEntity(snd_airmanu[veh], "siren_z3_horn", veh, "policingmp_sounds_sirens1_soundset", 0, 0)
@@ -905,6 +920,8 @@ function SetAirManuStateForVeh(veh, newstate)
 					
 				elseif UseCHPSiren(veh) then
 					PlaySoundFromEntity(snd_airmanu[veh], "siren_chp_manual", veh, "policingmp_sounds_sirens1_soundset", 0, 0)
+				elseif UseCHPMotorSiren(veh) then
+					PlaySoundFromEntity(snd_airmanu[veh], "siren_chp2_wail", veh, "policingmp_sounds_sirens5_soundset", 0, 0)
 				elseif UseZ3Siren(veh) then
 					PlaySoundFromEntity(snd_airmanu[veh], "siren_z3_wail", veh, "policingmp_sounds_sirens1_soundset", 0, 0)
 				elseif UseNERGY(veh) then

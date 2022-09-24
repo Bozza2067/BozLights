@@ -277,7 +277,6 @@ ModelsWithHornSwitch = {
     "gtfminivan",
     "centurionlspd",
     "polriot",
-    "policeb",
     "policet",
     "sahp1b3",
     "sahp1c",
@@ -354,7 +353,7 @@ ModelsWith80K = {
     "police2gs",
 }
 
-ModelsWithWhelenCHPSiren ={
+ModelsWithWhelenCHPSiren = {
     "sahp",
     "sahp1a",
     "sahp1b",
@@ -363,6 +362,10 @@ ModelsWithWhelenCHPSiren ={
     "sahp1e",
     "sahp2",
     "sahp2a",
+}
+
+ModelsWithWhelenCHPMotorSiren = {
+    "policeb",
 }
 
 ModelsWithFireSrn = { -- vanilla fire truck siren
