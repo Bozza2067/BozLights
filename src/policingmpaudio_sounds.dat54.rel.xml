@@ -420,6 +420,14 @@
 					<ScriptName>siren_eq2_wail</ScriptName>
 					<ChildSound>siren_eq2_wail_d</ChildSound>
 				</Item>
+				<Item>
+					<ScriptName>siren_chp2_wail</ScriptName>
+					<ChildSound>siren_chp2_wail_d</ChildSound>
+				</Item>
+				<Item>
+					<ScriptName>siren_chp2_yelp</ScriptName>
+					<ChildSound>siren_chp2_yelp_d</ChildSound>
+				</Item>
 			</Items>
 		</Item>
 		<Item type="SimpleSound">
@@ -3164,13 +3172,13 @@
 			<WaveSlotNum value="0" />
 		</Item>
 		<Item type="DirectionalSound">
-			<Name>siren_chp_wail_d</Name>
+			<Name>siren_chp2_wail_d</Name>
 			<Header>
 				<Flags value="0x00008004" />
 				<Volume value="65436" />
 				<Category>vehicles_sirens</Category>
 			</Header>
-			<ChildSound>siren_chp_wail_s</ChildSound>
+			<ChildSound>siren_chp2_wail_s</ChildSound>
 			<InnerAngle value="20" />
 			<OuterAngle value="65" />
 			<RearAttenuation value="-3" />

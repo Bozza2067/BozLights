@@ -1,7 +1,7 @@
 MuteHornToneSwitcher = true
 UsingVanillaSiren = false
 ShowDebugInfo = false
-DisableEquipmentWhenDamaged = true
+DisableEquipmentWhenDamaged = false
 DamageThreshold = 975
 TertiaryToneByDefault = true -- UNUSED AS OF RIGHT NOW
 
@@ -577,6 +577,10 @@ ModelsWithSmartSystemLMS = { -- LASD/LAPD Siren
 
 ModelsWith650RemoteSiren = {
     "sheriffheavy",
+}
+
+ModelsWithEQ2 = { -- THIS DOESNT WORK!!!!
+
 }
 
 -----------------------------------

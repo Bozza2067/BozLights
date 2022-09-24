@@ -454,6 +454,16 @@ function UseEQ2Dual(veh)
 	return false
 end
 
+function UseEQ2(veh)
+	local model = GetEntityModel(veh)
+	for i = 1, #ModelsWithEQ2, 1 do
+		if model == GetHashKey(ModelsWithEQ2[i]) then
+			return true
+		end
+	end
+	return false
+end
+
 function UseQ2Dual(veh)
 	local model = GetEntityModel(veh)
 	for i = 1, #ModelsWithQ2DualSiren, 1 do
@@ -785,7 +795,7 @@ function TogPowercallStateForVeh(veh, toggle)
 				snd_pwrcall[veh] = GetSoundId()
 				if UseTimberwolfDual(veh) then
 					PlaySoundFromEntity(snd_pwrcall[veh], "siren_timberwolf", veh, "policingmp_sounds_sirens5_soundset", 0, 0)
-				elseif UseEQ2Dual(veh) or UseEQ2(veh)then
+				elseif UseEQ2Dual(veh) or UseEQ2(veh) then
 					PlaySoundFromEntity(snd_pwrcall[veh], "siren_eq2_wail", veh, "policingmp_sounds_sirens4_soundset", 0, 0)
 				elseif UseQ2Dual(veh) then
 					PlaySoundFromEntity(snd_pwrcall[veh], "siren_q2", veh, "policingmp_sounds_sirens5_soundset", 0, 0)
@@ -945,7 +955,11 @@ function SetAirManuStateForVeh(veh, newstate)
 				elseif UseSapphire(veh) then
 					PlaySoundFromEntity(snd_airmanu[veh], "siren_sapphire_wail", veh, "policingmp_sounds_sirens2_soundset", 0, 0)
 				elseif UseAstroSpectra(veh) then
-					PlaySoundFromEntity(snd_airmanu[veh], "siren_spectra_wail", veh, "policingmp_sounds_sirens5_soundset", 0, 0)
+					if UseLAFDSpectraWail(veh) then
+						PlaySoundFromEntity(snd_lxsiren[veh], "siren_spectra_wail2", veh, "policingmp_sounds_sirens2_soundset", 0, 0)
+					else
+						PlaySoundFromEntity(snd_lxsiren[veh], "siren_spectra_wail", veh, "policingmp_sounds_sirens2_soundset", 0, 0)
+					end
 				elseif UseSSP3000(veh) then
 					PlaySoundFromEntity(snd_airmanu[veh], "siren_ssp3000_manual", veh, "policingmp_sounds_sirens1_soundset", 0, 0)
 				else
