@@ -11,20 +11,20 @@ Your one-stop-shop for lights and siren controls, BozLights is a modified versio
 
 ##Keyboard Controls:
 
-Q = Toggle emergency lights / Next light stage
-Left Alt = Toggle siren
-E (Double-press) = Toggle Siren
-E = Horn / Switch between wail or yelp (only on cars with hornSwitcher enabled in config and sirens running)
-R = Manual siren / Switch between wail or yelp
-1 = Wail
-2 = Yelp
-3 = Priority
-4 = Extra tone (usually a hi-lo)
-5 = Auxiliary siren (dual siren)
-6 = Rumbler
-_ = Left indicator
-= = Right indicator
-Backspace = Hazard lights
+- Q = Toggle emergency lights / Next light stage
+- Left Alt = Toggle siren
+- E (Double-press) = Toggle Siren
+- E = Horn / Switch between wail or yelp (only on cars with hornSwitcher enabled in config and sirens running)
+- R = Manual siren / Switch between wail or yelp
+- 1 = Wail
+- 2 = Yelp
+- 3 = Priority
+- 4 = Extra tone (usually a hi-lo)
+- 5 = Auxiliary siren (dual siren)
+- 6 = Rumbler
+- _ = Left indicator
+- = = Right indicator
+- Backspace = Hazard lights
 
 It's still compatible with controller, I'm just not sure of the controls since I regularly play with keyboard.
 
