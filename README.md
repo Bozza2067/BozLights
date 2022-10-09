@@ -9,7 +9,7 @@ Your one-stop-shop for lights and siren controls, BozLights is a modified versio
 - An ELS/DLS-like light stage system (requires cars to be specifically designed for this feature, no documentation yet)
 - Bindable key to toggle bomb doors (for NYPD/NYSP-style highrisers)
 
-##Keyboard Controls:
+## Keyboard Controls:
 
 - Q = Toggle emergency lights / Next light stage
 - Left Alt = Toggle siren
