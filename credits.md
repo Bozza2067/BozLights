@@ -32,3 +32,4 @@ Z3 LOWFREQ YELP: https://www.lcpdfr.com/downloads/gta5mods/audio/36204-code-3-z3
 
 TIMBERWOLF: https://www.lcpdfr.com/downloads/gta5mods/audio/20914-retro-fire-sirens-siren-mastery/
 
+nERGY 400: https://community-modding.com/index.php?/files/file/17-soundoff-signal-nergy-siren/
