@@ -10,6 +10,7 @@ Your one-stop-shop for lights and siren controls, BozLights is a modified versio
 - Bindable key to toggle bomb doors (for NYPD/NYSP-style highrisers)
 
 ##Keyboard Controls:
+
 Q = Toggle emergency lights / Next light stage
 Left Alt = Toggle siren
 E (Double-press) = Toggle Siren
@@ -21,7 +22,7 @@ R = Manual siren / Switch between wail or yelp
 4 = Extra tone (usually a hi-lo)
 5 = Auxiliary siren (dual siren)
 6 = Rumbler
-- = Left indicator
+_ = Left indicator
 = = Right indicator
 Backspace = Hazard lights
 
