@@ -9,6 +9,8 @@ Your one-stop-shop for lights and siren controls, BozLights is a modified versio
 - An ELS/DLS-like light stage system (requires cars to be specifically designed for this feature, no documentation yet)
 - Bindable key to toggle bomb doors (for NYPD/NYSP-style highrisers)
 
+## Links:
+
 [Forum Post](http://forum.policingmp.net/d/7-script-bozlights-an-expanded-and-enhanced-version-of-lux-vehcontrol)
 
 [Credits](https://github.com/OfficerBozza/boz_vehcontrol/blob/main/credits.md)
