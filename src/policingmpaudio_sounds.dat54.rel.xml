@@ -436,7 +436,7 @@
 				<Flags value="0x0820E010" />
 				<Pitch value="0" />
 				<ReleaseTime value="50" />
-				<DopplerFactor value="0" />
+				<DopplerFactor value="30" />
 				<Category>vehicles_sirens</Category>
 				<VolumeCurveScale value="300" />
 				<Unk22 value="50" />
@@ -456,7 +456,7 @@
 			<InnerAngle value="20" />
 			<OuterAngle value="65" />
 			<RearAttenuation value="-3" />
-			<YawAngle value="90" />
+			<YawAngle value="0" />
 			<PitchAngle value="0" />
 		</Item>
 		<Item type="SimpleSound">
@@ -465,7 +465,7 @@
 				<Flags value="0x0820E010" />
 				<Pitch value="0" />
 				<ReleaseTime value="50" />
-				<DopplerFactor value="0" />
+				<DopplerFactor value="30" />
 				<Category>vehicles_sirens</Category>
 				<VolumeCurveScale value="300" />
 				<Unk22 value="50" />
@@ -485,7 +485,7 @@
 			<InnerAngle value="20" />
 			<OuterAngle value="65" />
 			<RearAttenuation value="-3" />
-			<YawAngle value="90" />
+			<YawAngle value="0" />
 			<PitchAngle value="0" />
 		</Item>
 		<Item type="SimpleSound">
@@ -494,7 +494,7 @@
 				<Flags value="0x0820E010" />
 				<Pitch value="0" />
 				<ReleaseTime value="50" />
-				<DopplerFactor value="0" />
+				<DopplerFactor value="30" />
 				<Category>vehicles_sirens</Category>
 				<VolumeCurveScale value="300" />
 				<Unk22 value="50" />
@@ -514,7 +514,7 @@
 			<InnerAngle value="20" />
 			<OuterAngle value="65" />
 			<RearAttenuation value="-3" />
-			<YawAngle value="90" />
+			<YawAngle value="0" />
 			<PitchAngle value="0" />
 		</Item>
 		<Item type="SimpleSound">
@@ -523,7 +523,7 @@
 				<Flags value="0x0820E010" />
 				<Pitch value="0" />
 				<ReleaseTime value="50" />
-				<DopplerFactor value="0" />
+				<DopplerFactor value="30" />
 				<Category>vehicles_sirens</Category>
 				<VolumeCurveScale value="300" />
 				<Unk22 value="50" />
@@ -543,7 +543,7 @@
 			<InnerAngle value="20" />
 			<OuterAngle value="65" />
 			<RearAttenuation value="-3" />
-			<YawAngle value="90" />
+			<YawAngle value="0" />
 			<PitchAngle value="0" />
 		</Item>
 		<Item type="SimpleSound">
@@ -552,7 +552,7 @@
 				<Flags value="0x0820E010" />
 				<Pitch value="0" />
 				<ReleaseTime value="50" />
-				<DopplerFactor value="0" />
+				<DopplerFactor value="30" />
 				<Category>vehicles_sirens</Category>
 				<VolumeCurveScale value="300" />
 				<Unk22 value="50" />
@@ -572,7 +572,7 @@
 			<InnerAngle value="20" />
 			<OuterAngle value="65" />
 			<RearAttenuation value="-3" />
-			<YawAngle value="90" />
+			<YawAngle value="0" />
 			<PitchAngle value="0" />
 		</Item>
 		<Item type="SimpleSound">
@@ -581,7 +581,7 @@
 				<Flags value="0x0820E010" />
 				<Pitch value="0" />
 				<ReleaseTime value="50" />
-				<DopplerFactor value="0" />
+				<DopplerFactor value="30" />
 				<Category>vehicles_sirens</Category>
 				<VolumeCurveScale value="300" />
 				<Unk22 value="50" />
@@ -601,7 +601,7 @@
 			<InnerAngle value="20" />
 			<OuterAngle value="65" />
 			<RearAttenuation value="-3" />
-			<YawAngle value="90" />
+			<YawAngle value="0" />
 			<PitchAngle value="0" />
 		</Item>
 		<Item type="SimpleSound">
@@ -610,7 +610,7 @@
 				<Flags value="0x0820E010" />
 				<Pitch value="0" />
 				<ReleaseTime value="50" />
-				<DopplerFactor value="0" />
+				<DopplerFactor value="30" />
 				<Category>vehicles_sirens</Category>
 				<VolumeCurveScale value="300" />
 				<Unk22 value="50" />
@@ -630,7 +630,7 @@
 			<InnerAngle value="20" />
 			<OuterAngle value="65" />
 			<RearAttenuation value="-3" />
-			<YawAngle value="90" />
+			<YawAngle value="0" />
 			<PitchAngle value="0" />
 		</Item>
 		<Item type="SimpleSound">
@@ -639,7 +639,7 @@
 				<Flags value="0x0820E010" />
 				<Pitch value="0" />
 				<ReleaseTime value="50" />
-				<DopplerFactor value="0" />
+				<DopplerFactor value="30" />
 				<Category>vehicles_sirens</Category>
 				<VolumeCurveScale value="300" />
 				<Unk22 value="50" />
@@ -659,7 +659,7 @@
 			<InnerAngle value="20" />
 			<OuterAngle value="65" />
 			<RearAttenuation value="-3" />
-			<YawAngle value="90" />
+			<YawAngle value="0" />
 			<PitchAngle value="0" />
 		</Item>
 		<Item type="SimpleSound">
@@ -668,7 +668,7 @@
 				<Flags value="0x0820E010" />
 				<Pitch value="0" />
 				<ReleaseTime value="50" />
-				<DopplerFactor value="0" />
+				<DopplerFactor value="30" />
 				<Category>vehicles_sirens</Category>
 				<VolumeCurveScale value="300" />
 				<Unk22 value="50" />
@@ -688,7 +688,7 @@
 			<InnerAngle value="20" />
 			<OuterAngle value="65" />
 			<RearAttenuation value="-3" />
-			<YawAngle value="90" />
+			<YawAngle value="0" />
 			<PitchAngle value="0" />
 		</Item>
 		<Item type="SimpleSound">
@@ -697,7 +697,7 @@
 				<Flags value="0x0820E010" />
 				<Pitch value="0" />
 				<ReleaseTime value="50" />
-				<DopplerFactor value="0" />
+				<DopplerFactor value="30" />
 				<Category>vehicles_sirens</Category>
 				<VolumeCurveScale value="300" />
 				<Unk22 value="50" />
@@ -717,7 +717,7 @@
 			<InnerAngle value="20" />
 			<OuterAngle value="65" />
 			<RearAttenuation value="-3" />
-			<YawAngle value="90" />
+			<YawAngle value="0" />
 			<PitchAngle value="0" />
 		</Item>
 		<Item type="SimpleSound">
@@ -726,7 +726,7 @@
 				<Flags value="0x0820E010" />
 				<Pitch value="0" />
 				<ReleaseTime value="50" />
-				<DopplerFactor value="0" />
+				<DopplerFactor value="30" />
 				<Category>vehicles_sirens</Category>
 				<VolumeCurveScale value="300" />
 				<Unk22 value="50" />
@@ -746,7 +746,7 @@
 			<InnerAngle value="20" />
 			<OuterAngle value="65" />
 			<RearAttenuation value="-3" />
-			<YawAngle value="90" />
+			<YawAngle value="0" />
 			<PitchAngle value="0" />
 		</Item>
 		<Item type="SimpleSound">
@@ -755,7 +755,7 @@
 				<Flags value="0x0820E010" />
 				<Pitch value="0" />
 				<ReleaseTime value="50" />
-				<DopplerFactor value="0" />
+				<DopplerFactor value="30" />
 				<Category>vehicles_sirens</Category>
 				<VolumeCurveScale value="300" />
 				<Unk22 value="50" />
@@ -775,7 +775,7 @@
 			<InnerAngle value="20" />
 			<OuterAngle value="65" />
 			<RearAttenuation value="-3" />
-			<YawAngle value="90" />
+			<YawAngle value="0" />
 			<PitchAngle value="0" />
 		</Item>
 		<Item type="SimpleSound">
@@ -784,7 +784,7 @@
 				<Flags value="0x0820E010" />
 				<Pitch value="0" />
 				<ReleaseTime value="50" />
-				<DopplerFactor value="0" />
+				<DopplerFactor value="30" />
 				<Category>vehicles_sirens</Category>
 				<VolumeCurveScale value="300" />
 				<Unk22 value="50" />
@@ -804,7 +804,7 @@
 			<InnerAngle value="20" />
 			<OuterAngle value="65" />
 			<RearAttenuation value="-3" />
-			<YawAngle value="90" />
+			<YawAngle value="0" />
 			<PitchAngle value="0" />
 		</Item>
 		<Item type="SimpleSound">
@@ -813,7 +813,7 @@
 				<Flags value="0x0820E010" />
 				<Pitch value="0" />
 				<ReleaseTime value="50" />
-				<DopplerFactor value="0" />
+				<DopplerFactor value="30" />
 				<Category>vehicles_sirens</Category>
 				<VolumeCurveScale value="300" />
 				<Unk22 value="50" />
@@ -833,7 +833,7 @@
 			<InnerAngle value="20" />
 			<OuterAngle value="65" />
 			<RearAttenuation value="-3" />
-			<YawAngle value="90" />
+			<YawAngle value="0" />
 			<PitchAngle value="0" />
 		</Item>
 		<Item type="SimpleSound">
@@ -842,7 +842,7 @@
 				<Flags value="0x0820E010" />
 				<Pitch value="0" />
 				<ReleaseTime value="50" />
-				<DopplerFactor value="0" />
+				<DopplerFactor value="30" />
 				<Category>vehicles_sirens</Category>
 				<VolumeCurveScale value="300" />
 				<Unk22 value="50" />
@@ -862,7 +862,7 @@
 			<InnerAngle value="20" />
 			<OuterAngle value="65" />
 			<RearAttenuation value="-3" />
-			<YawAngle value="90" />
+			<YawAngle value="0" />
 			<PitchAngle value="0" />
 		</Item>
 		<Item type="SimpleSound">
@@ -871,7 +871,7 @@
 				<Flags value="0x0820E010" />
 				<Pitch value="0" />
 				<ReleaseTime value="50" />
-				<DopplerFactor value="0" />
+				<DopplerFactor value="30" />
 				<Category>vehicles_sirens</Category>
 				<VolumeCurveScale value="300" />
 				<Unk22 value="50" />
@@ -891,7 +891,7 @@
 			<InnerAngle value="20" />
 			<OuterAngle value="65" />
 			<RearAttenuation value="-3" />
-			<YawAngle value="90" />
+			<YawAngle value="0" />
 			<PitchAngle value="0" />
 		</Item>
 		<Item type="SimpleSound">
@@ -900,7 +900,7 @@
 				<Flags value="0x0820E010" />
 				<Pitch value="0" />
 				<ReleaseTime value="50" />
-				<DopplerFactor value="0" />
+				<DopplerFactor value="30" />
 				<Category>vehicles_sirens</Category>
 				<VolumeCurveScale value="300" />
 				<Unk22 value="50" />
@@ -920,7 +920,7 @@
 			<InnerAngle value="20" />
 			<OuterAngle value="65" />
 			<RearAttenuation value="-3" />
-			<YawAngle value="90" />
+			<YawAngle value="0" />
 			<PitchAngle value="0" />
 		</Item>
 		<Item type="SimpleSound">
@@ -929,7 +929,7 @@
 				<Flags value="0x0820E010" />
 				<Pitch value="0" />
 				<ReleaseTime value="50" />
-				<DopplerFactor value="0" />
+				<DopplerFactor value="30" />
 				<Category>vehicles_sirens</Category>
 				<VolumeCurveScale value="300" />
 				<Unk22 value="50" />
@@ -949,7 +949,7 @@
 			<InnerAngle value="20" />
 			<OuterAngle value="65" />
 			<RearAttenuation value="-3" />
-			<YawAngle value="90" />
+			<YawAngle value="0" />
 			<PitchAngle value="0" />
 		</Item>
 		<Item type="SimpleSound">
@@ -958,7 +958,7 @@
 				<Flags value="0x0820E010" />
 				<Pitch value="0" />
 				<ReleaseTime value="50" />
-				<DopplerFactor value="0" />
+				<DopplerFactor value="30" />
 				<Category>vehicles_sirens</Category>
 				<VolumeCurveScale value="300" />
 				<Unk22 value="50" />
@@ -978,7 +978,7 @@
 			<InnerAngle value="20" />
 			<OuterAngle value="65" />
 			<RearAttenuation value="-3" />
-			<YawAngle value="90" />
+			<YawAngle value="0" />
 			<PitchAngle value="0" />
 		</Item>
 		<Item type="SimpleSound">
@@ -987,7 +987,7 @@
 				<Flags value="0x0820E010" />
 				<Pitch value="0" />
 				<ReleaseTime value="50" />
-				<DopplerFactor value="0" />
+				<DopplerFactor value="30" />
 				<Category>vehicles_sirens</Category>
 				<VolumeCurveScale value="300" />
 				<Unk22 value="50" />
@@ -1007,7 +1007,7 @@
 			<InnerAngle value="20" />
 			<OuterAngle value="65" />
 			<RearAttenuation value="-3" />
-			<YawAngle value="90" />
+			<YawAngle value="0" />
 			<PitchAngle value="0" />
 		</Item>
 		<Item type="SimpleSound">
@@ -1016,7 +1016,7 @@
 				<Flags value="0x0820E010" />
 				<Pitch value="0" />
 				<ReleaseTime value="50" />
-				<DopplerFactor value="0" />
+				<DopplerFactor value="30" />
 				<Category>vehicles_sirens</Category>
 				<VolumeCurveScale value="300" />
 				<Unk22 value="50" />
@@ -1036,7 +1036,7 @@
 			<InnerAngle value="20" />
 			<OuterAngle value="65" />
 			<RearAttenuation value="-3" />
-			<YawAngle value="90" />
+			<YawAngle value="0" />
 			<PitchAngle value="0" />
 		</Item>
 		<Item type="SimpleSound">
@@ -1045,7 +1045,7 @@
 				<Flags value="0x0820E010" />
 				<Pitch value="0" />
 				<ReleaseTime value="50" />
-				<DopplerFactor value="0" />
+				<DopplerFactor value="30" />
 				<Category>vehicles_sirens</Category>
 				<VolumeCurveScale value="300" />
 				<Unk22 value="50" />
@@ -1065,7 +1065,7 @@
 			<InnerAngle value="20" />
 			<OuterAngle value="65" />
 			<RearAttenuation value="-3" />
-			<YawAngle value="90" />
+			<YawAngle value="0" />
 			<PitchAngle value="0" />
 		</Item>
 		<Item type="SimpleSound">
@@ -1074,7 +1074,7 @@
 				<Flags value="0x0820E010" />
 				<Pitch value="0" />
 				<ReleaseTime value="50" />
-				<DopplerFactor value="0" />
+				<DopplerFactor value="30" />
 				<Category>vehicles_sirens</Category>
 				<VolumeCurveScale value="300" />
 				<Unk22 value="50" />
@@ -1094,7 +1094,7 @@
 			<InnerAngle value="20" />
 			<OuterAngle value="65" />
 			<RearAttenuation value="-3" />
-			<YawAngle value="90" />
+			<YawAngle value="0" />
 			<PitchAngle value="0" />
 		</Item>
 		<Item type="SimpleSound">
@@ -1103,7 +1103,7 @@
 				<Flags value="0x0820E010" />
 				<Pitch value="0" />
 				<ReleaseTime value="50" />
-				<DopplerFactor value="0" />
+				<DopplerFactor value="30" />
 				<Category>vehicles_sirens</Category>
 				<VolumeCurveScale value="300" />
 				<Unk22 value="50" />
@@ -1123,7 +1123,7 @@
 			<InnerAngle value="20" />
 			<OuterAngle value="65" />
 			<RearAttenuation value="-3" />
-			<YawAngle value="90" />
+			<YawAngle value="0" />
 			<PitchAngle value="0" />
 		</Item>
 		<Item type="SimpleSound">
@@ -1132,7 +1132,7 @@
 				<Flags value="0x0820E010" />
 				<Pitch value="0" />
 				<ReleaseTime value="50" />
-				<DopplerFactor value="0" />
+				<DopplerFactor value="30" />
 				<Category>vehicles_sirens</Category>
 				<VolumeCurveScale value="300" />
 				<Unk22 value="50" />
@@ -1152,7 +1152,7 @@
 			<InnerAngle value="20" />
 			<OuterAngle value="65" />
 			<RearAttenuation value="-3" />
-			<YawAngle value="90" />
+			<YawAngle value="0" />
 			<PitchAngle value="0" />
 		</Item>
 		<Item type="SimpleSound">
@@ -1161,7 +1161,7 @@
 				<Flags value="0x0820E010" />
 				<Pitch value="0" />
 				<ReleaseTime value="50" />
-				<DopplerFactor value="0" />
+				<DopplerFactor value="30" />
 				<Category>vehicles_sirens</Category>
 				<VolumeCurveScale value="300" />
 				<Unk22 value="50" />
@@ -1181,7 +1181,7 @@
 			<InnerAngle value="20" />
 			<OuterAngle value="65" />
 			<RearAttenuation value="-3" />
-			<YawAngle value="90" />
+			<YawAngle value="0" />
 			<PitchAngle value="0" />
 		</Item>
 		<Item type="SimpleSound">
@@ -1190,7 +1190,7 @@
 				<Flags value="0x0820E010" />
 				<Pitch value="0" />
 				<ReleaseTime value="50" />
-				<DopplerFactor value="0" />
+				<DopplerFactor value="30" />
 				<Category>vehicles_sirens</Category>
 				<VolumeCurveScale value="300" />
 				<Unk22 value="50" />
@@ -1210,7 +1210,7 @@
 			<InnerAngle value="20" />
 			<OuterAngle value="65" />
 			<RearAttenuation value="-3" />
-			<YawAngle value="90" />
+			<YawAngle value="0" />
 			<PitchAngle value="0" />
 		</Item>
 		<Item type="SimpleSound">
@@ -1219,7 +1219,7 @@
 				<Flags value="0x0820E010" />
 				<Pitch value="0" />
 				<ReleaseTime value="50" />
-				<DopplerFactor value="0" />
+				<DopplerFactor value="30" />
 				<Category>vehicles_sirens</Category>
 				<VolumeCurveScale value="300" />
 				<Unk22 value="50" />
@@ -1239,7 +1239,7 @@
 			<InnerAngle value="20" />
 			<OuterAngle value="65" />
 			<RearAttenuation value="-3" />
-			<YawAngle value="90" />
+			<YawAngle value="0" />
 			<PitchAngle value="0" />
 		</Item>
 		<Item type="SimpleSound">
@@ -1248,7 +1248,7 @@
 				<Flags value="0x0820E010" />
 				<Pitch value="0" />
 				<ReleaseTime value="50" />
-				<DopplerFactor value="0" />
+				<DopplerFactor value="30" />
 				<Category>vehicles_sirens</Category>
 				<VolumeCurveScale value="300" />
 				<Unk22 value="50" />
@@ -1268,7 +1268,7 @@
 			<InnerAngle value="20" />
 			<OuterAngle value="65" />
 			<RearAttenuation value="-3" />
-			<YawAngle value="90" />
+			<YawAngle value="0" />
 			<PitchAngle value="0" />
 		</Item>
 		<Item type="SimpleSound">
@@ -1277,7 +1277,7 @@
 				<Flags value="0x0820E010" />
 				<Pitch value="0" />
 				<ReleaseTime value="50" />
-				<DopplerFactor value="0" />
+				<DopplerFactor value="30" />
 				<Category>vehicles_sirens</Category>
 				<VolumeCurveScale value="300" />
 				<Unk22 value="50" />
@@ -1297,7 +1297,7 @@
 			<InnerAngle value="20" />
 			<OuterAngle value="65" />
 			<RearAttenuation value="-3" />
-			<YawAngle value="90" />
+			<YawAngle value="0" />
 			<PitchAngle value="0" />
 		</Item>
 		<Item type="SimpleSound">
@@ -1306,7 +1306,7 @@
 				<Flags value="0x0820E010" />
 				<Pitch value="0" />
 				<ReleaseTime value="50" />
-				<DopplerFactor value="0" />
+				<DopplerFactor value="30" />
 				<Category>vehicles_sirens</Category>
 				<VolumeCurveScale value="300" />
 				<Unk22 value="50" />
@@ -1326,7 +1326,7 @@
 			<InnerAngle value="20" />
 			<OuterAngle value="65" />
 			<RearAttenuation value="-3" />
-			<YawAngle value="90" />
+			<YawAngle value="0" />
 			<PitchAngle value="0" />
 		</Item>
 		<Item type="SimpleSound">
@@ -1335,7 +1335,7 @@
 				<Flags value="0x0820E010" />
 				<Pitch value="0" />
 				<ReleaseTime value="50" />
-				<DopplerFactor value="0" />
+				<DopplerFactor value="30" />
 				<Category>vehicles_sirens</Category>
 				<VolumeCurveScale value="300" />
 				<Unk22 value="50" />
@@ -1355,7 +1355,7 @@
 			<InnerAngle value="20" />
 			<OuterAngle value="65" />
 			<RearAttenuation value="-3" />
-			<YawAngle value="90" />
+			<YawAngle value="0" />
 			<PitchAngle value="0" />
 		</Item>
 		<Item type="SimpleSound">
@@ -1364,7 +1364,7 @@
 				<Flags value="0x0820E010" />
 				<Pitch value="0" />
 				<ReleaseTime value="50" />
-				<DopplerFactor value="0" />
+				<DopplerFactor value="30" />
 				<Category>vehicles_sirens</Category>
 				<VolumeCurveScale value="300" />
 				<Unk22 value="50" />
@@ -1384,7 +1384,7 @@
 			<InnerAngle value="20" />
 			<OuterAngle value="65" />
 			<RearAttenuation value="-3" />
-			<YawAngle value="90" />
+			<YawAngle value="0" />
 			<PitchAngle value="0" />
 		</Item>
 		<Item type="SimpleSound">
@@ -1393,7 +1393,7 @@
 				<Flags value="0x0820E010" />
 				<Pitch value="0" />
 				<ReleaseTime value="50" />
-				<DopplerFactor value="0" />
+				<DopplerFactor value="30" />
 				<Category>vehicles_sirens</Category>
 				<VolumeCurveScale value="300" />
 				<Unk22 value="50" />
@@ -1413,7 +1413,7 @@
 			<InnerAngle value="20" />
 			<OuterAngle value="65" />
 			<RearAttenuation value="-3" />
-			<YawAngle value="90" />
+			<YawAngle value="0" />
 			<PitchAngle value="0" />
 		</Item>
 		<Item type="SimpleSound">
@@ -1422,7 +1422,7 @@
 				<Flags value="0x0820E010" />
 				<Pitch value="0" />
 				<ReleaseTime value="50" />
-				<DopplerFactor value="0" />
+				<DopplerFactor value="30" />
 				<Category>vehicles_sirens</Category>
 				<VolumeCurveScale value="300" />
 				<Unk22 value="50" />
@@ -1442,7 +1442,7 @@
 			<InnerAngle value="20" />
 			<OuterAngle value="65" />
 			<RearAttenuation value="-3" />
-			<YawAngle value="90" />
+			<YawAngle value="0" />
 			<PitchAngle value="0" />
 		</Item>
 		<Item type="SimpleSound">
@@ -1451,7 +1451,7 @@
 				<Flags value="0x0820E010" />
 				<Pitch value="0" />
 				<ReleaseTime value="50" />
-				<DopplerFactor value="0" />
+				<DopplerFactor value="30" />
 				<Category>vehicles_sirens</Category>
 				<VolumeCurveScale value="300" />
 				<Unk22 value="50" />
@@ -1471,7 +1471,7 @@
 			<InnerAngle value="20" />
 			<OuterAngle value="65" />
 			<RearAttenuation value="-3" />
-			<YawAngle value="90" />
+			<YawAngle value="0" />
 			<PitchAngle value="0" />
 		</Item>
 		<Item type="SimpleSound">
@@ -1480,7 +1480,7 @@
 				<Flags value="0x0820E010" />
 				<Pitch value="0" />
 				<ReleaseTime value="50" />
-				<DopplerFactor value="0" />
+				<DopplerFactor value="30" />
 				<Category>vehicles_sirens</Category>
 				<VolumeCurveScale value="300" />
 				<Unk22 value="50" />
@@ -1500,7 +1500,7 @@
 			<InnerAngle value="20" />
 			<OuterAngle value="65" />
 			<RearAttenuation value="-3" />
-			<YawAngle value="90" />
+			<YawAngle value="0" />
 			<PitchAngle value="0" />
 		</Item>
 		<Item type="SimpleSound">
@@ -1509,7 +1509,7 @@
 				<Flags value="0x0820E010" />
 				<Pitch value="0" />
 				<ReleaseTime value="50" />
-				<DopplerFactor value="0" />
+				<DopplerFactor value="30" />
 				<Category>vehicles_sirens</Category>
 				<VolumeCurveScale value="300" />
 				<Unk22 value="50" />
@@ -1529,7 +1529,7 @@
 			<InnerAngle value="20" />
 			<OuterAngle value="65" />
 			<RearAttenuation value="-3" />
-			<YawAngle value="90" />
+			<YawAngle value="0" />
 			<PitchAngle value="0" />
 		</Item>
 		<Item type="SimpleSound">
@@ -1538,7 +1538,7 @@
 				<Flags value="0x0820E010" />
 				<Pitch value="0" />
 				<ReleaseTime value="50" />
-				<DopplerFactor value="0" />
+				<DopplerFactor value="30" />
 				<Category>vehicles_sirens</Category>
 				<VolumeCurveScale value="300" />
 				<Unk22 value="50" />
@@ -1558,7 +1558,7 @@
 			<InnerAngle value="20" />
 			<OuterAngle value="65" />
 			<RearAttenuation value="-3" />
-			<YawAngle value="90" />
+			<YawAngle value="0" />
 			<PitchAngle value="0" />
 		</Item>
 		<Item type="SimpleSound">
@@ -1567,7 +1567,7 @@
 				<Flags value="0x0820E010" />
 				<Pitch value="0" />
 				<ReleaseTime value="50" />
-				<DopplerFactor value="0" />
+				<DopplerFactor value="30" />
 				<Category>vehicles_sirens</Category>
 				<VolumeCurveScale value="300" />
 				<Unk22 value="50" />
@@ -1587,7 +1587,7 @@
 			<InnerAngle value="20" />
 			<OuterAngle value="65" />
 			<RearAttenuation value="-3" />
-			<YawAngle value="90" />
+			<YawAngle value="0" />
 			<PitchAngle value="0" />
 		</Item>
 		<Item type="SimpleSound">
@@ -1596,7 +1596,7 @@
 				<Flags value="0x0820E010" />
 				<Pitch value="0" />
 				<ReleaseTime value="50" />
-				<DopplerFactor value="0" />
+				<DopplerFactor value="30" />
 				<Category>vehicles_sirens</Category>
 				<VolumeCurveScale value="300" />
 				<Unk22 value="50" />
@@ -1616,7 +1616,7 @@
 			<InnerAngle value="20" />
 			<OuterAngle value="65" />
 			<RearAttenuation value="-3" />
-			<YawAngle value="90" />
+			<YawAngle value="0" />
 			<PitchAngle value="0" />
 		</Item>
 		<Item type="SimpleSound">
@@ -1625,7 +1625,7 @@
 				<Flags value="0x0820E010" />
 				<Pitch value="0" />
 				<ReleaseTime value="50" />
-				<DopplerFactor value="0" />
+				<DopplerFactor value="30" />
 				<Category>vehicles_sirens</Category>
 				<VolumeCurveScale value="300" />
 				<Unk22 value="50" />
@@ -1645,7 +1645,7 @@
 			<InnerAngle value="20" />
 			<OuterAngle value="65" />
 			<RearAttenuation value="-3" />
-			<YawAngle value="90" />
+			<YawAngle value="0" />
 			<PitchAngle value="0" />
 		</Item>
 		<Item type="SimpleSound">
@@ -1654,7 +1654,7 @@
 				<Flags value="0x0820E010" />
 				<Pitch value="0" />
 				<ReleaseTime value="50" />
-				<DopplerFactor value="0" />
+				<DopplerFactor value="30" />
 				<Category>vehicles_sirens</Category>
 				<VolumeCurveScale value="300" />
 				<Unk22 value="50" />
@@ -1674,7 +1674,7 @@
 			<InnerAngle value="20" />
 			<OuterAngle value="65" />
 			<RearAttenuation value="-3" />
-			<YawAngle value="90" />
+			<YawAngle value="0" />
 			<PitchAngle value="0" />
 		</Item>
 		<Item type="SimpleSound">
@@ -1683,7 +1683,7 @@
 				<Flags value="0x0820E010" />
 				<Pitch value="0" />
 				<ReleaseTime value="50" />
-				<DopplerFactor value="0" />
+				<DopplerFactor value="30" />
 				<Category>vehicles_sirens</Category>
 				<VolumeCurveScale value="300" />
 				<Unk22 value="50" />
@@ -1703,7 +1703,7 @@
 			<InnerAngle value="20" />
 			<OuterAngle value="65" />
 			<RearAttenuation value="-3" />
-			<YawAngle value="90" />
+			<YawAngle value="0" />
 			<PitchAngle value="0" />
 		</Item>
 		<Item type="SimpleSound">
@@ -1712,7 +1712,7 @@
 				<Flags value="0x0820E010" />
 				<Pitch value="0" />
 				<ReleaseTime value="50" />
-				<DopplerFactor value="0" />
+				<DopplerFactor value="30" />
 				<Category>vehicles_sirens</Category>
 				<VolumeCurveScale value="300" />
 				<Unk22 value="50" />
@@ -1732,7 +1732,7 @@
 			<InnerAngle value="20" />
 			<OuterAngle value="65" />
 			<RearAttenuation value="-3" />
-			<YawAngle value="90" />
+			<YawAngle value="0" />
 			<PitchAngle value="0" />
 		</Item>
 		<Item type="SimpleSound">
@@ -1741,7 +1741,7 @@
 				<Flags value="0x0820E010" />
 				<Pitch value="0" />
 				<ReleaseTime value="50" />
-				<DopplerFactor value="0" />
+				<DopplerFactor value="30" />
 				<Category>vehicles_sirens</Category>
 				<VolumeCurveScale value="300" />
 				<Unk22 value="50" />
@@ -1761,7 +1761,7 @@
 			<InnerAngle value="20" />
 			<OuterAngle value="65" />
 			<RearAttenuation value="-3" />
-			<YawAngle value="90" />
+			<YawAngle value="0" />
 			<PitchAngle value="0" />
 		</Item>
 		<Item type="SimpleSound">
@@ -1770,7 +1770,7 @@
 				<Flags value="0x0820E010" />
 				<Pitch value="0" />
 				<ReleaseTime value="50" />
-				<DopplerFactor value="0" />
+				<DopplerFactor value="30" />
 				<Category>vehicles_sirens</Category>
 				<VolumeCurveScale value="300" />
 				<Unk22 value="50" />
@@ -1790,7 +1790,7 @@
 			<InnerAngle value="20" />
 			<OuterAngle value="65" />
 			<RearAttenuation value="-3" />
-			<YawAngle value="90" />
+			<YawAngle value="0" />
 			<PitchAngle value="0" />
 		</Item>
 		<Item type="SimpleSound">
@@ -1799,7 +1799,7 @@
 				<Flags value="0x0820E010" />
 				<Pitch value="0" />
 				<ReleaseTime value="50" />
-				<DopplerFactor value="0" />
+				<DopplerFactor value="30" />
 				<Category>vehicles_sirens</Category>
 				<VolumeCurveScale value="300" />
 				<Unk22 value="50" />
@@ -1819,7 +1819,7 @@
 			<InnerAngle value="20" />
 			<OuterAngle value="65" />
 			<RearAttenuation value="-3" />
-			<YawAngle value="90" />
+			<YawAngle value="0" />
 			<PitchAngle value="0" />
 		</Item>
 		<Item type="SimpleSound">
@@ -1828,7 +1828,7 @@
 				<Flags value="0x0820E010" />
 				<Pitch value="0" />
 				<ReleaseTime value="50" />
-				<DopplerFactor value="0" />
+				<DopplerFactor value="30" />
 				<Category>vehicles_sirens</Category>
 				<VolumeCurveScale value="300" />
 				<Unk22 value="50" />
@@ -1848,7 +1848,7 @@
 			<InnerAngle value="20" />
 			<OuterAngle value="65" />
 			<RearAttenuation value="-3" />
-			<YawAngle value="90" />
+			<YawAngle value="0" />
 			<PitchAngle value="0" />
 		</Item>
 		<Item type="SimpleSound">
@@ -1857,7 +1857,7 @@
 				<Flags value="0x0820E010" />
 				<Pitch value="0" />
 				<ReleaseTime value="50" />
-				<DopplerFactor value="0" />
+				<DopplerFactor value="30" />
 				<Category>vehicles_sirens</Category>
 				<VolumeCurveScale value="300" />
 				<Unk22 value="50" />
@@ -1877,7 +1877,7 @@
 			<InnerAngle value="20" />
 			<OuterAngle value="65" />
 			<RearAttenuation value="-3" />
-			<YawAngle value="90" />
+			<YawAngle value="0" />
 			<PitchAngle value="0" />
 		</Item>
 		<Item type="SimpleSound">
@@ -1886,7 +1886,7 @@
 				<Flags value="0x0820E010" />
 				<Pitch value="0" />
 				<ReleaseTime value="50" />
-				<DopplerFactor value="0" />
+				<DopplerFactor value="30" />
 				<Category>vehicles_sirens</Category>
 				<VolumeCurveScale value="300" />
 				<Unk22 value="50" />
@@ -1906,7 +1906,7 @@
 			<InnerAngle value="20" />
 			<OuterAngle value="65" />
 			<RearAttenuation value="-3" />
-			<YawAngle value="90" />
+			<YawAngle value="0" />
 			<PitchAngle value="0" />
 		</Item>
 		<Item type="SimpleSound">
@@ -1915,7 +1915,7 @@
 				<Flags value="0x0820E010" />
 				<Pitch value="0" />
 				<ReleaseTime value="50" />
-				<DopplerFactor value="0" />
+				<DopplerFactor value="30" />
 				<Category>vehicles_sirens</Category>
 				<VolumeCurveScale value="300" />
 				<Unk22 value="50" />
@@ -1935,7 +1935,7 @@
 			<InnerAngle value="20" />
 			<OuterAngle value="65" />
 			<RearAttenuation value="-3" />
-			<YawAngle value="90" />
+			<YawAngle value="0" />
 			<PitchAngle value="0" />
 		</Item>
 		<Item type="SimpleSound">
@@ -1944,7 +1944,7 @@
 				<Flags value="0x0820E010" />
 				<Pitch value="0" />
 				<ReleaseTime value="50" />
-				<DopplerFactor value="0" />
+				<DopplerFactor value="30" />
 				<Category>vehicles_sirens</Category>
 				<VolumeCurveScale value="300" />
 				<Unk22 value="50" />
@@ -1964,7 +1964,7 @@
 			<InnerAngle value="20" />
 			<OuterAngle value="65" />
 			<RearAttenuation value="-3" />
-			<YawAngle value="90" />
+			<YawAngle value="0" />
 			<PitchAngle value="0" />
 		</Item>
 		<Item type="SimpleSound">
@@ -1973,7 +1973,7 @@
 				<Flags value="0x0820E010" />
 				<Pitch value="0" />
 				<ReleaseTime value="50" />
-				<DopplerFactor value="0" />
+				<DopplerFactor value="30" />
 				<Category>vehicles_sirens</Category>
 				<VolumeCurveScale value="300" />
 				<Unk22 value="50" />
@@ -1993,7 +1993,7 @@
 			<InnerAngle value="20" />
 			<OuterAngle value="65" />
 			<RearAttenuation value="-3" />
-			<YawAngle value="90" />
+			<YawAngle value="0" />
 			<PitchAngle value="0" />
 		</Item>
 		<Item type="SimpleSound">
@@ -2002,7 +2002,7 @@
 				<Flags value="0x0820E010" />
 				<Pitch value="0" />
 				<ReleaseTime value="50" />
-				<DopplerFactor value="0" />
+				<DopplerFactor value="30" />
 				<Category>vehicles_sirens</Category>
 				<VolumeCurveScale value="300" />
 				<Unk22 value="50" />
@@ -2022,7 +2022,7 @@
 			<InnerAngle value="20" />
 			<OuterAngle value="65" />
 			<RearAttenuation value="-3" />
-			<YawAngle value="90" />
+			<YawAngle value="0" />
 			<PitchAngle value="0" />
 		</Item>
 		<Item type="SimpleSound">
@@ -2031,7 +2031,7 @@
 				<Flags value="0x0820E010" />
 				<Pitch value="0" />
 				<ReleaseTime value="50" />
-				<DopplerFactor value="0" />
+				<DopplerFactor value="30" />
 				<Category>vehicles_sirens</Category>
 				<VolumeCurveScale value="300" />
 				<Unk22 value="50" />
@@ -2051,7 +2051,7 @@
 			<InnerAngle value="20" />
 			<OuterAngle value="65" />
 			<RearAttenuation value="-3" />
-			<YawAngle value="90" />
+			<YawAngle value="0" />
 			<PitchAngle value="0" />
 		</Item>
 		<Item type="SimpleSound">
@@ -2060,7 +2060,7 @@
 				<Flags value="0x0820E010" />
 				<Pitch value="0" />
 				<ReleaseTime value="50" />
-				<DopplerFactor value="0" />
+				<DopplerFactor value="30" />
 				<Category>vehicles_sirens</Category>
 				<VolumeCurveScale value="300" />
 				<Unk22 value="50" />
@@ -2080,7 +2080,7 @@
 			<InnerAngle value="20" />
 			<OuterAngle value="65" />
 			<RearAttenuation value="-3" />
-			<YawAngle value="90" />
+			<YawAngle value="0" />
 			<PitchAngle value="0" />
 		</Item>
 		<Item type="SimpleSound">
@@ -2089,7 +2089,7 @@
 				<Flags value="0x0820E010" />
 				<Pitch value="0" />
 				<ReleaseTime value="50" />
-				<DopplerFactor value="0" />
+				<DopplerFactor value="30" />
 				<Category>vehicles_sirens</Category>
 				<VolumeCurveScale value="300" />
 				<Unk22 value="50" />
@@ -2109,7 +2109,7 @@
 			<InnerAngle value="20" />
 			<OuterAngle value="65" />
 			<RearAttenuation value="-3" />
-			<YawAngle value="90" />
+			<YawAngle value="0" />
 			<PitchAngle value="0" />
 		</Item>
 		<Item type="SimpleSound">
@@ -2118,7 +2118,7 @@
 				<Flags value="0x0820E010" />
 				<Pitch value="0" />
 				<ReleaseTime value="50" />
-				<DopplerFactor value="0" />
+				<DopplerFactor value="30" />
 				<Category>vehicles_sirens</Category>
 				<VolumeCurveScale value="300" />
 				<Unk22 value="50" />
@@ -2138,7 +2138,7 @@
 			<InnerAngle value="20" />
 			<OuterAngle value="65" />
 			<RearAttenuation value="-3" />
-			<YawAngle value="90" />
+			<YawAngle value="0" />
 			<PitchAngle value="0" />
 		</Item>
 		<Item type="SimpleSound">
@@ -2147,7 +2147,7 @@
 				<Flags value="0x0820E010" />
 				<Pitch value="0" />
 				<ReleaseTime value="50" />
-				<DopplerFactor value="0" />
+				<DopplerFactor value="30" />
 				<Category>vehicles_sirens</Category>
 				<VolumeCurveScale value="300" />
 				<Unk22 value="50" />
@@ -2167,7 +2167,7 @@
 			<InnerAngle value="20" />
 			<OuterAngle value="65" />
 			<RearAttenuation value="-3" />
-			<YawAngle value="90" />
+			<YawAngle value="0" />
 			<PitchAngle value="0" />
 		</Item>
 		<Item type="SimpleSound">
@@ -2176,7 +2176,7 @@
 				<Flags value="0x0820E010" />
 				<Pitch value="0" />
 				<ReleaseTime value="50" />
-				<DopplerFactor value="0" />
+				<DopplerFactor value="30" />
 				<Category>vehicles_sirens</Category>
 				<VolumeCurveScale value="300" />
 				<Unk22 value="50" />
@@ -2196,7 +2196,7 @@
 			<InnerAngle value="20" />
 			<OuterAngle value="65" />
 			<RearAttenuation value="-3" />
-			<YawAngle value="90" />
+			<YawAngle value="0" />
 			<PitchAngle value="0" />
 		</Item>
 		<Item type="SimpleSound">
@@ -2205,7 +2205,7 @@
 				<Flags value="0x0820E010" />
 				<Pitch value="0" />
 				<ReleaseTime value="50" />
-				<DopplerFactor value="0" />
+				<DopplerFactor value="30" />
 				<Category>vehicles_sirens</Category>
 				<VolumeCurveScale value="300" />
 				<Unk22 value="50" />
@@ -2225,7 +2225,7 @@
 			<InnerAngle value="20" />
 			<OuterAngle value="65" />
 			<RearAttenuation value="-3" />
-			<YawAngle value="90" />
+			<YawAngle value="0" />
 			<PitchAngle value="0" />
 		</Item>
 		<Item type="SimpleSound">
@@ -2234,7 +2234,7 @@
 				<Flags value="0x0820E010" />
 				<Pitch value="0" />
 				<ReleaseTime value="50" />
-				<DopplerFactor value="0" />
+				<DopplerFactor value="30" />
 				<Category>vehicles_sirens</Category>
 				<VolumeCurveScale value="300" />
 				<Unk22 value="50" />
@@ -2254,7 +2254,7 @@
 			<InnerAngle value="20" />
 			<OuterAngle value="65" />
 			<RearAttenuation value="-3" />
-			<YawAngle value="90" />
+			<YawAngle value="0" />
 			<PitchAngle value="0" />
 		</Item>
 		<Item type="SimpleSound">
@@ -2263,7 +2263,7 @@
 				<Flags value="0x0820E010" />
 				<Pitch value="0" />
 				<ReleaseTime value="50" />
-				<DopplerFactor value="0" />
+				<DopplerFactor value="30" />
 				<Category>vehicles_sirens</Category>
 				<VolumeCurveScale value="300" />
 				<Unk22 value="50" />
@@ -2283,7 +2283,7 @@
 			<InnerAngle value="20" />
 			<OuterAngle value="65" />
 			<RearAttenuation value="-3" />
-			<YawAngle value="90" />
+			<YawAngle value="0" />
 			<PitchAngle value="0" />
 		</Item>
 		<Item type="SimpleSound">
@@ -2292,7 +2292,7 @@
 				<Flags value="0x0820E010" />
 				<Pitch value="0" />
 				<ReleaseTime value="50" />
-				<DopplerFactor value="0" />
+				<DopplerFactor value="30" />
 				<Category>vehicles_sirens</Category>
 				<VolumeCurveScale value="300" />
 				<Unk22 value="50" />
@@ -2312,7 +2312,7 @@
 			<InnerAngle value="20" />
 			<OuterAngle value="65" />
 			<RearAttenuation value="-3" />
-			<YawAngle value="90" />
+			<YawAngle value="0" />
 			<PitchAngle value="0" />
 		</Item>
 		<Item type="SimpleSound">
@@ -2321,7 +2321,7 @@
 				<Flags value="0x0820E010" />
 				<Pitch value="0" />
 				<ReleaseTime value="50" />
-				<DopplerFactor value="0" />
+				<DopplerFactor value="30" />
 				<Category>vehicles_sirens</Category>
 				<VolumeCurveScale value="300" />
 				<Unk22 value="50" />
@@ -2341,7 +2341,7 @@
 			<InnerAngle value="20" />
 			<OuterAngle value="65" />
 			<RearAttenuation value="-3" />
-			<YawAngle value="90" />
+			<YawAngle value="0" />
 			<PitchAngle value="0" />
 		</Item>
 		<Item type="SimpleSound">
@@ -2350,7 +2350,7 @@
 				<Flags value="0x0820E010" />
 				<Pitch value="0" />
 				<ReleaseTime value="50" />
-				<DopplerFactor value="0" />
+				<DopplerFactor value="30" />
 				<Category>vehicles_sirens</Category>
 				<VolumeCurveScale value="300" />
 				<Unk22 value="50" />
@@ -2370,7 +2370,7 @@
 			<InnerAngle value="20" />
 			<OuterAngle value="65" />
 			<RearAttenuation value="-3" />
-			<YawAngle value="90" />
+			<YawAngle value="0" />
 			<PitchAngle value="0" />
 		</Item>
 		<Item type="SimpleSound">
@@ -2379,7 +2379,7 @@
 				<Flags value="0x0820E010" />
 				<Pitch value="0" />
 				<ReleaseTime value="50" />
-				<DopplerFactor value="0" />
+				<DopplerFactor value="30" />
 				<Category>vehicles_sirens</Category>
 				<VolumeCurveScale value="300" />
 				<Unk22 value="50" />
@@ -2399,7 +2399,7 @@
 			<InnerAngle value="20" />
 			<OuterAngle value="65" />
 			<RearAttenuation value="-3" />
-			<YawAngle value="90" />
+			<YawAngle value="0" />
 			<PitchAngle value="0" />
 		</Item>
 		<Item type="SimpleSound">
@@ -2408,7 +2408,7 @@
 				<Flags value="0x0820E010" />
 				<Pitch value="0" />
 				<ReleaseTime value="50" />
-				<DopplerFactor value="0" />
+				<DopplerFactor value="30" />
 				<Category>vehicles_sirens</Category>
 				<VolumeCurveScale value="300" />
 				<Unk22 value="50" />
@@ -2428,7 +2428,7 @@
 			<InnerAngle value="20" />
 			<OuterAngle value="65" />
 			<RearAttenuation value="-3" />
-			<YawAngle value="90" />
+			<YawAngle value="0" />
 			<PitchAngle value="0" />
 		</Item>
 		<Item type="SimpleSound">
@@ -2437,7 +2437,7 @@
 				<Flags value="0x0820E010" />
 				<Pitch value="0" />
 				<ReleaseTime value="50" />
-				<DopplerFactor value="0" />
+				<DopplerFactor value="30" />
 				<Category>vehicles_sirens</Category>
 				<VolumeCurveScale value="300" />
 				<Unk22 value="50" />
@@ -2457,7 +2457,7 @@
 			<InnerAngle value="20" />
 			<OuterAngle value="65" />
 			<RearAttenuation value="-3" />
-			<YawAngle value="90" />
+			<YawAngle value="0" />
 			<PitchAngle value="0" />
 		</Item>
 		<Item type="SimpleSound">
@@ -2466,7 +2466,7 @@
 				<Flags value="0x0820E010" />
 				<Pitch value="0" />
 				<ReleaseTime value="50" />
-				<DopplerFactor value="0" />
+				<DopplerFactor value="30" />
 				<Category>vehicles_sirens</Category>
 				<VolumeCurveScale value="300" />
 				<Unk22 value="50" />
@@ -2486,7 +2486,7 @@
 			<InnerAngle value="20" />
 			<OuterAngle value="65" />
 			<RearAttenuation value="-3" />
-			<YawAngle value="90" />
+			<YawAngle value="0" />
 			<PitchAngle value="0" />
 		</Item>
 		<Item type="SimpleSound">
@@ -2495,7 +2495,7 @@
 				<Flags value="0x0820E010" />
 				<Pitch value="0" />
 				<ReleaseTime value="50" />
-				<DopplerFactor value="0" />
+				<DopplerFactor value="30" />
 				<Category>vehicles_sirens</Category>
 				<VolumeCurveScale value="300" />
 				<Unk22 value="50" />
@@ -2515,7 +2515,7 @@
 			<InnerAngle value="20" />
 			<OuterAngle value="65" />
 			<RearAttenuation value="-3" />
-			<YawAngle value="90" />
+			<YawAngle value="0" />
 			<PitchAngle value="0" />
 		</Item>
 		<Item type="SimpleSound">
@@ -2524,7 +2524,7 @@
 				<Flags value="0x0820E010" />
 				<Pitch value="0" />
 				<ReleaseTime value="50" />
-				<DopplerFactor value="0" />
+				<DopplerFactor value="30" />
 				<Category>vehicles_sirens</Category>
 				<VolumeCurveScale value="300" />
 				<Unk22 value="50" />
@@ -2544,7 +2544,7 @@
 			<InnerAngle value="20" />
 			<OuterAngle value="65" />
 			<RearAttenuation value="-3" />
-			<YawAngle value="90" />
+			<YawAngle value="0" />
 			<PitchAngle value="0" />
 		</Item>
 		<Item type="SimpleSound">
@@ -2553,7 +2553,7 @@
 				<Flags value="0x0820E010" />
 				<Pitch value="0" />
 				<ReleaseTime value="50" />
-				<DopplerFactor value="0" />
+				<DopplerFactor value="30" />
 				<Category>vehicles_sirens</Category>
 				<VolumeCurveScale value="300" />
 				<Unk22 value="50" />
@@ -2573,7 +2573,7 @@
 			<InnerAngle value="20" />
 			<OuterAngle value="65" />
 			<RearAttenuation value="-3" />
-			<YawAngle value="90" />
+			<YawAngle value="0" />
 			<PitchAngle value="0" />
 		</Item>
 		<Item type="SimpleSound">
@@ -2582,7 +2582,7 @@
 				<Flags value="0x0820E010" />
 				<Pitch value="0" />
 				<ReleaseTime value="50" />
-				<DopplerFactor value="0" />
+				<DopplerFactor value="30" />
 				<Category>vehicles_sirens</Category>
 				<VolumeCurveScale value="300" />
 				<Unk22 value="50" />
@@ -2602,7 +2602,7 @@
 			<InnerAngle value="20" />
 			<OuterAngle value="65" />
 			<RearAttenuation value="-3" />
-			<YawAngle value="90" />
+			<YawAngle value="0" />
 			<PitchAngle value="0" />
 		</Item>
 		<Item type="SimpleSound">
@@ -2611,7 +2611,7 @@
 				<Flags value="0x0820E010" />
 				<Pitch value="0" />
 				<ReleaseTime value="50" />
-				<DopplerFactor value="0" />
+				<DopplerFactor value="30" />
 				<Category>vehicles_sirens</Category>
 				<VolumeCurveScale value="300" />
 				<Unk22 value="50" />
@@ -2631,7 +2631,7 @@
 			<InnerAngle value="20" />
 			<OuterAngle value="65" />
 			<RearAttenuation value="-3" />
-			<YawAngle value="90" />
+			<YawAngle value="0" />
 			<PitchAngle value="0" />
 		</Item>
 		<Item type="SimpleSound">
@@ -2640,7 +2640,7 @@
 				<Flags value="0x0820E010" />
 				<Pitch value="0" />
 				<ReleaseTime value="50" />
-				<DopplerFactor value="0" />
+				<DopplerFactor value="30" />
 				<Category>vehicles_sirens</Category>
 				<VolumeCurveScale value="300" />
 				<Unk22 value="50" />
@@ -2660,7 +2660,7 @@
 			<InnerAngle value="20" />
 			<OuterAngle value="65" />
 			<RearAttenuation value="-3" />
-			<YawAngle value="90" />
+			<YawAngle value="0" />
 			<PitchAngle value="0" />
 		</Item>
 		<Item type="SimpleSound">
@@ -2669,7 +2669,7 @@
 				<Flags value="0x0820E010" />
 				<Pitch value="0" />
 				<ReleaseTime value="50" />
-				<DopplerFactor value="0" />
+				<DopplerFactor value="30" />
 				<Category>vehicles_sirens</Category>
 				<VolumeCurveScale value="300" />
 				<Unk22 value="50" />
@@ -2689,7 +2689,7 @@
 			<InnerAngle value="20" />
 			<OuterAngle value="65" />
 			<RearAttenuation value="-3" />
-			<YawAngle value="90" />
+			<YawAngle value="0" />
 			<PitchAngle value="0" />
 		</Item>
 		<Item type="SimpleSound">
@@ -2698,7 +2698,7 @@
 				<Flags value="0x0820E010" />
 				<Pitch value="0" />
 				<ReleaseTime value="50" />
-				<DopplerFactor value="0" />
+				<DopplerFactor value="30" />
 				<Category>vehicles_sirens</Category>
 				<VolumeCurveScale value="300" />
 				<Unk22 value="50" />
@@ -2718,7 +2718,7 @@
 			<InnerAngle value="20" />
 			<OuterAngle value="65" />
 			<RearAttenuation value="-3" />
-			<YawAngle value="90" />
+			<YawAngle value="0" />
 			<PitchAngle value="0" />
 		</Item>
 		<Item type="SimpleSound">
@@ -2727,7 +2727,7 @@
 				<Flags value="0x0820E010" />
 				<Pitch value="0" />
 				<ReleaseTime value="50" />
-				<DopplerFactor value="0" />
+				<DopplerFactor value="30" />
 				<Category>vehicles_sirens</Category>
 				<VolumeCurveScale value="300" />
 				<Unk22 value="50" />
@@ -2747,7 +2747,7 @@
 			<InnerAngle value="20" />
 			<OuterAngle value="65" />
 			<RearAttenuation value="-3" />
-			<YawAngle value="90" />
+			<YawAngle value="0" />
 			<PitchAngle value="0" />
 		</Item>
 		<Item type="SimpleSound">
@@ -2756,7 +2756,7 @@
 				<Flags value="0x0820E010" />
 				<Pitch value="0" />
 				<ReleaseTime value="50" />
-				<DopplerFactor value="0" />
+				<DopplerFactor value="30" />
 				<Category>vehicles_sirens</Category>
 				<VolumeCurveScale value="300" />
 				<Unk22 value="50" />
@@ -2776,7 +2776,7 @@
 			<InnerAngle value="20" />
 			<OuterAngle value="65" />
 			<RearAttenuation value="-3" />
-			<YawAngle value="90" />
+			<YawAngle value="0" />
 			<PitchAngle value="0" />
 		</Item>
 		<Item type="SimpleSound">
@@ -2785,7 +2785,7 @@
 				<Flags value="0x0820E010" />
 				<Pitch value="0" />
 				<ReleaseTime value="50" />
-				<DopplerFactor value="0" />
+				<DopplerFactor value="30" />
 				<Category>vehicles_sirens</Category>
 				<VolumeCurveScale value="300" />
 				<Unk22 value="50" />
@@ -2805,7 +2805,7 @@
 			<InnerAngle value="20" />
 			<OuterAngle value="65" />
 			<RearAttenuation value="-3" />
-			<YawAngle value="90" />
+			<YawAngle value="0" />
 			<PitchAngle value="0" />
 		</Item>
 		<Item type="SimpleSound">
@@ -2814,7 +2814,7 @@
 				<Flags value="0x0820E010" />
 				<Pitch value="0" />
 				<ReleaseTime value="50" />
-				<DopplerFactor value="0" />
+				<DopplerFactor value="30" />
 				<Category>vehicles_sirens</Category>
 				<VolumeCurveScale value="300" />
 				<Unk22 value="50" />
@@ -2834,7 +2834,7 @@
 			<InnerAngle value="20" />
 			<OuterAngle value="65" />
 			<RearAttenuation value="-3" />
-			<YawAngle value="90" />
+			<YawAngle value="0" />
 			<PitchAngle value="0" />
 		</Item>
 		<Item type="SimpleSound">
@@ -2843,7 +2843,7 @@
 				<Flags value="0x0820E010" />
 				<Pitch value="0" />
 				<ReleaseTime value="50" />
-				<DopplerFactor value="0" />
+				<DopplerFactor value="30" />
 				<Category>vehicles_sirens</Category>
 				<VolumeCurveScale value="300" />
 				<Unk22 value="50" />
@@ -2863,7 +2863,7 @@
 			<InnerAngle value="20" />
 			<OuterAngle value="65" />
 			<RearAttenuation value="-3" />
-			<YawAngle value="90" />
+			<YawAngle value="0" />
 			<PitchAngle value="0" />
 		</Item>
 		<Item type="SimpleSound">
@@ -2872,7 +2872,7 @@
 				<Flags value="0x0820E010" />
 				<Pitch value="0" />
 				<ReleaseTime value="50" />
-				<DopplerFactor value="0" />
+				<DopplerFactor value="30" />
 				<Category>vehicles_sirens</Category>
 				<VolumeCurveScale value="300" />
 				<Unk22 value="50" />
@@ -2892,7 +2892,7 @@
 			<InnerAngle value="20" />
 			<OuterAngle value="65" />
 			<RearAttenuation value="-3" />
-			<YawAngle value="90" />
+			<YawAngle value="0" />
 			<PitchAngle value="0" />
 		</Item>
 		<Item type="SimpleSound">
@@ -2901,7 +2901,7 @@
 				<Flags value="0x0820E010" />
 				<Pitch value="0" />
 				<ReleaseTime value="50" />
-				<DopplerFactor value="0" />
+				<DopplerFactor value="30" />
 				<Category>vehicles_sirens</Category>
 				<VolumeCurveScale value="300" />
 				<Unk22 value="50" />
@@ -2921,7 +2921,7 @@
 			<InnerAngle value="20" />
 			<OuterAngle value="65" />
 			<RearAttenuation value="-3" />
-			<YawAngle value="90" />
+			<YawAngle value="0" />
 			<PitchAngle value="0" />
 		</Item>
 		<Item type="SimpleSound">
@@ -2930,7 +2930,7 @@
 				<Flags value="0x0820E010" />
 				<Pitch value="0" />
 				<ReleaseTime value="50" />
-				<DopplerFactor value="0" />
+				<DopplerFactor value="30" />
 				<Category>vehicles_sirens</Category>
 				<VolumeCurveScale value="300" />
 				<Unk22 value="50" />
@@ -2950,7 +2950,7 @@
 			<InnerAngle value="20" />
 			<OuterAngle value="65" />
 			<RearAttenuation value="-3" />
-			<YawAngle value="90" />
+			<YawAngle value="0" />
 			<PitchAngle value="0" />
 		</Item>
 		<Item type="SimpleSound">
@@ -2959,7 +2959,7 @@
 				<Flags value="0x0820E010" />
 				<Pitch value="0" />
 				<ReleaseTime value="50" />
-				<DopplerFactor value="0" />
+				<DopplerFactor value="30" />
 				<Category>vehicles_sirens</Category>
 				<VolumeCurveScale value="300" />
 				<Unk22 value="50" />
@@ -2979,7 +2979,7 @@
 			<InnerAngle value="20" />
 			<OuterAngle value="65" />
 			<RearAttenuation value="-3" />
-			<YawAngle value="90" />
+			<YawAngle value="0" />
 			<PitchAngle value="0" />
 		</Item>
 		<Item type="SimpleSound">
@@ -2988,7 +2988,7 @@
 				<Flags value="0x0820E010" />
 				<Pitch value="0" />
 				<ReleaseTime value="50" />
-				<DopplerFactor value="0" />
+				<DopplerFactor value="30" />
 				<Category>vehicles_sirens</Category>
 				<VolumeCurveScale value="300" />
 				<Unk22 value="50" />
@@ -3008,7 +3008,7 @@
 			<InnerAngle value="20" />
 			<OuterAngle value="65" />
 			<RearAttenuation value="-3" />
-			<YawAngle value="90" />
+			<YawAngle value="0" />
 			<PitchAngle value="0" />
 		</Item>
 		<Item type="SimpleSound">
@@ -3017,7 +3017,7 @@
 				<Flags value="0x0820E010" />
 				<Pitch value="0" />
 				<ReleaseTime value="50" />
-				<DopplerFactor value="0" />
+				<DopplerFactor value="30" />
 				<Category>vehicles_sirens</Category>
 				<VolumeCurveScale value="300" />
 				<Unk22 value="50" />
@@ -3037,7 +3037,7 @@
 			<InnerAngle value="20" />
 			<OuterAngle value="65" />
 			<RearAttenuation value="-3" />
-			<YawAngle value="90" />
+			<YawAngle value="0" />
 			<PitchAngle value="0" />
 		</Item>
 		<Item type="SimpleSound">
@@ -3046,7 +3046,7 @@
 				<Flags value="0x0820E010" />
 				<Pitch value="0" />
 				<ReleaseTime value="50" />
-				<DopplerFactor value="0" />
+				<DopplerFactor value="30" />
 				<Category>vehicles_sirens</Category>
 				<VolumeCurveScale value="300" />
 				<Unk22 value="50" />
@@ -3066,7 +3066,7 @@
 			<InnerAngle value="20" />
 			<OuterAngle value="65" />
 			<RearAttenuation value="-3" />
-			<YawAngle value="90" />
+			<YawAngle value="0" />
 			<PitchAngle value="0" />
 		</Item>
 		<Item type="SimpleSound">
@@ -3075,7 +3075,7 @@
 				<Flags value="0x0820E010" />
 				<Pitch value="0" />
 				<ReleaseTime value="50" />
-				<DopplerFactor value="0" />
+				<DopplerFactor value="30" />
 				<Category>vehicles_sirens</Category>
 				<VolumeCurveScale value="300" />
 				<Unk22 value="50" />
@@ -3095,7 +3095,7 @@
 			<InnerAngle value="20" />
 			<OuterAngle value="65" />
 			<RearAttenuation value="-3" />
-			<YawAngle value="90" />
+			<YawAngle value="0" />
 			<PitchAngle value="0" />
 		</Item>
 		<Item type="SimpleSound">
@@ -3104,7 +3104,7 @@
 				<Flags value="0x0820E010" />
 				<Pitch value="0" />
 				<ReleaseTime value="50" />
-				<DopplerFactor value="0" />
+				<DopplerFactor value="30" />
 				<Category>vehicles_sirens</Category>
 				<VolumeCurveScale value="300" />
 				<Unk22 value="50" />
@@ -3124,7 +3124,7 @@
 			<InnerAngle value="20" />
 			<OuterAngle value="65" />
 			<RearAttenuation value="-3" />
-			<YawAngle value="90" />
+			<YawAngle value="0" />
 			<PitchAngle value="0" />
 		</Item>
 		<Item type="SimpleSound">
@@ -3133,7 +3133,7 @@
 				<Flags value="0x0820E010" />
 				<Pitch value="0" />
 				<ReleaseTime value="50" />
-				<DopplerFactor value="0" />
+				<DopplerFactor value="30" />
 				<Category>vehicles_sirens</Category>
 				<VolumeCurveScale value="300" />
 				<Unk22 value="50" />
@@ -3153,7 +3153,7 @@
 			<InnerAngle value="20" />
 			<OuterAngle value="65" />
 			<RearAttenuation value="-3" />
-			<YawAngle value="90" />
+			<YawAngle value="0" />
 			<PitchAngle value="0" />
 		</Item>
 		<Item type="SimpleSound">
@@ -3162,7 +3162,7 @@
 				<Flags value="0x0820E010" />
 				<Pitch value="0" />
 				<ReleaseTime value="50" />
-				<DopplerFactor value="0" />
+				<DopplerFactor value="30" />
 				<Category>vehicles_sirens</Category>
 				<VolumeCurveScale value="300" />
 				<Unk22 value="50" />
@@ -3182,7 +3182,7 @@
 			<InnerAngle value="20" />
 			<OuterAngle value="65" />
 			<RearAttenuation value="-3" />
-			<YawAngle value="90" />
+			<YawAngle value="0" />
 			<PitchAngle value="0" />
 		</Item>
 		<Item type="SimpleSound">
@@ -3191,7 +3191,7 @@
 				<Flags value="0x0820E010" />
 				<Pitch value="0" />
 				<ReleaseTime value="50" />
-				<DopplerFactor value="0" />
+				<DopplerFactor value="30" />
 				<Category>vehicles_sirens</Category>
 				<VolumeCurveScale value="300" />
 				<Unk22 value="50" />
@@ -3211,7 +3211,7 @@
 			<InnerAngle value="20" />
 			<OuterAngle value="65" />
 			<RearAttenuation value="-3" />
-			<YawAngle value="90" />
+			<YawAngle value="0" />
 			<PitchAngle value="0" />
 		</Item>
 	</Items>
