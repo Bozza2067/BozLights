@@ -240,6 +240,9 @@ ModelsWithNoTertiaryTone = {
 	"mcsotorr2",
 	"mcsoyosemite",
 	"mcfdtruck",
+	"bombsemite",
+	"batstalker",
+	"lspdstalker",
 }
 
 -- Vehicles with a 4th tone activated by a seperate button. Usually a Hi-Lo.
@@ -341,6 +344,8 @@ ModelsWithHornSwitch = {
 	"mcsocara3",
 	"mcsoscout",
 	"mcsoscout4",
+	"bombsemite",
+	"polroamer",
 }
 
 ModelsWithRumbler = {
@@ -368,6 +373,7 @@ ModelsWithRumbler = {
 	"sheriffcoqm3",
 	"sheriffcoqmumk",
 	"police2a",
+	"bombsemite",
 }
 
 -- Vehicles that have moving parts assigned to bomb bay doors (e.g. highrisers)
@@ -440,6 +446,7 @@ ModelsWithMastercomB = {
 	"lsppscout",
 	"lsppscoutk9",
 	"lsppstanier",
+	"lspdstalker",
 }
 
 ModelsWithNergy400 = {
@@ -461,6 +468,7 @@ ModelsWithOmega90 = {
 	"sheriffvanold",
 	"sheriffmoon",
 	"sherifftrike",
+	"polroamer",
 }
 
 ModelsWithFIBSiren = { -- Vanilla FIB Siren
@@ -546,6 +554,7 @@ ModelsWithSSP3000 = {
 	"mcsocara3",
 	"mcsoscout",
 	"mcsoscout4",
+	"bombsemite",
 }
 
 ModelsWithTouchmaster = {
@@ -564,6 +573,7 @@ ModelsWithTouchmaster = {
 	"mcsotorr",
 	"mcsotorr2",
 	"mcsoyosemite",
+	"batstalker",
 }
 
 ModelsWithZ3 = {
