@@ -15,7 +15,7 @@
 			<Header>
 				<Flags value="0xAAAAAAAA" />
 			</Header>
-			<Items>
+			<SoundSets>
 				<Item>
 					<ScriptName>siren_z3_hyperyelp</ScriptName>
 					<ChildSound>siren_z3_hyperyelp_d</ChildSound>
@@ -84,14 +84,14 @@
 					<ScriptName>siren_ssp3000_hilo</ScriptName>
 					<ChildSound>siren_ssp3000_hilo_d</ChildSound>
 				</Item>
-			</Items>
+			</SoundSets>
 		</Item>
 		<Item type="SoundSet">
 			<Name>policingmp_sounds_sirens2_soundset</Name>
 			<Header>
 				<Flags value="0xAAAAAAAA" />
 			</Header>
-			<Items>
+			<SoundSets>
 				<Item>
 					<ScriptName>siren_ss2000_wail</ScriptName>
 					<ChildSound>siren_ss2000_wail_d</ChildSound>
@@ -196,14 +196,14 @@
 					<ScriptName>siren_nergy_horn</ScriptName>
 					<ChildSound>siren_nergy_horn_d</ChildSound>
 				</Item>
-			</Items>
+			</SoundSets>
 		</Item>
 		<Item type="SoundSet">
 			<Name>policingmp_sounds_sirens3_soundset</Name>
 			<Header>
 				<Flags value="0xAAAAAAAA" />
 			</Header>
-			<Items>
+			<SoundSets>
 				<Item>
 					<ScriptName>siren_295hfs_wail</ScriptName>
 					<ChildSound>siren_295hfs_wail_d</ChildSound>
@@ -292,14 +292,14 @@
 					<ScriptName>siren_touchmaster_ultra</ScriptName>
 					<ChildSound>siren_touchmaster_ultra_d</ChildSound>
 				</Item>
-			</Items>
+			</SoundSets>
 		</Item>
 		<Item type="SoundSet">
 			<Name>policingmp_sounds_sirens4_soundset</Name>
 			<Header>
 				<Flags value="0xAAAAAAAA" />
 			</Header>
-			<Items>
+			<SoundSets>
 				<Item>
 					<ScriptName>siren_omega_hilo</ScriptName>
 					<ChildSound>siren_omega_hilo_d</ChildSound>
@@ -360,14 +360,14 @@
 					<ScriptName>siren_3955_horn</ScriptName>
 					<ChildSound>siren_3955_horn_d</ChildSound>
 				</Item>
-			</Items>
+			</SoundSets>
 		</Item>
 		<Item type="SoundSet">
 			<Name>policingmp_sounds_sirens5_soundset</Name>
 			<Header>
 				<Flags value="0xAAAAAAAA" />
 			</Header>
-			<Items>
+			<SoundSets>
 				<Item>
 					<ScriptName>siren_650rs_wail</ScriptName>
 					<ChildSound>siren_650rs_wail_d</ChildSound>
@@ -428,7 +428,7 @@
 					<ScriptName>siren_chp2_yelp</ScriptName>
 					<ChildSound>siren_chp2_yelp_d</ChildSound>
 				</Item>
-			</Items>
+			</SoundSets>
 		</Item>
 		<Item type="SimpleSound">
 			<Name>siren_650rs_wail_s</Name>
