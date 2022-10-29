@@ -8,8 +8,479 @@
 		<Item>DLC_POLICINGMPAUDIO\POLICINGMP_SIRENS3</Item>
 		<Item>DLC_POLICINGMPAUDIO\POLICINGMP_SIRENS4</Item>
 		<Item>DLC_POLICINGMPAUDIO\POLICINGMP_SIRENS5</Item>
+		<Item>DLC_POLICINGMPAUDIO\POLICINGMP_RETROSIRENS</Item>
 	</ContainerPaths>
 	<Items>
+		<Item type="SoundSet">
+			<Name>policingmp_sounds_retrosirens_soundset</Name>
+			<Header>
+				<Flags value="0xAAAAAAAA" />
+			</Header>
+			<SoundSets>
+				<Item>
+					<ScriptName>siren_pa300_hilo</ScriptName>
+					<ChildSound>siren_pa300_hilo_d</ChildSound>
+				</Item>
+				<Item>
+					<ScriptName>siren_pa300_horn</ScriptName>
+					<ChildSound>siren_pa300_horn_d</ChildSound>
+				</Item>
+				<Item>
+					<ScriptName>siren_pa300_manual</ScriptName>
+					<ChildSound>siren_pa300_manual_d</ChildSound>
+				</Item>
+				<Item>
+					<ScriptName>siren_pa300_wail</ScriptName>
+					<ChildSound>siren_pa300_wail_d</ChildSound>
+				</Item>
+				<Item>
+					<ScriptName>siren_pa300_yelp</ScriptName>
+					<ChildSound>siren_pa300_yelp_d</ChildSound>
+				</Item>
+				<Item>
+					<ScriptName>siren_q2a</ScriptName>
+					<ChildSound>siren_q2a_d</ChildSound>
+				</Item>
+				<Item>
+					<ScriptName>siren_spmark7_horn</ScriptName>
+					<ChildSound>siren_spmark7_horn_d</ChildSound>
+				</Item>
+				<Item>
+					<ScriptName>siren_spmark7_priority</ScriptName>
+					<ChildSound>siren_spmark7_priority_d</ChildSound>
+				</Item>
+				<Item>
+					<ScriptName>siren_spmark7_wail</ScriptName>
+					<ChildSound>siren_spmark7_wail_d</ChildSound>
+				</Item>
+				<Item>
+					<ScriptName>siren_spmark7_yelp</ScriptName>
+					<ChildSound>siren_spmark7_yelp_d</ChildSound>
+				</Item>
+				<Item>
+					<ScriptName>siren_ss2000ss_horn</ScriptName>
+					<ChildSound>siren_ss2000ss_horn_d</ChildSound>
+				</Item>
+				<Item>
+					<ScriptName>siren_ss2000ss_priority</ScriptName>
+					<ChildSound>siren_ss2000ss_priority_d</ChildSound>
+				</Item>
+				<Item>
+					<ScriptName>siren_ss2000ss_wail</ScriptName>
+					<ChildSound>siren_ss2000ss_wail_d</ChildSound>
+				</Item>
+				<Item>
+					<ScriptName>siren_ss2000ss_yelp</ScriptName>
+					<ChildSound>siren_ss2000ss_yelp_d</ChildSound>
+				</Item>
+			</SoundSets>
+		</Item>
+		<Item type="SimpleSound">
+			<Name>siren_pa300_hilo_s</Name>
+			<Header>
+				<Flags value="0x0820E010" />
+				<Pitch value="0" />
+				<ReleaseTime value="50" />
+				<DopplerFactor value="30" />
+				<Category>vehicles_sirens</Category>
+				<VolumeCurveScale value="300" />
+				<Unk22 value="50" />
+			</Header>
+			<ContainerName>dlc_policingmpaudio/policingmp_retrosirens</ContainerName>
+			<FileName>siren_pa300_hilo</FileName>
+			<WaveSlotNum value="0" />
+		</Item>
+		<Item type="DirectionalSound">
+			<Name>siren_pa300_hilo_d</Name>
+			<Header>
+				<Flags value="0x00008004" />
+				<Volume value="65436" />
+				<Category>vehicles_sirens</Category>
+			</Header>
+			<ChildSound>siren_pa300_hilo_s</ChildSound>
+			<InnerAngle value="20" />
+			<OuterAngle value="65" />
+			<RearAttenuation value="-3" />
+			<YawAngle value="0" />
+			<PitchAngle value="0" />
+		</Item>
+		<Item type="SimpleSound">
+			<Name>siren_pa300_horn_s</Name>
+			<Header>
+				<Flags value="0x0820E010" />
+				<Pitch value="0" />
+				<ReleaseTime value="50" />
+				<DopplerFactor value="30" />
+				<Category>vehicles_sirens</Category>
+				<VolumeCurveScale value="300" />
+				<Unk22 value="50" />
+			</Header>
+			<ContainerName>dlc_policingmpaudio/policingmp_retrosirens</ContainerName>
+			<FileName>siren_pa300_horn</FileName>
+			<WaveSlotNum value="0" />
+		</Item>
+		<Item type="DirectionalSound">
+			<Name>siren_pa300_horn_d</Name>
+			<Header>
+				<Flags value="0x00008004" />
+				<Volume value="65436" />
+				<Category>vehicles_sirens</Category>
+			</Header>
+			<ChildSound>siren_pa300_horn_s</ChildSound>
+			<InnerAngle value="20" />
+			<OuterAngle value="65" />
+			<RearAttenuation value="-3" />
+			<YawAngle value="0" />
+			<PitchAngle value="0" />
+		</Item>
+		<Item type="SimpleSound">
+			<Name>siren_pa300_manual_s</Name>
+			<Header>
+				<Flags value="0x0820E010" />
+				<Pitch value="0" />
+				<ReleaseTime value="50" />
+				<DopplerFactor value="30" />
+				<Category>vehicles_sirens</Category>
+				<VolumeCurveScale value="300" />
+				<Unk22 value="50" />
+			</Header>
+			<ContainerName>dlc_policingmpaudio/policingmp_retrosirens</ContainerName>
+			<FileName>siren_pa300_manual</FileName>
+			<WaveSlotNum value="0" />
+		</Item>
+		<Item type="DirectionalSound">
+			<Name>siren_pa300_manual_d</Name>
+			<Header>
+				<Flags value="0x00008004" />
+				<Volume value="65436" />
+				<Category>vehicles_sirens</Category>
+			</Header>
+			<ChildSound>siren_pa300_manual_s</ChildSound>
+			<InnerAngle value="20" />
+			<OuterAngle value="65" />
+			<RearAttenuation value="-3" />
+			<YawAngle value="0" />
+			<PitchAngle value="0" />
+		</Item>
+		<Item type="SimpleSound">
+			<Name>siren_pa300_wail_s</Name>
+			<Header>
+				<Flags value="0x0820E010" />
+				<Pitch value="0" />
+				<ReleaseTime value="50" />
+				<DopplerFactor value="30" />
+				<Category>vehicles_sirens</Category>
+				<VolumeCurveScale value="300" />
+				<Unk22 value="50" />
+			</Header>
+			<ContainerName>dlc_policingmpaudio/policingmp_retrosirens</ContainerName>
+			<FileName>siren_pa300_wail</FileName>
+			<WaveSlotNum value="0" />
+		</Item>
+		<Item type="DirectionalSound">
+			<Name>siren_pa300_wail_d</Name>
+			<Header>
+				<Flags value="0x00008004" />
+				<Volume value="65436" />
+				<Category>vehicles_sirens</Category>
+			</Header>
+			<ChildSound>siren_pa300_wail_s</ChildSound>
+			<InnerAngle value="20" />
+			<OuterAngle value="65" />
+			<RearAttenuation value="-3" />
+			<YawAngle value="0" />
+			<PitchAngle value="0" />
+		</Item>
+		<Item type="SimpleSound">
+			<Name>siren_pa300_yelp_s</Name>
+			<Header>
+				<Flags value="0x0820E010" />
+				<Pitch value="0" />
+				<ReleaseTime value="50" />
+				<DopplerFactor value="30" />
+				<Category>vehicles_sirens</Category>
+				<VolumeCurveScale value="300" />
+				<Unk22 value="50" />
+			</Header>
+			<ContainerName>dlc_policingmpaudio/policingmp_retrosirens</ContainerName>
+			<FileName>siren_pa300_yelp</FileName>
+			<WaveSlotNum value="0" />
+		</Item>
+		<Item type="DirectionalSound">
+			<Name>siren_pa300_yelp_d</Name>
+			<Header>
+				<Flags value="0x00008004" />
+				<Volume value="65436" />
+				<Category>vehicles_sirens</Category>
+			</Header>
+			<ChildSound>siren_pa300_yelp_s</ChildSound>
+			<InnerAngle value="20" />
+			<OuterAngle value="65" />
+			<RearAttenuation value="-3" />
+			<YawAngle value="0" />
+			<PitchAngle value="0" />
+		</Item>
+		<Item type="SimpleSound">
+			<Name>siren_q2a_s</Name>
+			<Header>
+				<Flags value="0x0820E010" />
+				<Pitch value="0" />
+				<ReleaseTime value="50" />
+				<DopplerFactor value="30" />
+				<Category>vehicles_sirens</Category>
+				<VolumeCurveScale value="300" />
+				<Unk22 value="50" />
+			</Header>
+			<ContainerName>dlc_policingmpaudio/policingmp_retrosirens</ContainerName>
+			<FileName>siren_q2a</FileName>
+			<WaveSlotNum value="0" />
+		</Item>
+		<Item type="DirectionalSound">
+			<Name>siren_q2a_d</Name>
+			<Header>
+				<Flags value="0x00008004" />
+				<Volume value="65436" />
+				<Category>vehicles_sirens</Category>
+			</Header>
+			<ChildSound>siren_q2a_s</ChildSound>
+			<InnerAngle value="20" />
+			<OuterAngle value="65" />
+			<RearAttenuation value="-3" />
+			<YawAngle value="0" />
+			<PitchAngle value="0" />
+		</Item>
+		<Item type="SimpleSound">
+			<Name>siren_spmark7_horn_s</Name>
+			<Header>
+				<Flags value="0x0820E010" />
+				<Pitch value="0" />
+				<ReleaseTime value="50" />
+				<DopplerFactor value="30" />
+				<Category>vehicles_sirens</Category>
+				<VolumeCurveScale value="300" />
+				<Unk22 value="50" />
+			</Header>
+			<ContainerName>dlc_policingmpaudio/policingmp_retrosirens</ContainerName>
+			<FileName>siren_spmark7_horn</FileName>
+			<WaveSlotNum value="0" />
+		</Item>
+		<Item type="DirectionalSound">
+			<Name>siren_spmark7_horn_d</Name>
+			<Header>
+				<Flags value="0x00008004" />
+				<Volume value="65436" />
+				<Category>vehicles_sirens</Category>
+			</Header>
+			<ChildSound>siren_spmark7_horn_s</ChildSound>
+			<InnerAngle value="20" />
+			<OuterAngle value="65" />
+			<RearAttenuation value="-3" />
+			<YawAngle value="0" />
+			<PitchAngle value="0" />
+		</Item>
+		<Item type="SimpleSound">
+			<Name>siren_spmark7_priority_s</Name>
+			<Header>
+				<Flags value="0x0820E010" />
+				<Pitch value="0" />
+				<ReleaseTime value="50" />
+				<DopplerFactor value="30" />
+				<Category>vehicles_sirens</Category>
+				<VolumeCurveScale value="300" />
+				<Unk22 value="50" />
+			</Header>
+			<ContainerName>dlc_policingmpaudio/policingmp_retrosirens</ContainerName>
+			<FileName>siren_spmark7_priority</FileName>
+			<WaveSlotNum value="0" />
+		</Item>
+		<Item type="DirectionalSound">
+			<Name>siren_spmark7_priority_d</Name>
+			<Header>
+				<Flags value="0x00008004" />
+				<Volume value="65436" />
+				<Category>vehicles_sirens</Category>
+			</Header>
+			<ChildSound>siren_spmark7_priority_s</ChildSound>
+			<InnerAngle value="20" />
+			<OuterAngle value="65" />
+			<RearAttenuation value="-3" />
+			<YawAngle value="0" />
+			<PitchAngle value="0" />
+		</Item>
+		<Item type="SimpleSound">
+			<Name>siren_spmark7_wail_s</Name>
+			<Header>
+				<Flags value="0x0820E010" />
+				<Pitch value="0" />
+				<ReleaseTime value="50" />
+				<DopplerFactor value="30" />
+				<Category>vehicles_sirens</Category>
+				<VolumeCurveScale value="300" />
+				<Unk22 value="50" />
+			</Header>
+			<ContainerName>dlc_policingmpaudio/policingmp_retrosirens</ContainerName>
+			<FileName>siren_spmark7_wail</FileName>
+			<WaveSlotNum value="0" />
+		</Item>
+		<Item type="DirectionalSound">
+			<Name>siren_spmark7_wail_d</Name>
+			<Header>
+				<Flags value="0x00008004" />
+				<Volume value="65436" />
+				<Category>vehicles_sirens</Category>
+			</Header>
+			<ChildSound>siren_spmark7_wail_s</ChildSound>
+			<InnerAngle value="20" />
+			<OuterAngle value="65" />
+			<RearAttenuation value="-3" />
+			<YawAngle value="0" />
+			<PitchAngle value="0" />
+		</Item>
+		<Item type="SimpleSound">
+			<Name>siren_spmark7_yelp_s</Name>
+			<Header>
+				<Flags value="0x0820E010" />
+				<Pitch value="0" />
+				<ReleaseTime value="50" />
+				<DopplerFactor value="30" />
+				<Category>vehicles_sirens</Category>
+				<VolumeCurveScale value="300" />
+				<Unk22 value="50" />
+			</Header>
+			<ContainerName>dlc_policingmpaudio/policingmp_retrosirens</ContainerName>
+			<FileName>siren_spmark7_yelp</FileName>
+			<WaveSlotNum value="0" />
+		</Item>
+		<Item type="DirectionalSound">
+			<Name>siren_spmark7_yelp_d</Name>
+			<Header>
+				<Flags value="0x00008004" />
+				<Volume value="65436" />
+				<Category>vehicles_sirens</Category>
+			</Header>
+			<ChildSound>siren_spmark7_yelp_s</ChildSound>
+			<InnerAngle value="20" />
+			<OuterAngle value="65" />
+			<RearAttenuation value="-3" />
+			<YawAngle value="0" />
+			<PitchAngle value="0" />
+		</Item>
+		<Item type="SimpleSound">
+			<Name>siren_ss2000ss_horn_s</Name>
+			<Header>
+				<Flags value="0x0820E010" />
+				<Pitch value="0" />
+				<ReleaseTime value="50" />
+				<DopplerFactor value="30" />
+				<Category>vehicles_sirens</Category>
+				<VolumeCurveScale value="300" />
+				<Unk22 value="50" />
+			</Header>
+			<ContainerName>dlc_policingmpaudio/policingmp_retrosirens</ContainerName>
+			<FileName>siren_ss2000ss_horn</FileName>
+			<WaveSlotNum value="0" />
+		</Item>
+		<Item type="DirectionalSound">
+			<Name>siren_ss2000ss_horn_d</Name>
+			<Header>
+				<Flags value="0x00008004" />
+				<Volume value="65436" />
+				<Category>vehicles_sirens</Category>
+			</Header>
+			<ChildSound>siren_ss2000ss_horn_s</ChildSound>
+			<InnerAngle value="20" />
+			<OuterAngle value="65" />
+			<RearAttenuation value="-3" />
+			<YawAngle value="0" />
+			<PitchAngle value="0" />
+		</Item>
+		<Item type="SimpleSound">
+			<Name>siren_ss2000ss_priority_s</Name>
+			<Header>
+				<Flags value="0x0820E010" />
+				<Pitch value="0" />
+				<ReleaseTime value="50" />
+				<DopplerFactor value="30" />
+				<Category>vehicles_sirens</Category>
+				<VolumeCurveScale value="300" />
+				<Unk22 value="50" />
+			</Header>
+			<ContainerName>dlc_policingmpaudio/policingmp_retrosirens</ContainerName>
+			<FileName>siren_ss2000ss_priority</FileName>
+			<WaveSlotNum value="0" />
+		</Item>
+		<Item type="DirectionalSound">
+			<Name>siren_ss2000ss_priority_d</Name>
+			<Header>
+				<Flags value="0x00008004" />
+				<Volume value="65436" />
+				<Category>vehicles_sirens</Category>
+			</Header>
+			<ChildSound>siren_ss2000ss_priority_s</ChildSound>
+			<InnerAngle value="20" />
+			<OuterAngle value="65" />
+			<RearAttenuation value="-3" />
+			<YawAngle value="0" />
+			<PitchAngle value="0" />
+		</Item>
+		<Item type="SimpleSound">
+			<Name>siren_ss2000ss_wail_s</Name>
+			<Header>
+				<Flags value="0x0820E010" />
+				<Pitch value="0" />
+				<ReleaseTime value="50" />
+				<DopplerFactor value="30" />
+				<Category>vehicles_sirens</Category>
+				<VolumeCurveScale value="300" />
+				<Unk22 value="50" />
+			</Header>
+			<ContainerName>dlc_policingmpaudio/policingmp_retrosirens</ContainerName>
+			<FileName>siren_ss2000ss_wail</FileName>
+			<WaveSlotNum value="0" />
+		</Item>
+		<Item type="DirectionalSound">
+			<Name>siren_ss2000ss_wail_d</Name>
+			<Header>
+				<Flags value="0x00008004" />
+				<Volume value="65436" />
+				<Category>vehicles_sirens</Category>
+			</Header>
+			<ChildSound>siren_ss2000ss_wail_s</ChildSound>
+			<InnerAngle value="20" />
+			<OuterAngle value="65" />
+			<RearAttenuation value="-3" />
+			<YawAngle value="0" />
+			<PitchAngle value="0" />
+		</Item>
+		<Item type="SimpleSound">
+			<Name>siren_ss2000ss_yelp_s</Name>
+			<Header>
+				<Flags value="0x0820E010" />
+				<Pitch value="0" />
+				<ReleaseTime value="50" />
+				<DopplerFactor value="30" />
+				<Category>vehicles_sirens</Category>
+				<VolumeCurveScale value="300" />
+				<Unk22 value="50" />
+			</Header>
+			<ContainerName>dlc_policingmpaudio/policingmp_retrosirens</ContainerName>
+			<FileName>siren_ss2000ss_yelp</FileName>
+			<WaveSlotNum value="0" />
+		</Item>
+		<Item type="DirectionalSound">
+			<Name>siren_ss2000ss_yelp_d</Name>
+			<Header>
+				<Flags value="0x00008004" />
+				<Volume value="65436" />
+				<Category>vehicles_sirens</Category>
+			</Header>
+			<ChildSound>siren_ss2000ss_yelp_s</ChildSound>
+			<InnerAngle value="20" />
+			<OuterAngle value="65" />
+			<RearAttenuation value="-3" />
+			<YawAngle value="0" />
+			<PitchAngle value="0" />
+		</Item>
 		<Item type="SoundSet">
 			<Name>policingmp_sounds_sirens1_soundset</Name>
 			<Header>

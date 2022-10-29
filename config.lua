@@ -288,6 +288,7 @@ ModelsWithAuxiliaryTone = {
 	"firetruk",
 	"cfpdalamo2",
 	"cfpdscout",
+	"ambulance",
 	"cfpdscout2",
 	"cfpdtorrence",
 	"dppd",
@@ -394,8 +395,6 @@ ModelsWithBMWIntegratedSiren = {
 }
 
 ModelsWith80K = {
-	"policeold1",
-	"policeold2",
 	"polprem",
 	"polpremslick",
 	"polpremumk",
@@ -432,7 +431,6 @@ ModelsWithFireSrn = { -- vanilla fire truck siren
 
 ModelsWithAstroSpectra = {
 	"adspscout",
-	"ambulance",
 	"LSFDGRANGER",
 }
 
@@ -636,7 +634,22 @@ ModelsWith650RemoteSiren = {
 	"sheriffheavy",
 }
 
-ModelsWithEQ2 = { -- THIS DOESNT WORK!!!!
+ModelsWithEQ2 = { -- NOT WORKING
+
+}
+
+ModelsWithScientificPrototypesMk7Siren = {
+	"policeold2",
+
+}
+
+ModelsWithPA300Siren = {
+	"ambulance",
+
+}
+
+ModelsWithSS2000SS = {
+	"policeold1",
 
 }
 
@@ -645,7 +658,6 @@ ModelsWithEQ2 = { -- THIS DOESNT WORK!!!!
 ------------------------------------
 
 ModelsWithLAFDSpectraWail = { -- LAFD Wail Tone in LXSRN 1 (Wail). Will only work with vehicles that are also in ModelsWithAstroSpectra list.
-	"ambulance",
 	"LSFDGRANGER",
 }
 
@@ -657,8 +669,9 @@ ModelsWithEQ2DualSiren = {
 	"firetruk",
 }
 
-ModelsWithQ2DualSiren = { -- THIS DOESNT WORK!!!!
+ModelsWithQ2DualSiren = { 
 
+	"ambulance",
 }
 
 BCSOFugitiveModels = {
