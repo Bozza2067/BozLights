@@ -24,6 +24,9 @@ ModelsWithEquipment = {
 	"sadcrtorrslick",
 	"lsiasectorrence",
 	"lsiasecspeedo",
+	"gcscout",
+	"gcstanier",
+	"gcstanier2",
 }
 
 ModelsWithNoEquipment = { -- Non-emergency models without lights/sirens controls
@@ -54,27 +57,19 @@ ModelsWithNoEquipment = { -- Non-emergency models without lights/sirens controls
 ]]
 
 ModelsWithBozLights = {
-	"lspdbuffalosum",
-	"lspdstanier",
-	"lspdscout3",
-	"lspdscoutum",
 }
 
 ModelsWithBozLightsLegacy = {
-	"lspdscout",
-	"lspdstanierslick",
 }
 
 -- These models have extralights and sirens in the same spot that should not conflict on light stages two or three. 
 -- All models here must also be in the eModelsWithBozLightsLegacy or eModelsWithBozLights arrays.
 eModelsWithBLCTkdn =
 	{
-		"lspdscout",
 	}
 
 eModelsWithAlleyLights = -- pretty evident what this means
 	{
-		"lspdstanier",
 	}
 
 eModelsWithMiniSrn = -- These vehicles only have two light stages (required to also be in eModelsWithBozLights (legacy works too probably?))
@@ -243,6 +238,9 @@ ModelsWithNoTertiaryTone = {
 	"bombsemite",
 	"batstalker",
 	"lspdstalker",
+	"gcscout",
+	"gcstanier",
+	"gcstanier2",
 }
 
 -- Vehicles with a 4th tone activated by a seperate button. Usually a Hi-Lo.
@@ -281,6 +279,9 @@ ModelsWithQuarternaryTone = {
 	"sheriffscoutnew",
 	"sherprem2",
 	"mrcaalamo",
+	"gcscout",
+	"gcstanier",
+	"gcstanier2",
 }
 
 -- Vehicles with dual sirens
@@ -288,7 +289,6 @@ ModelsWithAuxiliaryTone = {
 	"firetruk",
 	"cfpdalamo2",
 	"cfpdscout",
-	"ambulance",
 	"cfpdscout2",
 	"cfpdtorrence",
 	"dppd",
@@ -395,6 +395,8 @@ ModelsWithBMWIntegratedSiren = {
 }
 
 ModelsWith80K = {
+	"policeold1",
+	"policeold2",
 	"polprem",
 	"polpremslick",
 	"polpremumk",
@@ -431,6 +433,7 @@ ModelsWithFireSrn = { -- vanilla fire truck siren
 
 ModelsWithAstroSpectra = {
 	"adspscout",
+	"ambulance",
 	"LSFDGRANGER",
 }
 
@@ -496,6 +499,7 @@ ModelsWithCencomSapphire = {
 	"mrcacara",
 	"rhpdscoutumk",
 	"mcfdfiretruk2",
+	"gcscout",
 }
 
 ModelsWith295HFS = {
@@ -628,6 +632,8 @@ ModelsWithSmartSystemLMS = { -- LASD/LAPD Siren
 	"lsiastanierk9",
 	"lsiastanier",
 	"lsiastanierumk",
+	"gcstanier",
+	"gcstanier2",
 }
 
 ModelsWith650RemoteSiren = {
@@ -639,17 +645,14 @@ ModelsWithEQ2 = { -- NOT WORKING
 }
 
 ModelsWithScientificPrototypesMk7Siren = {
-	"policeold2",
 
 }
 
 ModelsWithPA300Siren = {
-	"ambulance",
 
 }
 
 ModelsWithSS2000SS = {
-	"policeold1",
 
 }
 
@@ -658,6 +661,7 @@ ModelsWithSS2000SS = {
 ------------------------------------
 
 ModelsWithLAFDSpectraWail = { -- LAFD Wail Tone in LXSRN 1 (Wail). Will only work with vehicles that are also in ModelsWithAstroSpectra list.
+	"ambulance",
 	"LSFDGRANGER",
 }
 
@@ -671,7 +675,6 @@ ModelsWithEQ2DualSiren = {
 
 ModelsWithQ2DualSiren = { 
 
-	"ambulance",
 }
 
 BCSOFugitiveModels = {
