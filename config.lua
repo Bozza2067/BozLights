@@ -246,7 +246,6 @@ ModelsWithNoTertiaryTone = {
 	"unipd",
 	"unipd2",
 	"unipd4",
-	"policefug",
 	"policefug2",
 	"policefug3",
 	"policeold1",

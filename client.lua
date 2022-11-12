@@ -880,8 +880,6 @@ function SetLxSirenStateForVeh(veh, newstate)
 					PlaySoundFromEntity(snd_lxsiren[veh], "siren_omega_wail2", veh, "policingmp_sounds_sirens4_soundset", 0, 0)
 				elseif Use480K(veh) then
 					PlaySoundFromEntity(snd_lxsiren[veh], "siren_80k_wail2", veh, "policingmp_sounds_sirens4_soundset", 0, 0)
-				elseif UseZ3Siren(veh) then
-					PlaySoundFromEntity(snd_lxsiren[veh], "siren_z3_wail2", veh, "policingmp_sounds_sirens5_soundset", 0, 0)
 				end
 				TogMuteDfltSrnForVeh(veh, true)
 				
@@ -1424,7 +1422,7 @@ Citizen.CreateThread(function()
 
 							elseif IsDisabledControlJustPressed(0, 157) then
 								local cstate = state_lxsiren[veh]
-								if cstate == 2 and UseTouchmaster(veh) or UseOmega90(veh) and cstate == 2 or Use480K(veh) and cstate == 2 or UseZ3Siren(veh) and cstate == 2 then
+								if cstate == 2 and UseTouchmaster(veh) or UseOmega90(veh) and cstate == 2 or Use480K(veh) and cstate == 2 then
 									local sirenoption = math.random(0,1)
 									if IsVehicleSirenOn(veh) then
 										PlaySoundFrontend(-1, "Beep_Red", "DLC_HEIST_HACKING_SNAKE_SOUNDS", 1)
@@ -1621,7 +1619,7 @@ Citizen.CreateThread(function()
 											local sirenoption = math.random(0,1)
 											if rumblerState == 1 then
 												nstate = 5
-											elseif (UseTouchmaster(veh) or UseOmega90(veh) or Use480K(veh) or UseZ3Siren(veh)) and sirenoption == 1 then
+											elseif (UseTouchmaster(veh) or UseOmega90(veh) or Use480K(veh)) and sirenoption == 1 then
 												nstate = 9
 											else
 												nstate = 1
@@ -1718,7 +1716,7 @@ Citizen.CreateThread(function()
 						if hmanu_state_new == 1 or hmanu_state_new == 3 then
 							if not UseFiretruckSiren(veh) and not UseFiretruckHorn(veh) then
 								if state_lxsiren[veh] > 0 and actv_lxsrnmute_temp == false then
-									if state_lxsiren[veh] == 9 then
+									if state_lxsiren[veh] == 9 and not Use480K(veh) then
 										srntone_temp = 1
 									else
 										srntone_temp = state_lxsiren[veh]

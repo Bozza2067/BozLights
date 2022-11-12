@@ -884,10 +884,6 @@
 					<ChildSound>siren_timberwolf_d</ChildSound>
 				</Item>
 				<Item>
-					<ScriptName>siren_z3_wail2</ScriptName>
-					<ChildSound>siren_z3_wail2_d</ChildSound>
-				</Item>
-				<Item>
 					<ScriptName>siren_eq2_wail</ScriptName>
 					<ChildSound>siren_eq2_wail_d</ChildSound>
 				</Item>
@@ -3298,7 +3294,7 @@
 			<Name>siren_80k_wail_d</Name>
 			<Header>
 				<Flags value="0x00008004" />
-				<Volume value="65436" />
+				<Volume value="130872" />
 				<Category>vehicles_sirens</Category>
 			</Header>
 			<ChildSound>siren_80k_wail_s</ChildSound>
@@ -3327,7 +3323,7 @@
 			<Name>siren_80k_wail2_d</Name>
 			<Header>
 				<Flags value="0x00008004" />
-				<Volume value="65436" />
+				<Volume value="130872" />
 				<Category>vehicles_sirens</Category>
 			</Header>
 			<ChildSound>siren_80k_wail2_s</ChildSound>
@@ -3563,35 +3559,6 @@
 				<Category>vehicles_sirens</Category>
 			</Header>
 			<ChildSound>siren_timberwolf_s</ChildSound>
-			<InnerAngle value="20" />
-			<OuterAngle value="65" />
-			<RearAttenuation value="-3" />
-			<YawAngle value="0" />
-			<PitchAngle value="0" />
-		</Item>
-		<Item type="SimpleSound">
-			<Name>siren_z3_wail2_s</Name>
-			<Header>
-				<Flags value="0x0820E010" />
-				<Pitch value="0" />
-				<ReleaseTime value="50" />
-				<DopplerFactor value="30" />
-				<Category>vehicles_sirens</Category>
-				<VolumeCurveScale value="300" />
-				<Unk22 value="50" />
-			</Header>
-			<ContainerName>dlc_policingmpaudio/policingmp_sirens5</ContainerName>
-			<FileName>siren_z3_wail2</FileName>
-			<WaveSlotNum value="0" />
-		</Item>
-		<Item type="DirectionalSound">
-			<Name>siren_z3_wail2_d</Name>
-			<Header>
-				<Flags value="0x00008004" />
-				<Volume value="65436" />
-				<Category>vehicles_sirens</Category>
-			</Header>
-			<ChildSound>siren_z3_wail2_s</ChildSound>
 			<InnerAngle value="20" />
 			<OuterAngle value="65" />
 			<RearAttenuation value="-3" />
