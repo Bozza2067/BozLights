@@ -14,10 +14,9 @@ MASTERCOM: https://www.lcpdfr.com/downloads/gta5mods/audio/26065-mastercom-b-cod
 
 SS2000: https://www.lcpdfr.com/downloads/gta5mods/audio/8038-federal-signal-smart-siren-ss2000sm-rumbler-tones-now-available/ and https://www.lcpdfr.com/downloads/gta5mods/audio/36017-ultimate-federal-signal-smart-siren-signalmaster-ss2000sm-pack/
 
-LMS: (NOT FINAL)
+LASD Horn: https://gtapolicemods.com/files/file/4167-lasds-unique-federal-signal-smart-siren-ss2000-with-custom-airhorn-tone/
 
-SSP3000: 
-> https://www.lcpdfr.com/downloads/gta5mods/audio/35414-federal-signal-ssp3000-regular-rumbler-tones/ and https://www.lcpdfr.com/downloads/gta5mods/audio/39378-federal-signal-smart-siren-platinum/
+SSP3000: https://www.lcpdfr.com/downloads/gta5mods/audio/35414-federal-signal-ssp3000-regular-rumbler-tones/ and https://www.lcpdfr.com/downloads/gta5mods/audio/39378-federal-signal-smart-siren-platinum/
 
 80K: https://www.lcpdfr.com/downloads/gta5mods/audio/23572-unitrol-80k-federal-signal-professionally-recorded-with-real-siren/
 
@@ -34,3 +33,5 @@ Z3 LOWFREQ YELP: https://www.lcpdfr.com/downloads/gta5mods/audio/36204-code-3-z3
 TIMBERWOLF: https://www.lcpdfr.com/downloads/gta5mods/audio/20914-retro-fire-sirens-siren-mastery/
 
 nERGY 400: https://community-modding.com/index.php?/files/file/17-soundoff-signal-nergy-siren/
+
+480K: https://www.lcpdfr.com/downloads/gta4mods/audio/639-federal-signal-unitrol-480k-siren/

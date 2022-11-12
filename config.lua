@@ -249,6 +249,17 @@ ModelsWithNoTertiaryTone = {
 	"policefug",
 	"policefug2",
 	"policefug3",
+	"policeold1",
+	"policeold2",
+	"polprem",
+	"polpremslick",
+	"polpremumk",
+	"parkprem",
+	"sherprem2",
+	"sheriffold2",
+	"sheriffold3",
+	"sheriffriataold",
+	"police2gs",
 }
 
 -- Vehicles with a 4th tone activated by a seperate button. Usually a Hi-Lo.
@@ -285,7 +296,6 @@ ModelsWithQuarternaryTone = {
 	"sahp2",
 	"sahp2a",
 	"sheriffscoutnew",
-	"sherprem2",
 	"mrcaalamo",
 	"gcscout",
 	"gcstanier",
