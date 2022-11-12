@@ -1199,7 +1199,6 @@ Citizen.CreateThread(function()
 			
 			CleanupSounds()
 
-			RequestScriptAudioBank("DLC_POLICINGMPAUDIO\\POLICINGMP_RETROSIRENS", false)
 			RequestScriptAudioBank("DLC_POLICINGMPAUDIO\\POLICINGMP_SIRENS1", false)
 			RequestScriptAudioBank("DLC_POLICINGMPAUDIO\\POLICINGMP_SIRENS2", false)
 			RequestScriptAudioBank("DLC_POLICINGMPAUDIO\\POLICINGMP_SIRENS3", false)
