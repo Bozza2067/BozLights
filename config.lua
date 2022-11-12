@@ -27,6 +27,7 @@ ModelsWithEquipment = {
 	"gcscout",
 	"gcstanier",
 	"gcstanier2",
+	"dppdscoutvol",
 }
 
 ModelsWithNoEquipment = { -- Non-emergency models without lights/sirens controls
@@ -241,6 +242,13 @@ ModelsWithNoTertiaryTone = {
 	"gcscout",
 	"gcstanier",
 	"gcstanier2",
+	"uniems",
+	"unipd",
+	"unipd2",
+	"unipd4",
+	"policefug",
+	"policefug2",
+	"policefug3",
 }
 
 -- Vehicles with a 4th tone activated by a seperate button. Usually a Hi-Lo.
@@ -347,6 +355,8 @@ ModelsWithHornSwitch = {
 	"mcsoscout4",
 	"bombsemite",
 	"polroamer",
+	"policefug2",
+	"policefug3",
 }
 
 ModelsWithRumbler = {
@@ -394,7 +404,7 @@ ModelsWithBMWIntegratedSiren = {
 	"sheriffboat",
 }
 
-ModelsWith80K = {
+ModelsWith480K = {
 	"policeold1",
 	"policeold2",
 	"polprem",
@@ -489,6 +499,8 @@ ModelsWithSS2000 = {
 	"LCPD4B",
 	"lifeguard",
 	"mcsooutlaw",
+	"unipd",
+	"unipd4",
 }
 
 ModelsWithCencomSapphire = {
@@ -557,6 +569,10 @@ ModelsWithSSP3000 = {
 	"mcsoscout",
 	"mcsoscout4",
 	"bombsemite",
+	"uniems",
+	"unipd2",
+	"policefug2",
+	"policefug3",
 }
 
 ModelsWithTouchmaster = {
@@ -596,6 +612,7 @@ ModelsWithZ3 = {
 	"sadcrtorrence",
 	"sadcrtorrslick",
 	"lsppscoutum",
+	"policefug",
 }
 
 ModelsWithSmartSystemLMS = { -- LASD/LAPD Siren
