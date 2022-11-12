@@ -12,11 +12,12 @@ MASTERCOM: https://www.lcpdfr.com/downloads/gta5mods/audio/26065-mastercom-b-cod
 
 295: https://www.lcpdfr.com/downloads/gta5mods/audio/23730-whelen-295hfs-siren-fivem-ready-studio-recorded/
 
-SS2000: (NOT FINAL)
+SS2000: https://www.lcpdfr.com/downloads/gta5mods/audio/8038-federal-signal-smart-siren-ss2000sm-rumbler-tones-now-available/ and https://www.lcpdfr.com/downloads/gta5mods/audio/36017-ultimate-federal-signal-smart-siren-signalmaster-ss2000sm-pack/
 
 LMS: (NOT FINAL)
 
-SSP3000: (NOT FINAL)
+SSP3000: 
+> https://www.lcpdfr.com/downloads/gta5mods/audio/35414-federal-signal-ssp3000-regular-rumbler-tones/ and https://www.lcpdfr.com/downloads/gta5mods/audio/39378-federal-signal-smart-siren-platinum/
 
 80K: https://www.lcpdfr.com/downloads/gta5mods/audio/23572-unitrol-80k-federal-signal-professionally-recorded-with-real-siren/
 
