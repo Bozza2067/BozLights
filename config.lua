@@ -24,9 +24,9 @@ ModelsWithEquipment = {
 	"sadcrtorrslick",
 	"lsiasectorrence",
 	"lsiasecspeedo",
-	"gcscout",
 	"gcstanier",
 	"gcstanier2",
+	"gcscout",
 	"dppdscoutvol",
 }
 
@@ -239,9 +239,6 @@ ModelsWithNoTertiaryTone = {
 	"bombsemite",
 	"batstalker",
 	"lspdstalker",
-	"gcscout",
-	"gcstanier",
-	"gcstanier2",
 	"uniems",
 	"unipd",
 	"unipd2",
@@ -296,9 +293,9 @@ ModelsWithQuarternaryTone = {
 	"sahp2a",
 	"sheriffscoutnew",
 	"mrcaalamo",
-	"gcscout",
 	"gcstanier",
 	"gcstanier2",
+	"gcscout",
 }
 
 -- Vehicles with dual sirens
@@ -520,7 +517,6 @@ ModelsWithCencomSapphire = {
 	"mrcacara",
 	"rhpdscoutumk",
 	"mcfdfiretruk2",
-	"gcscout",
 }
 
 ModelsWith295HFS = {
@@ -582,6 +578,7 @@ ModelsWithSSP3000 = {
 	"unipd2",
 	"policefug2",
 	"policefug3",
+	"gcscout",
 }
 
 ModelsWithTouchmaster = {
