@@ -28,6 +28,9 @@ ModelsWithEquipment = {
 	"gcstanier2",
 	"gcscout",
 	"dppdscoutvol",
+	"mcsocara3",
+	"coroner",
+	"coroner2",
 }
 
 ModelsWithNoEquipment = { -- Non-emergency models without lights/sirens controls
@@ -86,7 +89,6 @@ ModelsWithNoTertiaryTone = {
 	"adspscout",
 	"amb_rox_sheriff2",
 	"amb_rox_swat",
-	"ambulance",
 	"bcfdbat",
 	"bcsonalamo",
 	"bcsospeedo",
@@ -223,8 +225,6 @@ ModelsWithNoTertiaryTone = {
 	"mcsocara",
 	"mcsocara2",
 	"mcsocara3",
-	"mcsocenturion",
-	"mcsooutlaw",
 	"mcsoscout",
 	"mcsoscout2",
 	"mcsoscout3",
@@ -236,6 +236,8 @@ ModelsWithNoTertiaryTone = {
 	"mcsotorr2",
 	"mcsoyosemite",
 	"mcfdtruck",
+	"mcfdrescue",
+	"mcfdhazmat",
 	"bombsemite",
 	"batstalker",
 	"lspdstalker",
@@ -256,6 +258,10 @@ ModelsWithNoTertiaryTone = {
 	"sheriffold3",
 	"sheriffriataold",
 	"police2gs",
+	"polnspeedo",
+	"ambulance2",
+	"coroner",
+	"pdumksx",
 }
 
 -- Vehicles with a 4th tone activated by a seperate button. Usually a Hi-Lo.
@@ -296,11 +302,15 @@ ModelsWithQuarternaryTone = {
 	"gcstanier",
 	"gcstanier2",
 	"gcscout",
+	"mcfdtruck",
+	"mcfdrescue",
+	"mcfdhazmat",
+	"senalamo5",
+	"senalamo6",
 }
 
 -- Vehicles with dual sirens
 ModelsWithAuxiliaryTone = {
-	"firetruk",
 	"cfpdalamo2",
 	"cfpdscout",
 	"cfpdscout2",
@@ -323,6 +333,13 @@ ModelsWithAuxiliaryTone = {
 	"sheriffscout2",
 	"sheriffslick",
 	"sheriffoss",
+	"mcfdtruck",
+	"mcfdrescue",
+	"mcfdhazmat",
+	"emsnspeedo",
+	"ambulance22",
+	"ambulance2",
+	"emsbisonamb",
 }
 
 -- Vehicles that use the horn to change tones. Disabled electronic horn. Horn behavior: Regular car horn when lights off, manual tone when lights on, change tone when sirens on.
@@ -363,6 +380,9 @@ ModelsWithHornSwitch = {
 	"polroamer",
 	"policefug2",
 	"policefug3",
+	"polnspeedo",
+	"pdumksx",
+	"lspdbsq1",
 }
 
 ModelsWithRumbler = {
@@ -449,8 +469,8 @@ ModelsWithFireSrn = { -- vanilla fire truck siren
 
 ModelsWithAstroSpectra = {
 	"adspscout",
-	"ambulance",
 	"LSFDGRANGER",
+	"ambulance2",
 }
 
 ModelsWithMastercomB = {
@@ -469,6 +489,7 @@ ModelsWithMastercomB = {
 ModelsWithNergy400 = {
 	"fbi",
 	"fbi2",
+	"senalamo5",
 }
 
 ModelsWithOmega90 = {
@@ -486,6 +507,9 @@ ModelsWithOmega90 = {
 	"sheriffmoon",
 	"sherifftrike",
 	"polroamer",
+	"emsroamer",
+	"coroner2",
+	"lspdbsq1",
 }
 
 ModelsWithFIBSiren = { -- Vanilla FIB Siren
@@ -516,7 +540,10 @@ ModelsWithCencomSapphire = {
 	"glpdgresleyum",
 	"mrcacara",
 	"rhpdscoutumk",
-	"mcfdfiretruk2",
+	"mcfdtruck",
+	"mcfdrescue",
+	"mcfdhazmat",
+	"senalamo6",
 }
 
 ModelsWith295HFS = {
@@ -528,6 +555,14 @@ ModelsWith295HFS = {
 	"riot2",
 	"riot3",
 	"mcsocenturion",
+	"senalamo",
+	"senalamo2",
+	"senalamo3",
+	"senalamo4",
+	"senstalker",
+	"emsnspeedo",
+	"ambulance22",
+	"emsbisonamb",
 }
 
 ModelsWithSSP3000 = {
@@ -579,6 +614,9 @@ ModelsWithSSP3000 = {
 	"policefug2",
 	"policefug3",
 	"gcscout",
+	"polnspeedo",
+	"coroner",
+	"pdumksx",
 }
 
 ModelsWithTouchmaster = {
@@ -684,8 +722,8 @@ ModelsWithSS2000SS = {
 ------------------------------------
 
 ModelsWithLAFDSpectraWail = { -- LAFD Wail Tone in LXSRN 1 (Wail). Will only work with vehicles that are also in ModelsWithAstroSpectra list.
-	"ambulance",
 	"LSFDGRANGER",
+	"ambulance2",
 }
 
 ModelsWithTimberwolfDualSiren = {
@@ -693,11 +731,12 @@ ModelsWithTimberwolfDualSiren = {
 }
 
 ModelsWithEQ2DualSiren = {
-	"firetruk",
+	"ambulance2",
 }
 
 ModelsWithQ2DualSiren = { 
-
+	"mcfdtruck",
+	"mcfdhazmat",
 }
 
 BCSOFugitiveModels = {
@@ -712,9 +751,14 @@ ModelsWithZ3LowFreqInsteadofHiLo = { -- Requires Z3 Siren
 }
 
 ModelsWithFireHorn = { -- Uses vanilla fire truck horn, does not interrupt main siren
-	"ambulance",
+	"mcfdtruck",
+	"mcfdhazmat",
+	"ambulance2",
 }
 
 ModelsWithCencomCarbideUltra = { -- Ultra Hi-Lo tone from Whelen Cencom Carbide in LXSRN 4 (Quarternary/Hilo)
 	"bcfdbat",
+	"mcfdtruck",
+	"mcfdrescue",
+	"mcfdhazmat",
 }
