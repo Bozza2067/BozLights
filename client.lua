@@ -768,9 +768,9 @@ function SetLxSirenStateForVeh(veh, newstate)
 				elseif UseNERGY(veh) then
 					PlaySoundFromEntity(snd_lxsiren[veh], "siren_nergy_yelp_reverse", veh, "policingmp_sounds_sirens2_soundset", 0, 0)
 				elseif UseSS2000(veh) then
-					PlaySoundFromEntity(snd_lxsiren[veh], "siren_lms_priority", veh, "policingmp_sounds_sirens2_soundset", 0, 0)
+					PlaySoundFromEntity(snd_lxsiren[veh], "siren_lms_priority", veh, "policingmp_sounds_sirens5_soundset", 0, 0)
 				elseif UseSSLMS(veh) then
-					PlaySoundFromEntity(snd_lxsiren[veh], "siren_ss2000_priority", veh, "policingmp_sounds_sirens5_soundset", 0, 0)
+					PlaySoundFromEntity(snd_lxsiren[veh], "siren_ss2000_priority", veh, "policingmp_sounds_sirens2_soundset", 0, 0)
 				elseif UseTouchmaster(veh) then
 					PlaySoundFromEntity(snd_lxsiren[veh], "siren_touchmaster_priority", veh, "policingmp_sounds_sirens3_soundset", 0, 0)
 				elseif UseOmega90(veh) then
