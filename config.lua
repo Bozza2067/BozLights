@@ -262,6 +262,17 @@ ModelsWithNoTertiaryTone = {
 	"ambulance2",
 	"coroner",
 	"pdumksx",
+	"sahp3",
+	"sahp3a",
+	"sahp3b",
+	"sahp4",
+	"sahp5",
+	"sahp5a",
+	"sahp6",
+	"sahp6a",
+	"sahpb",
+	"sahpb2",
+	"sahp4a",
 }
 
 -- Vehicles with a 4th tone activated by a seperate button. Usually a Hi-Lo.
@@ -307,6 +318,16 @@ ModelsWithQuarternaryTone = {
 	"mcfdhazmat",
 	"senalamo5",
 	"senalamo6",
+	"sahp3",
+	"sahp3a",
+	"sahp3b",
+	"sahp4",
+	"sahp5",
+	"sahp5a",
+	"sahp6",
+	"sahp6a",
+	"sahpb",
+	"sahpb2",
 }
 
 -- Vehicles with dual sirens
@@ -383,6 +404,7 @@ ModelsWithHornSwitch = {
 	"polnspeedo",
 	"pdumksx",
 	"lspdbsq1",
+	"sahp4a",
 }
 
 ModelsWithRumbler = {
@@ -453,10 +475,19 @@ ModelsWithWhelenCHPSiren = {
 	"sahp1e",
 	"sahp2",
 	"sahp2a",
+	"sahp3",
+	"sahp3a",
+	"sahp3b",
+	"sahp4",
+	"sahp5",
+	"sahp5a",
+	"sahp6",
+	"sahp6a",
 }
 
 ModelsWithWhelenCHPMotorSiren = {
-	"policeb",
+	"sahpb",
+	"sahpb2",
 }
 
 ModelsWithFireSrn = { -- vanilla fire truck siren
@@ -518,6 +549,7 @@ ModelsWithFIBSiren = { -- Vanilla FIB Siren
 	"sahp2b",
 	"sahpprem",
 	"sahppremslick",
+	"sahp4a",
 }
 
 ModelsWithSS2000 = {
