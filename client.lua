@@ -828,6 +828,8 @@ function SetLxSirenStateForVeh(veh, newstate)
 					PlaySoundFromEntity(snd_lxsiren[veh], "siren_pa20a_wail_r", veh, "policingmp_sounds_sirens5_soundset", 0, 0)
 				elseif UseSSP3000(veh) then
 					PlaySoundFromEntity(snd_lxsiren[veh], "siren_ssp3000_wail_r", veh, "policingmp_sounds_sirens3_soundset", 0, 0)
+				elseif UseOmega90(veh) then
+					PlaySoundFromEntity(snd_lxsiren[veh], "siren_omega_ringer", veh, "policingmp_sounds_sirens4_soundset", 0, 0)
 				elseif UseSS2000(veh) or UseSSLMS(veh) then
 					PlaySoundFromEntity(snd_lxsiren[veh], "siren_ss2000_wail_r", veh, "policingmp_sounds_sirens3_soundset", 0, 0)
 				else
@@ -840,6 +842,8 @@ function SetLxSirenStateForVeh(veh, newstate)
 					PlaySoundFromEntity(snd_lxsiren[veh], "siren_2_r", veh, "policingmp_sounds_sirens5_soundset", 0, 0)
 				elseif UseSSP3000(veh) then
 					PlaySoundFromEntity(snd_lxsiren[veh], "siren_ssp3000_yelp_r", veh, "policingmp_sounds_sirens3_soundset", 0, 0)
+					elseif UseOmega90(veh) then
+					PlaySoundFromEntity(snd_lxsiren[veh], "siren_omega_jingle", veh, "policingmp_sounds_sirens4_soundset", 0, 0)
 				elseif UseSS2000(veh) or UseSSLMS(veh) then
 					PlaySoundFromEntity(snd_lxsiren[veh], "siren_ss2000_yelp_r", veh, "policingmp_sounds_sirens3_soundset", 0, 0)
 				else
@@ -852,6 +856,8 @@ function SetLxSirenStateForVeh(veh, newstate)
 					PlaySoundFromEntity(snd_lxsiren[veh], "police_warning_r", veh, "policingmp_sounds_sirens5_soundset", 0, 0)
 				elseif UseSSP3000(veh) then
 					PlaySoundFromEntity(snd_lxsiren[veh], "siren_ssp3000_priority_r", veh, "policingmp_sounds_sirens3_soundset", 0, 0)
+					elseif UseOmega90(veh) then
+					PlaySoundFromEntity(snd_lxsiren[veh], "siren_omega_ultra", veh, "policingmp_sounds_sirens4_soundset", 0, 0)
 				elseif UseSS2000(veh) or UseSSLMS(veh) then
 					PlaySoundFromEntity(snd_lxsiren[veh], "siren_ss2000_priority_r", veh, "policingmp_sounds_sirens3_soundset", 0, 0)
 				else
