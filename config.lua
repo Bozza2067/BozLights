@@ -273,6 +273,9 @@ ModelsWithNoTertiaryTone = {
 	"sahpb",
 	"sahpb2",
 	"sahp4a",
+	"sahp2stx",
+	"sahp2astx",
+	"sahp2bstx",
 }
 
 -- Vehicles with a 4th tone activated by a seperate button. Usually a Hi-Lo.
@@ -328,6 +331,9 @@ ModelsWithQuarternaryTone = {
 	"sahp6a",
 	"sahpb",
 	"sahpb2",
+	"sahp2stx",
+	"sahp2astx",
+	"sahp2bstx",
 }
 
 -- Vehicles with dual sirens
@@ -483,6 +489,9 @@ ModelsWithWhelenCHPSiren = {
 	"sahp5a",
 	"sahp6",
 	"sahp6a",
+	"sahp2stx",
+	"sahp2astx",
+	"sahp2bstx",
 }
 
 ModelsWithWhelenCHPMotorSiren = {
