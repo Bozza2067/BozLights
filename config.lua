@@ -1,6 +1,6 @@
 MuteHornToneSwitcher = true
 UsingVanillaSiren = false
-ShowDebugInfo = false
+ShowDebugInfo = true
 DisableEquipmentWhenDamaged = false
 DamageThreshold = 975
 TertiaryToneByDefault = false -- UNUSED AS OF RIGHT NOW
@@ -367,6 +367,8 @@ ModelsWithAuxiliaryTone = {
 	"ambulance22",
 	"ambulance2",
 	"emsbisonamb",
+	"fbi",
+	"fbi2",
 }
 
 -- Vehicles that use the horn to change tones. Disabled electronic horn. Horn behavior: Regular car horn when lights off, manual tone when lights on, change tone when sirens on.
@@ -458,6 +460,10 @@ ModelsWithBMWIntegratedSiren = {
 	"sheriffboat",
 }
 
+ModelsWithCencomRed = {
+	"fbi",
+}
+
 ModelsWith480K = {
 	"policeold1",
 	"policeold2",
@@ -526,9 +532,7 @@ ModelsWithMastercomB = {
 	"lspdstalker",
 }
 
-ModelsWithNergy400 = {
-	"fbi",
-	"fbi2",
+ModelsWithNergy400 = { 
 	"senalamo5",
 }
 
@@ -707,7 +711,6 @@ ModelsWithSmartSystemLMS = { -- LASD/LAPD Siren
 	"police2",
 	"polspeedo",
 	"polsadlerk9",
-	"police4",
 	"police42old",
 	"gtfminivan",
 	"centurionlspd",
@@ -740,9 +743,11 @@ ModelsWithSmartSystemLMS = { -- LASD/LAPD Siren
 
 ModelsWith650RemoteSiren = {
 	"sheriffheavy",
+	"police4",
 }
 
 ModelsWithEQ2 = { -- NOT WORKING
+	"fbi2",
 
 }
 
@@ -778,6 +783,7 @@ ModelsWithEQ2DualSiren = {
 ModelsWithQ2DualSiren = { 
 	"mcfdtruck",
 	"mcfdhazmat",
+	"fbi2",
 }
 
 BCSOFugitiveModels = {
