@@ -31,6 +31,7 @@ ModelsWithEquipment = {
 	"mcsocara3",
 	"coroner",
 	"coroner2",
+	"rhpdeveron",
 }
 
 ModelsWithNoEquipment = { -- Non-emergency models without lights/sirens controls
@@ -38,6 +39,7 @@ ModelsWithNoEquipment = { -- Non-emergency models without lights/sirens controls
 	"pbus",
 	"sheriffretro",
 	"sheriffretro2",
+	"fibp8",
 }
 
 ---------------
@@ -152,10 +154,13 @@ ModelsWithNoTertiaryTone = {
 	"rhpdfug",
 	"rhpdfugumk",
 	"rhpdscout",
-	"rhpdscoutk9",
 	"rhpdscoutslick",
+	"rhpdscoutk9",
 	"rhpdscoutumk",
+	"rhpdnalamo",
+	"rhpdnalamok9",
 	"rhpdstanier",
+	"rhpdeveron",
 	"sahp",
 	"sahp1a",
 	"sahp1b",
@@ -276,6 +281,8 @@ ModelsWithNoTertiaryTone = {
 	"sahp2stx",
 	"sahp2astx",
 	"sahp2bstx",
+	"sahpnalamo",
+	"sahpnalamo2",
 }
 
 -- Vehicles with a 4th tone activated by a seperate button. Usually a Hi-Lo.
@@ -334,6 +341,8 @@ ModelsWithQuarternaryTone = {
 	"sahp2stx",
 	"sahp2astx",
 	"sahp2bstx",
+	"sahpnalamo",
+	"sahpnalamo2",
 }
 
 -- Vehicles with dual sirens
@@ -354,9 +363,13 @@ ModelsWithAuxiliaryTone = {
 	"rhpdfug",
 	"rhpdfugumk",
 	"rhpdscout",
-	"rhpdscoutk9",
 	"rhpdscoutslick",
+	"rhpdscoutk9",
+	"rhpdscoutumk",
+	"rhpdnalamo",
+	"rhpdnalamok9",
 	"rhpdstanier",
+	"rhpdeveron",
 	"sheriffscout2",
 	"sheriffslick",
 	"sheriffoss",
@@ -585,6 +598,14 @@ ModelsWithCencomSapphire = {
 	"mcfdrescue",
 	"mcfdhazmat",
 	"senalamo6",
+	"fibp",
+	"fibp1a",
+	"fibp2",
+	"fibp3",
+	"fibp6",
+	"fibp62",
+	"sahpnalamo",
+	"sahpnalamo2",
 }
 
 ModelsWith295HFS = {
@@ -604,6 +625,9 @@ ModelsWith295HFS = {
 	"emsnspeedo",
 	"ambulance22",
 	"emsbisonamb",
+	"fibp",
+	"fibp1a",
+	"fibp7",
 }
 
 ModelsWithSSP3000 = {
@@ -688,11 +712,14 @@ ModelsWithZ3 = {
 	"glpdgresley",
 	"glpdscout",
 	"mrcaalamo",
-	"rhpdfugumk",
 	"rhpdfug",
-	"rhpdscoutslick",
+	"rhpdfugumk",
 	"rhpdscout",
+	"rhpdscoutslick",
 	"rhpdscoutk9",
+	"rhpdnalamo",
+	"rhpdnalamok9",
+	"rhpdeveron",
 	"sadcrnscout",
 	"sadcrtorrence",
 	"sadcrtorrslick",
@@ -771,6 +798,12 @@ ModelsWithTimberwolfDualSiren = {
 
 }
 
+
+ModelsWithSAHPHiLo = {
+	"sahpnalamo",
+	"sahpnalamo2",
+}
+
 ModelsWithEQ2DualSiren = {
 	"ambulance2",
 }
@@ -782,8 +815,9 @@ ModelsWithQ2DualSiren = {
 
 BCSOFugitiveModels = {
 	"bcsofugitive",
-	"fibpalamo",
-	"fibpalamok9",
+	"fibp4",
+	"fibp42",
+	"fibp5",
 }
 
 ModelsWithZ3LowFreqInsteadofHiLo = { -- Requires Z3 Siren

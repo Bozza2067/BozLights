@@ -406,6 +406,16 @@ function UseAstroSpectra(veh)
 	return false
 end
 
+function UseSAHPHiLo(veh)
+	local model = GetEntityModel(veh)
+	for i = 1, #ModelsWithSAHPHiLo, 1 do
+		if model == GetHashKey(ModelsWithSAHPHiLo[i]) then
+			return true
+		end
+	end
+	return false
+end
+
 function UseLAFDSpectraWail(veh)
 	local model = GetEntityModel(veh)
 	for i = 1, #ModelsWithLAFDSpectraWail, 1 do
@@ -795,7 +805,7 @@ function SetLxSirenStateForVeh(veh, newstate)
 				elseif UsingVanillaSiren then
 					PlaySoundFromEntity(snd_lxsiren[veh], "vehicles_horns_police_warning_rnd_euro", veh, 0, 0, 0)
 
-				elseif UseCHPSiren(veh) or UseCHPMotorSiren(veh) then
+				elseif UseCHPSiren(veh) or UseCHPMotorSiren(veh) or UseSAHPHiLo(veh) then
 					PlaySoundFromEntity(snd_lxsiren[veh], "siren_chp_evac", veh, "policingmp_sounds_sirens1_soundset", 0, 0)
 				elseif UseZ3Siren(veh) then
 					if UseZ3SirenLowFreq(veh) then
@@ -1059,7 +1069,7 @@ function SetAirManuStateForVeh(veh, newstate)
 				elseif UsePA300Siren(veh) then
 					PlaySoundFromEntity(snd_airmanu[veh], "siren_pa300_manual", veh, "policingmp_sounds_retrosirens_soundset", 0, 0)
 				elseif Use3955(veh) then
-					PlaySoundFromEntity(snd_airmanu[veh], "siren_3955_yelp", veh, "policingmp_sounds_sirens4_soundset", 0, 0)
+					PlaySoundFromEntity(snd_airmanu[veh], "siren_3955_wail", veh, "policingmp_sounds_sirens4_soundset", 0, 0)
 				elseif Use480K(veh) then
 					PlaySoundFromEntity(snd_airmanu[veh], "siren_80k_wail", veh, "policingmp_sounds_sirens4_soundset", 0, 0)
 				elseif Use650RS(veh) then

@@ -6,7 +6,7 @@ TMD: https://www.lcpdfr.com/downloads/gta5mods/audio/26135-touchmaster-delta-sir
 
 O90: https://www.lcpdfr.com/downloads/gta5mods/audio/25042-omega-90-federal-signal-siren-fivem-ready-studio-recorded/
 
-SAPPHIRE: https://www.lcpdfr.com/downloads/gta5mods/audio/22875-whelen-cencom-sapphire-fivem-ready-studio-recorded/
+SAPPHIRE: https://www.lcpdfr.com/downloads/gta5mods/audio/40243-whelen-cencom-sapphire-siren/
 
 MASTERCOM: https://www.lcpdfr.com/downloads/gta5mods/audio/26065-mastercom-b-code-3-siren-fivem-ready-studio-recorded/
 
