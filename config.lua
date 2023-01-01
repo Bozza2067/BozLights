@@ -40,6 +40,10 @@ ModelsWithNoEquipment = { -- Non-emergency models without lights/sirens controls
 	"sheriffretro",
 	"sheriffretro2",
 	"fibp8",
+	"prangerplane",
+	"lguardverus",
+	"saspseashark",
+	"sheriffbuzzard",
 }
 
 ---------------
@@ -88,7 +92,6 @@ eModelsWithMiniSrn = -- These vehicles only have two light stages (required to a
 
 -- Vehicles with no third tone: Useful for california-compliant sirens that only have Wail and Yelp.
 ModelsWithNoTertiaryTone = {
-	"adspscout",
 	"amb_rox_sheriff2",
 	"amb_rox_swat",
 	"bcfdbat",
@@ -266,7 +269,8 @@ ModelsWithNoTertiaryTone = {
 	"polnspeedo",
 	"ambulance2",
 	"coroner",
-	"pdumksx",
+	"lspdbuffsumk",
+	"lspdbuffalostxum",
 	"sahp3",
 	"sahp3a",
 	"sahp3b",
@@ -283,11 +287,68 @@ ModelsWithNoTertiaryTone = {
 	"sahp2bstx",
 	"sahpnalamo",
 	"sahpnalamo2",
+	"ranchopdscout",
+	"prangerheli",
+	"parkbf400",
+	"prangerlrk9",
+	"prangeryok9",
+	"prangeral",
+	"prangereveron",
+	"prangerlr",
+	"prangerme",
+	"prangersct",
+	"prangersd",
+	"prangerstanier",
+	"prangertor",
+	"prangeryo",
+	"prangerbi2",
+	"prangeryo3",
+	"pranger",
+	"prangersm",
+	"parkbjxl",
+	"prangerpred",
+	"prangerpat",
+	"prangeralk9",
+	"prangerstalker",
+	"prangerlr2",
+	"prangerme2",
+	"prangeryo2",
+	"parkstalker",
+	"prangerri",
+	"prangerverus",
+	"lguard",
+	"lguardal",
+	"lguardcont",
+	"lguardeveron",
+	"lguardfc",
+	"lguardri",
+	"lguardyo",
+	"sasplguardbi",
+	"sasplguardev",
+	"sasplguardme",
+	"sasplguardsq",
+	"sasplguardyo",
+	"sasplguardyo2",
+	"lguardsq",
+	"lsdrp1",
+	"lsdrp2",
+	"lsdrp3",
+	"lsdrp4",
+	"lsdrp5",
+	"lsdrp6",
+	"lsdrp7",
+	"prangerlrold",
+	"prangersm2",
+	"prangersm3",
+	"prangerstanier2",
+	"saspsteed",
+	"lguardsk",
+	"lguardst",
+	"sasplguardlr",
 }
 
 -- Vehicles with a 4th tone activated by a seperate button. Usually a Hi-Lo.
 ModelsWithQuarternaryTone = {
-	"adspscout",
 	"bcfdbat",
 	"bcsonalamo",
 	"bcsospeedo",
@@ -380,6 +441,7 @@ ModelsWithAuxiliaryTone = {
 	"ambulance22",
 	"ambulance2",
 	"emsbisonamb",
+	"ranchopdscout",
 }
 
 -- Vehicles that use the horn to change tones. Disabled electronic horn. Horn behavior: Regular car horn when lights off, manual tone when lights on, change tone when sirens on.
@@ -421,7 +483,8 @@ ModelsWithHornSwitch = {
 	"policefug2",
 	"policefug3",
 	"polnspeedo",
-	"pdumksx",
+	"lspdbuffsumk",
+	"lspdbuffalostxum",
 	"lspdbsq1",
 	"sahp4a",
 }
@@ -469,6 +532,7 @@ ModelsWithBMWIntegratedSiren = {
 	"sheriffthrust",
 	"sheriffshark",
 	"sheriffboat",
+	"parkbf400",
 }
 
 ModelsWith480K = {
@@ -483,6 +547,7 @@ ModelsWith480K = {
 	"sheriffold3",
 	"sheriffriataold",
 	"police2gs",
+	"prangerpat",
 }
 
 ModelsWithWhelenCHPSiren = {
@@ -521,9 +586,9 @@ ModelsWithFireSrn = { -- vanilla fire truck siren
 }
 
 ModelsWithAstroSpectra = {
-	"adspscout",
 	"LSFDGRANGER",
 	"ambulance2",
+	"lguardsq",
 }
 
 ModelsWithMastercomB = {
@@ -537,12 +602,15 @@ ModelsWithMastercomB = {
 	"lsppscoutk9",
 	"lsppstanier",
 	"lspdstalker",
+	"apdstan",
+	"apdscout",
 }
 
 ModelsWithNergy400 = {
 	"fbi",
 	"fbi2",
 	"senalamo5",
+	"apdscout2",
 }
 
 ModelsWithOmega90 = {
@@ -606,17 +674,34 @@ ModelsWithCencomSapphire = {
 	"fibp62",
 	"sahpnalamo",
 	"sahpnalamo2",
+	"prangeralk9",
+	"prangerstalker",
+	"prangerlr2",
+	"prangerme2",
+	"prangeryo2",
+	"parkstalker",
+	"prangerri",
+	"scoutnps",
+	"lguardcont",
+	"lguardeveron",
+	"lguardfc",
+	"lguardri",
+	"lguardyo",
+	"gcscout",
+	"lsdrp1",
+	"lsdrp2",
+	"lsdrp3",
+	"lsdrp4",
+	"lsdrp5",
+	"lsdrp6",
+	"lsdrp7",
 }
 
 ModelsWith295HFS = {
 	"amb_rox_sheriff2",
 	"amb_rox_swat",
-	"centurionfib",
-	"centurionlssd",
 	"sheriffinsurgent",
 	"riot2",
-	"riot3",
-	"mcsocenturion",
 	"senalamo",
 	"senalamo2",
 	"senalamo3",
@@ -678,10 +763,10 @@ ModelsWithSSP3000 = {
 	"unipd2",
 	"policefug2",
 	"policefug3",
-	"gcscout",
 	"polnspeedo",
 	"coroner",
-	"pdumksx",
+	"lspdbuffsumk",
+	"lspdbuffalostxum",
 }
 
 ModelsWithTouchmaster = {
@@ -701,6 +786,40 @@ ModelsWithTouchmaster = {
 	"mcsotorr2",
 	"mcsoyosemite",
 	"batstalker",
+	"prangerlrk9",
+	"prangeryok9",
+	"prangeral",
+	"prangereveron",
+	"prangerlr",
+	"prangerme",
+	"prangersct",
+	"prangersd",
+	"prangerstanier",
+	"prangertor",
+	"prangeryo",
+	"prangerbi2",
+	"prangeryo3",
+	"pranger",
+	"prangersm",
+	"parkbjxl",
+	"prangerpred",
+	"sasplguardbi",
+	"sasplguardev",
+	"sasplguardme",
+	"sasplguardsq",
+	"sasplguardyo",
+	"sasplguardyo2",
+	"prangerverus",
+	"lguard",
+	"lguardal",
+	"prangerlrold",
+	"prangersm2",
+	"prangersm3",
+	"prangerstanier2",
+	"saspsteed",
+	"lguardsk",
+	"lguardst",
+	"sasplguardlr",
 }
 
 ModelsWithZ3 = {
@@ -725,6 +844,13 @@ ModelsWithZ3 = {
 	"sadcrtorrslick",
 	"lsppscoutum",
 	"policefug",
+	"ranchopdscout",
+	"prangerbi",
+	"prangerbu",
+	"prangercara",
+	"proutlaw",
+	"prangerstalker2",
+	"prangerfc",
 }
 
 ModelsWithSmartSystemLMS = { -- LASD/LAPD Siren
@@ -783,6 +909,19 @@ ModelsWithPA300Siren = {
 
 ModelsWithSS2000SS = {
 
+}
+
+ModelsWithPA640 = {
+	"apdint",
+	"apdalamo",
+}
+
+ModelsWithCencomRed = {
+	"mcsocenturion",
+	"centurionfib",
+	"centurionlssd",
+	"adspscout",
+	"riot3",
 }
 
 -----------------------------------

@@ -35,3 +35,7 @@ TIMBERWOLF: https://www.lcpdfr.com/downloads/gta5mods/audio/20914-retro-fire-sir
 nERGY 400: https://community-modding.com/index.php?/files/file/17-soundoff-signal-nergy-siren/
 
 480K: https://www.lcpdfr.com/downloads/gta4mods/audio/639-federal-signal-unitrol-480k-siren/
+
+PA640: https://www.lcpdfr.com/downloads/gta5mods/audio/23726-pa640-federal-signal-siren-w-eq2b-fivem-ready-studio-recorded/
+
+Cencom Red: https://www.lcpdfr.com/downloads/gta5mods/audio/13561-els-compatible-united-states-siren-mega-pack-54-siren-models
