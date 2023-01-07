@@ -600,6 +600,10 @@
 					<ChildSound>siren_ss2000_priority_d</ChildSound>
 				</Item>
 				<Item>
+					<ScriptName>siren_ss2000_priority_lms</ScriptName>
+					<ChildSound>siren_ss2000_priority_lms_d</ChildSound>
+				</Item>
+				<Item>
 					<ScriptName>siren_spectra_yelp</ScriptName>
 					<ChildSound>siren_spectra_yelp_d</ChildSound>
 				</Item>
@@ -624,8 +628,8 @@
 					<ChildSound>siren_mastercom_b_wail_d</ChildSound>
 				</Item>
 				<Item>
-					<ScriptName>siren_lasd_horn</ScriptName>
-					<ChildSound>siren_lasd_horn_d</ChildSound>
+					<ScriptName>siren_ss2000_horn_lms</ScriptName>
+					<ChildSound>siren_ss2000_horn_lms_d</ChildSound>
 				</Item>
 				<Item>
 					<ScriptName>siren_sapphire_horn</ScriptName>
@@ -776,6 +780,10 @@
 					<ChildSound>siren_omega_hilo_d</ChildSound>
 				</Item>
 				<Item>
+					<ScriptName>siren_as350</ScriptName>
+					<ChildSound>siren_as350_d</ChildSound>
+				</Item>
+				<Item>
 					<ScriptName>siren_omega_horn</ScriptName>
 					<ChildSound>siren_omega_horn_d</ChildSound>
 				</Item>
@@ -894,14 +902,6 @@
 				<Item>
 					<ScriptName>siren_police_manual</ScriptName>
 					<ChildSound>siren_police_manual_d</ChildSound>
-				</Item>
-				<Item>
-					<ScriptName>siren_lms_wail2</ScriptName>
-					<ChildSound>siren_lms_wail2_d</ChildSound>
-				</Item>
-				<Item>
-					<ScriptName>siren_lms_priority</ScriptName>
-					<ChildSound>siren_lms_priority_d</ChildSound>
 				</Item>
 				<Item>
 					<ScriptName>siren_timberwolf</ScriptName>
@@ -1263,64 +1263,6 @@
 				<Category>vehicles_sirens</Category>
 			</Header>
 			<ChildSound>siren_650rs_manual_s</ChildSound>
-			<InnerAngle value="20" />
-			<OuterAngle value="65" />
-			<RearAttenuation value="-3" />
-			<YawAngle value="0" />
-			<PitchAngle value="0" />
-		</Item>
-		<Item type="SimpleSound">
-			<Name>siren_lms_priority_s</Name>
-			<Header>
-				<Flags value="0x0820E010" />
-				<Pitch value="0" />
-				<ReleaseTime value="50" />
-				<DopplerFactor value="30" />
-				<Category>vehicles_sirens</Category>
-				<VolumeCurveScale value="300" />
-				<Unk22 value="50" />
-			</Header>
-			<ContainerName>dlc_policingmpaudio/policingmp_sirens5</ContainerName>
-			<FileName>siren_lms_priority</FileName>
-			<WaveSlotNum value="0" />
-		</Item>
-		<Item type="DirectionalSound">
-			<Name>siren_lms_priority_d</Name>
-			<Header>
-				<Flags value="0x00008004" />
-				<Volume value="65436" />
-				<Category>vehicles_sirens</Category>
-			</Header>
-			<ChildSound>siren_lms_priority_s</ChildSound>
-			<InnerAngle value="20" />
-			<OuterAngle value="65" />
-			<RearAttenuation value="-3" />
-			<YawAngle value="0" />
-			<PitchAngle value="0" />
-		</Item>
-		<Item type="SimpleSound">
-			<Name>siren_lms_wail2_s</Name>
-			<Header>
-				<Flags value="0x0820E010" />
-				<Pitch value="0" />
-				<ReleaseTime value="50" />
-				<DopplerFactor value="30" />
-				<Category>vehicles_sirens</Category>
-				<VolumeCurveScale value="300" />
-				<Unk22 value="50" />
-			</Header>
-			<ContainerName>dlc_policingmpaudio/policingmp_sirens5</ContainerName>
-			<FileName>siren_lms_wail2</FileName>
-			<WaveSlotNum value="0" />
-		</Item>
-		<Item type="DirectionalSound">
-			<Name>siren_lms_wail2_d</Name>
-			<Header>
-				<Flags value="0x00008004" />
-				<Volume value="65436" />
-				<Category>vehicles_sirens</Category>
-			</Header>
-			<ChildSound>siren_lms_wail2_s</ChildSound>
 			<InnerAngle value="20" />
 			<OuterAngle value="65" />
 			<RearAttenuation value="-3" />
@@ -2082,6 +2024,35 @@
 			<PitchAngle value="0" />
 		</Item>
 		<Item type="SimpleSound">
+			<Name>siren_ss2000_priority_lms_s</Name>
+			<Header>
+				<Flags value="0x0820E010" />
+				<Pitch value="0" />
+				<ReleaseTime value="50" />
+				<DopplerFactor value="30" />
+				<Category>vehicles_sirens</Category>
+				<VolumeCurveScale value="300" />
+				<Unk22 value="50" />
+			</Header>
+			<ContainerName>dlc_policingmpaudio/policingmp_sirens2</ContainerName>
+			<FileName>siren_ss2000_priority_lms</FileName>
+			<WaveSlotNum value="0" />
+		</Item>
+		<Item type="DirectionalSound">
+			<Name>siren_ss2000_priority_lms_d</Name>
+			<Header>
+				<Flags value="0x00008004" />
+				<Volume value="65436" />
+				<Category>vehicles_sirens</Category>
+			</Header>
+			<ChildSound>siren_ss2000_priority_lms_s</ChildSound>
+			<InnerAngle value="20" />
+			<OuterAngle value="65" />
+			<RearAttenuation value="-3" />
+			<YawAngle value="0" />
+			<PitchAngle value="0" />
+		</Item>
+		<Item type="SimpleSound">
 			<Name>siren_ss2000_wail_s</Name>
 			<Header>
 				<Flags value="0x0820E010" />
@@ -2285,7 +2256,7 @@
 			<PitchAngle value="0" />
 		</Item>
 		<Item type="SimpleSound">
-			<Name>siren_lasd_horn_s</Name>
+			<Name>siren_ss2000_horn_lms_s</Name>
 			<Header>
 				<Flags value="0x0820E010" />
 				<Pitch value="0" />
@@ -2296,17 +2267,17 @@
 				<Unk22 value="50" />
 			</Header>
 			<ContainerName>dlc_policingmpaudio/policingmp_sirens2</ContainerName>
-			<FileName>siren_lasd_horn</FileName>
+			<FileName>siren_ss2000_horn_lms</FileName>
 			<WaveSlotNum value="0" />
 		</Item>
 		<Item type="DirectionalSound">
-			<Name>siren_lasd_horn_d</Name>
+			<Name>siren_ss2000_horn_lms_d</Name>
 			<Header>
 				<Flags value="0x00008004" />
 				<Volume value="65436" />
 				<Category>vehicles_sirens</Category>
 			</Header>
-			<ChildSound>siren_lasd_horn_s</ChildSound>
+			<ChildSound>siren_ss2000_horn_lms_s</ChildSound>
 			<InnerAngle value="20" />
 			<OuterAngle value="65" />
 			<RearAttenuation value="-3" />
@@ -3409,6 +3380,35 @@
 				<Category>vehicles_sirens</Category>
 			</Header>
 			<ChildSound>siren_omega_horn_s</ChildSound>
+			<InnerAngle value="20" />
+			<OuterAngle value="65" />
+			<RearAttenuation value="-3" />
+			<YawAngle value="0" />
+			<PitchAngle value="0" />
+		</Item>
+		<Item type="SimpleSound">
+			<Name>siren_as350_s</Name>
+			<Header>
+				<Flags value="0x0820E010" />
+				<Pitch value="0" />
+				<ReleaseTime value="50" />
+				<DopplerFactor value="30" />
+				<Category>vehicles_sirens</Category>
+				<VolumeCurveScale value="300" />
+				<Unk22 value="50" />
+			</Header>
+			<ContainerName>dlc_policingmpaudio/policingmp_sirens4</ContainerName>
+			<FileName>siren_as350</FileName>
+			<WaveSlotNum value="0" />
+		</Item>
+		<Item type="DirectionalSound">
+			<Name>siren_as350_d</Name>
+			<Header>
+				<Flags value="0x00008004" />
+				<Volume value="65436" />
+				<Category>vehicles_sirens</Category>
+			</Header>
+			<ChildSound>siren_as350_s</ChildSound>
 			<InnerAngle value="20" />
 			<OuterAngle value="65" />
 			<RearAttenuation value="-3" />

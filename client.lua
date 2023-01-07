@@ -329,7 +329,7 @@ function Use480K(veh)
 	return false
 end
 
-function Use3955(veh)
+function UseBMWSiren(veh)
 	local model = GetEntityModel(veh)
 	for i = 1, #ModelsWithBMWIntegratedSiren, 1 do
 		if model == GetHashKey(ModelsWithBMWIntegratedSiren[i]) then
@@ -497,6 +497,16 @@ function Use650RS(veh)
 	local model = GetEntityModel(veh)
 	for i = 1, #ModelsWith650RemoteSiren, 1 do
 		if model == GetHashKey(ModelsWith650RemoteSiren[i]) then
+			return true
+		end
+	end
+	return false
+end
+
+function UseAS350Siren(veh)
+	local model = GetEntityModel(veh)
+	for i = 1, #AS350Helicopters, 1 do
+		if model == GetHashKey(AS350Helicopters[i]) then
 			return true
 		end
 	end
@@ -709,8 +719,8 @@ function SetLxSirenStateForVeh(veh, newstate)
 					PlaySoundFromEntity(snd_lxsiren[veh], "siren_ss2000_wail", veh, "policingmp_sounds_sirens2_soundset", 0, 0)
 				elseif UseOmega90(veh) then
 					PlaySoundFromEntity(snd_lxsiren[veh], "siren_omega_wail", veh, "policingmp_sounds_sirens4_soundset", 0, 0)
-				elseif Use3955(veh) then
-					PlaySoundFromEntity(snd_lxsiren[veh], "siren_3955_wail", veh, "policingmp_sounds_sirens4_soundset", 0, 0)
+				elseif UseBMWSiren(veh) then
+					PlaySoundFromEntity(snd_lxsiren[veh], "siren_hansch_wail", veh, "policingmp_sounds_sirens4_soundset", 0, 0)
 				elseif Use480K(veh) then
 					PlaySoundFromEntity(snd_lxsiren[veh], "siren_480k_wail", veh, "policingmp_sounds_sirens4_soundset", 0, 0)
 				elseif Use650RS(veh) then
@@ -764,8 +774,8 @@ function SetLxSirenStateForVeh(veh, newstate)
 					PlaySoundFromEntity(snd_lxsiren[veh], "siren_nergy_yelp", veh, "policingmp_sounds_sirens2_soundset", 0, 0)
 				elseif UseOmega90(veh) then
 					PlaySoundFromEntity(snd_lxsiren[veh], "siren_omega_yelp", veh, "policingmp_sounds_sirens4_soundset", 0, 0)
-				elseif Use3955(veh) then
-					PlaySoundFromEntity(snd_lxsiren[veh], "siren_3955_yelp", veh, "policingmp_sounds_sirens4_soundset", 0, 0)
+				elseif UseBMWSiren(veh) then
+					PlaySoundFromEntity(snd_lxsiren[veh], "siren_hansch_yelp", veh, "policingmp_sounds_sirens4_soundset", 0, 0)
 				elseif Use480K(veh) then
 					PlaySoundFromEntity(snd_lxsiren[veh], "siren_480k_yelp", veh, "policingmp_sounds_sirens4_soundset", 0, 0)
 				elseif Use650RS(veh) then
@@ -810,9 +820,9 @@ function SetLxSirenStateForVeh(veh, newstate)
 				elseif UseNERGY(veh) then
 					PlaySoundFromEntity(snd_lxsiren[veh], "siren_nergy_yelp_reverse", veh, "policingmp_sounds_sirens2_soundset", 0, 0)
 				elseif UseSS2000(veh) then
-					PlaySoundFromEntity(snd_lxsiren[veh], "siren_lms_priority", veh, "policingmp_sounds_sirens5_soundset", 0, 0)
-				elseif UseSSLMS(veh) then
 					PlaySoundFromEntity(snd_lxsiren[veh], "siren_ss2000_priority", veh, "policingmp_sounds_sirens2_soundset", 0, 0)
+				elseif UseSSLMS(veh) then
+					PlaySoundFromEntity(snd_lxsiren[veh], "siren_ss2000_priority_lms", veh, "policingmp_sounds_sirens2_soundset", 0, 0)
 				elseif UseTouchmaster(veh) then
 					PlaySoundFromEntity(snd_lxsiren[veh], "siren_touchmaster_priority", veh, "policingmp_sounds_sirens3_soundset", 0, 0)
 				elseif UseOmega90(veh) then
@@ -977,8 +987,8 @@ function TogPowercallStateForVeh(veh, toggle)
 					PlaySoundFromEntity(snd_pwrcall[veh], "siren_red_wail", veh, "policingmp_sounds_sirens5_soundset", 0, 0)
 				elseif UsePA640(veh) then
 					PlaySoundFromEntity(snd_pwrcall[veh], "siren_pa640_wail", veh, "policingmp_sounds_sirens5_soundset", 0, 0)
-				elseif Use3955(veh) then
-					PlaySoundFromEntity(snd_pwrcall[veh], "siren_3955_wail", veh, "policingmp_sounds_sirens4_soundset", 0, 0)
+				elseif UseBMWSiren(veh) then
+					PlaySoundFromEntity(snd_pwrcall[veh], "siren_hansch_wail", veh, "policingmp_sounds_sirens4_soundset", 0, 0)
 				elseif Use480K(veh) then
 					PlaySoundFromEntity(snd_pwrcall[veh], "siren_480k_wail", veh, "policingmp_sounds_sirens4_soundset", 0, 0)
 				elseif UseSS2000(veh) then
@@ -1040,7 +1050,7 @@ function SetAirManuStateForVeh(veh, newstate)
 					PlaySoundFromEntity(snd_airmanu[veh], "sirens_airhorn", veh, 0, 0, 0)
 						
 				elseif UseSSLMS(veh) then
-					PlaySoundFromEntity(snd_airmanu[veh], "siren_lasd_horn", veh, "policingmp_sounds_sirens2_soundset", 0, 0)
+					PlaySoundFromEntity(snd_airmanu[veh], "siren_ss2000_horn_lms", veh, "policingmp_sounds_sirens2_soundset", 0, 0)
 				elseif UseCHPSiren(veh) or UseCHPMotorSiren(veh) then
 					PlaySoundFromEntity(snd_airmanu[veh], "siren_chp_horn", veh, "policingmp_sounds_sirens1_soundset", 0, 0)
 				elseif UseZ3Siren(veh) then
@@ -1057,8 +1067,8 @@ function SetAirManuStateForVeh(veh, newstate)
 					PlaySoundFromEntity(snd_airmanu[veh], "siren_spmark7_horn", veh, "policingmp_sounds_retrosirens_soundset", 0, 0)
 				elseif UsePA300Siren(veh) then
 					PlaySoundFromEntity(snd_airmanu[veh], "siren_pa300_horn", veh, "policingmp_sounds_retrosirens_soundset", 0, 0)
-				elseif Use3955(veh) then
-					PlaySoundFromEntity(snd_airmanu[veh], "siren_3955_horn", veh, "policingmp_sounds_sirens4_soundset", 0, 0)
+				elseif UseBMWSiren(veh) then
+					PlaySoundFromEntity(snd_airmanu[veh], "siren_hansch_horn", veh, "policingmp_sounds_sirens4_soundset", 0, 0)
 				elseif Use650RS(veh) then
 					PlaySoundFromEntity(snd_airmanu[veh], "siren_650rs_horn", veh, "policingmp_sounds_sirens5_soundset", 0, 0)
 				elseif Use480K(veh) then
@@ -1102,6 +1112,8 @@ function SetAirManuStateForVeh(veh, newstate)
 					
 				elseif UseCHPSiren(veh) then
 					PlaySoundFromEntity(snd_airmanu[veh], "siren_chp_manual", veh, "policingmp_sounds_sirens1_soundset", 0, 0)
+				elseif UseAS350Siren(veh) then
+					PlaySoundFromEntity(snd_airmanu[veh], "siren_as350", veh, "policingmp_sounds_sirens4_soundset", 0, 0)
 				elseif UseCHPMotorSiren(veh) then
 					PlaySoundFromEntity(snd_airmanu[veh], "siren_chp2_wail", veh, "policingmp_sounds_sirens5_soundset", 0, 0)
 				elseif UseZ3Siren(veh) then
@@ -1114,8 +1126,8 @@ function SetAirManuStateForVeh(veh, newstate)
 					PlaySoundFromEntity(snd_airmanu[veh], "siren_spmark7_wail", veh, "policingmp_sounds_retrosirens_soundset", 0, 0)
 				elseif UsePA300Siren(veh) then
 					PlaySoundFromEntity(snd_airmanu[veh], "siren_pa300_manual", veh, "policingmp_sounds_retrosirens_soundset", 0, 0)
-				elseif Use3955(veh) then
-					PlaySoundFromEntity(snd_airmanu[veh], "siren_3955_wail", veh, "policingmp_sounds_sirens4_soundset", 0, 0)
+				elseif UseBMWSiren(veh) then
+					PlaySoundFromEntity(snd_airmanu[veh], "siren_hansch_wail", veh, "policingmp_sounds_sirens4_soundset", 0, 0)
 				elseif UseCencomRed(veh) then
 					PlaySoundFromEntity(snd_airmanu[veh], "siren_red_wail", veh, "policingmp_sounds_sirens5_soundset", 0, 0)
 				elseif UsePA640(veh) then
@@ -1479,7 +1491,7 @@ Citizen.CreateThread(function()
 							
 							-- TOG BOZ SIREN (NEW)
 
-							elseif IsDisabledControlJustPressed(0, 157) then
+							elseif IsDisabledControlJustPressed(0, 157) and not UseAS350Siren(veh) then
 								local cstate = state_lxsiren[veh]
 								if cstate == 2 and UseTouchmaster(veh) or UseOmega90(veh) and cstate == 2 or Use480K(veh) and cstate == 2 then
 									local sirenoption = math.random(0,1)
@@ -1493,7 +1505,7 @@ Citizen.CreateThread(function()
 										count_bcast_timer = delay_bcast_timer
 									end
 								elseif cstate ~= 1 and cstate ~= 5 and cstate ~= 9 then
-									if IsVehicleSirenOn(veh) then
+									if IsVehicleSirenOn(veh) or GetVehicleClass == 15 then
 										PlaySoundFrontend(-1, "Beep_Red", "DLC_HEIST_HACKING_SNAKE_SOUNDS", 1)
 										if rumblerState == 1 then
 											SetLxSirenStateForVeh(veh, 5)
@@ -1507,7 +1519,7 @@ Citizen.CreateThread(function()
 									SetLxSirenStateForVeh(veh, 0)
 									count_bcast_timer = delay_bcast_timer
 								end
-							elseif IsDisabledControlJustPressed(0, 158) then
+							elseif IsDisabledControlJustPressed(0, 158) and not UseAS350Siren(veh) then
 								local cstate = state_lxsiren[veh]
 								if cstate ~= 2 and cstate ~= 6 then
 									if IsVehicleSirenOn(veh) then
@@ -1524,21 +1536,23 @@ Citizen.CreateThread(function()
 									SetLxSirenStateForVeh(veh, 0)
 									count_bcast_timer = delay_bcast_timer
 								end
-							elseif IsDisabledControlJustPressed(0, 160) then
-								if not HasNoTertiaryTone(veh) and not Use3955(veh) and not Use650RS(veh) then
+							elseif IsDisabledControlJustPressed(0, 160) and GetVehicleClass(veh) ~= 15 then
+								if not HasNoTertiaryTone(veh) and not UseBMWSiren(veh) and not Use650RS(veh) then
 									local cstate = state_lxsiren[veh]
 									if cstate ~= 3 and cstate ~= 7 then
 										if IsVehicleSirenOn(veh) then
 
 											PlaySoundFrontend(-1, "Beep_Red", "DLC_HEIST_HACKING_SNAKE_SOUNDS", 1)
 
-											if UseSS2000(veh) or UseSSLMS(veh) then
-												if rumblerState == 1 then
-													SetLxSirenStateForVeh(veh, 8)
-												else
-													SetLxSirenStateForVeh(veh, 4)
+											if SmartSirenBeep then
+												if UseSS2000(veh) or UseSSLMS(veh) then
+													if rumblerState == 1 then
+														SetLxSirenStateForVeh(veh, 8)
+													else
+														SetLxSirenStateForVeh(veh, 4)
+													end
+													Citizen.Wait(100)
 												end
-												Citizen.Wait(100)
 											end
 
 											if rumblerState == 1 then
@@ -1557,7 +1571,7 @@ Citizen.CreateThread(function()
 								else
 									PlaySoundFrontend(-1, "Highlight_Error", "DLC_HEIST_PLANNING_BOARD_SOUNDS", 1)
 								end
-							elseif IsDisabledControlJustPressed(0, 164) then
+							elseif IsDisabledControlJustPressed(0, 164) and GetVehicleClass(veh) ~= 15 then
 								if HasQuarternaryTone(veh) then
 									local cstate = state_lxsiren[veh]
 									if cstate ~= 4 and cstate ~= 8 then
@@ -1579,7 +1593,7 @@ Citizen.CreateThread(function()
 									PlaySoundFrontend(-1, "Highlight_Error", "DLC_HEIST_PLANNING_BOARD_SOUNDS", 1)
 								end
 								
-							elseif IsDisabledControlJustPressed(0, 159) then
+							elseif IsDisabledControlJustPressed(0, 159) and GetVehicleClass(veh) ~= 15 then
 								local cstate = state_lxsiren[veh]
 								if HasRumbler(veh) then
 									PlaySoundFrontend(-1, "Beep_Red", "DLC_HEIST_HACKING_SNAKE_SOUNDS", 1)
@@ -1597,7 +1611,7 @@ Citizen.CreateThread(function()
 								end
 
 							-- TOG LX SIREN
-							elseif IsDisabledControlJustPressed(0, 19) then
+							elseif IsDisabledControlJustPressed(0, 19) and GetVehicleClass(veh) ~= 15 then
 								local cstate = state_lxsiren[veh]
 								if cstate == 0 then
 									if not useBozLights(veh) and IsVehicleSirenOn(veh) or useBozLights(veh) and lstate == 3 or not useBozLightsLegacy(veh) and IsVehicleSirenOn(veh) or useBozLightsLegacy(veh) and lstate == 3 then -- bozlights
@@ -1617,7 +1631,7 @@ Citizen.CreateThread(function()
 								end
 							
 							-- TOG LX SIREN (HORN)
-							elseif IsDisabledControlJustReleased(0,86) and HasHornSwitch(veh) then
+							elseif IsDisabledControlJustReleased(0,86) and HasHornSwitch(veh) and GetVehicleClass(veh) ~= 15 then
 								local timer = GetGameTimer()
 								while true do
 									if IsControlJustPressed(0, 86) then
@@ -1642,7 +1656,7 @@ Citizen.CreateThread(function()
 								end
 								
 							-- TOG AUXILIARY TONE
-							elseif IsDisabledControlJustPressed(0, 165) then
+							elseif IsDisabledControlJustPressed(0, 165) and GetVehicleClass(veh) ~= 15 then
 								--if HasAuxiliaryTone(veh) then -- bozlights
 								if HasAuxiliaryTone(veh) then
 									if state_pwrcall[veh] == true then
@@ -1666,7 +1680,7 @@ Citizen.CreateThread(function()
 								if IsDisabledControlJustPressed(0, 80) or (IsDisabledControlJustPressed(0, 86) and HasHornSwitch(veh)) then
 									local cstate = state_lxsiren[veh]
 									local nstate = 1
-									if IsVehicleSirenOn(veh) then
+									if IsVehicleSirenOn(veh) and GetVehicleClass(veh) ~= 15 then
 										--PlaySoundFrontend(-1, "Beep_Red", "DLC_HEIST_HACKING_SNAKE_SOUNDS", 1)
 										if cstate == 1 or cstate == 5 or cstate == 9 then
 											if rumblerState == 1 then
@@ -1721,13 +1735,19 @@ Citizen.CreateThread(function()
 							end
 
 							if IsDisabledControlJustPressed(0, 80) or (IsDisabledControlJustPressed(0, 86) and (not HasHornSwitch(veh) or HasHornSwitch(veh) and state_lxsiren[veh] ~= 0)) then
-								PlaySoundFrontend(-1, "Beep_Red", "DLC_HEIST_HACKING_SNAKE_SOUNDS", 1)
+								if GetVehicleClass(veh) ~= 15 then
+									PlaySoundFrontend(-1, "Beep_Red", "DLC_HEIST_HACKING_SNAKE_SOUNDS", 1)
+								end
 							end
 										
 							-- MANU
 							if state_lxsiren[veh] < 1 then
 								if IsDisabledControlPressed(0, 80) or IsDisabledControlPressed(0, 81) then
-									actv_manu = true
+									if not IsUsingKeyboard(0) and GetVehicleClass(veh) == 15 then 
+										actv_manu = false
+									else
+										actv_manu = true
+									end
 								else
 									actv_manu = false
 								end
@@ -1736,7 +1756,7 @@ Citizen.CreateThread(function()
 							end
 
 							-- HORN SIREN TOGGLL
-							if IsDisabledControlPressed(0, 86) and (not HasHornSwitch(veh) or (HasHornSwitch(veh) and state_lxsiren[veh] == 0))  then
+							if IsDisabledControlPressed(0, 86) and GetVehicleClass(veh) ~= 15 and (not HasHornSwitch(veh) or (HasHornSwitch(veh) and state_lxsiren[veh] == 0)) then
 								if HasHornSwitch(veh) and IsVehicleSirenOn(veh) and state_lxsiren[veh] >~ 0 then
 									local timer = GetGameTimer()
 									if (GetGameTimer() - timer > 100) then

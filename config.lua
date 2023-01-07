@@ -4,6 +4,7 @@ ShowDebugInfo = false
 DisableEquipmentWhenDamaged = false
 DamageThreshold = 975
 TertiaryToneByDefault = false -- UNUSED AS OF RIGHT NOW
+SmartSirenBeep = false
 
 ----------------------
 -- ENABLED VEHICLES --
@@ -32,6 +33,12 @@ ModelsWithEquipment = {
 	"coroner",
 	"coroner2",
 	"rhpdeveron",
+	"sasplguardsq",
+	"lguardsq",
+	"sahpair",
+	"sheriffmav",
+	"polmav",
+	"lspdmav",
 }
 
 ModelsWithNoEquipment = { -- Non-emergency models without lights/sirens controls
@@ -40,10 +47,7 @@ ModelsWithNoEquipment = { -- Non-emergency models without lights/sirens controls
 	"sheriffretro",
 	"sheriffretro2",
 	"fibp8",
-	"prangerplane",
 	"lguardverus",
-	"saspseashark",
-	"sheriffbuzzard",
 }
 
 ---------------
@@ -124,7 +128,6 @@ ModelsWithNoTertiaryTone = {
 	"glpdgresley",
 	"glpdgresleyum",
 	"glpdscout",
-	"glpdstanier",
 	"gtfminivan",
 	"lifeguard",
 	"LSFDGRANGER",
@@ -548,6 +551,7 @@ ModelsWith480K = {
 	"sheriffriataold",
 	"police2gs",
 	"prangerpat",
+	"sheriffmav",
 }
 
 ModelsWithWhelenCHPSiren = {
@@ -922,6 +926,12 @@ ModelsWithCencomRed = {
 	"centurionlssd",
 	"adspscout",
 	"riot3",
+}
+
+AS350Helicopters = {
+	"sahpair",
+	"polmav",
+	"lspdmav",
 }
 
 -----------------------------------
