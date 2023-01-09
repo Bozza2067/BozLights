@@ -4,6 +4,86 @@ Version 1 11
 	DescriptorsInOrder False
 	Entries
 	{
+		WaveTrack siren_940_wail
+		{
+			Compression PCM
+			Headroom -200
+			LoopPoint 0
+			LoopBegin 0
+			LoopEnd 0
+			PlayBegin 0
+			PlayEnd 0
+			Wave policingmp_sirens5\siren_940_wail.wav
+			AnimClip null
+			Events null
+			UNKNOWN_23097A2B null
+			UNKNOWN_E787895A null
+			UNKNOWN_252C20D9 null
+		}
+		WaveTrack siren_940_yelp
+		{
+			Compression PCM
+			Headroom -200
+			LoopPoint 0
+			LoopBegin 0
+			LoopEnd 0
+			PlayBegin 0
+			PlayEnd 0
+			Wave policingmp_sirens5\siren_940_yelp.wav
+			AnimClip null
+			Events null
+			UNKNOWN_23097A2B null
+			UNKNOWN_E787895A null
+			UNKNOWN_252C20D9 null
+		}
+		WaveTrack siren_940_hyper
+		{
+			Compression PCM
+			Headroom -200
+			LoopPoint 0
+			LoopBegin 0
+			LoopEnd 0
+			PlayBegin 0
+			PlayEnd 0
+			Wave policingmp_sirens5\siren_940_hyper.wav
+			AnimClip null
+			Events null
+			UNKNOWN_23097A2B null
+			UNKNOWN_E787895A null
+			UNKNOWN_252C20D9 null
+		}
+		WaveTrack siren_940_horn
+		{
+			Compression PCM
+			Headroom -200
+			LoopPoint 0
+			LoopBegin 0
+			LoopEnd 0
+			PlayBegin 0
+			PlayEnd 0
+			Wave policingmp_sirens5\siren_940_horn.wav
+			AnimClip null
+			Events null
+			UNKNOWN_23097A2B null
+			UNKNOWN_E787895A null
+			UNKNOWN_252C20D9 null
+		}
+		WaveTrack siren_940_hilo
+		{
+			Compression PCM
+			Headroom -200
+			LoopPoint 0
+			LoopBegin 0
+			LoopEnd 0
+			PlayBegin 0
+			PlayEnd 0
+			Wave policingmp_sirens5\siren_940_hilo.wav
+			AnimClip null
+			Events null
+			UNKNOWN_23097A2B null
+			UNKNOWN_E787895A null
+			UNKNOWN_252C20D9 null
+		}
 		WaveTrack siren_650rs_wail
 		{
 			Compression PCM

@@ -4,7 +4,7 @@ Q2: https://www.lcpdfr.com/downloads/gta5mods/audio/37531-federal-signal-q-siren
 
 TMD: https://www.lcpdfr.com/downloads/gta5mods/audio/26135-touchmaster-delta-siren-fivem-ready-studio-recorded/
 
-O90: https://www.lcpdfr.com/downloads/gta5mods/audio/25042-omega-90-federal-signal-siren-fivem-ready-studio-recorded/
+Omega 90: https://www.lcpdfr.com/downloads/gta5mods/audio/25042-omega-90-federal-signal-siren-fivem-ready-studio-recorded/
 
 SAPPHIRE: https://www.lcpdfr.com/downloads/gta5mods/audio/40243-whelen-cencom-sapphire-siren/
 
@@ -12,13 +12,14 @@ MASTERCOM: https://www.lcpdfr.com/downloads/gta5mods/audio/26065-mastercom-b-cod
 
 295: https://www.lcpdfr.com/downloads/gta5mods/audio/23730-whelen-295hfs-siren-fivem-ready-studio-recorded/
 
-SS2000: https://www.lcpdfr.com/downloads/gta5mods/audio/8038-federal-signal-smart-siren-ss2000sm-rumbler-tones-now-available/ and https://www.lcpdfr.com/downloads/gta5mods/audio/36017-ultimate-federal-signal-smart-siren-signalmaster-ss2000sm-pack/
+SS2000 & LMS: 
+- https://www.lcpdfr.com/downloads/gta5mods/audio/23297-federal-signal-ss2000-lms-siren-pack-fivem-ready/
+- https://www.lcpdfr.com/downloads/gta5mods/audio/24743-lapd-nypd-fed-sig-ss2000-smart-siren-fivem-ready-studio-recorded/
+- https://gtapolicemods.com/files/file/4167-lasds-unique-federal-signal-smart-siren-ss2000-with-custom-airhorn-tone/
 
-LASD Horn: https://gtapolicemods.com/files/file/4167-lasds-unique-federal-signal-smart-siren-ss2000-with-custom-airhorn-tone/
-
-SSP3000: https://www.lcpdfr.com/downloads/gta5mods/audio/35414-federal-signal-ssp3000-regular-rumbler-tones/ and https://www.lcpdfr.com/downloads/gta5mods/audio/39378-federal-signal-smart-siren-platinum/
-
-80K: https://www.lcpdfr.com/downloads/gta5mods/audio/23572-unitrol-80k-federal-signal-professionally-recorded-with-real-siren/
+SSP3000: 
+- https://www.lcpdfr.com/downloads/gta5mods/audio/35414-federal-signal-ssp3000-regular-rumbler-tones/ and 
+- https://www.lcpdfr.com/downloads/gta5mods/audio/39378-federal-signal-smart-siren-platinum/
 
 CHP: https://www.lcpdfr.com/downloads/gta5mods/audio/21926-charleszinkeys-realistic-chp-siren-els/
 
@@ -39,3 +40,5 @@ nERGY 400: https://community-modding.com/index.php?/files/file/17-soundoff-signa
 PA640: https://www.lcpdfr.com/downloads/gta5mods/audio/23726-pa640-federal-signal-siren-w-eq2b-fivem-ready-studio-recorded/
 
 Cencom Red: https://www.lcpdfr.com/downloads/gta5mods/audio/13561-els-compatible-united-states-siren-mega-pack-54-siren-models
+
+Tomar 940L: https://www.lcpdfr.com/downloads/gta5mods/audio/20182-tomar-940l/

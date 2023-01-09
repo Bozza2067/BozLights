@@ -74,6 +74,10 @@ ModelsWithBozLights = {
 }
 
 ModelsWithBozLightsLegacy = {
+	"lspd1b",
+	"lspd1c",
+	"lspd4a",
+	"lspd11",
 }
 
 -- These models have extralights and sirens in the same spot that should not conflict on light stages two or three. 
@@ -88,6 +92,7 @@ eModelsWithAlleyLights = -- pretty evident what this means
 
 eModelsWithMiniSrn = -- These vehicles only have two light stages (required to also be in eModelsWithBozLights (legacy works too probably?))
 	{
+		"lspd4a",
 	}
 
 ------------------------------------
@@ -333,13 +338,10 @@ ModelsWithNoTertiaryTone = {
 	"sasplguardyo",
 	"sasplguardyo2",
 	"lguardsq",
-	"lsdrp1",
-	"lsdrp2",
-	"lsdrp3",
-	"lsdrp4",
-	"lsdrp5",
-	"lsdrp6",
-	"lsdrp7",
+	"lsdrpalamo",
+	"lsdrpalamo2",
+	"lsdrpalamo3",
+	"lsdrpyosemite",
 	"prangerlrold",
 	"prangersm2",
 	"prangersm3",
@@ -348,6 +350,21 @@ ModelsWithNoTertiaryTone = {
 	"lguardsk",
 	"lguardst",
 	"sasplguardlr",
+	"lspdscout",
+	"lspdscout2",
+	"lspdalamo",
+	"lspdesd",
+	"lspdscoutk9",
+	"lspdscout2k9",
+	"lspdbuff",
+	"lspd1b",
+	"lspd1c",
+	"lspd4a",
+	"lspd11",
+	"senalamo7",
+	"lssdstanier2",
+	"lssdscout4",
+	"lssdnalamo2",
 }
 
 -- Vehicles with a 4th tone activated by a seperate button. Usually a Hi-Lo.
@@ -407,6 +424,7 @@ ModelsWithQuarternaryTone = {
 	"sahp2bstx",
 	"sahpnalamo",
 	"sahpnalamo2",
+	"senmesa",
 }
 
 -- Vehicles with dual sirens
@@ -490,6 +508,17 @@ ModelsWithHornSwitch = {
 	"lspdbuffalostxum",
 	"lspdbsq1",
 	"sahp4a",
+	"lspdscout",
+	"lspdscout2",
+	"lspdalamo",
+	"lspdesd",
+	"lspdscoutk9",
+	"lspdscout2k9",
+	"lspdbuff",
+	"lspd1b",
+	"lspd1c",
+	"lspd4a",
+	"lspd11",
 }
 
 ModelsWithRumbler = {
@@ -518,6 +547,8 @@ ModelsWithRumbler = {
 	"sheriffcoqmumk",
 	"police2a",
 	"bombsemite",
+	"lspdscoutk9",
+	"lspdscout2k9",
 }
 
 -- Vehicles that have moving parts assigned to bomb bay doors (e.g. highrisers)
@@ -657,6 +688,8 @@ ModelsWithSS2000 = {
 	"mcsooutlaw",
 	"unipd",
 	"unipd4",
+	"lspd1c",
+	"lspd4a",
 }
 
 ModelsWithCencomSapphire = {
@@ -692,13 +725,9 @@ ModelsWithCencomSapphire = {
 	"lguardri",
 	"lguardyo",
 	"gcscout",
-	"lsdrp1",
-	"lsdrp2",
-	"lsdrp3",
-	"lsdrp4",
-	"lsdrp5",
-	"lsdrp6",
-	"lsdrp7",
+	"lsdrpalamo",
+	"lsdrpalamo2",
+	"lsdrpyosemite",
 }
 
 ModelsWith295HFS = {
@@ -771,6 +800,17 @@ ModelsWithSSP3000 = {
 	"coroner",
 	"lspdbuffsumk",
 	"lspdbuffalostxum",
+	"lspdscout",
+	"lspdscout2",
+	"lspdalamo",
+	"lspdesd",
+	"lspdscoutk9",
+	"lspdscout2k9",
+	"lspdbuff",
+	"lspd11",
+	"lsdrpalamo3",
+	"lssdscout4",
+	"lssdnalamo2",
 }
 
 ModelsWithTouchmaster = {
@@ -855,6 +895,7 @@ ModelsWithZ3 = {
 	"proutlaw",
 	"prangerstalker2",
 	"prangerfc",
+	"senalamo7",
 }
 
 ModelsWithSmartSystemLMS = { -- LASD/LAPD Siren
@@ -893,6 +934,8 @@ ModelsWithSmartSystemLMS = { -- LASD/LAPD Siren
 	"lsiastanierumk",
 	"gcstanier",
 	"gcstanier2",
+	"lspd1b",
+	"lssdstanier2",
 }
 
 ModelsWith650RemoteSiren = {
@@ -926,6 +969,10 @@ ModelsWithCencomRed = {
 	"centurionlssd",
 	"adspscout",
 	"riot3",
+}
+
+ModelsWithTomar940 = {
+	"senmesa",
 }
 
 AS350Helicopters = {
