@@ -15,7 +15,7 @@ MASTERCOM: https://www.lcpdfr.com/downloads/gta5mods/audio/26065-mastercom-b-cod
 SS2000 & LMS: 
 - https://www.lcpdfr.com/downloads/gta5mods/audio/23297-federal-signal-ss2000-lms-siren-pack-fivem-ready/
 - https://www.lcpdfr.com/downloads/gta5mods/audio/24743-lapd-nypd-fed-sig-ss2000-smart-siren-fivem-ready-studio-recorded/
-- https://gtapolicemods.com/files/file/4167-lasds-unique-federal-signal-smart-siren-ss2000-with-custom-airhorn-tone/
+- https://modification-universe.com/forums/resources/federal-signal-smart-siren-ss2000-lasd-spec.905/
 
 SSP3000: 
 - https://www.lcpdfr.com/downloads/gta5mods/audio/35414-federal-signal-ssp3000-regular-rumbler-tones/ and 

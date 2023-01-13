@@ -970,11 +970,11 @@ function TogPowercallStateForVeh(veh, toggle)
 			if snd_pwrcall[veh] == nil then
 				snd_pwrcall[veh] = GetSoundId()
 				if UseTimberwolfDual(veh) then
-					PlaySoundFromEntity(snd_pwrcall[veh], "siren_timberwolf", veh, "policingmp_sounds_sirens5_soundset", 0, 0)
+					PlaySoundFromEntity(snd_pwrcall[veh], "siren_timberwolf", veh, "policingmp_sounds_sirens4_soundset", 0, 0)
 				elseif UseEQ2Dual(veh) or UseEQ2(veh) then
 					PlaySoundFromEntity(snd_pwrcall[veh], "siren_eq2_wail", veh, "policingmp_sounds_sirens4_soundset", 0, 0)
 				elseif UseQ2Dual(veh) then
-					PlaySoundFromEntity(snd_pwrcall[veh], "siren_q2a", veh, "policingmp_sounds_retrosirens_soundset", 0, 0)
+					PlaySoundFromEntity(snd_pwrcall[veh], "siren_q2a", veh, "policingmp_sounds_sirens1_soundset", 0, 0)
 				elseif UseFiretruckSiren(veh) then
 					PlaySoundFromEntity(snd_pwrcall[veh], "collision_i8o7bp", veh, 0, 0, 0)
 				elseif UseFIBSiren(veh) then
@@ -1133,7 +1133,7 @@ function SetAirManuStateForVeh(veh, newstate)
 					PlaySoundFromEntity(snd_airmanu[veh], "siren_police_manual", veh, "policingmp_sounds_sirens5_soundset", 0, 0)
 					
 				elseif UseCHPSiren(veh) then
-					PlaySoundFromEntity(snd_airmanu[veh], "siren_chp_manual", veh, "policingmp_sounds_sirens1_soundset", 0, 0)
+					PlaySoundFromEntity(snd_airmanu[veh], "siren_chp_wail", veh, "policingmp_sounds_sirens1_soundset", 0, 0)
 				elseif UseAS350Siren(veh) then
 					PlaySoundFromEntity(snd_airmanu[veh], "siren_as350", veh, "policingmp_sounds_sirens4_soundset", 0, 0)
 				elseif UseCHPMotorSiren(veh) then

@@ -21,10 +21,6 @@
      <ChildSound>siren_pa300_wail_d</ChildSound>
     </Item>
     <Item>
-     <ScriptName>siren_q2a</ScriptName>
-     <ChildSound>siren_q2a_d</ChildSound>
-    </Item>
-    <Item>
      <ScriptName>siren_spmark7_wail</ScriptName>
      <ChildSound>siren_spmark7_wail_d</ChildSound>
     </Item>
@@ -230,7 +226,7 @@
     <VolumeCurveScale value="300" />
     <Unk22 value="50" />
    </Header>
-   <ContainerName>dlc_policingmpaudio/policingmp_retrosirens</ContainerName>
+   <ContainerName>dlc_policingmpaudio/policingmp_sirens1</ContainerName>
    <FileName>siren_q2a</FileName>
    <WaveSlotNum value="0" />
   </Item>
@@ -486,6 +482,10 @@
     <Flags value="0xAAAAAAAA" />
    </Header>
    <SoundSets>
+    <Item>
+     <ScriptName>siren_q2a</ScriptName>
+     <ChildSound>siren_q2a_d</ChildSound>
+    </Item>
     <Item>
      <ScriptName>siren_ssp3000_yelp</ScriptName>
      <ChildSound>siren_ssp3000_yelp_d</ChildSound>
@@ -801,6 +801,10 @@
     <Item>
      <ScriptName>siren_omega_wail2</ScriptName>
      <ChildSound>siren_omega_wail2_d</ChildSound>
+    </Item>
+    <Item>
+     <ScriptName>siren_timberwolf</ScriptName>
+     <ChildSound>siren_timberwolf_d</ChildSound>
     </Item>
     <Item>
      <ScriptName>siren_omega_wail</ScriptName>
@@ -3492,6 +3496,37 @@
    <YawAngle value="0" />
    <PitchAngle value="0" />
   </Item>
+
+  <Item type="SimpleSound">
+   <Name>siren_timberwolf_s</Name>
+   <Header>
+    <Flags value="0x0820E010" />
+    <Pitch value="0" />
+    <ReleaseTime value="50" />
+    <DopplerFactor value="30" />
+    <Category>vehicles_sirens</Category>
+    <VolumeCurveScale value="300" />
+    <Unk22 value="50" />
+   </Header>
+   <ContainerName>dlc_policingmpaudio/policingmp_sirens4</ContainerName>
+   <FileName>siren_timberwolf</FileName>
+   <WaveSlotNum value="0" />
+  </Item>
+  <Item type="DirectionalSound">
+   <Name>siren_timberwolf_d</Name>
+   <Header>
+    <Flags value="0x00008004" />
+    <Volume value="-100" />
+    <Category>vehicles_sirens</Category>
+   </Header>
+   <ChildSound>siren_timberwolf_s</ChildSound>
+   <InnerAngle value="20" />
+   <OuterAngle value="65" />
+   <RearAttenuation value="-3" />
+   <YawAngle value="0" />
+   <PitchAngle value="0" />
+  </Item>
+
   <Item type="SimpleSound">
    <Name>siren_omega_hilo_s</Name>
    <Header>
