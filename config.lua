@@ -39,6 +39,7 @@ ModelsWithEquipment = {
 	"sheriffmav",
 	"polmav",
 	"lspdmav",
+	"lssdsecurity1",
 }
 
 ModelsWithNoEquipment = { -- Non-emergency models without lights/sirens controls
@@ -388,6 +389,19 @@ ModelsWithNoTertiaryTone = {
 	"bcsoscout",
 	"bcsospeedo",
 	"bcsostanier",
+	"lspdscoutum",
+	"lssdsecurity1",
+	"lssdscout1",
+	"lssdscout2",
+	"lssdscoutnew1",
+	"lssdscoutnew2",
+	"lssdstanier1",
+	"lssdstanier2",
+	"lssdalamonew1",
+	"lssdalamonew2",
+	"lssdumk1",
+	"lssdumk2",
+	"lssdumk3",
 }
 
 -- Vehicles with a 4th tone activated by a seperate button. Usually a Hi-Lo.
@@ -503,6 +517,7 @@ ModelsWithAuxiliaryTone = {
 	"amb_rox_ambu",
 	"ambulance",
 	"ambulance2",
+	"lssdumk2",
 }
 
 -- Vehicles that use the horn to change tones. Disabled electronic horn. Horn behavior: Regular car horn when lights off, manual tone when lights on, change tone when sirens on.
@@ -560,6 +575,7 @@ ModelsWithHornSwitch = {
 	"lspd4a",
 	"lspd11",
 	"lspdscoutum2",
+	"lspdscoutum",
 }
 
 ModelsWithRumbler = {
@@ -624,6 +640,9 @@ ModelsWith480K = {
 	"police2gs",
 	"prangerpat",
 	"sheriffmav",
+	"lssdsecurity1",
+	"lssdumk1",
+	"lssdumk3",
 }
 
 ModelsWithWhelenCHPSiren = {
@@ -833,6 +852,7 @@ ModelsWithSSP3000 = {
 	"dppdcara2",
 	"dppdcaraspare",
 	"dppdscout",
+	"lspdscoutum",
 	"dppdscoutk9",
 	"dppdscoutsgt",
 	"dppdscoutunmk",
@@ -890,6 +910,11 @@ ModelsWithSSP3000 = {
 	"lssdscout4",
 	"lssdnalamo2",
 	"lspdscoutum2",
+	"lssdsecurity1",
+	"lssdscoutnew1",
+	"lssdscoutnew2",
+	"lssdalamonew1",
+	"lssdalamonew2",
 }
 
 ModelsWithTouchmaster = {
@@ -1014,7 +1039,11 @@ ModelsWithSmartSystemLMS = { -- LASD/LAPD Siren
 	"gcstanier",
 	"gcstanier2",
 	"lspd1b",
+	"lssdscout1",
+	"lssdscout2",
+	"lssdstanier1",
 	"lssdstanier2",
+	"lssdumk2",
 }
 
 ModelsWith650RemoteSiren = {

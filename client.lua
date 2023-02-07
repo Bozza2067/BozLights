@@ -989,10 +989,8 @@ function TogPowercallStateForVeh(veh, toggle)
 					PlaySoundFromEntity(snd_pwrcall[veh], "siren_chp2_wail", veh, "policingmp_sounds_sirens5_soundset", 0, 0)
 				elseif UseZ3Siren(veh) then
 					if state_lxsiren[veh] == 2 then
-						Citizen.Wait(250)
 						PlaySoundFromEntity(snd_pwrcall[veh], "siren_z3_yelp", veh, "policingmp_sounds_sirens1_soundset", 0, 0)
 					else
-						Citizen.Wait(250)
 						PlaySoundFromEntity(snd_pwrcall[veh], "siren_z3_wail", veh, "policingmp_sounds_sirens1_soundset", 0, 0)
 					end
 				elseif Use295HFS(veh) then
@@ -1030,7 +1028,15 @@ function TogPowercallStateForVeh(veh, toggle)
 				elseif UseMastercomB(veh) then
 					PlaySoundFromEntity(snd_pwrcall[veh], "siren_mastercom_b_wail", veh, "policingmp_sounds_sirens2_soundset", 0, 0)
 				elseif UseSSP3000(veh) then
-					PlaySoundFromEntity(snd_pwrcall[veh], "siren_ssp3000_wail", veh, "policingmp_sounds_sirens1_soundset", 0, 0)
+					if state_lxsiren[veh] == 2 or state_lxsiren[veh] == 6 then
+						PlaySoundFromEntity(snd_pwrcall[veh], "siren_touchmaster_yelp", veh, "policingmp_sounds_sirens3_soundset", 0, 0)
+					elseif state_lxsiren[veh] == 3 or state_lxsiren[veh] == 7 then
+						PlaySoundFromEntity(snd_pwrcall[veh], "siren_touchmaster_priority", veh, "policingmp_sounds_sirens3_soundset", 0, 0)
+					elseif state_lxsiren[veh] == 4 or state_lxsiren[veh] == 8 then
+						PlaySoundFromEntity(snd_pwrcall[veh], "siren_touchmaster_ultra", veh, "policingmp_sounds_sirens3_soundset", 0, 0)
+					else
+						PlaySoundFromEntity(snd_pwrcall[veh], "siren_touchmaster_wail", veh, "policingmp_sounds_sirens3_soundset", 0, 0)
+					end
 				else
 					PlaySoundFromEntity(snd_pwrcall[veh], "VEHICLES_HORNS_SIREN_1", veh, 0, 0, 0)
 				end
