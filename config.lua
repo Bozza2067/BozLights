@@ -146,7 +146,6 @@ ModelsWithNoTertiaryTone = {
 	"lsiaops2",
 	"mrcaalamo",
 	"mrcacara",
-	"parkprem",
 	"police",
 	"policeslick",
 	"police2",
@@ -158,14 +157,10 @@ ModelsWithNoTertiaryTone = {
 	"polsadlerk9",
 	"police4",
 	"police42old",
-	"polprem",
-	"polpremslick",
-	"polpremumk",
 	"gtfminivan",
 	"centurionlspd",
 	"polthrust",
 	"policeb",
-	"parkprem",
 	"pranger",
 	"riot",
 	"rhpdfug",
@@ -207,11 +202,6 @@ ModelsWithNoTertiaryTone = {
 	"sheriffscoutnew",
 	"sheriffstalker",
 	"sheriffthrust",
-	"sherprem",
-	"sherprem2",
-	"sheriffold2",
-	"sheriffold3",
-	"sheriffriataold",
 	"sheriffslick",
 	"sheriffcont",
 	"sheriffintc",
@@ -271,14 +261,6 @@ ModelsWithNoTertiaryTone = {
 	"policefug3",
 	"policeold1",
 	"policeold2",
-	"polprem",
-	"polpremslick",
-	"polpremumk",
-	"parkprem",
-	"sherprem2",
-	"sheriffold2",
-	"sheriffold3",
-	"sheriffriataold",
 	"police2gs",
 	"polnspeedo",
 	"LSFDAmbulance",
@@ -402,6 +384,17 @@ ModelsWithNoTertiaryTone = {
 	"lssdumk1",
 	"lssdumk2",
 	"lssdumk3",
+	"lsfd5",
+	"lsfd2",
+	"lsfdcmd",
+	"lsfdstanier",
+	"firehazmat",
+	"firehazmat2",
+	"firerescue",
+	"firetruk2",
+	"firetruk3",
+	"rfdtruck",
+	"lsfdtruck",
 }
 
 -- Vehicles with a 4th tone activated by a seperate button. Usually a Hi-Lo.
@@ -425,7 +418,6 @@ ModelsWithQuarternaryTone = {
 	"lcpd6abahn",
 	"lcpd6abkd",
 	"LCPDT6A",
-	"parkprem",
 	"rhpdfug",
 	"rhpdSCOUTSLICK",
 	"sahp",
@@ -476,6 +468,9 @@ ModelsWithQuarternaryTone = {
 	"bcsoscout",
 	"bcsospeedo",
 	"bcsostanier",
+	"firerescue",
+	"firetruk2",
+	"firehazmat",
 }
 
 -- Vehicles with dual sirens
@@ -518,6 +513,14 @@ ModelsWithAuxiliaryTone = {
 	"ambulance",
 	"ambulance2",
 	"lssdumk2",
+	"lsfd5",
+	"lsfd2",
+	"firehazmat",
+	"firehazmat2",
+	"firetruk2",
+	"firetruk3",
+	"rfdtruck",
+	"lsfdtruck",
 }
 
 -- Vehicles that use the horn to change tones. Disabled electronic horn. Horn behavior: Regular car horn when lights off, manual tone when lights on, change tone when sirens on.
@@ -542,8 +545,6 @@ ModelsWithHornSwitch = {
 	"sahp1b3",
 	"sahp1c",
 	"sahp2b",
-	"sahpprem",
-	"sahppremslick",
 	"sheriffcoqm3",
 	"sheriffcoqmumk",
 	"police2c",
@@ -629,14 +630,6 @@ ModelsWithBMWIntegratedSiren = {
 ModelsWith480K = {
 	"policeold1",
 	"policeold2",
-	"polprem",
-	"polpremslick",
-	"polpremumk",
-	"parkprem",
-	"sherprem2",
-	"sheriffold2",
-	"sheriffold3",
-	"sheriffriataold",
 	"police2gs",
 	"prangerpat",
 	"sheriffmav",
@@ -684,6 +677,11 @@ ModelsWithAstroSpectra = {
 	"LSFDGRANGER",
 	"LSFDAmbulance",
 	"lguardsq",
+	"lsfd5",
+	"lsfd2",
+	"lsfdstanier",
+	"lsfdtruck",
+	"lsfdtiller",
 }
 
 ModelsWithMastercomB = {
@@ -717,7 +715,6 @@ ModelsWithOmega90 = {
 	"lspdb",
 	"policet",
 	"riot",
-	"sherprem",
 	"sheriffalamoold",
 	"sheriffsar",
 	"sheriffvanold",
@@ -747,8 +744,6 @@ ModelsWithFIBSiren = { -- Vanilla FIB Siren
 	"sahp1b3",
 	"sahp1c",
 	"sahp2b",
-	"sahpprem",
-	"sahppremslick",
 	"sahp4a",
 }
 
@@ -807,6 +802,11 @@ ModelsWithCencomSapphire = {
 	"emscomet",
 	"emsstalker",
 	"lsdrpyosemite",
+	"firehazmat",
+	"firehazmat2",
+	"firerescue",
+	"firetruk2",
+	"firetruk3",
 }
 
 ModelsWith295HFS = {
@@ -830,6 +830,7 @@ ModelsWith295HFS = {
 	"amb_rox_ambu",
 	"ambulance2",
 	"ambulance",
+	"rfdtruck",
 }
 
 ModelsWithSSP3000 = {
@@ -1000,6 +1001,7 @@ ModelsWithZ3 = {
 	"prangerstalker2",
 	"prangerfc",
 	"senalamo7",
+	"lsfdcmd",
 }
 
 ModelsWithSmartSystemLMS = { -- LASD/LAPD Siren
@@ -1096,10 +1098,14 @@ AS350Helicopters = {
 ModelsWithLAFDSpectraWail = { -- LAFD Wail Tone in LXSRN 1 (Wail). Will only work with vehicles that are also in ModelsWithAstroSpectra list.
 	"LSFDGRANGER",
 	"LSFDAmbulance",
+	"lsfd5",
+	"lsfd2",
+	"lsfdstanier",
+	"lsfdtruck",
+	"lsfdtiller",
 }
 
 ModelsWithTimberwolfDualSiren = {
-	"lsfdambulance",
 }
 
 
@@ -1109,11 +1115,21 @@ ModelsWithSAHPHiLo = {
 }
 
 ModelsWithEQ2DualSiren = {
+	"lsfdambulance",
 }
 
 ModelsWithQ2DualSiren = { 
 	"mcfdtruck",
 	"mcfdhazmat",
+	"firehazmat",
+	"firehazmat2",
+	"firetruk2",
+	"rfdtruck",
+	"firetruk3",
+	"lsfd5",
+	"lsfdtruck",
+	"lsfd2",
+	"lsfdtiller",
 }
 
 BCSOFugitiveModels = {
@@ -1132,6 +1148,15 @@ ModelsWithFireHorn = { -- Uses vanilla fire truck horn, does not interrupt main 
 	"mcfdtruck",
 	"mcfdhazmat",
 	"LSFDAmbulance",
+	"lsfd5",
+	"lsfd2",
+	"firehazmat",
+	"firehazmat2",
+	"firerescue",
+	"firetruk2",
+	"firetruk3",
+	"rfdtruck",
+	"lsfdtruck",
 }
 
 ModelsWithCencomCarbideUltra = { -- Ultra Hi-Lo tone from Whelen Cencom Carbide in LXSRN 4 (Quarternary/Hilo)
@@ -1139,4 +1164,7 @@ ModelsWithCencomCarbideUltra = { -- Ultra Hi-Lo tone from Whelen Cencom Carbide 
 	"mcfdtruck",
 	"mcfdrescue",
 	"mcfdhazmat",
+	"firerescue",
+	"firetruk2",
+	"firehazmat",
 }

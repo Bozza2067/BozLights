@@ -775,6 +775,10 @@
    </Header>
    <SoundSets>
     <Item>
+     <ScriptName>siren_eq2_wail</ScriptName>
+     <ChildSound>siren_eq2_wail_d</ChildSound>
+    </Item>
+    <Item>
      <ScriptName>siren_hansch_horn</ScriptName>
      <ChildSound>siren_hansch_horn_d</ChildSound>
     </Item>
@@ -913,10 +917,6 @@
     <Item>
      <ScriptName>siren_chp2_yelp</ScriptName>
      <ChildSound>siren_chp2_yelp_d</ChildSound>
-    </Item>
-    <Item>
-     <ScriptName>siren_eq2_wail</ScriptName>
-     <ChildSound>siren_eq2_wail_d</ChildSound>
     </Item>
     <Item>
      <ScriptName>siren_650rs_horn</ScriptName>
