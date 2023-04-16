@@ -33,3 +33,9 @@ Your one-stop-shop for lights and siren controls, BozLights is a modified versio
 - Backspace = Hazard lights
 
 It's still compatible with controller, I'm just not sure of the controls since I regularly play with keyboard.
+
+## Controller Controls
+Right D-Pad = Emergency Lights
+Down D-Pad = Toggle Siren
+Left Thumbstick Down = Horn / Switch Between Tones with HornSwitcher enabled
+B = Manual / Siren Swap
