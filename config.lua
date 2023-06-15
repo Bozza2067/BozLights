@@ -52,6 +52,8 @@ ModelsWithNoEquipment = { -- Non-emergency models without lights/sirens controls
 	"fwcverus",
 }
 
+ModelsWithSirenParkKill = { -- By default exiting a vehicle with its siren running will keep it running, adding a model here will make the siren turn off when exiting the vehicle.
+}
 ---------------
 -- BOZLIGHTS --
 ---------------
@@ -82,7 +84,7 @@ ModelsWithBozLightsLegacy = {
 	"lspd11",
 }
 
--- These models have extralights and sirens in the same spot that should not conflict on light stages two or three. 
+-- These models have extralights and sirens in the same spot that should not conflict on light stages two or three.
 -- All models here must also be in the eModelsWithBozLightsLegacy or eModelsWithBozLights arrays.
 eModelsWithBLCTkdn =
 	{
@@ -1118,7 +1120,7 @@ ModelsWithEQ2DualSiren = {
 	"lsfdambulance",
 }
 
-ModelsWithQ2DualSiren = { 
+ModelsWithQ2DualSiren = {
 	"mcfdtruck",
 	"mcfdhazmat",
 	"firehazmat",

@@ -8,7 +8,7 @@ Coded by Lt.Caine
 NOTES
 	LVC will automatically apply to all emergency vehicles (vehicle class 18)
 ---------------------------------------------------
-CONTROLS	
+CONTROLS
 	Right indicator:	=	(Next Custom Radio Track)
 	Left indicator:		-	(Previous Custom Radio Track)
 	Hazard lights:	Backspace	(Phone Cancel)
@@ -55,7 +55,7 @@ local fstate = 0
 
 local rumblerState = 0
 local SecondManualBrowserToneOption = 0
-							
+
 -- BOZLIGHTS START
 local lstate = state_ltsg[veh]
 local lstate = 0
@@ -124,7 +124,7 @@ RegisterCommand('toggleemergencylights', function()
             PlaySoundFrontend(-1, "NAV_LEFT_RIGHT", "HUD_FRONTEND_DEFAULT_SOUNDSET", 1)
             SetVehicleSiren(veh, true)
         end
-    end	
+    end
 end)]]
 
 ---------------------------------------------------------------------
@@ -686,19 +686,30 @@ function TogMuteDfltSrnForVeh(veh, toggle)
 	end
 end
 
+Citizen.CreateThread(function()
+	while true do
+		Citizen.Wait(0)
+		local ped = GetPlayerPed(-1)
+		local veh = GetVehiclePedIsIn(ped, false)
+		if  IsVehicleSirenOn(veh) and ModelsWithSirenParkKill(veh) and IsControlPressed(0, 23) then
+			SetLxSirenStateForVeh(veh, newstate)
+		end
+	end
+end)
+
 ---------------------------------------------------------------------
 function SetLxSirenStateForVeh(veh, newstate)
 	if DoesEntityExist(veh) and not IsEntityDead(veh) then
 		if newstate ~= state_lxsiren[veh] then
-				
+
 			if snd_lxsiren[veh] ~= nil then
 				StopSound(snd_lxsiren[veh])
 				ReleaseSoundId(snd_lxsiren[veh])
 				snd_lxsiren[veh] = nil
 			end
-						
-			if newstate == 1 then
-				snd_lxsiren[veh] = GetSoundId()	
+
+			if newstate == 1 and lstate == 3 then
+				snd_lxsiren[veh] = GetSoundId()
 				if UseFiretruckSiren(veh) then
 					PlaySoundFromEntity(snd_lxsiren[veh], "collision_i8o7bp", veh, 0, 0, 0)
 				elseif UseFIBSiren(veh) then
@@ -755,9 +766,9 @@ function SetLxSirenStateForVeh(veh, newstate)
 					PlaySoundFromEntity(snd_lxsiren[veh], "VEHICLES_HORNS_SIREN_1", veh, 0, 0, 0)
 				end
 				TogMuteDfltSrnForVeh(veh, true)
-				
-			elseif newstate == 2 then
-				snd_lxsiren[veh] = GetSoundId()	
+
+			elseif newstate == 2 and lstate == 3 then
+				snd_lxsiren[veh] = GetSoundId()
 				if UseFiretruckSiren(veh) then
 					PlaySoundFromEntity(snd_lxsiren[veh], "collision_q3nurz", veh, 0, 0, 0)
 				elseif UseFIBSiren(veh) then
@@ -810,8 +821,8 @@ function SetLxSirenStateForVeh(veh, newstate)
 					PlaySoundFromEntity(snd_lxsiren[veh], "VEHICLES_HORNS_SIREN_2", veh, 0, 0, 0)
 				end
 				TogMuteDfltSrnForVeh(veh, true)
-			
-			elseif newstate == 3 then
+
+			elseif newstate == 3 and lstate == 3 then
 				snd_lxsiren[veh] = GetSoundId()
 				if UseFiretruckSiren(veh) then
 					PlaySoundFromEntity(snd_lxsiren[veh], "VEHICLES_HORNS_AMBULANCE_WARNING", veh, 0, 0, 0)
@@ -855,8 +866,8 @@ function SetLxSirenStateForVeh(veh, newstate)
 					PlaySoundFromEntity(snd_lxsiren[veh], "VEHICLES_HORNS_POLICE_WARNING", veh, 0, 0, 0)
 				end
 				TogMuteDfltSrnForVeh(veh, true)
-			
-			elseif newstate == 4 then
+
+			elseif newstate == 4 and lstate == 3 then
 				snd_lxsiren[veh] = GetSoundId()
 				if UseCarbideUltra(veh) then
 					PlaySoundFromEntity(snd_lxsiren[veh], "siren_carbide_ultra", veh, "policingmp_sounds_sirens2_soundset", 0, 0)
@@ -891,8 +902,8 @@ function SetLxSirenStateForVeh(veh, newstate)
 					PlaySoundFromEntity(snd_lxsiren[veh], "vehicles_horns_police_warning_rnd_euro", veh, 0, 0, 0)
 				end
 				TogMuteDfltSrnForVeh(veh, true)
-			
-			elseif newstate == 5 then
+
+			elseif newstate == 5 and lstate == 3 then
 				snd_lxsiren[veh] = GetSoundId()
 				if UsingVanillaSiren then
 					PlaySoundFromEntity(snd_lxsiren[veh], "siren_pa20a_wail_r", veh, "policingmp_sounds_sirens5_soundset", 0, 0)
@@ -903,8 +914,8 @@ function SetLxSirenStateForVeh(veh, newstate)
 				else
 					PlaySoundFromEntity(snd_lxsiren[veh], "siren_pa20a_wail_r", veh, "policingmp_sounds_sirens5_soundset", 0, 0)
 				end
-			
-			elseif newstate == 6 then
+
+			elseif newstate == 6 and lstate == 3 then
 				snd_lxsiren[veh] = GetSoundId()
 				if UsingVanillaSiren then
 					PlaySoundFromEntity(snd_lxsiren[veh], "siren_2_r", veh, "policingmp_sounds_sirens5_soundset", 0, 0)
@@ -915,8 +926,8 @@ function SetLxSirenStateForVeh(veh, newstate)
 				else
 					PlaySoundFromEntity(snd_lxsiren[veh], "siren_2_r", veh, "policingmp_sounds_sirens5_soundset", 0, 0)
 				end
-			
-			elseif newstate == 7 then
+
+			elseif newstate == 7 and lstate == 3 then
 				snd_lxsiren[veh] = GetSoundId()
 				if UsingVanillaSiren then
 					PlaySoundFromEntity(snd_lxsiren[veh], "police_warning_r", veh, "policingmp_sounds_sirens5_soundset", 0, 0)
@@ -927,8 +938,8 @@ function SetLxSirenStateForVeh(veh, newstate)
 				else
 					PlaySoundFromEntity(snd_lxsiren[veh], "police_warning_r", veh, "policingmp_sounds_sirens5_soundset", 0, 0)
 				end
-			
-			elseif newstate == 8 then
+
+			elseif newstate == 8 and lstate == 3 then
 				snd_lxsiren[veh] = GetSoundId()
 				if UsingVanillaSiren then
 					PlaySoundFromEntity(snd_lxsiren[veh], "vehicles_horns_police_warning_rnd_euro", veh, 0, 0, 0)
@@ -939,8 +950,8 @@ function SetLxSirenStateForVeh(veh, newstate)
 				else
 					PlaySoundFromEntity(snd_lxsiren[veh], "vehicles_horns_police_warning_rnd_euro", veh, 0, 0, 0)
 				end
-			
-			elseif newstate == 9 then
+
+			elseif newstate == 9 and lstate == 3 then
 				snd_lxsiren[veh] = GetSoundId()
 				if UsingVanillaSiren then
 					PlaySoundFromEntity(snd_lxsiren[veh], "vehicles_horns_siren_1", veh, 0, 0, 0)
@@ -952,12 +963,12 @@ function SetLxSirenStateForVeh(veh, newstate)
 					PlaySoundFromEntity(snd_lxsiren[veh], "siren_480k_wail2", veh, "policingmp_sounds_sirens4_soundset", 0, 0)
 				end
 				TogMuteDfltSrnForVeh(veh, true)
-				
+
 			else
 				TogMuteDfltSrnForVeh(veh, true)
-				
-			end				
-				
+
+			end
+
 			state_lxsiren[veh] = newstate
 		end
 	end
@@ -1056,13 +1067,13 @@ end
 function SetAirManuStateForVeh(veh, newstate)
 	if DoesEntityExist(veh) and not IsEntityDead(veh) then
 		if newstate ~= state_airmanu[veh] then
-				
+
 			if snd_airmanu[veh] ~= nil then
 				StopSound(snd_airmanu[veh])
 				ReleaseSoundId(snd_airmanu[veh])
 				snd_airmanu[veh] = nil
 			end
-						
+
 			if newstate == 1 then
 				snd_airmanu[veh] = GetSoundId()
 				if HasHornSwitch(veh) and not IsVehicleSirenOn(veh) then
@@ -1074,7 +1085,7 @@ function SetAirManuStateForVeh(veh, newstate)
 					PlaySoundFromEntity(snd_airmanu[veh], "stretch_multi_horn", veh, 0, 0, 0)
 				elseif UsingVanillaSiren then
 					PlaySoundFromEntity(snd_airmanu[veh], "sirens_airhorn", veh, 0, 0, 0)
-						
+
 				elseif UseSSLMS(veh) then
 					PlaySoundFromEntity(snd_airmanu[veh], "siren_ss2000_horn_lms", veh, "policingmp_sounds_sirens2_soundset", 0, 0)
 				elseif UseCHPSiren(veh) or UseCHPMotorSiren(veh) then
@@ -1128,7 +1139,7 @@ function SetAirManuStateForVeh(veh, newstate)
 				else
 					PlaySoundFromEntity(snd_airmanu[veh], "SIRENS_AIRHORN", veh, 0, 0, 0)
 				end
-				
+
 			elseif newstate == 2 then
 				snd_airmanu[veh] = GetSoundId()
 				if UseFiretruckSiren(veh) then
@@ -1137,7 +1148,7 @@ function SetAirManuStateForVeh(veh, newstate)
 					PlaySoundFromEntity(snd_airmanu[veh], "resident_vehicles_siren_wail_02", veh, 0, 0, 0)
 				elseif UsingVanillaSiren then
 					PlaySoundFromEntity(snd_airmanu[veh], "siren_police_manual", veh, "policingmp_sounds_sirens5_soundset", 0, 0)
-					
+
 				elseif UseCHPSiren(veh) then
 					PlaySoundFromEntity(snd_airmanu[veh], "siren_chp_wail", veh, "policingmp_sounds_sirens1_soundset", 0, 0)
 				elseif UseAS350Siren(veh) then
@@ -1187,7 +1198,7 @@ function SetAirManuStateForVeh(veh, newstate)
 				else
 					PlaySoundFromEntity(snd_airmanu[veh], "siren_police_manual", veh, "policingmp_sounds_sirens5_soundset", 0, 0)
 				end
-				
+
 			elseif newstate == 3 then
 				snd_airmanu[veh] = GetSoundId()
 				if UsingVanillaSiren then
@@ -1211,9 +1222,9 @@ function SetAirManuStateForVeh(veh, newstate)
 				elseif UseOmega90(veh) then
 					PlaySoundFromEntity(snd_airmanu[veh], "siren_omega_wail", veh, "policingmp_sounds_sirens4_soundset", 0, 0)
 				end
-				
-			end				
-				
+
+			end
+
 			state_airmanu[veh] = newstate
 		end
 	end
@@ -1298,7 +1309,7 @@ end)
 ---------------------------------------------------------------------
 Citizen.CreateThread(function()
 	while true do
-			
+
 			CleanupSounds()
 
 			RequestScriptAudioBank("DLC_POLICINGMPAUDIO\\POLICINGMP_SIRENS1", false)
@@ -1307,27 +1318,27 @@ Citizen.CreateThread(function()
 			RequestScriptAudioBank("DLC_POLICINGMPAUDIO\\POLICINGMP_SIRENS4", false)
 			RequestScriptAudioBank("DLC_POLICINGMPAUDIO\\POLICINGMP_SIRENS5", false)
 
-			
+
 			----- IS IN VEHICLE -----
-			local playerped = GetPlayerPed(-1)		
-			if IsPedInAnyVehicle(playerped, false) then	
-			
+			local playerped = GetPlayerPed(-1)
+			if IsPedInAnyVehicle(playerped, false) then
+
 				----- IS DRIVER -----
-				local veh = GetVehiclePedIsUsing(playerped)	
+				local veh = GetVehiclePedIsUsing(playerped)
 				if GetPedInVehicleSeat(veh, -1) == playerped then
-				
-					DisableControlAction(0, 84, true) -- INPUT_VEH_PREV_RADIO_TRACK  
-					DisableControlAction(0, 83, true) -- INPUT_VEH_NEXT_RADIO_TRACK 
+
+					DisableControlAction(0, 84, true) -- INPUT_VEH_PREV_RADIO_TRACK
+					DisableControlAction(0, 83, true) -- INPUT_VEH_NEXT_RADIO_TRACK
 
 					-- Get speed in mph
 					local speed = GetEntitySpeed(veh) * 2.236936
-					
+
 					if state_indic[veh] ~= ind_state_o and state_indic[veh] ~= ind_state_l and state_indic[veh] ~= ind_state_r and state_indic[veh] ~= ind_state_h then
 						state_indic[veh] = ind_state_o
 					end
 
 					-- INDIC AUTO CONTROL
-					if actv_ind_timer == true then	
+					if actv_ind_timer == true then
 						if state_indic[veh] == ind_state_l or state_indic[veh] == ind_state_r then
 							if GetEntitySpeed(veh) < 6 then
 								count_ind_timer = 0
@@ -1353,23 +1364,23 @@ Citizen.CreateThread(function()
 						end
 					end
 
-					
+
 					--- IS EMERG VEHICLE ---
 					if GetVehicleClass(veh) == 18 and not HasNoEquipment(veh) or HasEquipment(veh) then
-						
+
 						local actv_manu = false
 						local actv_horn = false
-						
-						DisableControlAction(0, 86, true) -- INPUT_VEH_HORN	
-						--DisableControlAction(0, 172, true) -- INPUT_CELLPHONE_UP 
+
+						DisableControlAction(0, 86, true) -- INPUT_VEH_HORN
+						--DisableControlAction(0, 172, true) -- INPUT_CELLPHONE_UP
 						--DisableControlAction(0, 173, true) -- INPUT_CELLPHONE_DOWN
-						--DisableControlAction(0, 174, true) -- INPUT_CELLPHONE_LEFT 
-						--DisableControlAction(0, 175, true) -- INPUT_CELLPHONE_RIGHT 
+						--DisableControlAction(0, 174, true) -- INPUT_CELLPHONE_LEFT
+						--DisableControlAction(0, 175, true) -- INPUT_CELLPHONE_RIGHT
 						--DisableControlAction(0, 81, true) -- INPUT_VEH_NEXT_RADIO
 						--DisableControlAction(0, 82, true) -- INPUT_VEH_PREV_RADIO
-						DisableControlAction(0, 19, true) -- INPUT_CHARACTER_WHEEL 
-						DisableControlAction(0, 85, true) -- INPUT_VEH_RADIO_WHEEL 
-						DisableControlAction(0, 80, true) -- INPUT_VEH_CIN_CAM 
+						DisableControlAction(0, 19, true) -- INPUT_CHARACTER_WHEEL
+						DisableControlAction(0, 85, true) -- INPUT_VEH_RADIO_WHEEL
+						DisableControlAction(0, 80, true) -- INPUT_VEH_CIN_CAM
 
 						DisableControlAction(0, 157, true) -- INPUT_SELECT_WEAPON_UNARMED (1)
 						DisableControlAction(0, 158, true) -- INPUT_SELECT_WEAPON_MELEE (2)
@@ -1378,10 +1389,10 @@ Citizen.CreateThread(function()
 						DisableControlAction(0, 165, true) -- INPUT_SELECT_WEAPON_SPECIAL (5) (Auxiliary)
 						DisableControlAction(0, 159, true) -- INPUT_SELECT_WEAPON_HANDGUN (6) (Rumbler)
 
-					
+
 						SetVehRadioStation(veh, "OFF")
 						SetVehicleRadioEnabled(veh, false)
-						
+
 						if state_lxsiren[veh] ~= 1 and state_lxsiren[veh] ~= 2 and state_lxsiren[veh] ~= 3 and state_lxsiren[veh] ~= 4 and state_lxsiren[veh] ~= 5 and state_lxsiren[veh] ~= 6 and state_lxsiren[veh] ~= 7 and state_lxsiren[veh] ~= 8 and state_lxsiren[veh] ~= 9 then
 							state_lxsiren[veh] = 0
 						end
@@ -1404,7 +1415,7 @@ Citizen.CreateThread(function()
 
 						TogMuteDfltSrnForVeh(veh, true)
 						dsrn_mute = true
-						
+
 						if IsVehicleSirenOn(veh) and IsFirstPersonAimCamActive() then
 							ShowInfo("Your emergency lights are active.")
 						end
@@ -1431,6 +1442,7 @@ Citizen.CreateThread(function()
 								if useBozLights(veh) then
 									SetVehicleExtra(veh, 5, true)
 									SetVehicleExtra(veh, 6, true)
+									SetVehicleAutoRepairDisabled(veh, false)
 								end
 							elseif lstate == 2 then
 								SetVehicleAutoRepairDisabled(veh, true)
@@ -1441,6 +1453,7 @@ Citizen.CreateThread(function()
 								if useBozLights(veh) then
 									SetVehicleExtra(veh, 5, true)
 									SetVehicleExtra(veh, 6, true)
+									SetVehicleAutoRepairDisabled(veh, false)
 								end
 							elseif lstate == 3 then
 								SetVehicleAutoRepairDisabled(veh, true)
@@ -1451,6 +1464,7 @@ Citizen.CreateThread(function()
 								if useBozLights(veh) then
 									SetVehicleExtra(veh, 5, false)
 									SetVehicleExtra(veh, 6, false)
+									SetVehicleAutoRepairDisabled(veh, false)
 								end
 							elseif lstate == 0 then
 								SetVehicleAutoRepairDisabled(veh, true)
@@ -1461,6 +1475,7 @@ Citizen.CreateThread(function()
 								if useBozLights(veh) then
 									SetVehicleExtra(veh, 5, true)
 									SetVehicleExtra(veh, 6, true)
+									SetVehicleAutoRepairDisabled(veh, false)
 								end
 							end
 						end
@@ -1469,7 +1484,7 @@ Citizen.CreateThread(function()
 						if not HasRumbler(veh) then
 							rumblerState = 0
 						end
-					
+
 						----- CONTROLS -----
 						if not IsPauseMenuActive() and UpdateOnscreenKeyboard() ~= 0 then
 							if GetVehicleBodyHealth(veh) < DamageThreshold and DisableEquipmentWhenDamaged then
@@ -1491,7 +1506,7 @@ Citizen.CreateThread(function()
 										SetVehicleSiren(veh, true)
 										if useMiniSiren(veh) and lstate == 0 then
 											lstate = 2
-										else 
+										else
 											lstate = lstate + 1
 										end
 										count_bcast_timer = delay_bcast_timer
@@ -1518,7 +1533,7 @@ Citizen.CreateThread(function()
 									SetVehicleSiren(veh, true)
 									count_bcast_timer = delay_bcast_timer
 								end		]]
-							
+
 							-- TOG BOZ SIREN (NEW)
 
 							elseif IsDisabledControlJustPressed(0, 157) and not UseAS350Siren(veh) then
@@ -1529,7 +1544,7 @@ Citizen.CreateThread(function()
 										PlaySoundFrontend(-1, "Beep_Red", "DLC_HEIST_HACKING_SNAKE_SOUNDS", 1)
 										if sirenoption == 1 then
 											SetLxSirenStateForVeh(veh, 9)
-										else 
+										else
 											SetLxSirenStateForVeh(veh, 1)
 										end
 										count_bcast_timer = delay_bcast_timer
@@ -1590,7 +1605,7 @@ Citizen.CreateThread(function()
 											else
 												SetLxSirenStateForVeh(veh, 3)
 											end
-											
+
 											count_bcast_timer = delay_bcast_timer
 										end
 									else
@@ -1622,7 +1637,7 @@ Citizen.CreateThread(function()
 								else
 									PlaySoundFrontend(-1, "Highlight_Error", "DLC_HEIST_PLANNING_BOARD_SOUNDS", 1)
 								end
-								
+
 							elseif IsDisabledControlJustPressed(0, 159) and GetVehicleClass(veh) ~= 15 then
 								local cstate = state_lxsiren[veh]
 								if HasRumbler(veh) then
@@ -1647,6 +1662,7 @@ Citizen.CreateThread(function()
 									if not useBozLights(veh) and IsVehicleSirenOn(veh) or useBozLights(veh) and lstate == 3 or not useBozLightsLegacy(veh) and IsVehicleSirenOn(veh) or useBozLightsLegacy(veh) and lstate == 3 then -- bozlights
 									--if IsVehicleSirenOn(veh) then
 										PlaySoundFrontend(-1, "Beep_Red", "DLC_HEIST_HACKING_SNAKE_SOUNDS", 1)
+										lstate == 3
 										if rumblerState == 1 then
 											SetLxSirenStateForVeh(veh, 5)
 										else
@@ -1659,7 +1675,7 @@ Citizen.CreateThread(function()
 									SetLxSirenStateForVeh(veh, 0)
 									count_bcast_timer = delay_bcast_timer
 								end
-							
+
 							-- TOG LX SIREN (HORN)
 							elseif IsDisabledControlJustReleased(0,86) and HasHornSwitch(veh) and GetVehicleClass(veh) ~= 15 then
 								local timer = GetGameTimer()
@@ -1684,7 +1700,7 @@ Citizen.CreateThread(function()
 									end
 									Citizen.Wait(0)
 								end
-								
+
 							-- TOG AUXILIARY TONE
 							elseif IsDisabledControlJustPressed(0, 165) and GetVehicleClass(veh) ~= 15 then
 								--if HasAuxiliaryTone(veh) then -- bozlights
@@ -1769,11 +1785,11 @@ Citizen.CreateThread(function()
 									PlaySoundFrontend(-1, "Beep_Red", "DLC_HEIST_HACKING_SNAKE_SOUNDS", 1)
 								end
 							end
-										
+
 							-- MANU
 							if state_lxsiren[veh] < 1 then
 								if IsDisabledControlPressed(0, 80) then
-									if not IsUsingKeyboard(0) and GetVehicleClass(veh) == 15 then 
+									if not IsUsingKeyboard(0) and GetVehicleClass(veh) == 15 then
 										actv_manu = false
 									else
 										actv_manu = true
@@ -1798,9 +1814,9 @@ Citizen.CreateThread(function()
 							else
 								actv_horn = false
 							end
-						
+
 						end
-						
+
 						---- ADJUST HORN / MANU STATE ----
 						local hmanu_state_new = 0
 						if actv_horn == true and actv_manu == false then
@@ -1845,16 +1861,16 @@ Citizen.CreateThread(function()
 						if state_airmanu[veh] ~= hmanu_state_new then
 							SetAirManuStateForVeh(veh, hmanu_state_new)
 							count_bcast_timer = delay_bcast_timer
-						end	
+						end
 					end
-					
-						
-					--- IS ANY LAND VEHICLE ---	
+
+
+					--- IS ANY LAND VEHICLE ---
 					if GetVehicleClass(veh) ~= 14 and GetVehicleClass(veh) ~= 15 and GetVehicleClass(veh) ~= 16 and GetVehicleClass(veh) ~= 21 then
-					
+
 						----- CONTROLS -----
 						if not IsPauseMenuActive() and UpdateOnscreenKeyboard() ~= 0 then
-						
+
 							-- IND L
 							if IsDisabledControlJustReleased(0, 84) then -- INPUT_VEH_PREV_RADIO_TRACK
 								local cstate = state_indic[veh]
@@ -1869,7 +1885,7 @@ Citizen.CreateThread(function()
 								end
 								TogIndicStateForVeh(veh, state_indic[veh])
 								count_ind_timer = 0
-								count_bcast_timer = delay_bcast_timer			
+								count_bcast_timer = delay_bcast_timer
 							-- IND R
 							elseif IsDisabledControlJustReleased(0, 83) then -- INPUT_VEH_NEXT_RADIO_TRACK
 								local cstate = state_indic[veh]
@@ -1902,10 +1918,10 @@ Citizen.CreateThread(function()
 									count_bcast_timer = delay_bcast_timer
 								end
 							end
-						
+
 						end
-						
-						
+
+
 						----- AUTO BROADCAST VEH STATES -----
 						if count_bcast_timer > delay_bcast_timer then
 							count_bcast_timer = 0
@@ -1921,12 +1937,12 @@ Citizen.CreateThread(function()
 						else
 							count_bcast_timer = count_bcast_timer + 1
 						end
-					
+
 					end
-					
+
 				end
 			end
-			
+
 		Citizen.Wait(0)
 	end
 end)
