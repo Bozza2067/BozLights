@@ -26,3 +26,8 @@ src/dev/New folder/wail_data/Code 3 Z3 Demo_1-2.wav
 src/dev/New folder/horn_data/Code 3 Z3 Demo_1.wav
 src/dev/New folder/wail.aup
 src/dev/New folder/horn.aup
+*.vsidx
+*.lock
+*.sqlite
+.vs/VSWorkspaceState.json
+.vs/BozLights/v17/.wsuo
