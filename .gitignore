@@ -1,31 +1,7 @@
 
-.dev/sirenpack_one/0x1BC2AD34.wav
-.dev/sirenpack_one/0x1740ABD7.wav
-.dev/sirenpack_one/0x163DB082.wav
-.dev/sirenpack_one/0x1155164C.wav
-.dev/sirenpack_one/0x0CA329BA.wav
-.dev/sirenpack_one/0x067A81B4.wav
-.dev/sirenpack_one/0x0426CC32.wav
-.dev/sirenpack_one/0x03E724D7.wav
-.dev/sirenpack_one.oac
-.dev/sheriffscout2/START_UP.wav
-.dev/sheriffscout2/SHUT_DOWN.wav
-.dev/sheriffscout2/EXHAUST_IDLE.wav
-.dev/sheriffscout2/EXHAUST_DECEL.wav
-.dev/sheriffscout2/EXHAUST_ACCEL.wav
-.dev/sheriffscout2/ENGINE_IDLE.wav
-.dev/sheriffscout2/ENGINE_DECEL.wav
-.dev/sheriffscout2/ENGINE_ACCEL.wav
-.dev/sheriffscout2/0x19A5478F.wav
-.dev/sheriffscout2/0x0E54E68C.wav
-.dev/sheriffscout2/0x005CE0B4.wav
-.dev/sheriffscout2.oac
+.dev/*
+src/dev
 src/policingmp_sirens2/stuff
-src/dev/New folder/wail_data/Code 3 Z3 Demo_1.wav
-src/dev/New folder/wail_data/Code 3 Z3 Demo_1-2.wav
-src/dev/New folder/horn_data/Code 3 Z3 Demo_1.wav
-src/dev/New folder/wail.aup
-src/dev/New folder/horn.aup
 *.vsidx
 *.lock
 *.sqlite
