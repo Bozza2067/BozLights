@@ -60,7 +60,8 @@ local SecondManualBrowserToneOption = 0
 local lstate = state_ltsg[veh]
 local lstate = 0
 -- BOZLIGHTS END
-
+local blackout = 0 -- Blackout mode toggle
+local idlelights = 0
 
 
 
@@ -110,6 +111,38 @@ RegisterCommand('riser', function()
 		PlaySoundFrontend(-1, "Highlight_Error", "DLC_HEIST_PLANNING_BOARD_SOUNDS", 1)
 	end
 end)
+
+RegisterKeyMapping('idlelights', 'Toggle Idle Lights', 'keyboard', 'X') -- Idle Lights Function
+RegisterCommand('idlelights', function()
+	local ped = GetPlayerPed(-1)
+	local veh = GetVehiclePedIsIn(ped, false)
+	if UseIdleLights(veh) then
+		if idlelights == 0 then
+			PlaySoundFrontend(-1, "NAV_UP_DOWN", "HUD_FRONTEND_DEFAULT_SOUNDSET", 1)
+			idlelights = 1
+		else
+			PlaySoundFrontend(-1, "NAV_UP_DOWN", "HUD_FRONTEND_DEFAULT_SOUNDSET", 1)
+			idlelights = 0
+		end
+	end
+end)
+
+
+RegisterKeyMapping('Blackout', 'Blackout Mode', 'keyboard', 'K') -- Blackout Mode Function
+RegisterCommand('Blackout', function()
+	local ped = GetPlayerPed(-1)
+	local veh = GetVehiclePedIsIn(ped, false)
+	if UseBlackoutMode(veh) then
+		if blackout == 0 then
+			PlaySoundFrontend(-1, "NAV_UP_DOWN", "HUD_FRONTEND_DEFAULT_SOUNDSET", 1)
+			blackout = 1
+		else
+			PlaySoundFrontend(-1, "NAV_UP_DOWN", "HUD_FRONTEND_DEFAULT_SOUNDSET", 1)
+			blackout = 0
+		end
+	end
+end)
+
 
 -- EXPERIMENTAL FEATURE, NOT IN USE AT THE MOMENT
 --[[RegisterKeyMapping('toggleemergencylights', 'Toggle Emergency Lights', 'keyboard', 'J')
@@ -523,6 +556,36 @@ function useRiser(veh)
 	return false
 end
 
+function UseIdleLights(veh)
+	local model = GetEntityModel(veh)
+	for i = 1, #ModelsWithIdleLights, 1 do
+		if model == GetHashKey(ModelsWithIdleLights[i]) then
+			return true
+		end
+	end
+	return false
+end
+
+function UseParkKill(veh)
+	local model = GetEntityModel(veh)
+	for i = 1, #ModelsWithSirenParkKill, 1 do
+		if model == GetHashKey(ModelsWithSirenParkKill[i]) then
+			return true
+		end
+	end
+	return false
+end
+
+function UseBlackoutMode(veh)
+	local model = GetEntityModel(veh)
+	for i = 1, #ModelsWithBlackoutMode, 1 do
+		if model == GetHashKey(ModelsWithBlackoutMode[i]) then
+			return true
+		end
+	end
+	return false
+end
+
 function UseZ3SirenLowFreq(veh)
 	local model = GetEntityModel(veh)
 	for i = 1, #ModelsWithZ3LowFreqInsteadofHiLo, 1 do
@@ -697,7 +760,7 @@ function SetLxSirenStateForVeh(veh, newstate)
 				snd_lxsiren[veh] = nil
 			end
 						
-			if newstate == 1 then
+			if newstate == 1 and lstate == 3 then
 				snd_lxsiren[veh] = GetSoundId()	
 				if UseFiretruckSiren(veh) then
 					PlaySoundFromEntity(snd_lxsiren[veh], "collision_i8o7bp", veh, 0, 0, 0)
@@ -756,7 +819,7 @@ function SetLxSirenStateForVeh(veh, newstate)
 				end
 				TogMuteDfltSrnForVeh(veh, true)
 				
-			elseif newstate == 2 then
+			elseif newstate == 2 and lstate == 3 then
 				snd_lxsiren[veh] = GetSoundId()	
 				if UseFiretruckSiren(veh) then
 					PlaySoundFromEntity(snd_lxsiren[veh], "collision_q3nurz", veh, 0, 0, 0)
@@ -811,7 +874,7 @@ function SetLxSirenStateForVeh(veh, newstate)
 				end
 				TogMuteDfltSrnForVeh(veh, true)
 			
-			elseif newstate == 3 then
+			elseif newstate == 3 and lstate == 3 then
 				snd_lxsiren[veh] = GetSoundId()
 				if UseFiretruckSiren(veh) then
 					PlaySoundFromEntity(snd_lxsiren[veh], "VEHICLES_HORNS_AMBULANCE_WARNING", veh, 0, 0, 0)
@@ -856,7 +919,7 @@ function SetLxSirenStateForVeh(veh, newstate)
 				end
 				TogMuteDfltSrnForVeh(veh, true)
 			
-			elseif newstate == 4 then
+			elseif newstate == 4 and lstate == 3 then
 				snd_lxsiren[veh] = GetSoundId()
 				if UseCarbideUltra(veh) then
 					PlaySoundFromEntity(snd_lxsiren[veh], "siren_carbide_ultra", veh, "policingmp_sounds_sirens2_soundset", 0, 0)
@@ -892,7 +955,7 @@ function SetLxSirenStateForVeh(veh, newstate)
 				end
 				TogMuteDfltSrnForVeh(veh, true)
 			
-			elseif newstate == 5 then
+			elseif newstate == 5 and lstate == 3 then
 				snd_lxsiren[veh] = GetSoundId()
 				if UsingVanillaSiren then
 					PlaySoundFromEntity(snd_lxsiren[veh], "siren_pa20a_wail_r", veh, "policingmp_sounds_sirens5_soundset", 0, 0)
@@ -904,7 +967,7 @@ function SetLxSirenStateForVeh(veh, newstate)
 					PlaySoundFromEntity(snd_lxsiren[veh], "siren_pa20a_wail_r", veh, "policingmp_sounds_sirens5_soundset", 0, 0)
 				end
 			
-			elseif newstate == 6 then
+			elseif newstate == 6 and lstate == 3 then
 				snd_lxsiren[veh] = GetSoundId()
 				if UsingVanillaSiren then
 					PlaySoundFromEntity(snd_lxsiren[veh], "siren_2_r", veh, "policingmp_sounds_sirens5_soundset", 0, 0)
@@ -916,7 +979,7 @@ function SetLxSirenStateForVeh(veh, newstate)
 					PlaySoundFromEntity(snd_lxsiren[veh], "siren_2_r", veh, "policingmp_sounds_sirens5_soundset", 0, 0)
 				end
 			
-			elseif newstate == 7 then
+			elseif newstate == 7 and lstate == 3 then
 				snd_lxsiren[veh] = GetSoundId()
 				if UsingVanillaSiren then
 					PlaySoundFromEntity(snd_lxsiren[veh], "police_warning_r", veh, "policingmp_sounds_sirens5_soundset", 0, 0)
@@ -928,7 +991,7 @@ function SetLxSirenStateForVeh(veh, newstate)
 					PlaySoundFromEntity(snd_lxsiren[veh], "police_warning_r", veh, "policingmp_sounds_sirens5_soundset", 0, 0)
 				end
 			
-			elseif newstate == 8 then
+			elseif newstate == 8 and lstate == 3 then
 				snd_lxsiren[veh] = GetSoundId()
 				if UsingVanillaSiren then
 					PlaySoundFromEntity(snd_lxsiren[veh], "vehicles_horns_police_warning_rnd_euro", veh, 0, 0, 0)
@@ -940,7 +1003,7 @@ function SetLxSirenStateForVeh(veh, newstate)
 					PlaySoundFromEntity(snd_lxsiren[veh], "vehicles_horns_police_warning_rnd_euro", veh, 0, 0, 0)
 				end
 			
-			elseif newstate == 9 then
+			elseif newstate == 9 and lstate == 3 then
 				snd_lxsiren[veh] = GetSoundId()
 				if UsingVanillaSiren then
 					PlaySoundFromEntity(snd_lxsiren[veh], "vehicles_horns_siren_1", veh, 0, 0, 0)
@@ -955,7 +1018,6 @@ function SetLxSirenStateForVeh(veh, newstate)
 				
 			else
 				TogMuteDfltSrnForVeh(veh, true)
-				
 			end				
 				
 			state_lxsiren[veh] = newstate
@@ -1353,7 +1415,43 @@ Citizen.CreateThread(function()
 						end
 					end
 
-					
+					-- siren park kill
+					if UseParkKill(veh) then
+						if IsControlPressed(0, 75) then
+							SetLxSirenStateForVeh(veh, newstate)
+						end
+					end
+
+					-- blackout mode/idle lights
+					if blackout == 1 then
+						SetVehicleLights(veh, 1)
+						SetVehicleIndicatorLights(veh, 0, false)
+						SetVehicleIndicatorLights(veh, 1, false)
+						SetVehicleBrakeLights(veh, false)
+						SetVehicleInteriorlight(veh, false)
+						SetLxSirenStateForVeh(veh, newstate)
+						lstate = 0
+						SetVehicleSiren(veh, false)
+						if UseIdleLights(veh) then
+							idlelights = 0
+							SetVehicleExtra(veh, 12, true)
+						end
+					elseif not UseIdleLights(veh) then
+						SetVehicleLights(veh, 0)
+					elseif UseIdleLights then
+						if idlelights == 0 then
+							SetVehicleLights(veh, 0)
+							SetVehicleExtra(veh, 12, true)
+						elseif idlelights == 1 then
+							SetVehicleLights(veh, 1)
+							SetVehicleExtra(veh, 12, false)
+						end
+					end
+
+					if IsDisabledControlJustPressed(0, 85) and blackout == 1 then
+						PlaySoundFrontend(-1, "Highlight_Error", "DLC_HEIST_PLANNING_BOARD_SOUNDS", 1)
+					end
+
 					--- IS EMERG VEHICLE ---
 					if GetVehicleClass(veh) == 18 and not HasNoEquipment(veh) or HasEquipment(veh) then
 						
@@ -1523,6 +1621,11 @@ Citizen.CreateThread(function()
 
 							elseif IsDisabledControlJustPressed(0, 157) and not UseAS350Siren(veh) then
 								local cstate = state_lxsiren[veh]
+								if not useBozLights(veh) then
+									if not useBozLightsLegacy(veh) then
+										lstate = 3
+									end
+								end
 								if cstate == 2 and UseTouchmaster(veh) or UseOmega90(veh) and cstate == 2 or Use480K(veh) and cstate == 2 then
 									local sirenoption = math.random(0,1)
 									if IsVehicleSirenOn(veh) then
@@ -1551,6 +1654,11 @@ Citizen.CreateThread(function()
 								end
 							elseif IsDisabledControlJustPressed(0, 158) and not UseAS350Siren(veh) then
 								local cstate = state_lxsiren[veh]
+								if not useBozLights(veh) then
+									if not useBozLightsLegacy(veh) then
+										lstate = 3
+									end
+								end
 								if cstate ~= 2 and cstate ~= 6 then
 									if IsVehicleSirenOn(veh) then
 										PlaySoundFrontend(-1, "Beep_Red", "DLC_HEIST_HACKING_SNAKE_SOUNDS", 1)
@@ -1569,6 +1677,12 @@ Citizen.CreateThread(function()
 							elseif IsDisabledControlJustPressed(0, 160) and GetVehicleClass(veh) ~= 15 then
 								if not HasNoTertiaryTone(veh) and not UseBMWSiren(veh) and not Use650RS(veh) then
 									local cstate = state_lxsiren[veh]
+									if not useBozLights(veh) then
+										if not useBozLightsLegacy(veh) then
+											lstate = 3
+										end
+									end
+
 									if cstate ~= 3 and cstate ~= 7 then
 										if IsVehicleSirenOn(veh) then
 
@@ -1604,6 +1718,11 @@ Citizen.CreateThread(function()
 							elseif IsDisabledControlJustPressed(0, 164) and GetVehicleClass(veh) ~= 15 then
 								if HasQuarternaryTone(veh) then
 									local cstate = state_lxsiren[veh]
+									if not useBozLights(veh) then
+										if not useBozLightsLegacy(veh) then
+											lstate = 3
+										end
+									end
 									if cstate ~= 4 and cstate ~= 8 then
 										if IsVehicleSirenOn(veh) then
 											PlaySoundFrontend(-1, "Beep_Red", "DLC_HEIST_HACKING_SNAKE_SOUNDS", 1)
@@ -1625,6 +1744,11 @@ Citizen.CreateThread(function()
 								
 							elseif IsDisabledControlJustPressed(0, 159) and GetVehicleClass(veh) ~= 15 then
 								local cstate = state_lxsiren[veh]
+								if not useBozLights(veh) then
+									if not useBozLightsLegacy(veh) then
+										lstate = 3
+									end
+								end
 								if HasRumbler(veh) then
 									PlaySoundFrontend(-1, "Beep_Red", "DLC_HEIST_HACKING_SNAKE_SOUNDS", 1)
 									if rumblerState == 0 then
@@ -1643,6 +1767,12 @@ Citizen.CreateThread(function()
 							-- TOG LX SIREN
 							elseif IsDisabledControlJustPressed(0, 19) and GetVehicleClass(veh) ~= 15 then
 								local cstate = state_lxsiren[veh]
+								if not useBozLights(veh) then
+									if not useBozLightsLegacy(veh) then
+										lstate = 3
+									end
+								end
+
 								if cstate == 0 then
 									if not useBozLights(veh) and IsVehicleSirenOn(veh) or useBozLights(veh) and lstate == 3 or not useBozLightsLegacy(veh) and IsVehicleSirenOn(veh) or useBozLightsLegacy(veh) and lstate == 3 then -- bozlights
 									--if IsVehicleSirenOn(veh) then
