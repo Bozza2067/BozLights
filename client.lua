@@ -60,7 +60,6 @@ local SecondManualBrowserToneOption = 0
 local lstate = state_ltsg[veh]
 local lstate = 0
 -- BOZLIGHTS END
-local blackout = 0 -- Blackout mode toggle
 local idlelights = 0
 
 
@@ -126,23 +125,6 @@ RegisterCommand('idlelights', function()
 		end
 	end
 end)
-
-
-RegisterKeyMapping('Blackout', 'Blackout Mode', 'keyboard', 'K') -- Blackout Mode Function
-RegisterCommand('Blackout', function()
-	local ped = GetPlayerPed(-1)
-	local veh = GetVehiclePedIsIn(ped, false)
-	if UseBlackoutMode(veh) then
-		if blackout == 0 then
-			PlaySoundFrontend(-1, "NAV_UP_DOWN", "HUD_FRONTEND_DEFAULT_SOUNDSET", 1)
-			blackout = 1
-		else
-			PlaySoundFrontend(-1, "NAV_UP_DOWN", "HUD_FRONTEND_DEFAULT_SOUNDSET", 1)
-			blackout = 0
-		end
-	end
-end)
-
 
 -- EXPERIMENTAL FEATURE, NOT IN USE AT THE MOMENT
 --[[RegisterKeyMapping('toggleemergencylights', 'Toggle Emergency Lights', 'keyboard', 'J')
@@ -566,20 +548,10 @@ function UseIdleLights(veh)
 	return false
 end
 
-function UseParkKill(veh)
+function DontUseParkKill(veh)
 	local model = GetEntityModel(veh)
-	for i = 1, #ModelsWithSirenParkKill, 1 do
-		if model == GetHashKey(ModelsWithSirenParkKill[i]) then
-			return true
-		end
-	end
-	return false
-end
-
-function UseBlackoutMode(veh)
-	local model = GetEntityModel(veh)
-	for i = 1, #ModelsWithBlackoutMode, 1 do
-		if model == GetHashKey(ModelsWithBlackoutMode[i]) then
+	for i = 1, #ModelsWithoutSirenParkKill, 1 do
+		if model == GetHashKey(ModelsWithoutSirenParkKill[i]) then
 			return true
 		end
 	end
@@ -760,7 +732,7 @@ function SetLxSirenStateForVeh(veh, newstate)
 				snd_lxsiren[veh] = nil
 			end
 						
-			if newstate == 1 and lstate == 3 then
+			if newstate == 1 then
 				snd_lxsiren[veh] = GetSoundId()	
 				if UseFiretruckSiren(veh) then
 					PlaySoundFromEntity(snd_lxsiren[veh], "collision_i8o7bp", veh, 0, 0, 0)
@@ -819,7 +791,7 @@ function SetLxSirenStateForVeh(veh, newstate)
 				end
 				TogMuteDfltSrnForVeh(veh, true)
 				
-			elseif newstate == 2 and lstate == 3 then
+			elseif newstate == 2 then
 				snd_lxsiren[veh] = GetSoundId()	
 				if UseFiretruckSiren(veh) then
 					PlaySoundFromEntity(snd_lxsiren[veh], "collision_q3nurz", veh, 0, 0, 0)
@@ -874,7 +846,7 @@ function SetLxSirenStateForVeh(veh, newstate)
 				end
 				TogMuteDfltSrnForVeh(veh, true)
 			
-			elseif newstate == 3 and lstate == 3 then
+			elseif newstate == 3 then
 				snd_lxsiren[veh] = GetSoundId()
 				if UseFiretruckSiren(veh) then
 					PlaySoundFromEntity(snd_lxsiren[veh], "VEHICLES_HORNS_AMBULANCE_WARNING", veh, 0, 0, 0)
@@ -919,7 +891,7 @@ function SetLxSirenStateForVeh(veh, newstate)
 				end
 				TogMuteDfltSrnForVeh(veh, true)
 			
-			elseif newstate == 4 and lstate == 3 then
+			elseif newstate == 4 then
 				snd_lxsiren[veh] = GetSoundId()
 				if UseCarbideUltra(veh) then
 					PlaySoundFromEntity(snd_lxsiren[veh], "siren_carbide_ultra", veh, "policingmp_sounds_sirens2_soundset", 0, 0)
@@ -955,7 +927,7 @@ function SetLxSirenStateForVeh(veh, newstate)
 				end
 				TogMuteDfltSrnForVeh(veh, true)
 			
-			elseif newstate == 5 and lstate == 3 then
+			elseif newstate == 5 then
 				snd_lxsiren[veh] = GetSoundId()
 				if UsingVanillaSiren then
 					PlaySoundFromEntity(snd_lxsiren[veh], "siren_pa20a_wail_r", veh, "policingmp_sounds_sirens5_soundset", 0, 0)
@@ -967,7 +939,7 @@ function SetLxSirenStateForVeh(veh, newstate)
 					PlaySoundFromEntity(snd_lxsiren[veh], "siren_pa20a_wail_r", veh, "policingmp_sounds_sirens5_soundset", 0, 0)
 				end
 			
-			elseif newstate == 6 and lstate == 3 then
+			elseif newstate == 6 then
 				snd_lxsiren[veh] = GetSoundId()
 				if UsingVanillaSiren then
 					PlaySoundFromEntity(snd_lxsiren[veh], "siren_2_r", veh, "policingmp_sounds_sirens5_soundset", 0, 0)
@@ -979,7 +951,7 @@ function SetLxSirenStateForVeh(veh, newstate)
 					PlaySoundFromEntity(snd_lxsiren[veh], "siren_2_r", veh, "policingmp_sounds_sirens5_soundset", 0, 0)
 				end
 			
-			elseif newstate == 7 and lstate == 3 then
+			elseif newstate == 7 then
 				snd_lxsiren[veh] = GetSoundId()
 				if UsingVanillaSiren then
 					PlaySoundFromEntity(snd_lxsiren[veh], "police_warning_r", veh, "policingmp_sounds_sirens5_soundset", 0, 0)
@@ -991,7 +963,7 @@ function SetLxSirenStateForVeh(veh, newstate)
 					PlaySoundFromEntity(snd_lxsiren[veh], "police_warning_r", veh, "policingmp_sounds_sirens5_soundset", 0, 0)
 				end
 			
-			elseif newstate == 8 and lstate == 3 then
+			elseif newstate == 8 then
 				snd_lxsiren[veh] = GetSoundId()
 				if UsingVanillaSiren then
 					PlaySoundFromEntity(snd_lxsiren[veh], "vehicles_horns_police_warning_rnd_euro", veh, 0, 0, 0)
@@ -1003,7 +975,7 @@ function SetLxSirenStateForVeh(veh, newstate)
 					PlaySoundFromEntity(snd_lxsiren[veh], "vehicles_horns_police_warning_rnd_euro", veh, 0, 0, 0)
 				end
 			
-			elseif newstate == 9 and lstate == 3 then
+			elseif newstate == 9 then
 				snd_lxsiren[veh] = GetSoundId()
 				if UsingVanillaSiren then
 					PlaySoundFromEntity(snd_lxsiren[veh], "vehicles_horns_siren_1", veh, 0, 0, 0)
@@ -1363,6 +1335,8 @@ Citizen.CreateThread(function()
 			
 			CleanupSounds()
 
+			DistantCopCarSirens(false)
+
 			RequestScriptAudioBank("DLC_POLICINGMPAUDIO\\POLICINGMP_SIRENS1", false)
 			RequestScriptAudioBank("DLC_POLICINGMPAUDIO\\POLICINGMP_SIRENS2", false)
 			RequestScriptAudioBank("DLC_POLICINGMPAUDIO\\POLICINGMP_SIRENS3", false)
@@ -1416,40 +1390,22 @@ Citizen.CreateThread(function()
 					end
 
 					-- siren park kill
-					if UseParkKill(veh) then
+					if not DontUseParkKill(veh) then
 						if IsControlPressed(0, 75) then
 							SetLxSirenStateForVeh(veh, newstate)
+							SetLxSirenStateForVeh(veh, 0)
+							state_lxsiren[veh] = 0
+							count_bcast_timer = delay_bcast_timer
 						end
 					end
 
-					-- blackout mode/idle lights
-					if blackout == 1 then
-						SetVehicleLights(veh, 1)
-						SetVehicleIndicatorLights(veh, 0, false)
-						SetVehicleIndicatorLights(veh, 1, false)
-						SetVehicleBrakeLights(veh, false)
-						SetVehicleInteriorlight(veh, false)
-						SetLxSirenStateForVeh(veh, newstate)
-						lstate = 0
-						SetVehicleSiren(veh, false)
-						if UseIdleLights(veh) then
-							idlelights = 0
-							SetVehicleExtra(veh, 12, true)
-						end
-					elseif not UseIdleLights(veh) then
+					-- idle lights
+					if idlelights == 0 then
 						SetVehicleLights(veh, 0)
-					elseif UseIdleLights then
-						if idlelights == 0 then
-							SetVehicleLights(veh, 0)
-							SetVehicleExtra(veh, 12, true)
-						elseif idlelights == 1 then
-							SetVehicleLights(veh, 1)
-							SetVehicleExtra(veh, 12, false)
-						end
-					end
-
-					if IsDisabledControlJustPressed(0, 85) and blackout == 1 then
-						PlaySoundFrontend(-1, "Highlight_Error", "DLC_HEIST_PLANNING_BOARD_SOUNDS", 1)
+						SetVehicleExtra(veh, 12, true)
+					elseif idlelights == 1 then
+						SetVehicleLights(veh, 1)
+						SetVehicleExtra(veh, 12, false)
 					end
 
 					--- IS EMERG VEHICLE ---
