@@ -56,7 +56,7 @@ Version 1 11
 		{
 			Compression PCM
 			Headroom -200
-			LoopPoint 0
+			LoopPoint -1
 			LoopBegin 0
 			LoopEnd 0
 			PlayBegin 0
