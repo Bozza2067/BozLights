@@ -52,6 +52,15 @@ ModelsWithNoEquipment = { -- Non-emergency models without lights/sirens controls
 	"fwcverus",
 }
 
+ModelsWithIdleLights = { -- Turns on extra 12 and disables headlights when pressing set keybind (X by default)
+	"model1",
+	"model2",
+	"model3",
+}
+
+ModelsWithoutSirenParkKill = { -- Disables automaticly turning off sirens when exiting vehicle without any input from user
+}
+
 ---------------
 -- BOZLIGHTS --
 ---------------
