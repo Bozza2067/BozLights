@@ -8,10 +8,13 @@ Your one-stop-shop for lights and siren controls, BozLights is a modified versio
 - Seperate manual tones for some sirens (including the vanilla siren)
 - An ELS/DLS-like light stage system (requires cars to be specifically designed for this feature, no documentation yet)
 - Bindable key to toggle bomb doors (for NYPD/NYSP-style highrisers)
+- Everything you need to customize the selection of sirens as you need.
+
+## End of support
+I'm no longer working on this mod, and will not be providing support for it. Pull requests are accepted and encouraged.
+If you want to add new sirens, I've included everything you need to do just that. Requires CodeWalker for .rel editing, and OpenIV for .awc editing.
 
 ## Links:
-
-[Forum Post](http://forum.policingmp.net/d/7-script-bozlights-an-expanded-and-enhanced-version-of-lux-vehcontrol)
 
 [Credits](https://github.com/OfficerBozza/boz_vehcontrol/blob/main/credits.md)
 
