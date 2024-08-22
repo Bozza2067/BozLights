@@ -1,3 +1,7 @@
+## End of support
+I'm no longer working on this mod, and will not be providing support for it. Pull requests are accepted and encouraged.
+If you want to add new sirens, I've included everything you need to do just that. Requires CodeWalker for .rel editing, and OpenIV for .awc editing.
+
 # BozLights
 Your one-stop-shop for lights and siren controls, BozLights is a modified version of [Lt.Caine's original script](https://forum.cfx.re/t/release-luxart-vehicle-control/17304), featuring a plethora of new content, including:
 
@@ -9,10 +13,6 @@ Your one-stop-shop for lights and siren controls, BozLights is a modified versio
 - An ELS/DLS-like light stage system (requires cars to be specifically designed for this feature, no documentation yet)
 - Bindable key to toggle bomb doors (for NYPD/NYSP-style highrisers)
 - Everything you need to customize the selection of sirens as you need.
-
-## End of support
-I'm no longer working on this mod, and will not be providing support for it. Pull requests are accepted and encouraged.
-If you want to add new sirens, I've included everything you need to do just that. Requires CodeWalker for .rel editing, and OpenIV for .awc editing.
 
 ## Links:
 
