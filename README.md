@@ -1,17 +1,17 @@
 ## End of support
-I'm no longer working on this mod, and will not be providing support for it. Pull requests are accepted and encouraged.
-If you want to add new sirens, I've included everything you need to do just that. Requires CodeWalker for .rel editing, and OpenIV for .awc editing.
+I'm no longer working on this mod, and will not be supporting it. Pull requests are accepted and encouraged.
+I've included everything you need to do if you want to add new sirens. Requires CodeWalker for .rel editing, and OpenIV for .awc editing.
 
 # BozLights
-Your one-stop-shop for lights and siren controls, BozLights is a modified version of [Lt.Caine's original script](https://forum.cfx.re/t/release-luxart-vehicle-control/17304), featuring a plethora of new content, including:
+Your one-stop shop for lights and siren controls, BozLights is a modified version of [Lt. Caine's original script](https://forum.cfx.re/t/release-luxart-vehicle-control/17304), featuring a plethora of new content, including:
 
 - New configuration file
-- A plethora of popular real sirens built in
+- A plethora of popular real sirens built-in
 - Ability to select siren tones by pressing the 1-4 keys
 - Toggleable rumbler system for some siren models (including the vanilla siren)
-- Seperate manual tones for some sirens (including the vanilla siren)
+- Separate manual tones for some sirens (including the vanilla siren)
 - An ELS/DLS-like light stage system (requires cars to be specifically designed for this feature, no documentation yet)
-- Bindable key to toggle bomb doors (for NYPD/NYSP-style highrisers)
+- Bindable key to toggle bomb doors (for NYPD/NYSP-style high-risers)
 - Everything you need to customize the selection of sirens as you need.
 
 ## Links:
@@ -35,7 +35,7 @@ Your one-stop-shop for lights and siren controls, BozLights is a modified versio
 - = = Right indicator
 - Backspace = Hazard lights
 
-It's still compatible with controller, I'm just not sure of the controls since I regularly play with keyboard.
+It's still compatible with a controller, I'm just not sure of the controls since I regularly play with a keyboard.
 
 ## Controller Controls
 - Right D-Pad = Emergency Lights
